@@ -247,30 +247,6 @@ a:hover { color: var(--color-tab-dark); }
   font-size: 0.9rem;
 }
 
-/* --- Cookie consent banner --- */
-.consent-banner {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: var(--color-panel);
-  color: var(--color-text);
-  border-top: 3px solid var(--color-brand);
-  padding: var(--space-4);
-  z-index: 2000;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
-}
-.consent-banner .container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-3);
-}
-.consent-banner p { margin: 0; max-width: 60ch; }
-.consent-actions { display: flex; gap: var(--space-2); flex-wrap: wrap; }
-.consent-banner[hidden] { display: none; }
-
 /* --- Utility --- */
 .visually-hidden {
   position: absolute;

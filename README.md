@@ -15,7 +15,6 @@ about.html            About / contact
 privacy.html          Privacy & cookies policy (GDPR etc.)
 css/styles.css        All site styles (colors match the DELE app)
 js/main.js            Shared header/footer injection, mobile nav
-js/consent.js         Cookie consent banner + gated Google Analytics 4
 partials/header.html  Shared nav, injected by main.js
 partials/footer.html  Shared footer, injected by main.js
 ```
@@ -34,7 +33,7 @@ Then visit `http://localhost:8000`.
 
 ## Before going live
 
-- Replace `G-XXXXXXXXXX` in `js/consent.js` with the real GA4 measurement ID.
+- No analytics is used on this site by design — nothing to configure there.
 - Confirm the DELE Shiny app allows being embedded in an iframe from
   `spanishdespacio.com` (no blocking `X-Frame-Options` / CSP
   `frame-ancestors` header on its side).
