@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Podcasts — Spanish Despacio</title>
+  <meta name="description" content="Episodios de podcast para practicar la comprensión auditiva en español, a un ritmo pausado.">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+  <div id="site-header-placeholder"></div>
+
+  <main id="main-content">
+    <div class="container">
+      <h1>Podcasts</h1>
+      <p>Episodios organizados por nivel y tema. Escucha, repite, y vuelve tantas veces como necesites.</p>
+
+      <section class="panel">
+        <h2>Último episodio</h2>
+        <!--
+          Spotify for Creators embed placeholder.
+          Replace SHOW_OR_EPISODE_ID with your real embed src from Spotify for Creators
+          (Share > Embed episode/show). The iframe below is fully accessible by default
+          (Spotify's player includes its own captions/controls).
+        -->
+        <iframe
+          style="border-radius:12px"
+          src="https://open.spotify.com/embed/show/SHOW_OR_EPISODE_ID?utm_source=generator"
+          width="100%"
+          height="232"
+          frameborder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+          title="Reproductor de Spotify: episodio más reciente">
+        </iframe>
+      </section>
+
+      <section class="panel">
+        <h2>Todos los episodios</h2>
+        <p>Próximamente: listado completo con transcripciones descargables para cada episodio.</p>
+      </section>
+    </div>
+  </main>
+
+  <div id="site-footer-placeholder"></div>
+
+  <div class="consent-banner" id="consent-banner" role="dialog" aria-label="Aviso de cookies" hidden>
+    <div class="container">
+      <p>Usamos cookies de analítica para entender cómo se usa el sitio. Puedes aceptar o rechazar. Más información en nuestra <a href="/privacy.html">política de privacidad</a>.</p>
+      <div class="consent-actions">
+        <button type="button" class="btn btn-secondary" id="consent-decline">Rechazar</button>
+        <button type="button" class="btn btn-primary" id="consent-accept">Aceptar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/consent.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

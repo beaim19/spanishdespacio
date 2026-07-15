@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica DELE A2 — Spanish Despacio</title>
+  <meta name="description" content="Simulador interactivo para practicar el examen oficial DELE A2.">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+  <div id="site-header-placeholder"></div>
+
+  <main id="main-content">
+    <div class="container">
+      <h1>Práctica para el examen DELE A2</h1>
+      <p>
+        Esta aplicación interactiva (creada con R Shiny) te permite practicar con
+        preguntas en el estilo del examen oficial DELE A2.
+      </p>
+
+      <!--
+        NOTE: this iframe embed is still pending confirmation that the Shiny
+        app allows being embedded from another domain (no blocking
+        X-Frame-Options / CSP frame-ancestors header on its side). Until
+        that's confirmed, the "open in a new tab" link below is the safe
+        fallback for anyone who hits a blank box.
+      -->
+      <section class="iframe-wrapper">
+        <iframe
+          src="https://shiny-app-service-862289729029.europe-southwest1.run.app"
+          title="Simulador de práctica DELE A2"
+          loading="lazy">
+        </iframe>
+      </section>
+
+      <p>
+        ¿No se carga la aplicación?
+        <a href="https://shiny-app-service-862289729029.europe-southwest1.run.app" target="_blank" rel="noopener noreferrer">
+          Ábrela en una pestaña nueva
+        </a>.
+      </p>
+    </div>
+  </main>
+
+  <div id="site-footer-placeholder"></div>
+
+  <div class="consent-banner" id="consent-banner" role="dialog" aria-label="Aviso de cookies" hidden>
+    <div class="container">
+      <p>Usamos cookies de analítica para entender cómo se usa el sitio. Puedes aceptar o rechazar. Más información en nuestra <a href="/privacy.html">política de privacidad</a>.</p>
+      <div class="consent-actions">
+        <button type="button" class="btn btn-secondary" id="consent-decline">Rechazar</button>
+        <button type="button" class="btn btn-primary" id="consent-accept">Aceptar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/consent.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>
