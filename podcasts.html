@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Podcasts — Spanish Despacio</title>
-  <meta name="description" content="Episodios de podcast para practicar la comprensión auditiva en español, a un ritmo pausado.">
+  <meta name="description" content="Episodios de podcast para practicar la comprensión auditiva en español, organizados por tema.">
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
@@ -15,32 +15,65 @@
   <main id="main-content">
     <div class="container">
       <h1>Podcasts</h1>
-      <p>Episodios organizados por nivel y tema. Escucha, repite, y vuelve tantas veces como necesites.</p>
+      <p>Episodios organizados por tema. Escucha, repite, y vuelve tantas veces como necesites.</p>
 
-      <section class="panel">
-        <h2>Último episodio</h2>
-        <!--
-          Spotify for Creators embed placeholder.
-          Replace SHOW_OR_EPISODE_ID with your real embed src from Spotify for Creators
-          (Share > Embed episode/show). The iframe below is fully accessible by default
-          (Spotify's player includes its own captions/controls).
-        -->
-        <iframe
-          style="border-radius:12px"
-          src="https://open.spotify.com/embed/show/SHOW_OR_EPISODE_ID?utm_source=generator"
-          width="100%"
-          height="232"
-          frameborder="0"
-          allowfullscreen=""
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
-          title="Reproductor de Spotify: episodio más reciente">
-        </iframe>
+      <!--
+        Theme index: plain anchor links, so it works with zero JS and is
+        fully keyboard/screen-reader navigable. Add a new <li> here whenever
+        a new theme section is added below.
+      -->
+      <nav class="theme-nav" aria-label="Temas de podcast">
+        <ul>
+          <li><a href="#tema-deportes">Deportes</a></li>
+          <li><a href="#tema-comidas">Comidas</a></li>
+          <li><a href="#tema-historia">Historia</a></li>
+          <li><a href="#tema-turismo">Turismo</a></li>
+          <li><a href="#tema-viajes">Viajes</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="container">
+      <!--
+        One section per theme. Each card-grid is where real episode cards
+        will go once episodes exist (RSS.com feed pending) — see the
+        .theme-empty placeholder for what to replace.
+        data-theme is there for later JS (e.g. a combined "all episodes"
+        view with client-side filtering) — not used yet.
+      -->
+      <section class="theme-section" id="tema-deportes" aria-labelledby="tema-deportes-h">
+        <h2 id="tema-deportes-h">Deportes</h2>
+        <div class="card-grid" data-theme="deportes">
+          <p class="theme-empty">Episodios próximamente.</p>
+        </div>
       </section>
 
-      <section class="panel">
-        <h2>Todos los episodios</h2>
-        <p>Próximamente: listado completo con transcripciones descargables para cada episodio.</p>
+      <section class="theme-section" id="tema-comidas" aria-labelledby="tema-comidas-h">
+        <h2 id="tema-comidas-h">Comidas</h2>
+        <div class="card-grid" data-theme="comidas">
+          <p class="theme-empty">Episodios próximamente.</p>
+        </div>
+      </section>
+
+      <section class="theme-section" id="tema-historia" aria-labelledby="tema-historia-h">
+        <h2 id="tema-historia-h">Historia</h2>
+        <div class="card-grid" data-theme="historia">
+          <p class="theme-empty">Episodios próximamente.</p>
+        </div>
+      </section>
+
+      <section class="theme-section" id="tema-turismo" aria-labelledby="tema-turismo-h">
+        <h2 id="tema-turismo-h">Turismo</h2>
+        <div class="card-grid" data-theme="turismo">
+          <p class="theme-empty">Episodios próximamente.</p>
+        </div>
+      </section>
+
+      <section class="theme-section" id="tema-viajes" aria-labelledby="tema-viajes-h">
+        <h2 id="tema-viajes-h">Viajes</h2>
+        <div class="card-grid" data-theme="viajes">
+          <p class="theme-empty">Episodios próximamente.</p>
+        </div>
       </section>
     </div>
   </main>
