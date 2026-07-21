@@ -21,6 +21,7 @@
   --color-text: #222222;        /* body copy: 15.9:1 on white, 6.2:1 on --color-bg */
   --color-text-inverse: #ffffff;
   --color-hover-tint: #eef2ec;   /* very light neutral for hover states — sage itself is too dark to hold dark-green text/borders on hover */
+  --color-intro-bg: #fbead2;     /* light tint of the orange/selected accent, for the intro+nav band on topic-index pages */
 
   --font-base: 'Segoe UI', Arial, Helvetica, sans-serif;
 
@@ -82,10 +83,15 @@ a:hover { color: var(--color-tab-dark); }
   padding-inline: var(--space-4);
 }
 
-/* --- Header / nav --- */
+/* --- Header / nav ---
+   Header background is the brand green (matches the DELE app). White text
+   is the only readable option on this green (4.28:1 — short of the 4.5:1
+   normal-text AA threshold), so nav text and the tagline are sized/weighted
+   to qualify as "large text" instead, which only needs 3:1 and clears it
+   comfortably. */
 .site-header {
-  background-color: var(--color-panel);
-  border-bottom: 4px solid var(--color-brand);
+  background-color: var(--color-brand);
+  border-bottom: 4px solid var(--color-selected-dark);
 }
 .site-header .container {
   display: flex;
@@ -103,21 +109,29 @@ a:hover { color: var(--color-tab-dark); }
   display: block;
   height: 48px;
   width: auto;
+  /* the logo artwork has a solid white background — on the green header
+     that would show as a stray white rectangle, so it's turned into a
+     deliberate badge instead */
+  background-color: var(--color-panel);
+  padding: var(--space-1);
+  border-radius: var(--radius);
 }
 .site-tagline {
   display: block;
-  font-size: 0.85rem;
-  font-weight: 400;
-  color: var(--color-text);
+  font-size: 1.2rem; /* large enough (with bold) to qualify for the 3:1 AA threshold on green */
+  font-weight: 700;
+  color: var(--color-text-inverse);
 }
 
 .nav-toggle {
   display: none;
   background: none;
-  border: 2px solid var(--color-brand);
+  border: 2px solid var(--color-text-inverse);
+  color: var(--color-text-inverse);
   border-radius: var(--radius);
   padding: var(--space-2) var(--space-3);
   font-size: 1rem;
+  font-weight: 700;
   cursor: pointer;
 }
 
@@ -130,15 +144,15 @@ a:hover { color: var(--color-tab-dark); }
 }
 .main-nav a {
   text-decoration: none;
-  color: var(--color-brand-dark);
-  font-weight: 600;
+  color: var(--color-text-inverse);
+  font-weight: 700;
+  font-size: 1.2rem; /* see .site-header comment above re: contrast */
   padding: var(--space-2) 0;
   border-bottom: 3px solid transparent;
 }
 .main-nav a:hover,
 .main-nav a[aria-current="page"] {
-  border-bottom-color: var(--color-tab);
-  color: var(--color-tab-dark);
+  border-bottom-color: var(--color-selected);
 }
 
 @media (max-width: 700px) {
@@ -152,7 +166,7 @@ a:hover { color: var(--color-tab-dark); }
     flex-direction: column;
     gap: 0;
   }
-  .main-nav li { border-top: 1px solid var(--color-bg); }
+  .main-nav li { border-top: 1px solid rgba(255, 255, 255, 0.35); }
   .main-nav a { display: block; padding: var(--space-3); }
   .site-header .container { flex-wrap: wrap; }
 }
@@ -199,7 +213,16 @@ a:hover { color: var(--color-tab-dark); }
 }
 .card h3 { color: var(--color-brand); }
 
-/* --- Podcast theme index / sections --- */
+/* --- Intro + theme-nav band (podcasts.html, exercises.html) ---
+   Full-bleed light tint so the "what is this section" intro and the
+   jump-to-theme nav read as visually separate from the actual content
+   cards below, instead of blending into the same white page background. */
+.intro-band {
+  background-color: var(--color-intro-bg);
+  padding-block: var(--space-4);
+}
+
+/* --- Podcast/exercise theme index / sections --- */
 .theme-nav {
   margin-block: var(--space-4);
 }
