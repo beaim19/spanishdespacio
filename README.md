@@ -57,7 +57,28 @@ the `<h1>`, `data-src`, and `<title>`, then link it from `exercises.html`.
 
 A different exercise *type* (matching, fill-in-the-blank, etc.) will need its
 own small engine file and its own CSV column layout — same pattern, new
-component.
+component. `js/exercise-common.js` holds the CSV-loading + set-filtering
+logic shared by every engine, so a new engine only has to implement its own
+rendering/checking, not CSV plumbing.
+
+## Adding a new exercise (typed-answer / conjugation type)
+
+Same CSV-per-topic idea, different columns and a different engine
+(`js/exercise-typed.js`): the user types the answer into a text box instead
+of picking between two buttons, with the infinitive shown as a hint.
+
+```
+set,id,before,after,infinitive,correct
+1,1,"Yo","español todos los días.",hablar,hablo
+```
+
+Renders as: "Yo [ ___ ] español todos los días. *(hablar)*". Matching is
+case-insensitive but accent-sensitive — "Hablo" and "hablo" both count,
+"habло" without the accent on a word that needs one does not.
+
+This engine also adds an accent toolbar (á é í ó ú ñ ¿ ¡) above the
+questions, matching the buttons in the DELE app — clicking one inserts the
+character into whichever text box was last focused, at the cursor position.
 
 ### Writing accented characters (á, é, í, ó, ú, ñ, ¿, ¡) correctly
 

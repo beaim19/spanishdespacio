@@ -20,6 +20,7 @@
   /* --- Neutral text --- */
   --color-text: #222222;        /* body copy: 15.9:1 on white, 6.2:1 on --color-bg */
   --color-text-inverse: #ffffff;
+  --color-hover-tint: #eef2ec;   /* very light neutral for hover states — sage itself is too dark to hold dark-green text/borders on hover */
 
   --font-base: 'Segoe UI', Arial, Helvetica, sans-serif;
 
@@ -46,7 +47,13 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   color: var(--color-text);
-  background-color: var(--color-bg);
+  /* White page background: --color-bg (the sage green) is kept for the
+     header border, hero band, and footer, but a full-page green wash was
+     putting green heading text and the orange divider directly against
+     green, which read poorly and is also a contrast problem (checked:
+     ~1.7:1, needs 4.5:1). White everywhere else keeps sage as an accent
+     instead of a backdrop. */
+  background-color: var(--color-panel);
 }
 img { max-width: 100%; height: auto; display: block; }
 a { color: var(--color-brand-dark); text-underline-offset: 2px; }
@@ -228,7 +235,7 @@ a:hover { color: var(--color-tab-dark); }
 }
 .theme-section h2 {
   color: var(--color-brand);
-  border-bottom: 3px solid var(--color-selected);
+  border-bottom: 3px solid var(--color-selected-dark);
   padding-bottom: var(--space-2);
 }
 .theme-empty {
@@ -268,7 +275,7 @@ a:hover { color: var(--color-tab-dark); }
   cursor: pointer;
 }
 .option-btn:hover:not(:disabled) {
-  background-color: var(--color-bg);
+  background-color: var(--color-hover-tint);
 }
 .option-btn.option-selected {
   background-color: var(--color-selected);
@@ -306,6 +313,59 @@ a:hover { color: var(--color-tab-dark); }
 .exercise-meta {
   color: var(--color-brand-dark);
   font-weight: 600;
+}
+
+/* --- Exercises: typed-answer (conjugation) engine --- */
+.accent-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+.accent-btn {
+  font-family: inherit;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: var(--color-panel);
+  color: var(--color-brand-dark);
+  border: 2px solid var(--color-brand);
+  border-radius: var(--radius);
+  min-height: 44px;
+  min-width: 44px;
+  cursor: pointer;
+}
+.accent-btn:hover { background-color: var(--color-hover-tint); }
+
+.exercise-input {
+  font-family: inherit;
+  font-size: 1.1rem;
+  padding: var(--space-1) var(--space-2);
+  min-height: 44px;
+  width: 9ch;
+  border: 2px solid var(--color-brand);
+  border-radius: var(--radius);
+  margin: 0 var(--space-1);
+}
+.exercise-input.input-correct {
+  border-color: var(--color-brand-dark);
+  background-color: var(--color-hover-tint);
+  color: var(--color-brand-dark);
+  font-weight: 700;
+}
+.exercise-input.input-incorrect {
+  border-color: var(--color-tab-dark);
+  color: var(--color-tab-dark);
+  text-decoration: line-through;
+}
+.exercise-hint {
+  font-style: italic;
+  color: var(--color-text);
+  opacity: 0.75;
+}
+.exercise-feedback {
+  color: var(--color-tab-dark);
+  font-style: italic;
+  font-size: 0.95rem;
 }
 
 /* --- Buttons --- */

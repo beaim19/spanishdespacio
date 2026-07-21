@@ -15,7 +15,8 @@
  *
  * Host page needs, before this script:
  *   1. PapaParse (loaded via CDN)
- *   2. A container: <div id="exercise-app" data-src="/content/exercises/ser-estar.csv"></div>
+ *   2. js/exercise-common.js
+ *   3. A container: <div id="exercise-app" data-src="/content/exercises/ser-estar.csv"></div>
  *
  * Which set to show comes from the URL query string, e.g.
  * ser-estar.html?set=2 — defaults to set 1 if not given.
@@ -27,24 +28,15 @@
   const REVEAL_CLASS = 'option-reveal-correct';
 
   async function loadExercise(container) {
-    const src = container.dataset.src;
-    const requestedSet = new URLSearchParams(window.location.search).get('set') || '1';
-
     try {
-      const res = await fetch(src);
-      if (!res.ok) throw new Error(`${src} respondió ${res.status}`);
-      const csvText = await res.text();
-      const { data } = Papa.parse(csvText, { header: true, skipEmptyLines: true });
-
-      const allSets = [...new Set(data.map((r) => (r.set || '').trim()).filter(Boolean))];
-      const rows = data.filter((r) => (r.set || '').trim() === requestedSet.trim());
+      const { rows, requestedSet, totalSets } = await window.ExerciseCommon.loadCsvSet(container.dataset.src);
 
       if (rows.length === 0) {
-        container.innerHTML = `<p>No existe la serie ${requestedSet}. Series disponibles: ${allSets.join(', ') || 'ninguna'}.</p>`;
+        container.innerHTML = `<p>No existe la serie ${requestedSet}.</p>`;
         return;
       }
 
-      renderExercise(container, rows, requestedSet, allSets.length);
+      renderExercise(container, rows, requestedSet, totalSets);
     } catch (err) {
       console.error('No se pudo cargar el ejercicio', err);
       container.innerHTML = '<p>No se pudo cargar el ejercicio. Inténtalo de nuevo más tarde.</p>';
