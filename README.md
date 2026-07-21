@@ -7,17 +7,77 @@ custom domain `spanishdespacio.com` via Porkbun DNS.
 ## Structure
 
 ```
-index.html          Home page
-podcasts.html        Spotify for Creators embeds
-exercises.html        Practice activities
-dele.html             DELE A2 Shiny app (iframe)
-about.html            About / contact
-privacy.html          Privacy & cookies policy (GDPR etc.)
-css/styles.css        All site styles (colors match the DELE app)
-js/main.js            Shared header/footer injection, mobile nav
-partials/header.html  Shared nav, injected by main.js
-partials/footer.html  Shared footer, injected by main.js
+index.html               Home page
+podcasts.html             Podcasts, organized by theme (anchor-nav index)
+exercises.html            Exercises, organized by grammar topic (anchor-nav index)
+exercises/*.html          One page per exercise (e.g. ser-estar-1.html)
+dele.html                 DELE A2 Shiny app (iframe)
+about.html                About / contact
+privacy.html              Privacy & cookies policy
+css/styles.css            All site styles (colors match the DELE app)
+js/main.js                Shared header/footer injection, mobile nav
+js/exercise-choice2.js    Reusable "pick between two options" exercise engine
+content/exercises/        Exercise content as CSV — see below
+partials/header.html      Shared nav, injected by main.js
+partials/footer.html      Shared footer, injected by main.js
 ```
+
+## Adding a new exercise (two-option type, e.g. ser/estar, por/para)
+
+Content lives as one CSV per **topic** (not per set of 10) under
+`content/exercises/<topic>.csv`, e.g. `ser-estar.csv`, `por-para.csv` —
+separate from the code, the same idea as keeping exercise data in Excel for
+the Shiny app, just as plain-text CSV instead (so `git diff` actually shows
+what changed, unlike a binary .xlsx).
+
+Columns for the two-option type:
+
+```
+set,id,before,after,option_a,option_b,correct
+1,"Ella","muy cansada hoy.",es,está,está
+```
+
+`set` is which group of ~10 questions a row belongs to — this is what lets
+one file hold every set for a topic. `before`/`after` are the sentence split
+around the blank, `option_a`/`option_b` are the two clickable choices,
+`correct` must exactly match the text of whichever option is right.
+
+**To add a new set to an existing topic:** just append 10 more rows with the
+next `set` number (2, 3...) to that topic's CSV, then add one link in
+`exercises.html`: `href="/exercises/ser-estar.html?set=2"`. No new files, no
+new HTML pages — the engine (`js/exercise-choice2.js`) reads the `set` query
+parameter from the URL, filters to matching rows, and figures out how many
+sets exist automatically from the data. Same idea as before (no manual count
+to maintain), just applied one level up: number of *questions* = rows in a
+set; number of *sets* = distinct `set` values in the file.
+
+**To add a brand-new topic of this same type:** new CSV
+(`content/exercises/<topic>.csv`), copy `exercises/ser-estar.html` changing
+the `<h1>`, `data-src`, and `<title>`, then link it from `exercises.html`.
+
+A different exercise *type* (matching, fill-in-the-blank, etc.) will need its
+own small engine file and its own CSV column layout — same pattern, new
+component.
+
+### Writing accented characters (á, é, í, ó, ú, ñ, ¿, ¡) correctly
+
+If you edit these CSVs in Excel and see garbled characters instead of accents,
+that's an encoding mismatch — Excel's plain "CSV (Comma delimited)" save
+format uses the Windows system codepage, not UTF-8, which is what the website
+expects. Fix: in Excel, use **File → Save As**, and in the file-type dropdown
+pick **"CSV UTF-8 (Comma delimited) (*.csv)"** specifically — it's a separate
+option from plain "CSV (Comma delimited)" in Excel 2016 and later. The CSVs
+in this repo are saved with a UTF-8 byte-order-mark, which is what makes
+Excel correctly detect UTF-8 when you double-click to open them; re-saving
+with the "CSV UTF-8" option keeps that intact.
+
+### Known loose ends
+
+`content/exercises/ser-estar/set-01.csv` and `exercises/ser-estar-1.html` are
+leftover from an earlier version of this pattern (one file per set of 10)
+before switching to one file per topic. They're unused by any live page but
+weren't deleted — feel free to delete them yourself in File Explorer whenever
+convenient.
 
 ## Local preview
 

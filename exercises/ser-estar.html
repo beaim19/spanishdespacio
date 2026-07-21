@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ser o estar — Spanish Despacio</title>
+  <meta name="description" content="Ejercicio interactivo: elige entre ser y estar en cada frase.">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+  <div id="site-header-placeholder"></div>
+
+  <main id="main-content">
+    <div class="container">
+      <h1>Ser o estar</h1>
+      <p>Elige la palabra correcta para completar cada frase. Cuando termines, pulsa "Comprobar".</p>
+
+      <div id="exercise-app" data-src="/content/exercises/ser-estar.csv">
+        <p>Cargando ejercicio…</p>
+      </div>
+
+      <p><a href="/exercises.html">&larr; Volver a Ejercicios</a></p>
+    </div>
+  </main>
+
+  <div id="site-footer-placeholder"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <script src="/js/exercise-choice2.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

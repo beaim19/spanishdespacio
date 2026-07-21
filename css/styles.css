@@ -236,6 +236,78 @@ a:hover { color: var(--color-tab-dark); }
   font-style: italic;
 }
 
+/* --- Exercises: two-option choice engine --- */
+.exercise-list {
+  list-style: decimal;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+.exercise-item {
+  margin-bottom: var(--space-4);
+}
+.exercise-sentence {
+  font-size: 1.1rem;
+  line-height: 2.2;
+}
+.option-group {
+  display: inline-flex;
+  gap: var(--space-2);
+  margin: 0 var(--space-2);
+}
+.option-btn {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: var(--color-panel);
+  color: var(--color-brand-dark);
+  border: 2px solid var(--color-brand);
+  border-radius: var(--radius);
+  padding: var(--space-1) var(--space-3);
+  min-height: 44px;
+  min-width: 44px;
+  cursor: pointer;
+}
+.option-btn:hover:not(:disabled) {
+  background-color: var(--color-bg);
+}
+.option-btn.option-selected {
+  background-color: var(--color-selected);
+  border-color: var(--color-selected-dark);
+  color: var(--color-text);
+}
+.option-btn.option-correct {
+  background-color: var(--color-brand-dark);
+  border-color: var(--color-brand-dark);
+  color: var(--color-text-inverse);
+}
+.option-btn.option-incorrect {
+  background-color: var(--color-panel);
+  border-color: var(--color-tab-dark);
+  color: var(--color-tab-dark);
+  text-decoration: line-through;
+}
+.option-btn.option-reveal-correct {
+  border-color: var(--color-brand-dark);
+  border-width: 3px;
+  font-weight: 700;
+}
+.option-btn:disabled { cursor: default; }
+
+.exercise-controls {
+  display: flex;
+  gap: var(--space-3);
+  margin-block: var(--space-4);
+}
+.exercise-result {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-brand);
+}
+.exercise-meta {
+  color: var(--color-brand-dark);
+  font-weight: 600;
+}
+
 /* --- Buttons --- */
 .btn {
   display: inline-block;

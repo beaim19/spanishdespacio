@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ejercicios — Spanish Despacio</title>
-  <meta name="description" content="Ejercicios de comprensión y vocabulario para practicar español.">
+  <meta name="description" content="Ejercicios de gramática y vocabulario para practicar español, organizados por tema.">
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
@@ -15,11 +15,78 @@
   <main id="main-content">
     <div class="container">
       <h1>Ejercicios</h1>
-      <p>Actividades para reforzar lo que escuchas en los podcasts.</p>
+      <p>Actividades para reforzar la gramática, organizadas por tema.</p>
 
-      <section class="panel">
-        <h2>Próximamente</h2>
-        <p>Esta sección está en construcción. Aquí irán ejercicios de comprensión, vocabulario y gramática ligados a cada episodio.</p>
+      <!--
+        Same pattern as the podcasts page: plain anchor links, zero JS
+        needed for the index itself. Add a new <li> here whenever a new
+        topic section is added below.
+      -->
+      <nav class="theme-nav" aria-label="Temas de ejercicios">
+        <ul>
+          <li><a href="#tema-ser-estar">Ser y estar</a></li>
+          <li><a href="#tema-por-para">Por y para</a></li>
+          <li><a href="#tema-presente">Presente</a></li>
+          <li><a href="#tema-pasado">Pasado</a></li>
+          <li><a href="#tema-pasado-perfecto">Pasado perfecto</a></li>
+          <li><a href="#tema-futuro">Futuro</a></li>
+          <li><a href="#tema-subjuntivo">Subjuntivo</a></li>
+          <li><a href="#tema-imperativo">Imperativo</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="container">
+      <section class="theme-section" id="tema-ser-estar" aria-labelledby="tema-ser-estar-h">
+        <h2 id="tema-ser-estar-h">Ser y estar</h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Serie 1</h3>
+            <p>Elige entre ser y estar en 10 frases.</p>
+            <a class="btn btn-primary" href="/exercises/ser-estar.html?set=1">Empezar</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="theme-section" id="tema-por-para" aria-labelledby="tema-por-para-h">
+        <h2 id="tema-por-para-h">Por y para</h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Serie 1</h3>
+            <p>Elige entre por y para en 10 frases.</p>
+            <a class="btn btn-primary" href="/exercises/por-para.html?set=1">Empezar</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="theme-section" id="tema-presente" aria-labelledby="tema-presente-h">
+        <h2 id="tema-presente-h">Presente</h2>
+        <div class="card-grid"><p class="theme-empty">Ejercicios próximamente.</p></div>
+      </section>
+
+      <section class="theme-section" id="tema-pasado" aria-labelledby="tema-pasado-h">
+        <h2 id="tema-pasado-h">Pasado</h2>
+        <div class="card-grid"><p class="theme-empty">Ejercicios próximamente.</p></div>
+      </section>
+
+      <section class="theme-section" id="tema-pasado-perfecto" aria-labelledby="tema-pasado-perfecto-h">
+        <h2 id="tema-pasado-perfecto-h">Pasado perfecto</h2>
+        <div class="card-grid"><p class="theme-empty">Ejercicios próximamente.</p></div>
+      </section>
+
+      <section class="theme-section" id="tema-futuro" aria-labelledby="tema-futuro-h">
+        <h2 id="tema-futuro-h">Futuro</h2>
+        <div class="card-grid"><p class="theme-empty">Ejercicios próximamente.</p></div>
+      </section>
+
+      <section class="theme-section" id="tema-subjuntivo" aria-labelledby="tema-subjuntivo-h">
+        <h2 id="tema-subjuntivo-h">Subjuntivo</h2>
+        <div class="card-grid"><p class="theme-empty">Ejercicios próximamente.</p></div>
+      </section>
+
+      <section class="theme-section" id="tema-imperativo" aria-labelledby="tema-imperativo-h">
+        <h2 id="tema-imperativo-h">Imperativo</h2>
+        <div class="card-grid"><p class="theme-empty">Ejercicios próximamente.</p></div>
       </section>
     </div>
   </main>
