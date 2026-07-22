@@ -19,8 +19,39 @@ window.ExerciseCommon = (function () {
     const allSets = [...new Set(data.map((r) => (r.set || '').trim()).filter(Boolean))];
     const rows = data.filter((r) => (r.set || '').trim() === requestedSet);
 
-    return { rows, requestedSet, totalSets: allSets.length };
+    return { rows, requestedSet, allSets, totalSets: allSets.length };
   }
 
-  return { loadCsvSet };
+  /*
+   * Builds the "Serie 1 / Serie 2 / ..." pill nav shown at the top of an
+   * exercise page once a topic has more than one set — plain links to
+   * ?set=N on the same page, so it works with zero extra JS wiring beyond
+   * calling this once. Returns null (nothing to render) if there's only
+   * one set, since a switcher for one option isn't useful.
+   */
+  function buildSetSwitcher(allSets, currentSet) {
+    if (!allSets || allSets.length <= 1) return null;
+
+    const nav = document.createElement('nav');
+    nav.className = 'set-switcher';
+    nav.setAttribute('aria-label', 'Elegir serie');
+
+    const list = document.createElement('ul');
+    const sorted = [...allSets].sort((a, b) => Number(a) - Number(b));
+
+    sorted.forEach((setId) => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = `?set=${encodeURIComponent(setId)}`;
+      a.textContent = `Serie ${setId}`;
+      if (setId === currentSet) a.setAttribute('aria-current', 'true');
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+
+    nav.appendChild(list);
+    return nav;
+  }
+
+  return { loadCsvSet, buildSetSwitcher };
 })();

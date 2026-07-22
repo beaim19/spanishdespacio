@@ -84,14 +84,14 @@ a:hover { color: var(--color-tab-dark); }
 }
 
 /* --- Header / nav ---
-   Header background is the brand green (matches the DELE app). White text
-   is the only readable option on this green (4.28:1 — short of the 4.5:1
-   normal-text AA threshold), so nav text and the tagline are sized/weighted
-   to qualify as "large text" instead, which only needs 3:1 and clears it
-   comfortably. */
+   White header, primary-green text. Note on contrast: --color-brand on
+   white is 4.28:1 — just under the 4.5:1 AA threshold for normal-size
+   text (large/bold text only needs 3:1, which this clears easily). Kept
+   as requested since it's a small, common gap; swap to --color-brand-dark
+   (6.76:1) any time for a fully-compliant version of the same green. */
 .site-header {
-  background-color: var(--color-brand);
-  border-bottom: 4px solid var(--color-selected-dark);
+  background-color: var(--color-panel);
+  border-bottom: 4px solid var(--color-brand);
 }
 .site-header .container {
   display: flex;
@@ -107,52 +107,51 @@ a:hover { color: var(--color-tab-dark); }
 }
 .site-logo-img {
   display: block;
-  height: 48px;
+  height: 80px;
   width: auto;
-  /* the logo artwork has a solid white background — on the green header
-     that would show as a stray white rectangle, so it's turned into a
-     deliberate badge instead */
-  background-color: var(--color-panel);
-  padding: var(--space-1);
-  border-radius: var(--radius);
 }
 .site-tagline {
   display: block;
-  font-size: 1.2rem; /* large enough (with bold) to qualify for the 3:1 AA threshold on green */
-  font-weight: 700;
-  color: var(--color-text-inverse);
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--color-brand);
 }
 
 .nav-toggle {
   display: none;
   background: none;
-  border: 2px solid var(--color-text-inverse);
-  color: var(--color-text-inverse);
+  border: 2px solid var(--color-brand);
+  color: var(--color-brand-dark);
   border-radius: var(--radius);
   padding: var(--space-2) var(--space-3);
   font-size: 1rem;
-  font-weight: 700;
   cursor: pointer;
 }
 
 .main-nav ul {
   list-style: none;
   display: flex;
+  align-items: center;
   gap: var(--space-4);
   margin: 0;
   padding: 0;
 }
+/* Sends "Sobre el proyecto" to the far right, away from the other tabs */
+.main-nav li.nav-push-right {
+  margin-left: auto;
+}
 .main-nav a {
   text-decoration: none;
-  color: var(--color-text-inverse);
-  font-weight: 700;
-  font-size: 1.2rem; /* see .site-header comment above re: contrast */
+  color: var(--color-brand);
+  font-weight: 600;
+  font-size: 0.95rem;
   padding: var(--space-2) 0;
   border-bottom: 3px solid transparent;
 }
 .main-nav a:hover,
 .main-nav a[aria-current="page"] {
   border-bottom-color: var(--color-selected);
+  color: var(--color-brand-dark);
 }
 
 @media (max-width: 700px) {
@@ -164,9 +163,11 @@ a:hover { color: var(--color-tab-dark); }
   .main-nav.is-open { display: block; }
   .main-nav ul {
     flex-direction: column;
+    align-items: stretch;
     gap: 0;
   }
-  .main-nav li { border-top: 1px solid rgba(255, 255, 255, 0.35); }
+  .main-nav li.nav-push-right { margin-left: 0; }
+  .main-nav li { border-top: 1px solid var(--color-hover-tint); }
   .main-nav a { display: block; padding: var(--space-3); }
   .site-header .container { flex-wrap: wrap; }
 }
@@ -210,8 +211,17 @@ a:hover { color: var(--color-tab-dark); }
   border-radius: var(--radius);
   padding: var(--space-4);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  /* flex column + the paragraph growing to fill space is what keeps the
+     button aligned at the same height across cards regardless of how much
+     text is in each one (grid rows already stretch cards to equal height) */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
-.card h3 { color: var(--color-brand); }
+.card h3 { color: var(--color-brand); margin-top: 0; }
+.card p { flex-grow: 1; }
+.card .btn { margin-top: var(--space-3); align-self: center; }
 
 /* --- Intro + theme-nav band (podcasts.html, exercises.html) ---
    Full-bleed light tint so the "what is this section" intro and the
@@ -253,17 +263,78 @@ a:hover { color: var(--color-tab-dark); }
 }
 
 .theme-section {
-  margin-block: var(--space-5);
   scroll-margin-top: var(--space-4); /* keeps the heading visible after an anchor jump */
 }
-.theme-section h2 {
-  color: var(--color-brand);
-  border-bottom: 3px solid var(--color-selected-dark);
-  padding-bottom: var(--space-2);
+
+/* One compact row per theme: title + one-line description on the left,
+   a single CTA on the right — kept short on purpose so a long list of
+   themes (or a topic with several series) doesn't turn into a wall of
+   scrolling. Series-switching (when a topic has more than one) happens on
+   the topic's own page, not here — see .set-switcher. */
+.theme-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  background-color: var(--color-panel);
+  border-radius: var(--radius);
+  padding: var(--space-3) var(--space-4);
+  margin-block: var(--space-3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+.theme-block-text h2 {
+  margin: 0 0 var(--space-1) 0;
+  font-size: 1.25rem;
+  color: var(--color-brand);
+}
+.theme-block-text p {
+  margin: 0;
+  color: var(--color-text);
+}
+.theme-block .btn { flex-shrink: 0; }
 .theme-empty {
   color: var(--color-text);
+  opacity: 0.7;
   font-style: italic;
+  flex-shrink: 0;
+  padding: var(--space-2) var(--space-4);
+}
+
+@media (max-width: 700px) {
+  .theme-block {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Series switcher inside a topic page (ser-estar.html etc.) when a topic
+   has more than one set of ~10 questions. */
+.set-switcher {
+  margin-bottom: var(--space-4);
+}
+.set-switcher ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+}
+.set-switcher a {
+  display: inline-block;
+  background-color: var(--color-panel);
+  color: var(--color-brand-dark);
+  text-decoration: none;
+  font-weight: 600;
+  padding: var(--space-1) var(--space-3);
+  border-radius: 999px;
+  border: 2px solid var(--color-brand);
+  min-height: 44px;
+  line-height: 1.9;
+}
+.set-switcher a[aria-current="true"] {
+  background-color: var(--color-brand);
+  color: var(--color-text-inverse);
 }
 
 /* --- Exercises: two-option choice engine --- */
@@ -333,11 +404,6 @@ a:hover { color: var(--color-tab-dark); }
   font-weight: 700;
   color: var(--color-brand);
 }
-.exercise-meta {
-  color: var(--color-brand-dark);
-  font-weight: 600;
-}
-
 /* --- Exercises: typed-answer (conjugation) engine --- */
 .accent-toolbar {
   display: flex;
@@ -423,21 +489,44 @@ a:hover { color: var(--color-tab-dark); }
    it read as "a box containing a website." Letting it span the viewport
    and take most of the screen height makes it feel like part of the page. */
 .iframe-wrapper {
+  position: relative;
   width: 100%;
   border-top: 3px solid var(--color-brand);
   border-bottom: 3px solid var(--color-brand);
 }
 .iframe-wrapper iframe {
   width: 100%;
-  height: calc(100vh - 90px); /* full viewport minus roughly the header height */
+  height: calc(100vh - 120px); /* full viewport minus roughly the header height (80px logo + padding) */
   min-height: 600px;
   border: none;
   display: block;
 }
 
+.iframe-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  background-color: var(--color-panel);
+}
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 6px solid var(--color-hover-tint);
+  border-top-color: var(--color-brand);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
 @media (max-width: 700px) {
   .iframe-wrapper iframe {
-    height: calc(100vh - 140px); /* header wraps taller on mobile */
+    height: calc(100vh - 170px); /* header wraps taller on mobile, plus the bigger logo */
     min-height: 500px;
   }
 }

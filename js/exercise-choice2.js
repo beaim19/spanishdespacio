@@ -29,29 +29,25 @@
 
   async function loadExercise(container) {
     try {
-      const { rows, requestedSet, totalSets } = await window.ExerciseCommon.loadCsvSet(container.dataset.src);
+      const { rows, requestedSet, allSets } = await window.ExerciseCommon.loadCsvSet(container.dataset.src);
 
       if (rows.length === 0) {
         container.innerHTML = `<p>No existe la serie ${requestedSet}.</p>`;
         return;
       }
 
-      renderExercise(container, rows, requestedSet, totalSets);
+      renderExercise(container, rows, requestedSet, allSets);
     } catch (err) {
       console.error('No se pudo cargar el ejercicio', err);
       container.innerHTML = '<p>No se pudo cargar el ejercicio. Inténtalo de nuevo más tarde.</p>';
     }
   }
 
-  function renderExercise(container, rows, setNumber, totalSets) {
+  function renderExercise(container, rows, setNumber, allSets) {
     container.innerHTML = '';
 
-    if (totalSets > 1) {
-      const meta = document.createElement('p');
-      meta.className = 'exercise-meta';
-      meta.textContent = `Serie ${setNumber} de ${totalSets}`;
-      container.appendChild(meta);
-    }
+    const switcher = window.ExerciseCommon.buildSetSwitcher(allSets, setNumber);
+    if (switcher) container.appendChild(switcher);
 
     const list = document.createElement('ol');
     list.className = 'exercise-list';

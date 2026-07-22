@@ -28,12 +28,27 @@
       instead of an embed.
     -->
     <section class="iframe-wrapper">
+      <div class="iframe-loading" id="dele-loading" aria-live="polite">
+        <span class="spinner" aria-hidden="true"></span>
+        <p>Cargando la aplicación… puede tardar unos segundos.</p>
+      </div>
       <iframe
+        id="dele-frame"
         src="https://shiny-app-service-862289729029.europe-southwest1.run.app"
         title="Simulador de práctica DELE A2"
         loading="lazy">
       </iframe>
     </section>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var frame = document.getElementById('dele-frame');
+        var loading = document.getElementById('dele-loading');
+        if (frame && loading) {
+          frame.addEventListener('load', function () { loading.hidden = true; });
+        }
+      });
+    </script>
 
     <div class="container">
       <p>

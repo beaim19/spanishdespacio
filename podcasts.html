@@ -36,45 +36,54 @@
     </section>
 
     <div class="container">
-      <!--
-        One section per theme. Each card-grid is where real episode cards
-        will go once episodes exist (RSS.com feed pending) — see the
-        .theme-empty placeholder for what to replace.
-        data-theme is there for later JS (e.g. a combined "all episodes"
-        view with client-side filtering) — not used yet.
-      -->
+      <!-- One row per theme — see README for how to wire up real episodes once the RSS feed exists. -->
       <section class="theme-section" id="tema-deportes" aria-labelledby="tema-deportes-h">
-        <h2 id="tema-deportes-h">Deportes</h2>
-        <div class="card-grid" data-theme="deportes">
-          <p class="theme-empty">Episodios próximamente.</p>
+        <div class="theme-block">
+          <div class="theme-block-text">
+            <h2 id="tema-deportes-h">Deportes</h2>
+            <p>Episodios sobre deporte y vida activa en español.</p>
+          </div>
+          <span class="theme-empty">Próximamente</span>
         </div>
       </section>
 
       <section class="theme-section" id="tema-comidas" aria-labelledby="tema-comidas-h">
-        <h2 id="tema-comidas-h">Comidas</h2>
-        <div class="card-grid" data-theme="comidas">
-          <p class="theme-empty">Episodios próximamente.</p>
+        <div class="theme-block">
+          <div class="theme-block-text">
+            <h2 id="tema-comidas-h">Comidas</h2>
+            <p>Platos, recetas y tradiciones culinarias.</p>
+          </div>
+          <span class="theme-empty">Próximamente</span>
         </div>
       </section>
 
       <section class="theme-section" id="tema-historia" aria-labelledby="tema-historia-h">
-        <h2 id="tema-historia-h">Historia</h2>
-        <div class="card-grid" data-theme="historia">
-          <p class="theme-empty">Episodios próximamente.</p>
+        <div class="theme-block">
+          <div class="theme-block-text">
+            <h2 id="tema-historia-h">Historia</h2>
+            <p>Momentos y personajes de la historia en español.</p>
+          </div>
+          <span class="theme-empty">Próximamente</span>
         </div>
       </section>
 
       <section class="theme-section" id="tema-turismo" aria-labelledby="tema-turismo-h">
-        <h2 id="tema-turismo-h">Turismo</h2>
-        <div class="card-grid" data-theme="turismo">
-          <p class="theme-empty">Episodios próximamente.</p>
+        <div class="theme-block">
+          <div class="theme-block-text">
+            <h2 id="tema-turismo-h">Turismo</h2>
+            <p>Lugares y experiencias para viajeros.</p>
+          </div>
+          <span class="theme-empty">Próximamente</span>
         </div>
       </section>
 
       <section class="theme-section" id="tema-viajes" aria-labelledby="tema-viajes-h">
-        <h2 id="tema-viajes-h">Viajes</h2>
-        <div class="card-grid" data-theme="viajes">
-          <p class="theme-empty">Episodios próximamente.</p>
+        <div class="theme-block">
+          <div class="theme-block-text">
+            <h2 id="tema-viajes-h">Viajes</h2>
+            <p>Historias y consejos de viajes por el mundo hispanohablante.</p>
+          </div>
+          <span class="theme-empty">Próximamente</span>
         </div>
       </section>
     </div>

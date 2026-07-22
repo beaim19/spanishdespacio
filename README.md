@@ -43,13 +43,15 @@ around the blank, `option_a`/`option_b` are the two clickable choices,
 `correct` must exactly match the text of whichever option is right.
 
 **To add a new set to an existing topic:** just append 10 more rows with the
-next `set` number (2, 3...) to that topic's CSV, then add one link in
-`exercises.html`: `href="/exercises/ser-estar.html?set=2"`. No new files, no
-new HTML pages — the engine (`js/exercise-choice2.js`) reads the `set` query
-parameter from the URL, filters to matching rows, and figures out how many
-sets exist automatically from the data. Same idea as before (no manual count
-to maintain), just applied one level up: number of *questions* = rows in a
-set; number of *sets* = distinct `set` values in the file.
+next `set` number (2, 3...) to that topic's CSV — nothing else to do.
+`exercises.html` links to the topic page directly (e.g.
+`/exercises/ser-estar.html`, no `?set=` needed — it defaults to set 1). The
+engine reads however many distinct `set` values exist in the file and
+automatically shows a "Serie 1 / Serie 2 / ..." switcher at the top of the
+page once there's more than one — with only one set, the switcher doesn't
+appear at all. Same idea as before (no manual count to maintain), just
+applied one level up: number of *questions* = rows in a set; number of
+*sets* = distinct `set` values in the file.
 
 **To add a brand-new topic of this same type:** new CSV
 (`content/exercises/<topic>.csv`), copy `exercises/ser-estar.html` changing
