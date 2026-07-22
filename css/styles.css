@@ -128,6 +128,7 @@ a:hover { color: var(--color-tab-dark); }
    nav-push-right's margin-left: auto had no slack space to push into. */
 .main-nav {
   flex: 1;
+  margin-left: var(--space-5);
 }
 .main-nav ul {
   list-style: none;
@@ -167,6 +168,7 @@ a:hover { color: var(--color-tab-dark); }
     align-items: stretch;
     gap: 0;
   }
+  .main-nav { margin-left: 0; }
   .main-nav li.nav-push-right { margin-left: 0; }
   .main-nav li { border-top: 1px solid var(--color-hover-tint); }
   .main-nav a { display: block; padding: var(--space-3); }
@@ -262,44 +264,14 @@ a:hover { color: var(--color-tab-dark); }
 }
 
 /* --- Podcast/exercise theme index / sections --- */
-.theme-nav {
-  margin-block: var(--space-4);
-}
-.theme-nav ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-  margin: 0;
-  padding: 0;
-}
-.theme-nav a {
-  display: inline-block;
-  background-color: var(--color-panel);
-  color: var(--color-brand-dark);
-  text-decoration: none;
-  font-weight: 600;
-  padding: var(--space-2) var(--space-3);
-  border-radius: 999px;
-  border: 2px solid var(--color-brand);
-  min-height: 44px;
-  line-height: 1.5;
-}
-.theme-nav a:hover,
-.theme-nav a:focus-visible {
-  background-color: var(--color-brand);
-  color: var(--color-text-inverse);
-}
-
 .theme-section {
-  scroll-margin-top: var(--space-4); /* keeps the heading visible after an anchor jump */
+  scroll-margin-top: var(--space-4);
 }
 
-/* One compact row per theme: title + one-line description on the left,
-   a single CTA on the right — kept short on purpose so a long list of
-   themes (or a topic with several series) doesn't turn into a wall of
-   scrolling. Series-switching (when a topic has more than one) happens on
-   the topic's own page, not here — see .set-switcher. */
+/* One compact row per theme: title + one-line description. Topics with
+   content are the whole row as one clickable link (no separate button) —
+   topics with nothing yet stay a plain, non-interactive row with a
+   "Próximamente" label instead. */
 .theme-block {
   display: flex;
   align-items: center;
@@ -311,6 +283,14 @@ a:hover { color: var(--color-tab-dark); }
   margin-block: var(--space-3);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+a.theme-block {
+  text-decoration: none;
+  color: inherit;
+}
+a.theme-block:hover,
+a.theme-block:focus-visible {
+  background-color: var(--color-hover-tint);
+}
 .theme-block-text h2 {
   margin: 0 0 var(--space-1) 0;
   font-size: 1.25rem;
@@ -320,7 +300,11 @@ a:hover { color: var(--color-tab-dark); }
   margin: 0;
   color: var(--color-text);
 }
-.theme-block .btn { flex-shrink: 0; }
+.theme-block-arrow {
+  flex-shrink: 0;
+  font-size: 1.5rem;
+  color: var(--color-brand-dark);
+}
 .theme-empty {
   color: var(--color-text);
   opacity: 0.7;
@@ -336,34 +320,42 @@ a:hover { color: var(--color-tab-dark); }
   }
 }
 
-/* Series switcher inside a topic page (ser-estar.html etc.) when a topic
-   has more than one set of ~10 questions. */
-.set-switcher {
-  margin-bottom: var(--space-4);
-}
+/* Series switcher — lives inside the green intro band of an exercise page
+   (ser-estar.html etc.) once a topic has more than one set of ~10
+   questions, so ghost/ outline style instead of the white-chip style used
+   elsewhere, to read correctly on green. */
 .set-switcher ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2);
-  margin: 0;
+  margin: var(--space-2) 0 0 0;
   padding: 0;
 }
 .set-switcher a {
   display: inline-block;
-  background-color: var(--color-panel);
-  color: var(--color-brand-dark);
+  background-color: transparent;
+  color: var(--color-text-inverse);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 1.2rem; /* large-text AA threshold on the green band, same reasoning as .intro-band p */
   padding: var(--space-1) var(--space-3);
   border-radius: 999px;
-  border: 2px solid var(--color-brand);
+  border: 2px solid var(--color-text-inverse);
   min-height: 44px;
-  line-height: 1.9;
+  line-height: 1.6;
 }
 .set-switcher a[aria-current="true"] {
-  background-color: var(--color-brand);
-  color: var(--color-text-inverse);
+  background-color: var(--color-text-inverse);
+  color: var(--color-brand-dark);
+}
+
+/* "Serie X" label above the questions themselves, in the white area —
+   only shown when there's more than one series. */
+.exercise-current-set {
+  color: var(--color-brand-dark);
+  font-weight: 700;
+  margin-top: 0;
 }
 
 /* --- Exercises: two-option choice engine --- */
@@ -407,6 +399,12 @@ a:hover { color: var(--color-tab-dark); }
   background-color: var(--color-selected-neutral);
   border-color: var(--color-brand-dark);
   color: var(--color-text);
+}
+/* Without this, :hover (which is more specific than a single class) would
+   win and the button would fade back to the lighter hover tint while the
+   mouse sat on it, making an already-picked answer look unpicked again. */
+.option-btn.option-selected:hover:not(:disabled) {
+  background-color: var(--color-selected-neutral);
 }
 .option-btn.option-correct {
   background-color: var(--color-brand-dark);

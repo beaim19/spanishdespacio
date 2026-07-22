@@ -53,5 +53,28 @@ window.ExerciseCommon = (function () {
     return nav;
   }
 
-  return { loadCsvSet, buildSetSwitcher };
+  /*
+   * Puts the series switcher into the page's #series-switcher-slot (which
+   * lives in the green intro band, not next to the questions) and returns
+   * a "Serie X" label element for the engine to place above the questions
+   * themselves — or null if there's only one series, since neither is
+   * useful when there's nothing to switch between.
+   */
+  function renderSeriesNav(setNumber, allSets) {
+    const slot = document.getElementById('series-switcher-slot');
+    if (slot) {
+      slot.innerHTML = '';
+      const switcher = buildSetSwitcher(allSets, setNumber);
+      if (switcher) slot.appendChild(switcher);
+    }
+
+    if (!allSets || allSets.length <= 1) return null;
+
+    const label = document.createElement('p');
+    label.className = 'exercise-current-set';
+    label.textContent = `Serie ${setNumber}`;
+    return label;
+  }
+
+  return { loadCsvSet, buildSetSwitcher, renderSeriesNav };
 })();

@@ -47,8 +47,8 @@
   function render(container, rows, setNumber, allSets) {
     container.innerHTML = '';
 
-    const switcher = window.ExerciseCommon.buildSetSwitcher(allSets, setNumber);
-    if (switcher) container.appendChild(switcher);
+    const label = window.ExerciseCommon.renderSeriesNav(setNumber, allSets);
+    if (label) container.appendChild(label);
 
     container.appendChild(buildAccentToolbar());
 

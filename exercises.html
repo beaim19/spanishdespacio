@@ -17,108 +17,87 @@
       <div class="container">
         <h1>Ejercicios</h1>
         <p>Actividades para reforzar la gramática, organizadas por tema.</p>
-
-        <!--
-          Same pattern as the podcasts page: plain anchor links, zero JS
-          needed for the index itself. Add a new <li> here whenever a new
-          topic section is added below.
-        -->
-        <nav class="theme-nav" aria-label="Temas de ejercicios">
-          <ul>
-            <li><a href="#tema-ser-estar">Ser y estar</a></li>
-            <li><a href="#tema-por-para">Por y para</a></li>
-            <li><a href="#tema-presente">Presente</a></li>
-            <li><a href="#tema-pasado">Pasado</a></li>
-            <li><a href="#tema-pasado-perfecto">Pasado perfecto</a></li>
-            <li><a href="#tema-futuro">Futuro</a></li>
-            <li><a href="#tema-subjuntivo">Subjuntivo</a></li>
-            <li><a href="#tema-imperativo">Imperativo</a></li>
-          </ul>
-        </nav>
       </div>
     </section>
 
     <div class="container">
-      <!--
-        One row per topic: title + one-line description + a single button.
-        If a topic ends up with several series, the series switcher lives
-        on the topic's own page (see exercises/ser-estar.html), not here —
-        keeps this index short no matter how much content exists underneath.
-      -->
-      <section class="theme-section" id="tema-ser-estar" aria-labelledby="tema-ser-estar-h">
-        <div class="theme-block">
+      <!-- Each topic is one clickable row (title + description); topics
+           with nothing published yet stay non-interactive with a
+           "Próximamente" label instead of a link. -->
+      <section class="theme-section" id="tema-ser-estar">
+        <a class="theme-block" href="/exercises/ser-estar.html">
           <div class="theme-block-text">
-            <h2 id="tema-ser-estar-h">Ser y estar</h2>
+            <h2>Ser y estar</h2>
             <p>Elige entre ser y estar según el contexto de cada frase.</p>
           </div>
-          <a class="btn btn-primary" href="/exercises/ser-estar.html">Empezar</a>
-        </div>
+          <span class="theme-block-arrow" aria-hidden="true">&rarr;</span>
+        </a>
       </section>
 
-      <section class="theme-section" id="tema-por-para" aria-labelledby="tema-por-para-h">
-        <div class="theme-block">
+      <section class="theme-section" id="tema-por-para">
+        <a class="theme-block" href="/exercises/por-para.html">
           <div class="theme-block-text">
-            <h2 id="tema-por-para-h">Por y para</h2>
+            <h2>Por y para</h2>
             <p>Practica cuándo usar por y cuándo usar para.</p>
           </div>
-          <a class="btn btn-primary" href="/exercises/por-para.html">Empezar</a>
-        </div>
+          <span class="theme-block-arrow" aria-hidden="true">&rarr;</span>
+        </a>
       </section>
 
-      <section class="theme-section" id="tema-presente" aria-labelledby="tema-presente-h">
-        <div class="theme-block">
+      <section class="theme-section" id="tema-presente">
+        <a class="theme-block" href="/exercises/presente.html">
           <div class="theme-block-text">
-            <h2 id="tema-presente-h">Presente</h2>
+            <h2>Presente</h2>
             <p>Conjuga verbos en presente para completar cada frase.</p>
           </div>
-          <a class="btn btn-primary" href="/exercises/presente.html">Empezar</a>
-        </div>
+          <span class="theme-block-arrow" aria-hidden="true">&rarr;</span>
+        </a>
       </section>
 
-      <section class="theme-section" id="tema-pasado" aria-labelledby="tema-pasado-h">
+      <section class="theme-section" id="tema-pasado">
         <div class="theme-block">
           <div class="theme-block-text">
-            <h2 id="tema-pasado-h">Pasado</h2>
+            <h2>Pasado</h2>
             <p>Practica las formas del pretérito.</p>
           </div>
           <span class="theme-empty">Próximamente</span>
         </div>
       </section>
 
-      <section class="theme-section" id="tema-pasado-perfecto" aria-labelledby="tema-pasado-perfecto-h">
+      <section class="theme-section" id="tema-pasado-perfecto">
         <div class="theme-block">
           <div class="theme-block-text">
-            <h2 id="tema-pasado-perfecto-h">Pasado perfecto</h2>
+            <h2>Pasado perfecto</h2>
             <p>Practica el pretérito perfecto compuesto.</p>
           </div>
           <span class="theme-empty">Próximamente</span>
         </div>
       </section>
 
-      <section class="theme-section" id="tema-futuro" aria-labelledby="tema-futuro-h">
+      <section class="theme-section" id="tema-futuro">
         <div class="theme-block">
           <div class="theme-block-text">
-            <h2 id="tema-futuro-h">Futuro</h2>
+            <h2>Futuro</h2>
             <p>Conjuga verbos en futuro.</p>
           </div>
           <span class="theme-empty">Próximamente</span>
         </div>
       </section>
 
-      <section class="theme-section" id="tema-subjuntivo" aria-labelledby="tema-subjuntivo-h">
+      <section class="theme-section" id="tema-subjuntivo">
         <div class="theme-block">
           <div class="theme-block-text">
-            <h2 id="tema-subjuntivo-h">Subjuntivo</h2>
+            <h2>Subjuntivo</h2>
             <p>Practica el modo subjuntivo.</p>
           </div>
           <span class="theme-empty">Próximamente</span>
         </div>
       </section>
 
-      <section class="theme-section" id="tema-imperativo" aria-labelledby="tema-imperativo-h">
+      <section class="theme-section" id="tema-imperativo">
         <div class="theme-block">
           <div class="theme-block-text">
-            <h2 id="tema-imperativo-h">Imperativo</h2>
+            <h2>Imperativo</h2>
             <p>Practica órdenes y peticiones con el imperativo.</p>
           </div>
           <span class="theme-empty">Próximamente</span>
