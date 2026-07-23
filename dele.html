@@ -13,13 +13,15 @@
   <div id="site-header-placeholder"></div>
 
   <main id="main-content">
-    <div class="container">
-      <h1>Práctica para el examen DELE A2</h1>
-      <p>
-        Esta aplicación interactiva (creada con R Shiny) te permite practicar con
-        preguntas en el estilo del examen oficial DELE A2.
-      </p>
-    </div>
+    <section class="intro-band">
+      <div class="container">
+        <h1>Práctica para el examen DELE A2</h1>
+        <p>
+          Esta aplicación interactiva (creada con R Shiny) te permite practicar con
+          preguntas en el estilo del examen oficial DELE A2.
+        </p>
+      </div>
+    </section>
 
     <!--
       Full-bleed, tall embed on purpose: at container width + card shadow it
@@ -35,7 +37,8 @@
       <iframe
         id="dele-frame"
         src="https://shiny-app-service-862289729029.europe-southwest1.run.app"
-        title="Simulador de práctica DELE A2">
+        title="Simulador de práctica DELE A2"
+        allow="unload">
       </iframe>
     </section>
 
