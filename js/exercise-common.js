@@ -70,7 +70,7 @@ window.ExerciseCommon = (function () {
 
     if (!allSets || allSets.length <= 1) return null;
 
-    const label = document.createElement('p');
+    const label = document.createElement('h2');
     label.className = 'exercise-current-set';
     label.textContent = `Serie ${setNumber}`;
     return label;

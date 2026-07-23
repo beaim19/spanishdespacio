@@ -249,19 +249,32 @@ a:hover { color: var(--color-tab-dark); }
   font-size: 1.2rem;
   font-weight: 700;
 }
-.intro-band .back-link {
+/* Top back-link: just a bigger arrow, sitting at title level. Large size
+   is also what keeps it AA-compliant as white-on-green (large/bold text
+   only needs 3:1, this is 4.28:1). */
+.back-link-top {
+  display: inline-block;
+  color: var(--color-text-inverse);
+  text-decoration: none;
+  font-size: 2.25rem;
+  line-height: 1;
+  margin-bottom: var(--space-2);
+}
+.back-link-top:hover { opacity: 0.8; }
+
+/* Bottom back-link: arrow + text, sitting in the white area after the
+   exercise, so it uses the same brand-dark-on-white treatment as regular
+   links (6.76:1 — fully compliant regardless of size). */
+.back-link-bottom {
   display: inline-flex;
   align-items: center;
   gap: var(--space-1);
-  color: var(--color-text-inverse);
+  color: var(--color-brand-dark);
   text-decoration: none;
-  font-weight: 700;
-  font-size: 1.2rem; /* same reasoning as .intro-band p — needs to qualify as "large text" for AA on this green */
-  margin-bottom: var(--space-2);
+  font-weight: 600;
+  margin-top: var(--space-4);
 }
-.intro-band .back-link:hover {
-  text-decoration: underline;
-}
+.back-link-bottom:hover { text-decoration: underline; }
 
 /* --- Podcast/exercise theme index / sections --- */
 .theme-section {
@@ -350,12 +363,14 @@ a.theme-block:focus-visible {
   color: var(--color-brand-dark);
 }
 
-/* "Serie X" label above the questions themselves, in the white area —
-   only shown when there's more than one series. */
+/* "Serie X" heading above the questions themselves, in the white area —
+   only shown when there's more than one series. Sized like a real section
+   title, not a small label. */
 .exercise-current-set {
-  color: var(--color-brand-dark);
+  color: var(--color-brand);
+  font-size: 1.6rem;
   font-weight: 700;
-  margin-top: 0;
+  margin: 0 0 var(--space-3) 0;
 }
 
 /* --- Exercises: two-option choice engine --- */

@@ -35,8 +35,7 @@
       <iframe
         id="dele-frame"
         src="https://shiny-app-service-862289729029.europe-southwest1.run.app"
-        title="Simulador de práctica DELE A2"
-        loading="lazy">
+        title="Simulador de práctica DELE A2">
       </iframe>
     </section>
 
@@ -44,9 +43,18 @@
       document.addEventListener('DOMContentLoaded', function () {
         var frame = document.getElementById('dele-frame');
         var loading = document.getElementById('dele-loading');
-        if (frame && loading) {
-          frame.addEventListener('load', function () { loading.hidden = true; });
-        }
+        if (!frame || !loading) return;
+
+        frame.addEventListener('load', function () { loading.hidden = true; });
+
+        // Safety net: never let the spinner get stuck forever covering the
+        // app, even if something prevents the iframe's "load" event from
+        // firing (e.g. the frame being blocked from loading at all).
+        window.setTimeout(function () {
+          if (!loading.hidden) {
+            loading.hidden = true;
+          }
+        }, 20000);
       });
     </script>
 
