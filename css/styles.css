@@ -557,6 +557,13 @@ a.theme-block:focus-visible {
   gap: var(--space-3);
   background-color: var(--color-panel);
 }
+/* Without this, setting the "hidden" attribute in JS does nothing — the
+   class rule above and the browser's built-in [hidden] rule are equally
+   specific, and author CSS wins ties, so display:flex was winning and the
+   spinner could never actually disappear. This is the actual bug. */
+.iframe-loading[hidden] {
+  display: none;
+}
 .spinner {
   width: 48px;
   height: 48px;
