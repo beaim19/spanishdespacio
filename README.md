@@ -82,6 +82,44 @@ This engine also adds an accent toolbar (á é í ó ú ñ ¿ ¡) above the
 questions, matching the buttons in the DELE app — clicking one inserts the
 character into whichever text box was last focused, at the cursor position.
 
+## Splitting a topic into verb-type variants (regular/irregular/reflexivos)
+
+Some tenses need a second, independent grouping on top of "set" — e.g.
+Presente has separate Regular/Irregular/Reflexivos tabs, each with their own
+series. This is one CSV per **variant**, not one big file:
+
+```
+content/exercises/presente-regular.csv
+content/exercises/presente-irregular.csv
+content/exercises/presente-reflexivos.csv
+```
+
+Each file uses the normal `set,id,before,after,infinitive,correct` columns —
+"variant" and "set" are independent, so series numbering restarts at 1 in
+each variant's file, and that's fine.
+
+On the page (`exercises/presente.html`), the container tells the engine
+about the variants instead of a single `data-src`:
+
+```html
+<div id="exercise-app"
+     data-variants="regular,irregular,reflexivos"
+     data-src-template="/content/exercises/presente-{type}.csv"></div>
+```
+
+Two slots elsewhere on the page are where the two switchers render:
+`#variant-switcher-slot` (Regular/Irregular/Reflexivos tabs — put this one in
+the intro band, next to the title) and `#series-switcher-slot` (Serie 1/2/...
+— put this one in the white area, above `#exercise-app`). The URL ends up
+looking like `presente.html?type=irregular&set=2`; switching variant always
+lands on that variant's set 1, since set numbers don't mean anything across
+variants.
+
+To add a fourth variant later: new CSV, add its slug to `data-variants`,
+done — no JS changes needed. A topic that *doesn't* need this (ser/estar,
+por/para) just keeps the plain `data-src` attribute and never renders a
+variant tab at all.
+
 ### Writing accented characters (á, é, í, ó, ú, ñ, ¿, ¡) correctly
 
 If you edit these CSVs in Excel and see garbled characters instead of accents,
@@ -98,9 +136,12 @@ with the "CSV UTF-8" option keeps that intact.
 
 `content/exercises/ser-estar/set-01.csv` and `exercises/ser-estar-1.html` are
 leftover from an earlier version of this pattern (one file per set of 10)
-before switching to one file per topic. They're unused by any live page but
-weren't deleted — feel free to delete them yourself in File Explorer whenever
-convenient.
+before switching to one file per topic. `content/exercises/presente.csv` is
+similarly superseded now that Presente split into
+`presente-regular.csv`/`presente-irregular.csv`/`presente-reflexivos.csv` (its
+old content was copied into `presente-regular.csv` first, nothing was lost).
+None of these three are used by any live page but weren't deleted — feel
+free to delete them yourself in File Explorer whenever convenient.
 
 ## Local preview
 

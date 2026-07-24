@@ -42,7 +42,12 @@ window.ExerciseCommon = (function () {
     sorted.forEach((setId) => {
       const li = document.createElement('li');
       const a = document.createElement('a');
-      a.href = `?set=${encodeURIComponent(setId)}`;
+      // Clone the current URL's params and only change "set" — this is
+      // what keeps ?type=irregular (or any other future param) intact
+      // when a page also has a verb-type switcher.
+      const params = new URLSearchParams(window.location.search);
+      params.set('set', setId);
+      a.href = `?${params.toString()}`;
       a.textContent = `Serie ${setId}`;
       if (setId === currentSet) a.setAttribute('aria-current', 'true');
       li.appendChild(a);
@@ -76,5 +81,52 @@ window.ExerciseCommon = (function () {
     return label;
   }
 
-  return { loadCsvSet, buildSetSwitcher, renderSeriesNav };
+  /*
+   * Verb-type support (regular/irregular/reflexivos, etc.) — a second,
+   * independent dimension from "set". Reads ?type= from the URL, defaults
+   * to the first variant if it's missing or not recognized.
+   */
+  function getRequestedType(variants) {
+    const requested = (new URLSearchParams(window.location.search).get('type') || '').trim();
+    return variants.includes(requested) ? requested : variants[0];
+  }
+
+  function capitalize(word) {
+    return word.charAt(0).toUpperCase() + word.slice(1);
+  }
+
+  /*
+   * Renders the Regular / Irregular / Reflexivos-style tabs into the
+   * page's #variant-switcher-slot (meant to live in the green intro band,
+   * alongside the title). Switching type always lands on set 1 of the new
+   * type — series numbering is independent per type, so carrying over the
+   * old set number wouldn't mean anything. No-op if there's only one variant.
+   */
+  function renderVariantNav(variants, currentType) {
+    const slot = document.getElementById('variant-switcher-slot');
+    if (!slot) return;
+    slot.innerHTML = '';
+
+    if (!variants || variants.length <= 1) return;
+
+    const nav = document.createElement('nav');
+    nav.className = 'type-switcher';
+    nav.setAttribute('aria-label', 'Elegir tipo de verbo');
+
+    const list = document.createElement('ul');
+    variants.forEach((typeId) => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = `?type=${encodeURIComponent(typeId)}`;
+      a.textContent = capitalize(typeId);
+      if (typeId === currentType) a.setAttribute('aria-current', 'true');
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+
+    nav.appendChild(list);
+    slot.appendChild(nav);
+  }
+
+  return { loadCsvSet, buildSetSwitcher, renderSeriesNav, getRequestedType, renderVariantNav };
 })();

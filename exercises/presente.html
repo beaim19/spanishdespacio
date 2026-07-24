@@ -18,12 +18,15 @@
         <a class="back-link-top" href="/exercises.html" aria-label="Volver a Ejercicios">&larr;</a>
         <h1>Presente</h1>
         <p>Escribe el verbo en presente para completar cada frase. El infinitivo aparece entre paréntesis como pista. Cuando termines, pulsa "Comprobar".</p>
-        <div id="series-switcher-slot"></div>
+        <div id="variant-switcher-slot"></div>
       </div>
     </section>
 
     <div class="container">
-      <div id="exercise-app" data-src="/content/exercises/presente.csv">
+      <div id="series-switcher-slot"></div>
+      <div id="exercise-app"
+           data-variants="regular,irregular,reflexivos"
+           data-src-template="/content/exercises/presente-{type}.csv">
         <p>Cargando ejercicio…</p>
       </div>
       <a class="back-link-bottom" href="/exercises.html">&larr; Ejercicios</a>

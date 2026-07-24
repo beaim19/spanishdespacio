@@ -18,7 +18,14 @@
  *                  have to be right — that's what the accent toolbar is for).
  *
  * Host page needs, before this script: PapaParse, js/exercise-common.js,
- * and <div id="exercise-app" data-src="/content/exercises/presente.csv"></div>
+ * and either:
+ *   <div id="exercise-app" data-src="/content/exercises/presente.csv"></div>
+ * or, for a topic split into verb-type variants (regular/irregular/...):
+ *   <div id="exercise-app"
+ *        data-variants="regular,irregular,reflexivos"
+ *        data-src-template="/content/exercises/presente-{type}.csv"></div>
+ * plus a <div id="variant-switcher-slot"></div> somewhere in the intro
+ * band for the Regular/Irregular/Reflexivos tabs to render into.
  */
 
 (function () {
@@ -29,8 +36,20 @@
     const container = document.getElementById('exercise-app');
     if (!container) return;
 
+    const variants = (container.dataset.variants || '')
+      .split(',')
+      .map((v) => v.trim())
+      .filter(Boolean);
+
+    let src = container.dataset.src;
+    if (variants.length > 0) {
+      const currentType = window.ExerciseCommon.getRequestedType(variants);
+      src = container.dataset.srcTemplate.replace('{type}', currentType);
+      window.ExerciseCommon.renderVariantNav(variants, currentType);
+    }
+
     try {
-      const { rows, requestedSet, allSets } = await window.ExerciseCommon.loadCsvSet(container.dataset.src);
+      const { rows, requestedSet, allSets } = await window.ExerciseCommon.loadCsvSet(src);
 
       if (rows.length === 0) {
         container.innerHTML = `<p>No existe la serie ${requestedSet}.</p>`;

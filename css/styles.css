@@ -333,11 +333,38 @@ a.theme-block:focus-visible {
   }
 }
 
-/* Series switcher — lives inside the green intro band of an exercise page
-   (ser-estar.html etc.) once a topic has more than one set of ~10
-   questions, so ghost/ outline style instead of the white-chip style used
-   elsewhere, to read correctly on green. */
+/* Series switcher — sits in the white area above the questions (not in
+   the green band), so it uses the same white-chip style as other pill
+   navs on white. */
 .set-switcher ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: 0 0 var(--space-3) 0;
+  padding: 0;
+}
+.set-switcher a {
+  display: inline-block;
+  background-color: var(--color-panel);
+  color: var(--color-brand-dark);
+  text-decoration: none;
+  font-weight: 600;
+  padding: var(--space-1) var(--space-3);
+  border-radius: 999px;
+  border: 2px solid var(--color-brand);
+  min-height: 44px;
+  line-height: 1.9;
+}
+.set-switcher a[aria-current="true"] {
+  background-color: var(--color-brand);
+  color: var(--color-text-inverse);
+}
+
+/* Verb-type switcher (Regular / Irregular / Reflexivos) — lives in the
+   green intro band next to the title, same ghost-pill treatment as the
+   series switcher used to have there. */
+.type-switcher ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -345,20 +372,20 @@ a.theme-block:focus-visible {
   margin: var(--space-2) 0 0 0;
   padding: 0;
 }
-.set-switcher a {
+.type-switcher a {
   display: inline-block;
   background-color: transparent;
   color: var(--color-text-inverse);
   text-decoration: none;
   font-weight: 700;
-  font-size: 1.2rem; /* large-text AA threshold on the green band, same reasoning as .intro-band p */
+  font-size: 1.2rem;
   padding: var(--space-1) var(--space-3);
   border-radius: 999px;
   border: 2px solid var(--color-text-inverse);
   min-height: 44px;
   line-height: 1.6;
 }
-.set-switcher a[aria-current="true"] {
+.type-switcher a[aria-current="true"] {
   background-color: var(--color-text-inverse);
   color: var(--color-brand-dark);
 }
@@ -371,6 +398,12 @@ a.theme-block:focus-visible {
   font-size: 1.6rem;
   font-weight: 700;
   margin: 0 0 var(--space-3) 0;
+}
+
+/* Gives the question block breathing room below the green intro band,
+   on every exercise page. */
+#exercise-app {
+  margin-top: var(--space-4);
 }
 
 /* --- Exercises: two-option choice engine --- */
@@ -454,6 +487,7 @@ a.theme-block:focus-visible {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2);
+  margin-top: var(--space-3);
   margin-bottom: var(--space-4);
 }
 .accent-btn {
