@@ -16,7 +16,12 @@ about.html                About / contact
 privacy.html              Privacy & cookies policy
 css/styles.css            All site styles (colors match the DELE app)
 js/main.js                Shared header/footer injection, mobile nav
-js/exercise-choice2.js    Reusable "pick between two options" exercise engine
+js/exercise-common.js     Shared CSV loading, series pager, verb-type and
+                          exercise-type switchers
+js/exercise-choice2.js    "Pick between two options" exercise engine (Dos opciones)
+js/exercise-arrastra.js   "Drag a word into the blank" exercise engine (Arrastra)
+js/exercise-parejas.js    "Match two columns" exercise engine (Parejas)
+js/exercise-typed.js      Typed-answer/conjugation exercise engine
 content/exercises/        Exercise content as CSV — see below
 partials/header.html      Shared nav, injected by main.js
 partials/footer.html      Shared footer, injected by main.js
@@ -47,11 +52,11 @@ next `set` number (2, 3...) to that topic's CSV — nothing else to do.
 `exercises.html` links to the topic page directly (e.g.
 `/exercises/ser-estar.html`, no `?set=` needed — it defaults to set 1). The
 engine reads however many distinct `set` values exist in the file and
-automatically shows a "Serie 1 / Serie 2 / ..." switcher at the top of the
-page once there's more than one — with only one set, the switcher doesn't
-appear at all. Same idea as before (no manual count to maintain), just
-applied one level up: number of *questions* = rows in a set; number of
-*sets* = distinct `set` values in the file.
+automatically shows a "‹ 1 2 3 ›" series pager above the questions once
+there's more than one — with only one set, the pager doesn't appear at all.
+Same idea as before (no manual count to maintain), just applied one level
+up: number of *questions* = rows in a set; number of *sets* = distinct `set`
+values in the file.
 
 **To add a brand-new topic of this same type:** new CSV
 (`content/exercises/<topic>.csv`), copy `exercises/ser-estar.html` changing
@@ -119,6 +124,78 @@ To add a fourth variant later: new CSV, add its slug to `data-variants`,
 done — no JS changes needed. A topic that *doesn't* need this (ser/estar,
 por/para) just keeps the plain `data-src` attribute and never renders a
 variant tab at all.
+
+## Splitting a topic into exercise types (Dos opciones / Arrastra / Parejas)
+
+Some topics — Ser y estar first — offer the same content practiced through
+different mechanics: a two-option choice, a drag-word-into-blank exercise,
+or a drag-to-match two-column exercise. This is a third, independent
+dimension on top of "set" and "variant": it's driven by `?tipo=` in the
+URL and, unlike variants, each type needs its own **engine**, not just its
+own CSV, since the interaction itself is different.
+
+On the page (`exercises/ser-estar.html`), `#exercise-app` is left with no
+`data-src` at all. Instead, all three engine scripts are loaded, and a small
+inline script at the bottom of the page hands control to
+`ExerciseCommon.initExerciseTypePage(...)`:
+
+```html
+<script src="/js/exercise-common.js"></script>
+<script src="/js/exercise-choice2.js"></script>
+<script src="/js/exercise-arrastra.js"></script>
+<script src="/js/exercise-parejas.js"></script>
+<script src="/js/main.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    ExerciseCommon.initExerciseTypePage([
+      { id: 'dos-opciones', label: 'Dos opciones', engine: 'choice2', src: '/content/exercises/ser-estar.csv' },
+      { id: 'arrastra', label: 'Arrastra', engine: 'arrastra', src: '/content/exercises/ser-estar-arrastra.csv' },
+      { id: 'parejas', label: 'Parejas', engine: 'parejas', src: '/content/exercises/ser-estar-parejas.csv' },
+    ]);
+  });
+</script>
+```
+
+Every engine registers itself on `window.ExerciseEngines[id].init(container)`
+instead of self-starting on `DOMContentLoaded` (it still self-starts on
+pages that set `data-src` directly, like `por-para.html` — this only
+changes on pages using the type router). `initExerciseTypePage` reads
+`?tipo=` from the URL (defaulting to the first type), renders the
+"Dos opciones / Arrastra / Parejas" tabs into `#exercise-type-slot`
+(right below the intro band), points `#exercise-app` at the matching CSV,
+and calls that type's `init`. Switching type always lands on set 1 of the
+new type, same reasoning as switching verb-type variants. Adding a fourth
+type later to a topic is: write its CSV, write its engine (or reuse an
+existing one against a new CSV), add one more entry to the array above —
+no other page needs to change.
+
+**Arrastra** CSV columns — one word bank per set, built from the `word`
+column of every row:
+
+```
+set,id,before,after,word
+1,1,"Ella","muy cansada hoy.",está
+```
+
+**Parejas** CSV columns — a fixed left-hand subject with the verb form that
+belongs to it:
+
+```
+set,id,subject,verb
+1,1,Yo,estoy
+```
+
+Both engines present themselves as "drag the word/box into place," but the
+actual interaction is **click/tap to select, then click/tap the target to
+place it** — not native HTML5 drag-and-drop. Real drag-and-drop needs extra
+polyfill code to work reliably on touchscreens, whereas click/tap works
+identically on desktop, mobile, and keyboard (every chip and slot is a real
+`<button>`, so Tab + Enter/Space already places things without any extra
+code). Visually it still reads as "boxes you move around"; functionally
+it's more robust and accessible than true dragging. If the felt experience
+of physically dragging turns out to matter, that could be added later as a
+progressive enhancement on top of the same click/tap logic, but it isn't
+needed for the exercise to work correctly today.
 
 ### Writing accented characters (á, é, í, ó, ú, ñ, ¿, ¡) correctly
 

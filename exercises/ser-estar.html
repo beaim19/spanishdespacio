@@ -17,13 +17,14 @@
       <div class="container">
         <a class="back-link-top" href="/exercises.html" aria-label="Volver a Ejercicios">&larr;</a>
         <h1>Ser o estar</h1>
-        <p>Elige la palabra correcta para completar cada frase. Cuando termines, pulsa "Comprobar".</p>
+        <p>Elige el tipo de ejercicio y completa cada frase. Cuando termines, pulsa "Comprobar".</p>
       </div>
     </section>
 
     <div class="container">
+      <div id="exercise-type-slot"></div>
       <div id="series-switcher-slot"></div>
-      <div id="exercise-app" data-src="/content/exercises/ser-estar.csv">
+      <div id="exercise-app">
         <p>Cargando ejercicio…</p>
       </div>
       <a class="back-link-bottom" href="/exercises.html">&larr; Ejercicios</a>
@@ -35,6 +36,17 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
   <script src="/js/exercise-common.js"></script>
   <script src="/js/exercise-choice2.js"></script>
+  <script src="/js/exercise-arrastra.js"></script>
+  <script src="/js/exercise-parejas.js"></script>
   <script src="/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      ExerciseCommon.initExerciseTypePage([
+        { id: 'dos-opciones', label: 'Dos opciones', engine: 'choice2', src: '/content/exercises/ser-estar.csv' },
+        { id: 'arrastra', label: 'Arrastra', engine: 'arrastra', src: '/content/exercises/ser-estar-arrastra.csv' },
+        { id: 'parejas', label: 'Parejas', engine: 'parejas', src: '/content/exercises/ser-estar-parejas.csv' },
+      ]);
+    });
+  </script>
 </body>
 </html>

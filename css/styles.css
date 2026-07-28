@@ -333,18 +333,22 @@ a.theme-block:focus-visible {
   }
 }
 
-/* Series switcher — sits in the white area above the questions (not in
-   the green band), so it uses the same white-chip style as other pill
-   navs on white. */
-.set-switcher ul {
+/* Exercise-type switcher (Dos opciones / Arrastra / Parejas) — sits right
+   below the green intro band, using the same white-chip pill treatment the
+   series switcher used to have there. Only rendered when a topic offers
+   more than one exercise type. */
+.exercise-type-nav {
+  margin: var(--space-4) 0 var(--space-3) 0;
+}
+.exercise-type-nav ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2);
-  margin: 0 0 var(--space-3) 0;
+  margin: 0;
   padding: 0;
 }
-.set-switcher a {
+.exercise-type-nav a {
   display: inline-block;
   background-color: var(--color-panel);
   color: var(--color-brand-dark);
@@ -356,9 +360,67 @@ a.theme-block:focus-visible {
   min-height: 44px;
   line-height: 1.9;
 }
-.set-switcher a[aria-current="true"] {
+.exercise-type-nav a[aria-current="true"] {
   background-color: var(--color-brand);
   color: var(--color-text-inverse);
+}
+.exercise-type-nav a:hover {
+  background-color: var(--color-hover-tint);
+}
+.exercise-type-nav a[aria-current="true"]:hover {
+  background-color: var(--color-brand-dark);
+}
+
+/* Series pager — a "‹ 1 2 3 ›" pager above the questions, lighter-weight
+   than a row of pill buttons since it's a plain step-through-pages control,
+   not a set of equally-weighted choices. */
+.series-pager {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: var(--space-2) 0 var(--space-3) 0;
+}
+.series-pager-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  color: var(--color-brand-dark);
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1;
+  border-radius: var(--radius);
+}
+.series-pager-arrow:hover {
+  background-color: var(--color-hover-tint);
+}
+.series-pager-arrow[aria-disabled="true"] {
+  color: var(--color-selected-neutral);
+  pointer-events: none;
+}
+.series-pager-numbers {
+  display: flex;
+  gap: var(--space-2);
+}
+.series-pager-numbers a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  min-height: 36px;
+  color: var(--color-brand-dark);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: var(--radius);
+}
+.series-pager-numbers a[aria-current="true"] {
+  background-color: var(--color-brand);
+  color: var(--color-text-inverse);
+}
+.series-pager-numbers a:hover:not([aria-current="true"]) {
+  background-color: var(--color-hover-tint);
 }
 
 /* Verb-type switcher (Regular / Irregular / Reflexivos) — lives in the
@@ -471,6 +533,116 @@ a.theme-block:focus-visible {
   font-weight: 700;
 }
 .option-btn:disabled { cursor: default; }
+
+/* --- Exercises: Arrastra + Parejas (click-to-place word pool + slots) ---
+   Both engines share this pool/slot styling: a bank of word chips the
+   student selects from, and dashed-border slots they place the selection
+   into. Presented like drag targets, but the interaction underneath is
+   click/tap so it works the same on touch, desktop, and keyboard. */
+.word-pool {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: var(--space-3) 0 var(--space-4) 0;
+  padding: var(--space-3);
+  background-color: var(--color-panel);
+  border-radius: var(--radius);
+}
+.pool-chip {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: var(--color-panel);
+  border: 2px solid var(--color-brand);
+  color: var(--color-brand-dark);
+  border-radius: var(--radius);
+  padding: var(--space-1) var(--space-3);
+  min-height: 44px;
+  cursor: pointer;
+}
+.pool-chip:hover:not(:disabled) {
+  background-color: var(--color-hover-tint);
+}
+.pool-chip.pool-chip-selected {
+  background-color: var(--color-selected-neutral);
+  border-color: var(--color-brand-dark);
+  color: var(--color-text);
+}
+.pool-chip:disabled {
+  /* Placed chips are removed from the visual pool entirely (via [hidden]
+     in the markup) — this rule only covers the brief "Comprobar" moment
+     where remaining, never-placed chips are disabled but stay visible. */
+  cursor: default;
+  opacity: 0.6;
+}
+
+.drop-slot {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: var(--color-panel);
+  border: 2px dashed var(--color-brand);
+  color: var(--color-text);
+  border-radius: var(--radius);
+  padding: var(--space-1) var(--space-3);
+  min-height: 44px;
+  min-width: 100px;
+  cursor: pointer;
+}
+.drop-slot:hover:not(:disabled) {
+  background-color: var(--color-hover-tint);
+}
+.drop-slot-filled {
+  border-style: solid;
+  background-color: var(--color-selected-neutral);
+  border-color: var(--color-brand-dark);
+}
+.drop-slot-correct {
+  background-color: var(--color-brand-dark);
+  border-style: solid;
+  border-color: var(--color-brand-dark);
+  color: var(--color-text-inverse);
+  cursor: default;
+}
+.drop-slot-incorrect {
+  background-color: var(--color-panel);
+  border-style: solid;
+  border-color: var(--color-tab-dark);
+  color: var(--color-tab-dark);
+  text-decoration: line-through;
+  cursor: default;
+}
+.drop-slot:disabled { cursor: default; }
+.drop-slot-reveal {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--color-text);
+  margin: var(--space-1) 0 0 0;
+}
+
+/* Parejas: two-column subject / verb-form layout, verb forms filled in via
+   the shared .drop-slot styling above. */
+.parejas-grid {
+  margin: var(--space-3) 0;
+}
+.parejas-column {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.parejas-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-hover-tint);
+}
+.parejas-subject {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
 
 .exercise-controls {
   display: flex;

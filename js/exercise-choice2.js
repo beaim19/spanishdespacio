@@ -20,6 +20,11 @@
  *
  * Which set to show comes from the URL query string, e.g.
  * ser-estar.html?set=2 — defaults to set 1 if not given.
+ *
+ * Also registers itself as window.ExerciseEngines.choice2 so a page with
+ * several exercise types (see exercise-common.js's initExerciseTypePage) can
+ * call this engine explicitly instead of relying on the container having a
+ * data-src attribute already in the HTML.
  */
 
 (function () {
@@ -167,8 +172,15 @@
     });
   }
 
+  window.ExerciseEngines = window.ExerciseEngines || {};
+  window.ExerciseEngines.choice2 = { init: loadExercise };
+
   document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('exercise-app');
-    if (container) loadExercise(container);
+    // Only self-initialize on pages that set data-src directly in the HTML
+    // (por-para.html, the plain single-type case). Pages with several
+    // exercise types leave data-src off and are started explicitly by
+    // ExerciseCommon.initExerciseTypePage instead, so this doesn't double-run.
+    if (container && container.dataset.src) loadExercise(container);
   });
 })();
