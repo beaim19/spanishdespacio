@@ -31,6 +31,15 @@
 (function () {
   let lastFocusedInput = null;
   const ACCENT_CHARS = ['á', 'é', 'í', 'ó', 'ú', 'ñ', '¿', '¡'];
+  const MIN_INPUT_CH = 9;
+
+  // Grows the input as the student types so the whole word stays visible
+  // instead of scrolling inside a fixed-width box — never shrinks below
+  // the starting width, so short answers still line up.
+  function growInput(input) {
+    const width = Math.max(MIN_INPUT_CH, input.value.length + 2);
+    input.style.width = `${width}ch`;
+  }
 
   async function init() {
     const container = document.getElementById('exercise-app');
@@ -90,7 +99,9 @@
       input.autocapitalize = 'off';
       input.spellcheck = false;
       input.setAttribute('aria-label', `Respuesta a la frase ${index + 1}`);
+      input.style.width = `${MIN_INPUT_CH}ch`;
       input.addEventListener('focus', () => { lastFocusedInput = input; });
+      input.addEventListener('input', () => growInput(input));
       if (!lastFocusedInput) lastFocusedInput = input;
       sentence.appendChild(input);
 
@@ -181,6 +192,7 @@
       const feedback = item.querySelector('.exercise-feedback');
       input.value = '';
       input.disabled = false;
+      input.style.width = `${MIN_INPUT_CH}ch`;
       input.classList.remove('input-correct', 'input-incorrect');
       feedback.textContent = '';
     });

@@ -475,7 +475,7 @@ a.theme-block:focus-visible {
   margin: 0;
 }
 .exercise-item {
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-2);
 }
 .exercise-sentence {
   font-size: 1.1rem;
@@ -539,11 +539,21 @@ a.theme-block:focus-visible {
    student selects from, and dashed-border slots they place the selection
    into. Presented like drag targets, but the interaction underneath is
    click/tap so it works the same on touch, desktop, and keyboard. */
+/* Short how-it-works line shown above the exercise for Arrastra/Parejas
+   ("select a word, then tap where it goes") — same treatment as the typed
+   engine's infinitive hint, quiet and not competing with the sentences. */
+.exercise-instructions {
+  color: var(--color-text);
+  font-size: 0.95rem;
+  font-style: italic;
+  margin: 0 0 var(--space-3) 0;
+}
+
 .word-pool {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2);
-  margin: var(--space-3) 0 var(--space-4) 0;
+  margin: var(--space-2) 0 var(--space-3) 0;
   padding: var(--space-3);
   background-color: var(--color-panel);
   border-radius: var(--radius);
@@ -614,11 +624,12 @@ a.theme-block:focus-visible {
 }
 .drop-slot:disabled { cursor: default; }
 .drop-slot-reveal {
-  display: block;
+  display: inline-block;
   font-size: 0.9rem;
   font-weight: 400;
+  font-style: italic;
   color: var(--color-text);
-  margin: var(--space-1) 0 0 0;
+  margin-left: var(--space-2);
 }
 
 /* Parejas: two-column subject / verb-form layout, verb forms filled in via
@@ -660,7 +671,7 @@ a.theme-block:focus-visible {
   flex-wrap: wrap;
   gap: var(--space-2);
   margin-top: var(--space-3);
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-2);
 }
 .accent-btn {
   font-family: inherit;
@@ -681,10 +692,20 @@ a.theme-block:focus-visible {
   font-size: 1.1rem;
   padding: var(--space-1) var(--space-2);
   min-height: 44px;
-  width: 9ch;
+  min-width: 9ch;
   border: 2px solid var(--color-brand);
   border-radius: var(--radius);
   margin: 0 var(--space-1);
+  /* Width itself is set/grown from JS as the student types (see
+     exercise-typed.js) so the whole word stays visible. */
+}
+.exercise-input:focus {
+  /* Explicit, calm focus styling instead of falling back to the browser's
+     default validation-style outline, which reads as an error state to
+     some students even though nothing is actually wrong yet. */
+  outline: none;
+  border-color: var(--color-brand-dark);
+  box-shadow: 0 0 0 3px var(--color-hover-tint);
 }
 .exercise-input.input-correct {
   border-color: var(--color-brand-dark);

@@ -55,6 +55,11 @@
     const label = window.ExerciseCommon.renderSeriesNav(setNumber, allSets);
     if (label) container.appendChild(label);
 
+    const instructions = document.createElement('p');
+    instructions.className = 'exercise-instructions';
+    instructions.textContent = 'Selecciona primero una de las formas verbales y después toca el sujeto que le corresponde. Vuelve a tocar un espacio ya relleno para quitar la palabra.';
+    container.appendChild(instructions);
+
     let selectedChip = null;
 
     const grid = document.createElement('div');

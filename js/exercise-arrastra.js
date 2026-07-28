@@ -58,6 +58,11 @@
     const label = window.ExerciseCommon.renderSeriesNav(setNumber, allSets);
     if (label) container.appendChild(label);
 
+    const instructions = document.createElement('p');
+    instructions.className = 'exercise-instructions';
+    instructions.textContent = 'Selecciona primero una palabra del banco y después toca el espacio donde quieres colocarla. Vuelve a tocar un espacio ya relleno para quitar la palabra.';
+    container.appendChild(instructions);
+
     let selectedChip = null;
 
     const list = document.createElement('ol');
@@ -206,6 +211,7 @@
     items.forEach((item) => {
       const correctAnswer = item.dataset.correct;
       const slot = item.querySelector('.drop-slot');
+      const sentence = item.querySelector('.exercise-sentence');
       const filled = slot.dataset.filled === 'true';
       const placedText = filled ? slot.textContent.trim() : '';
 
@@ -214,10 +220,12 @@
         correctCount += 1;
       } else {
         slot.classList.add('drop-slot-incorrect');
+        // Appended at the end of the sentence (to its right), not right
+        // after the blank, so it doesn't interrupt the sentence mid-way.
         const reveal = document.createElement('span');
         reveal.className = 'drop-slot-reveal';
         reveal.textContent = `Respuesta correcta: ${correctAnswer}`;
-        slot.after(reveal);
+        sentence.appendChild(reveal);
       }
     });
 
