@@ -655,6 +655,83 @@ a.theme-block:focus-visible {
   font-weight: 600;
 }
 
+/* --- Exercises: Flashcards --- */
+.flashcard {
+  background-color: var(--color-panel);
+  border-radius: var(--radius);
+  padding: var(--space-4);
+  margin: var(--space-3) 0;
+  text-align: center;
+}
+.flashcard-progress {
+  color: var(--color-brand-dark);
+  font-weight: 600;
+  margin: 0 0 var(--space-3) 0;
+}
+.flashcard-sentence {
+  font-size: 1.3rem;
+  line-height: 2;
+  margin: 0 0 var(--space-3) 0;
+}
+.flashcard-answer {
+  color: var(--color-brand-dark);
+}
+.flashcard .exercise-controls {
+  justify-content: center;
+}
+.flashcard-summary .exercise-result {
+  font-size: 1.2rem;
+  margin-bottom: var(--space-3);
+}
+
+/* --- Exercises: Ordena (sentence reordering) ---
+   Each sentence gets its own assembly line (where tapped words land, in
+   order) and its own small word bank below it, reusing the shared
+   .word-pool/.pool-chip styling from Empareja. */
+.ordena-assembly {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 44px;
+  padding: var(--space-2) var(--space-3);
+  margin-bottom: var(--space-2);
+  border: 2px dashed var(--color-brand);
+  border-radius: var(--radius);
+}
+.ordena-placeholder {
+  color: var(--color-text);
+  opacity: 0.65;
+  font-style: italic;
+}
+.ordena-word {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: var(--color-selected-neutral);
+  border: 2px solid var(--color-brand-dark);
+  color: var(--color-text);
+  border-radius: var(--radius);
+  padding: var(--space-1) var(--space-3);
+  min-height: 44px;
+  cursor: pointer;
+}
+.ordena-word:hover:not(:disabled) {
+  background-color: var(--color-hover-tint);
+}
+.ordena-assembly-correct {
+  border-style: solid;
+  border-color: var(--color-brand-dark);
+  background-color: var(--color-hover-tint);
+}
+.ordena-assembly-incorrect {
+  border-style: solid;
+  border-color: var(--color-tab-dark);
+}
+.ordena-bank {
+  margin-top: 0;
+}
+
 .exercise-controls {
   display: flex;
   gap: var(--space-3);

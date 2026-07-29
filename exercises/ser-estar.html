@@ -37,14 +37,18 @@
   <script src="/js/exercise-common.js"></script>
   <script src="/js/exercise-choice2.js"></script>
   <script src="/js/exercise-arrastra.js"></script>
-  <script src="/js/exercise-parejas.js"></script>
+  <script src="/js/exercise-typed.js"></script>
+  <script src="/js/exercise-flashcards.js"></script>
+  <script src="/js/exercise-ordena.js"></script>
   <script src="/js/main.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       ExerciseCommon.initExerciseTypePage([
         { id: 'dos-opciones', label: 'Dos opciones', engine: 'choice2', src: '/content/exercises/ser-estar.csv' },
-        { id: 'arrastra', label: 'Arrastra', engine: 'arrastra', src: '/content/exercises/ser-estar-arrastra.csv' },
-        { id: 'parejas', label: 'Parejas', engine: 'parejas', src: '/content/exercises/ser-estar-parejas.csv' },
+        { id: 'empareja', label: 'Empareja', engine: 'arrastra', src: '/content/exercises/ser-estar-arrastra.csv' },
+        { id: 'completa', label: 'Completa', engine: 'typed', src: '/content/exercises/ser-estar-completa.csv' },
+        { id: 'flashcards', label: 'Flashcards', engine: 'flashcards', src: '/content/exercises/ser-estar.csv' },
+        { id: 'ordena', label: 'Ordena', engine: 'ordena', src: '/content/exercises/ser-estar-ordena.csv' },
       ]);
     });
   </script>

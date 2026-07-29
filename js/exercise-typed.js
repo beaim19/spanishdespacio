@@ -10,9 +10,13 @@
  *
  * One CSV per topic, same "set" convention as exercise-choice2.js — see
  * js/exercise-common.js. Expected columns: set, id, before, after,
- * infinitive, correct
+ * infinitive, correct — plus an optional tense column (used by the
+ * "Completa" exercise type, where one set can mix several indicative
+ * tenses, so the hint needs to say which one is expected):
  *   before/after = sentence text around the blank
- *   infinitive   = shown as "(infinitivo)" after the sentence
+ *   infinitive   = shown in the hint after the sentence
+ *   tense        = optional; if present, shown alongside the infinitive,
+ *                  e.g. "(estar, pretérito imperfecto)"
  *   correct      = the correctly conjugated form. Matching is
  *                  case-insensitive but accent-sensitive (á/a/etc. still
  *                  have to be right — that's what the accent toolbar is for).
@@ -109,7 +113,12 @@
 
       const hint = document.createElement('span');
       hint.className = 'exercise-hint';
-      hint.textContent = `(${row.infinitive})`;
+      // "Completa"-style CSVs add a tense column (presente, futuro...) since
+      // one set can mix several indicative tenses; plain conjugation CSVs
+      // like Presente's don't have that column, so the hint falls back to
+      // just the infinitive.
+      const tense = (row.tense || '').trim();
+      hint.textContent = tense ? `(${row.infinitive}, ${tense})` : `(${row.infinitive})`;
       sentence.appendChild(hint);
 
       const feedback = document.createElement('span');
@@ -226,5 +235,15 @@
     input.focus();
   }
 
-  document.addEventListener('DOMContentLoaded', init);
+  window.ExerciseEngines = window.ExerciseEngines || {};
+  window.ExerciseEngines.typed = { init };
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('exercise-app');
+    // Only self-initialize on pages that already set data-src or
+    // data-variants directly in the HTML (Presente, the plain case). A
+    // page with several exercise types leaves both off and is started
+    // explicitly by ExerciseCommon.initExerciseTypePage instead.
+    if (container && (container.dataset.src || container.dataset.variants)) init();
+  });
 })();

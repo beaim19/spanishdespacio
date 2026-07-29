@@ -19,9 +19,10 @@ js/main.js                Shared header/footer injection, mobile nav
 js/exercise-common.js     Shared CSV loading, series pager, verb-type and
                           exercise-type switchers
 js/exercise-choice2.js    "Pick between two options" exercise engine (Dos opciones)
-js/exercise-arrastra.js   "Drag a word into the blank" exercise engine (Arrastra)
-js/exercise-parejas.js    "Match two columns" exercise engine (Parejas)
-js/exercise-typed.js      Typed-answer/conjugation exercise engine
+js/exercise-arrastra.js   "Drag a word into the blank" exercise engine (Empareja)
+js/exercise-typed.js      Typed-answer/conjugation exercise engine (Presente, Completa)
+js/exercise-flashcards.js Self-paced reveal-and-self-assess exercise engine (Flashcards)
+js/exercise-ordena.js     Sentence word-reordering exercise engine (Ordena)
 content/exercises/        Exercise content as CSV — see below
 partials/header.html      Shared nav, injected by main.js
 partials/footer.html      Shared footer, injected by main.js
@@ -125,32 +126,37 @@ done — no JS changes needed. A topic that *doesn't* need this (ser/estar,
 por/para) just keeps the plain `data-src` attribute and never renders a
 variant tab at all.
 
-## Splitting a topic into exercise types (Dos opciones / Arrastra / Parejas)
+## Splitting a topic into exercise types (Dos opciones / Empareja / Completa / Flashcards / Ordena)
 
 Some topics — Ser y estar first — offer the same content practiced through
-different mechanics: a two-option choice, a drag-word-into-blank exercise,
-or a drag-to-match two-column exercise. This is a third, independent
-dimension on top of "set" and "variant": it's driven by `?tipo=` in the
-URL and, unlike variants, each type needs its own **engine**, not just its
-own CSV, since the interaction itself is different.
+several different mechanics. This is a third, independent dimension on top
+of "set" and "variant": it's driven by `?tipo=` in the URL and, unlike
+variants, each type needs its own **engine**, not just its own CSV, since
+the interaction itself is different. This pattern is meant to be reused for
+other topics later — a topic doesn't have to offer all five types, it's
+just whichever entries you list in its page's router array.
 
 On the page (`exercises/ser-estar.html`), `#exercise-app` is left with no
-`data-src` at all. Instead, all three engine scripts are loaded, and a small
-inline script at the bottom of the page hands control to
+`data-src` at all. Instead, every engine script the topic uses is loaded,
+and a small inline script at the bottom of the page hands control to
 `ExerciseCommon.initExerciseTypePage(...)`:
 
 ```html
 <script src="/js/exercise-common.js"></script>
 <script src="/js/exercise-choice2.js"></script>
 <script src="/js/exercise-arrastra.js"></script>
-<script src="/js/exercise-parejas.js"></script>
+<script src="/js/exercise-typed.js"></script>
+<script src="/js/exercise-flashcards.js"></script>
+<script src="/js/exercise-ordena.js"></script>
 <script src="/js/main.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     ExerciseCommon.initExerciseTypePage([
       { id: 'dos-opciones', label: 'Dos opciones', engine: 'choice2', src: '/content/exercises/ser-estar.csv' },
-      { id: 'arrastra', label: 'Arrastra', engine: 'arrastra', src: '/content/exercises/ser-estar-arrastra.csv' },
-      { id: 'parejas', label: 'Parejas', engine: 'parejas', src: '/content/exercises/ser-estar-parejas.csv' },
+      { id: 'empareja', label: 'Empareja', engine: 'arrastra', src: '/content/exercises/ser-estar-arrastra.csv' },
+      { id: 'completa', label: 'Completa', engine: 'typed', src: '/content/exercises/ser-estar-completa.csv' },
+      { id: 'flashcards', label: 'Flashcards', engine: 'flashcards', src: '/content/exercises/ser-estar.csv' },
+      { id: 'ordena', label: 'Ordena', engine: 'ordena', src: '/content/exercises/ser-estar-ordena.csv' },
     ]);
   });
 </script>
@@ -158,44 +164,80 @@ inline script at the bottom of the page hands control to
 
 Every engine registers itself on `window.ExerciseEngines[id].init(container)`
 instead of self-starting on `DOMContentLoaded` (it still self-starts on
-pages that set `data-src` directly, like `por-para.html` — this only
-changes on pages using the type router). `initExerciseTypePage` reads
-`?tipo=` from the URL (defaulting to the first type), renders the
-"Dos opciones / Arrastra / Parejas" tabs into `#exercise-type-slot`
-(right below the intro band), points `#exercise-app` at the matching CSV,
-and calls that type's `init`. Switching type always lands on set 1 of the
-new type, same reasoning as switching verb-type variants. Adding a fourth
-type later to a topic is: write its CSV, write its engine (or reuse an
-existing one against a new CSV), add one more entry to the array above —
-no other page needs to change.
+pages that set `data-src`/`data-variants` directly, like `por-para.html`
+and `presente.html` — this only changes on pages using the type router).
+`initExerciseTypePage` reads `?tipo=` from the URL (defaulting to the first
+type), renders the tabs into `#exercise-type-slot` (right below the intro
+band), points `#exercise-app` at the matching CSV, and calls that type's
+`init`. Switching type always lands on set 1 of the new type, same
+reasoning as switching verb-type variants. Note the `id` (used in the URL
+and shown as the tab label) and the `engine` key are independent — that's
+what let "Arrastra" get renamed to "Empareja" in the UI without touching
+the underlying `exercise-arrastra.js` file, and what lets Flashcards point
+its `engine` at a brand-new file while reusing an existing CSV via `src`.
 
-**Arrastra** CSV columns — one word bank per set, built from the `word`
-column of every row:
+**Empareja** (`js/exercise-arrastra.js` — internal id kept as "arrastra" for
+continuity with the file/CSV names) CSV columns — one word bank, shown
+*above* the sentences, built from the `word` column of every row:
 
 ```
 set,id,before,after,word
 1,1,"Ella","muy cansada hoy.",está
 ```
 
-**Parejas** CSV columns — a fixed left-hand subject with the verb form that
-belongs to it:
+**Completa** reuses the typed-answer engine (`js/exercise-typed.js`, the
+same one Presente uses), with one extra optional column, `tense` — useful
+here because one set can mix several indicative tenses instead of drilling
+just one:
 
 ```
-set,id,subject,verb
-1,1,Yo,estoy
+set,id,before,after,infinitive,tense,correct
+1,1,"Cuando era pequeña, mi hermana",muy tímida.,ser,pretérito imperfecto,era
 ```
 
-Both engines present themselves as "drag the word/box into place," but the
-actual interaction is **click/tap to select, then click/tap the target to
-place it** — not native HTML5 drag-and-drop. Real drag-and-drop needs extra
+Renders the hint as "(ser, pretérito imperfecto)" instead of just
+"(ser)" when the column is present; a plain conjugation CSV without a
+`tense` column (like Presente's) renders exactly as before.
+
+**Flashcards** (`js/exercise-flashcards.js`) is deliberately *not* a graded
+quiz — one sentence at a time, "Mostrar respuesta" reveals the answer, then
+the student self-reports "La sabía" / "No la sabía" and moves to the next
+card, ending with a "Sabías X de Y" summary and a "Repetir esta serie"
+button. It only reads the `before`/`after`/`correct` columns, so it can
+point straight at a topic's existing Dos opciones CSV (as above, reusing
+`ser-estar.csv` — no new content file needed); a topic without one just
+needs a plain `set,id,before,after,correct` CSV instead.
+
+**Ordena** (`js/exercise-ordena.js`) shuffles a sentence's words into a word
+bank; the student taps them in the right order to rebuild it. CSV columns:
+
+```
+set,id,correct,also_correct
+1,1,Ella está muy cansada hoy.,Hoy ella está muy cansada.
+```
+
+`correct` is the sentence written out normally — its words (split on
+whitespace) become that sentence's shuffled word bank. Spanish word order
+is often flexible (adverbs and time expressions especially can usually
+move to the front or the end), so a sentence can have more than one
+legitimate order: `also_correct` holds any other accepted orders of the
+*same words*, separated by `|` if there's more than one — leave it blank
+if the sentence only has one natural order. Grading ignores case and
+punctuation entirely (only word order is actually being tested — moving a
+word to the front changes its capitalization and can shift the final
+period to a different word, neither of which the exercise cares about).
+
+Empareja, Completa's typed input, and Ordena all present themselves as
+"drag/write the thing into place," but the actual interaction (where it
+isn't literally typing) is **click/tap to select, then click/tap the
+target** — not native HTML5 drag-and-drop. Real drag-and-drop needs extra
 polyfill code to work reliably on touchscreens, whereas click/tap works
 identically on desktop, mobile, and keyboard (every chip and slot is a real
 `<button>`, so Tab + Enter/Space already places things without any extra
-code). Visually it still reads as "boxes you move around"; functionally
-it's more robust and accessible than true dragging. If the felt experience
-of physically dragging turns out to matter, that could be added later as a
-progressive enhancement on top of the same click/tap logic, but it isn't
-needed for the exercise to work correctly today.
+code). If the felt experience of physically dragging turns out to matter,
+that could be added later as a progressive enhancement on top of the same
+click/tap logic, but it isn't needed for the exercises to work correctly
+today.
 
 ### Writing accented characters (á, é, í, ó, ú, ñ, ¿, ¡) correctly
 
@@ -219,6 +261,11 @@ similarly superseded now that Presente split into
 old content was copied into `presente-regular.csv` first, nothing was lost).
 None of these three are used by any live page but weren't deleted — feel
 free to delete them yourself in File Explorer whenever convenient.
+
+`js/exercise-parejas.js` and `content/exercises/ser-estar-parejas.csv` are
+similarly unused now — Ser y estar's "Parejas" exercise type was removed
+(two-column drag-to-match, subject → conjugated form). Neither file is
+referenced from any page anymore; delete them yourself whenever convenient.
 
 ## Local preview
 

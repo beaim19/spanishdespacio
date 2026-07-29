@@ -1,6 +1,8 @@
 /*
- * "Arrastra" exercise engine: 10 sentences each with one blank, plus a word
- * bank holding the correct word for every blank in the set (shuffled). The
+ * "Empareja" exercise engine (internal id stays "arrastra" for continuity
+ * with the file/CSV names already in place — only the user-facing label
+ * changed): 10 sentences each with one blank, plus a word bank above them
+ * holding the correct word for every blank in the set (shuffled). The
  * student picks a word from the bank, then picks a blank to drop it into.
  *
  * This is presented visually as "drag the word into place," but the actual
@@ -65,6 +67,26 @@
 
     let selectedChip = null;
 
+    // Word bank comes first, above the sentences — the student picks the
+    // word before deciding where it goes, so it reads top-to-bottom in the
+    // order the interaction actually happens.
+    const pool = document.createElement('div');
+    pool.className = 'word-pool';
+    pool.setAttribute('role', 'group');
+    pool.setAttribute('aria-label', 'Banco de palabras');
+
+    const words = shuffle(rows.map((row) => (row.word || '').trim()));
+    words.forEach((word, chipIndex) => {
+      const chip = document.createElement('button');
+      chip.type = 'button';
+      chip.className = 'pool-chip';
+      chip.textContent = word;
+      chip.dataset.chipId = String(chipIndex);
+      pool.appendChild(chip);
+    });
+
+    container.appendChild(pool);
+
     const list = document.createElement('ol');
     list.className = 'exercise-list';
 
@@ -92,25 +114,6 @@
     });
 
     container.appendChild(list);
-
-    // Word bank: one chip per row's word, shuffled so it isn't just the
-    // sentence order repeated.
-    const pool = document.createElement('div');
-    pool.className = 'word-pool';
-    pool.setAttribute('role', 'group');
-    pool.setAttribute('aria-label', 'Banco de palabras');
-
-    const words = shuffle(rows.map((row) => (row.word || '').trim()));
-    words.forEach((word, chipIndex) => {
-      const chip = document.createElement('button');
-      chip.type = 'button';
-      chip.className = 'pool-chip';
-      chip.textContent = word;
-      chip.dataset.chipId = String(chipIndex);
-      pool.appendChild(chip);
-    });
-
-    container.appendChild(pool);
 
     function selectChip(chip) {
       if (chip.disabled) return;
