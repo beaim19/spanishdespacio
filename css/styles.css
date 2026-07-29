@@ -333,6 +333,80 @@ a.theme-block:focus-visible {
   }
 }
 
+/* Theme row that groups several sub-topics behind one dropdown (e.g.
+   "Verbos" grouping Presente/Pasado/Futuro...) instead of listing every
+   sub-topic as its own top-level row. Overrides .theme-block's row layout
+   with a column layout, since the toggle button and the (initially
+   hidden) menu now stack. */
+.theme-menu-wrapper {
+  position: relative;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0;
+}
+.theme-menu-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  width: 100%;
+  font: inherit;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius);
+}
+.theme-menu-toggle:hover,
+.theme-menu-toggle:focus-visible {
+  background-color: var(--color-hover-tint);
+}
+.theme-menu-caret {
+  transition: transform 0.15s ease;
+}
+.theme-menu-wrapper.is-open .theme-menu-caret {
+  transform: rotate(180deg);
+}
+.theme-menu {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: var(--space-2) 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--color-panel);
+  border-radius: 0 0 var(--radius) var(--radius);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+.theme-menu-wrapper.is-open .theme-menu {
+  display: block;
+}
+.theme-menu a,
+.theme-menu-empty-item {
+  display: block;
+  padding: var(--space-2) var(--space-4);
+}
+.theme-menu a {
+  color: var(--color-brand-dark);
+  text-decoration: none;
+  font-weight: 600;
+}
+.theme-menu a:hover,
+.theme-menu a:focus-visible {
+  background-color: var(--color-hover-tint);
+}
+.theme-menu-empty-item {
+  color: var(--color-text);
+  opacity: 0.7;
+}
+.theme-menu-empty-item em {
+  font-style: italic;
+}
+
 /* Exercise-type switcher (Dos opciones / Arrastra / Parejas) — sits right
    below the green intro band, using the same white-chip pill treatment the
    series switcher used to have there. Only rendered when a topic offers

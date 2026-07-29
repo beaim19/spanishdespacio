@@ -17,16 +17,15 @@
       <div class="container">
         <a class="back-link-top" href="/exercises.html" aria-label="Volver a Ejercicios">&larr;</a>
         <h1>Presente</h1>
-        <p>Escribe el verbo en presente para completar cada frase. El infinitivo aparece entre paréntesis como pista. Cuando termines, pulsa "Comprobar".</p>
+        <p>Elige el tipo de verbo y el tipo de ejercicio para practicar el presente. Cuando termines, pulsa "Comprobar".</p>
         <div id="variant-switcher-slot"></div>
       </div>
     </section>
 
     <div class="container">
+      <div id="exercise-type-slot"></div>
       <div id="series-switcher-slot"></div>
-      <div id="exercise-app"
-           data-variants="regular,irregular,reflexivos"
-           data-src-template="/content/exercises/presente-{type}.csv">
+      <div id="exercise-app">
         <p>Cargando ejercicio…</p>
       </div>
       <a class="back-link-bottom" href="/exercises.html">&larr; Ejercicios</a>
@@ -37,7 +36,20 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
   <script src="/js/exercise-common.js"></script>
+  <script src="/js/exercise-arrastra.js"></script>
   <script src="/js/exercise-typed.js"></script>
+  <script src="/js/exercise-flashcards.js"></script>
+  <script src="/js/exercise-ordena.js"></script>
   <script src="/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      ExerciseCommon.initExerciseTypePage([
+        { id: 'empareja', label: 'Empareja', engine: 'arrastra', srcTemplate: '/content/exercises/presente-{type}-empareja.csv' },
+        { id: 'completa', label: 'Completa', engine: 'typed', srcTemplate: '/content/exercises/presente-{type}.csv' },
+        { id: 'flashcards', label: 'Flashcards', engine: 'flashcards', srcTemplate: '/content/exercises/presente-{type}.csv' },
+        { id: 'ordena', label: 'Ordena', engine: 'ordena', srcTemplate: '/content/exercises/presente-{type}-ordena.csv' },
+      ], { variants: ['regular', 'irregular', 'reflexivos'] });
+    });
+  </script>
 </body>
 </html>

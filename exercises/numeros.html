@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Por o para — Spanish Despacio</title>
-  <meta name="description" content="Ejercicio interactivo: elige entre por y para en cada frase.">
+  <title>Números — Spanish Despacio</title>
+  <meta name="description" content="Ejercicio interactivo: practica los números en español.">
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
@@ -16,8 +16,8 @@
     <section class="intro-band">
       <div class="container">
         <a class="back-link-top" href="/exercises.html" aria-label="Volver a Ejercicios">&larr;</a>
-        <h1>Por o para</h1>
-        <p>Elige el tipo de ejercicio y completa cada frase. Cuando termines, pulsa "Comprobar".</p>
+        <h1>Números</h1>
+        <p>Elige el tipo de ejercicio y practica los números en español. Cuando termines, pulsa "Comprobar".</p>
       </div>
     </section>
 
@@ -35,14 +35,16 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
   <script src="/js/exercise-common.js"></script>
-  <script src="/js/exercise-choice2.js"></script>
+  <script src="/js/exercise-arrastra.js"></script>
+  <script src="/js/exercise-typed.js"></script>
   <script src="/js/exercise-flashcards.js"></script>
   <script src="/js/main.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       ExerciseCommon.initExerciseTypePage([
-        { id: 'dos-opciones', label: 'Dos opciones', engine: 'choice2', src: '/content/exercises/por-para.csv' },
-        { id: 'flashcards', label: 'Flashcards', engine: 'flashcards', src: '/content/exercises/por-para.csv' },
+        { id: 'empareja', label: 'Empareja', engine: 'arrastra', src: '/content/exercises/numeros-empareja.csv' },
+        { id: 'completa', label: 'Completa', engine: 'typed', src: '/content/exercises/numeros-completa.csv' },
+        { id: 'flashcards', label: 'Flashcards', engine: 'flashcards', src: '/content/exercises/numeros-completa.csv' },
       ]);
     });
   </script>

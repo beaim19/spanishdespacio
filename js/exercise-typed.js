@@ -116,9 +116,15 @@
       // "Completa"-style CSVs add a tense column (presente, futuro...) since
       // one set can mix several indicative tenses; plain conjugation CSVs
       // like Presente's don't have that column, so the hint falls back to
-      // just the infinitive.
+      // just showing the base form. That base form itself comes from
+      // "infinitive" for verb topics, but "Completa" isn't only used for
+      // verbs (Adjetivos types the correct agreement given the base
+      // adjective, Números types the word form given the digit) — those
+      // CSVs use a more accurately-named "hint" column instead; either one
+      // works here.
       const tense = (row.tense || '').trim();
-      hint.textContent = tense ? `(${row.infinitive}, ${tense})` : `(${row.infinitive})`;
+      const baseForm = (row.hint || row.infinitive || '').trim();
+      hint.textContent = tense ? `(${baseForm}, ${tense})` : `(${baseForm})`;
       sentence.appendChild(hint);
 
       const feedback = document.createElement('span');

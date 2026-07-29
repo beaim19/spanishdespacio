@@ -9,18 +9,24 @@ custom domain `spanishdespacio.com` via Porkbun DNS.
 ```
 index.html               Home page
 podcasts.html             Podcasts, organized by theme (anchor-nav index)
-exercises.html            Exercises, organized by grammar topic (anchor-nav index)
-exercises/*.html          One page per exercise (e.g. ser-estar-1.html)
+exercises.html            Exercises index — Ser y estar / Por y para / Adjetivos /
+                          Números as top-level topics, plus "Verbos" as a
+                          dropdown grouping every verb tense (see below)
+exercises/*.html          One page per topic (ser-estar.html, por-para.html,
+                          adjetivos.html, numeros.html, presente.html, ...)
 dele.html                 DELE A2 Shiny app (iframe)
 about.html                About / contact
 privacy.html              Privacy & cookies policy
 css/styles.css            All site styles (colors match the DELE app)
 js/main.js                Shared header/footer injection, mobile nav
+js/theme-menu.js          Accessible dropdown for theme-index rows that group
+                          several sub-topics (used by "Verbos")
 js/exercise-common.js     Shared CSV loading, series pager, verb-type and
                           exercise-type switchers
 js/exercise-choice2.js    "Pick between two options" exercise engine (Dos opciones)
 js/exercise-arrastra.js   "Drag a word into the blank" exercise engine (Empareja)
-js/exercise-typed.js      Typed-answer/conjugation exercise engine (Presente, Completa)
+js/exercise-typed.js      Typed-answer exercise engine (Completa) — also
+                          reused, unmodified, as Presente's conjugation drill
 js/exercise-flashcards.js Self-paced reveal-and-self-assess exercise engine (Flashcards)
 js/exercise-ordena.js     Sentence word-reordering exercise engine (Ordena)
 content/exercises/        Exercise content as CSV — see below
@@ -104,8 +110,9 @@ Each file uses the normal `set,id,before,after,infinitive,correct` columns —
 "variant" and "set" are independent, so series numbering restarts at 1 in
 each variant's file, and that's fine.
 
-On the page (`exercises/presente.html`), the container tells the engine
-about the variants instead of a single `data-src`:
+For a topic that has variants but only ever needs ONE exercise engine (no
+type-switcher), the container can tell that engine about the variants
+directly instead of a single `data-src`:
 
 ```html
 <div id="exercise-app"
@@ -119,22 +126,30 @@ the intro band, next to the title) and `#series-switcher-slot` (Serie 1/2/...
 — put this one in the white area, above `#exercise-app`). The URL ends up
 looking like `presente.html?type=irregular&set=2`; switching variant always
 lands on that variant's set 1, since set numbers don't mean anything across
-variants.
+variants. To add a fourth variant later: new CSV, add its slug to
+`data-variants`, done — no JS changes needed. A topic that doesn't need
+variants at all (ser/estar, por/para, adjetivos, números) just keeps the
+plain `data-src` attribute and never renders a variant tab.
 
-To add a fourth variant later: new CSV, add its slug to `data-variants`,
-done — no JS changes needed. A topic that *doesn't* need this (ser/estar,
-por/para) just keeps the plain `data-src` attribute and never renders a
-variant tab at all.
+Presente itself has since grown past this simple case — it now also offers
+several exercise *types* per variant — see the combined pattern below.
 
 ## Splitting a topic into exercise types (Dos opciones / Empareja / Completa / Flashcards / Ordena)
 
-Some topics — Ser y estar first — offer the same content practiced through
-several different mechanics. This is a third, independent dimension on top
-of "set" and "variant": it's driven by `?tipo=` in the URL and, unlike
-variants, each type needs its own **engine**, not just its own CSV, since
-the interaction itself is different. This pattern is meant to be reused for
-other topics later — a topic doesn't have to offer all five types, it's
-just whichever entries you list in its page's router array.
+Some topics offer the same content practiced through several different
+mechanics. This is a third, independent dimension on top of "set" and
+"variant": it's driven by `?tipo=` in the URL and, unlike variants, each
+type needs its own **engine**, not just its own CSV, since the interaction
+itself is different. A topic doesn't have to offer all five — it's just
+whichever entries you list in its page's router array. Current lineup:
+
+- **Ser y estar** and **Adjetivos** — all five types.
+- **Por y para** — Dos opciones and Flashcards only.
+- **Números** — Empareja, Completa, and Flashcards only (no two-way choice
+  or word-order drill makes sense for numbers).
+- **Presente** — Empareja, Completa, Flashcards, and Ordena, *combined*
+  with its Regular/Irregular/Reflexivos variants — see the dedicated
+  section below, since that combination needed the router to do a bit more.
 
 On the page (`exercises/ser-estar.html`), `#exercise-app` is left with no
 `data-src` at all. Instead, every engine script the topic uses is loaded,
@@ -199,6 +214,13 @@ Renders the hint as "(ser, pretérito imperfecto)" instead of just
 "(ser)" when the column is present; a plain conjugation CSV without a
 `tense` column (like Presente's) renders exactly as before.
 
+Completa isn't only for verbs — the hint column itself is `infinitive` OR
+`hint`, whichever the CSV has (falls back to `infinitive` first, for the
+existing verb CSVs). Adjetivos' Completa uses `hint` to show the base
+(masculine singular) form of the adjective, e.g. "(rápido)" as the hint
+for typing "rápida"; Números' Completa uses `hint` to show the digit, e.g.
+"(20)" as the hint for typing "veinte".
+
 **Flashcards** (`js/exercise-flashcards.js`) is deliberately *not* a graded
 quiz — one sentence at a time, "Mostrar respuesta" reveals the answer, then
 the student self-reports "La sabía" / "No la sabía" and moves to the next
@@ -238,6 +260,73 @@ code). If the felt experience of physically dragging turns out to matter,
 that could be added later as a progressive enhancement on top of the same
 click/tap logic, but it isn't needed for the exercises to work correctly
 today.
+
+## Combining verb-type variants with exercise types (Presente)
+
+Presente needs both dimensions at once: Regular/Irregular/Reflexivos
+*and* Empareja/Completa/Flashcards/Ordena, all independent of each other
+and of "set". `initExerciseTypePage` takes an optional second argument for
+this — pass `{ variants: [...] }` and give each type entry a `srcTemplate`
+(containing `{type}`) instead of a fixed `src`:
+
+```html
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    ExerciseCommon.initExerciseTypePage([
+      { id: 'empareja', label: 'Empareja', engine: 'arrastra', srcTemplate: '/content/exercises/presente-{type}-empareja.csv' },
+      { id: 'completa', label: 'Completa', engine: 'typed', srcTemplate: '/content/exercises/presente-{type}.csv' },
+      { id: 'flashcards', label: 'Flashcards', engine: 'flashcards', srcTemplate: '/content/exercises/presente-{type}.csv' },
+      { id: 'ordena', label: 'Ordena', engine: 'ordena', srcTemplate: '/content/exercises/presente-{type}-ordena.csv' },
+    ], { variants: ['regular', 'irregular', 'reflexivos'] });
+  });
+</script>
+```
+
+With `variants` given, the router renders the Regular/Irregular/Reflexivos
+tabs into `#variant-switcher-slot` itself (the container no longer needs
+`data-variants`/`data-src-template` — those only matter for the simple,
+type-router-free case described above), resolves `{type}` against whichever
+variant is selected, and hands the fully-resolved URL to the chosen
+engine. The URL ends up looking like
+`presente.html?tipo=completa&type=irregular&set=2`; switching either
+variant or exercise type independently preserves the other one and resets
+`set` to 1 (new combination, no reason the old series number would still
+line up). Completa reuses the exact same `presente-{type}.csv` files
+Presente always had — nothing changed there — while Empareja and Ordena
+needed their own new CSVs per variant (`presente-regular-empareja.csv`,
+`presente-regular-ordena.csv`, etc.), same column layouts described above,
+just one file per variant instead of one file for the whole topic.
+
+## Grouping topics behind a dropdown (Verbos)
+
+`exercises.html` lists most topics as a single clickable row, but tenses
+(Presente, Pasado, Futuro...) are all "Verbos" to a student choosing what to
+practice, so they're grouped behind one row that opens a small menu instead
+of every tense getting its own top-level row:
+
+```html
+<div class="theme-block theme-menu-wrapper">
+  <button type="button" class="theme-menu-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="verbos-menu">
+    <div class="theme-block-text"><h2>Verbos</h2><p>...</p></div>
+    <span class="theme-block-arrow theme-menu-caret" aria-hidden="true">&darr;</span>
+  </button>
+  <ul class="theme-menu" id="verbos-menu">
+    <li><a href="/exercises/presente.html">Presente</a></li>
+    <li class="theme-menu-empty-item">Pasado <em>(Próximamente)</em></li>
+    <!-- ...one <li> per tense... -->
+  </ul>
+</div>
+```
+
+`js/theme-menu.js` wires up any `.theme-menu-wrapper` it finds on the page:
+click/tap toggles it (works on touch and via Enter/Space on the button,
+since it's a real `<button>`), hovering the whole component open on desktop
+is purely an added convenience on top of that, Escape closes it and returns
+focus to the toggle, and clicking outside closes it too. To add a topic
+under Verbos later: add another `<li>` (a link if it's built, a
+`.theme-menu-empty-item` if not) — no JS changes needed. A second grouped
+category later would just reuse the same `.theme-menu-wrapper` markup with
+a different id.
 
 ### Writing accented characters (á, é, í, ó, ú, ñ, ¿, ¡) correctly
 

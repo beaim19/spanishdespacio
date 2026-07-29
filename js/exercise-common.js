@@ -149,7 +149,15 @@ window.ExerciseCommon = (function () {
     variants.forEach((typeId) => {
       const li = document.createElement('li');
       const a = document.createElement('a');
-      a.href = `?type=${encodeURIComponent(typeId)}`;
+      // Clones the current URL's params and only changes "type" — this is
+      // what keeps ?tipo=completa (exercise type) intact on topics that
+      // combine both a verb-type switcher and an exercise-type switcher
+      // (e.g. Presente). Still resets "set", since series numbers aren't
+      // shared across verb-type variants either.
+      const params = new URLSearchParams(window.location.search);
+      params.set('type', typeId);
+      params.delete('set');
+      a.href = `?${params.toString()}`;
       a.textContent = capitalize(typeId);
       if (typeId === currentType) a.setAttribute('aria-current', 'true');
       li.appendChild(a);
@@ -222,17 +230,37 @@ window.ExerciseCommon = (function () {
    * Entry point for a topic page that offers several exercise types.
    * Figures out which type is selected, renders the tabs, points
    * #exercise-app at the right CSV, and hands off to that type's engine.
+   *
+   * A topic that ALSO splits into verb-type variants (Presente's
+   * Regular/Irregular/Reflexivos) passes `{ variants: [...] }` as a second
+   * argument — combining both dimensions. When variants are given, each
+   * `types` entry uses `srcTemplate` (containing "{type}") instead of a
+   * fixed `src`, e.g. '/content/exercises/presente-{type}-empareja.csv',
+   * and this also renders the variant tabs into #variant-switcher-slot.
+   * Topics without variants just omit the second argument entirely and
+   * every type entry uses a plain `src` — unchanged from before.
    */
-  function initExerciseTypePage(types) {
+  function initExerciseTypePage(types, options) {
     const container = document.getElementById('exercise-app');
     if (!container) return;
+
+    const opts = options || {};
+    const variants = opts.variants || null;
 
     const currentTypeId = getRequestedExerciseType(types);
     const current = types.find((t) => t.id === currentTypeId) || types[0];
 
     renderExerciseTypeNav(types, currentTypeId);
 
-    container.dataset.src = current.src;
+    let resolvedSrc = current.src;
+    if (variants && variants.length > 0) {
+      const currentVariant = getRequestedType(variants);
+      renderVariantNav(variants, currentVariant);
+      const template = current.srcTemplate || current.src;
+      resolvedSrc = template.replace('{type}', currentVariant);
+    }
+
+    container.dataset.src = resolvedSrc;
     const engine = window.ExerciseEngines && window.ExerciseEngines[current.engine];
     if (!engine) {
       container.innerHTML = '<p>No se pudo cargar el ejercicio. Inténtalo de nuevo más tarde.</p>';

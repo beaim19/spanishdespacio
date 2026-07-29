@@ -23,7 +23,9 @@
     <div class="container">
       <!-- Each topic is one clickable row (title + description); topics
            with nothing published yet stay non-interactive with a
-           "Próximamente" label instead of a link. -->
+           "Próximamente" label instead of a link. "Verbos" groups every
+           verb tense behind one dropdown instead of listing each as its
+           own top-level row — see js/theme-menu.js for the toggle. -->
       <section class="theme-section" id="tema-ser-estar">
         <a class="theme-block" href="/exercises/ser-estar.html">
           <div class="theme-block-text">
@@ -44,63 +46,43 @@
         </a>
       </section>
 
-      <section class="theme-section" id="tema-presente">
-        <a class="theme-block" href="/exercises/presente.html">
+      <section class="theme-section" id="tema-adjetivos">
+        <a class="theme-block" href="/exercises/adjetivos.html">
           <div class="theme-block-text">
-            <h2>Presente</h2>
-            <p>Conjuga verbos en presente para completar cada frase.</p>
+            <h2>Adjetivos</h2>
+            <p>Practica la concordancia de género y número de los adjetivos.</p>
           </div>
           <span class="theme-block-arrow" aria-hidden="true">&rarr;</span>
         </a>
       </section>
 
-      <section class="theme-section" id="tema-pasado">
-        <div class="theme-block">
+      <section class="theme-section" id="tema-numeros">
+        <a class="theme-block" href="/exercises/numeros.html">
           <div class="theme-block-text">
-            <h2>Pasado</h2>
-            <p>Practica las formas del pretérito.</p>
+            <h2>Números</h2>
+            <p>Practica los números en español.</p>
           </div>
-          <span class="theme-empty">Próximamente</span>
-        </div>
+          <span class="theme-block-arrow" aria-hidden="true">&rarr;</span>
+        </a>
       </section>
 
-      <section class="theme-section" id="tema-pasado-perfecto">
-        <div class="theme-block">
-          <div class="theme-block-text">
-            <h2>Pasado perfecto</h2>
-            <p>Practica el pretérito perfecto compuesto.</p>
-          </div>
-          <span class="theme-empty">Próximamente</span>
-        </div>
-      </section>
-
-      <section class="theme-section" id="tema-futuro">
-        <div class="theme-block">
-          <div class="theme-block-text">
-            <h2>Futuro</h2>
-            <p>Conjuga verbos en futuro.</p>
-          </div>
-          <span class="theme-empty">Próximamente</span>
-        </div>
-      </section>
-
-      <section class="theme-section" id="tema-subjuntivo">
-        <div class="theme-block">
-          <div class="theme-block-text">
-            <h2>Subjuntivo</h2>
-            <p>Practica el modo subjuntivo.</p>
-          </div>
-          <span class="theme-empty">Próximamente</span>
-        </div>
-      </section>
-
-      <section class="theme-section" id="tema-imperativo">
-        <div class="theme-block">
-          <div class="theme-block-text">
-            <h2>Imperativo</h2>
-            <p>Practica órdenes y peticiones con el imperativo.</p>
-          </div>
-          <span class="theme-empty">Próximamente</span>
+      <section class="theme-section" id="tema-verbos">
+        <div class="theme-block theme-menu-wrapper">
+          <button type="button" class="theme-menu-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="verbos-menu">
+            <div class="theme-block-text">
+              <h2>Verbos</h2>
+              <p>Elige un tiempo verbal para practicar.</p>
+            </div>
+            <span class="theme-block-arrow theme-menu-caret" aria-hidden="true">&darr;</span>
+          </button>
+          <ul class="theme-menu" id="verbos-menu">
+            <li><a href="/exercises/presente.html">Presente</a></li>
+            <li class="theme-menu-empty-item">Pasado <em>(Próximamente)</em></li>
+            <li class="theme-menu-empty-item">Pasado perfecto <em>(Próximamente)</em></li>
+            <li class="theme-menu-empty-item">Futuro <em>(Próximamente)</em></li>
+            <li class="theme-menu-empty-item">Subjuntivo <em>(Próximamente)</em></li>
+            <li class="theme-menu-empty-item">Imperativo <em>(Próximamente)</em></li>
+          </ul>
         </div>
       </section>
     </div>
@@ -109,5 +91,6 @@
   <div id="site-footer-placeholder"></div>
 
   <script src="/js/main.js"></script>
+  <script src="/js/theme-menu.js"></script>
 </body>
 </html>
