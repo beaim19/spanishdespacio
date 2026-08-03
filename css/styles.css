@@ -750,6 +750,11 @@ a.theme-block:focus-visible {
 .flashcard-answer {
   color: var(--color-brand-dark);
 }
+.flashcard-label {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--color-text);
+}
 .flashcard .exercise-controls {
   justify-content: center;
 }

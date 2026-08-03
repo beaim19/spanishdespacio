@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ser o estar — Spanish Despacio</title>
-  <meta name="description" content="Ejercicio interactivo: elige entre ser y estar en cada frase.">
+  <title>Pasado — Spanish Despacio</title>
+  <meta name="description" content="Ejercicio interactivo: escribe el verbo en pasado para completar cada frase.">
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
@@ -16,8 +16,9 @@
     <section class="intro-band">
       <div class="container">
         <a class="back-link-top" href="/exercises.html" aria-label="Volver a Ejercicios">&larr;</a>
-        <h1>Ser o estar</h1>
-        <p>Elige el tipo de ejercicio y completa cada frase. Cuando termines, pulsa "Comprobar".</p>
+        <h1>Pasado</h1>
+        <p>Elige el tipo de verbo y el tipo de ejercicio para practicar el pretérito. Cuando termines, pulsa "Comprobar".</p>
+        <div id="variant-switcher-slot"></div>
       </div>
     </section>
 
@@ -35,7 +36,6 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
   <script src="/js/exercise-common.js"></script>
-  <script src="/js/exercise-choice2.js"></script>
   <script src="/js/exercise-arrastra.js"></script>
   <script src="/js/exercise-typed.js"></script>
   <script src="/js/exercise-flashcards.js"></script>
@@ -44,12 +44,11 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       ExerciseCommon.initExerciseTypePage([
-        { id: 'dos-opciones', label: 'Dos opciones', engine: 'choice2', src: '/content/exercises/ser-estar.csv' },
-        { id: 'empareja', label: 'Empareja', engine: 'arrastra', src: '/content/exercises/ser-estar-arrastra.csv' },
-        { id: 'completa', label: 'Completa', engine: 'typed', src: '/content/exercises/ser-estar-completa.csv' },
-        { id: 'flashcards', label: 'Flashcards', engine: 'flashcards', src: '/content/exercises/ser-estar-flashcards.csv' },
-        { id: 'ordena', label: 'Ordena', engine: 'ordena', src: '/content/exercises/ser-estar-ordena.csv' },
-      ]);
+        { id: 'empareja', label: 'Empareja', engine: 'arrastra', srcTemplate: '/content/exercises/pasado-{type}-empareja.csv' },
+        { id: 'completa', label: 'Completa', engine: 'typed', srcTemplate: '/content/exercises/pasado-{type}-completa.csv' },
+        { id: 'flashcards', label: 'Flashcards', engine: 'flashcards', srcTemplate: '/content/exercises/pasado-{type}-completa.csv' },
+        { id: 'ordena', label: 'Ordena', engine: 'ordena', srcTemplate: '/content/exercises/pasado-{type}-ordena.csv' },
+      ], { variants: ['regular', 'irregular', 'reflexivos'] });
     });
   </script>
 </body>

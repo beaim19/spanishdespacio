@@ -1,11 +1,21 @@
 ﻿set,id,correct,also_correct
-1,1,Yo hablo español todos los días.,
-1,2,Ella vive en Madrid.,
-1,3,Su perro corre muy deprisa.,
-1,4,Tú caminas muy despacio.,
-1,5,Ustedes viajan con muy poco equipaje.,
-1,6,Vosotros cantáis demasiado alto.,
-1,7,Él trabaja en una oficina pequeña.,
-1,8,Yo compro el pan en esta tienda.,
-1,9,Ellos suben las escaleras a pie.,
-1,10,Nosotros visitamos este museo cada año.,
+1,1,Me gusta mucho visitar nuevos países.,
+1,2,Los pájaros beben agua en la fuente.,
+1,3,Ustedes caminan demasiado rápido para mí. ,
+1,4,Los niños escuchan con atención al maestro.,
+1,5,Todas las mañanas estudio un poco de español. ,Estudio un poco de español todas las mañanas.
+1,6,Su padre trabaja en el garaje detrás de su casa. ,
+1,7,Dicen que mañana canta Luis. ,Mañana dicen que canta Luis.
+1,8,La tienda de la esquina abre todos los días.,
+1,9,Ellos intentan marcar gol con mucho esfuerzo. ,Con mucho esfuerzo ellos intentan marcar gol. 
+1,10,Ellos leen muchos libros cada mes. ,Cada mes ellos leen muchos libros. 
+2,1,Vosotros cambiáis los platos de la mesa. ,
+2,2,Sus hijos necesitan ir a casa antes del partido. ,Antes del partido sus hijos necesitan ir a casa. 
+2,3,Yo tomo el autobús para ir al trabajo. ,Para ir al trabajo yo tomo el autobús.
+2,4,Vosotros vivís muy cerca de mis padres. ,
+2,5,Ella escribe una carta a sus abuelos cada semana ,Cada semana ella escribe una carta a sus abuelos. 
+2,6,Usteder beben el agua muy fría. ,
+2,7,El dueño del local busca un apartamento. ,El dueño del apartamento busca un local. 
+2,8,Las enfermeras comen todos los días en la cantina. ,Las enfermeras comen en la cantina todos los días.
+2,9,El director llama a menudo a los padres de los alumnos. ,El director llama a los padres de los alumnos a menudo. 
+2,10,Tú llevas a tus hijos a una piscina muy buena. ,

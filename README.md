@@ -147,9 +147,19 @@ whichever entries you list in its page's router array. Current lineup:
 - **Por y para** — Dos opciones and Flashcards only.
 - **Números** — Empareja, Completa, and Flashcards only (no two-way choice
   or word-order drill makes sense for numbers).
-- **Presente** — Empareja, Completa, Flashcards, and Ordena, *combined*
-  with its Regular/Irregular/Reflexivos variants — see the dedicated
+- **Presente** and **Pasado** — Empareja, Completa, Flashcards, and Ordena,
+  *combined* with Regular/Irregular/Reflexivos variants — see the dedicated
   section below, since that combination needed the router to do a bit more.
+  Pasado is currently a scaffold (real content still to come) — see "Known
+  loose ends" below.
+
+Every topic's exercise types increasingly use their **own dedicated CSV per
+type** rather than reusing one file across several types, even when the
+schemas would allow it — repeating the same 10 sentences across Empareja,
+Completa, and Ordena got monotonous fast for a student doing all three.
+Flashcards is the one exception that still reuses another type's CSV by
+default (see below), since self-testing recall of the same sentences you
+just practiced elsewhere is actually useful, not repetitive.
 
 On the page (`exercises/ser-estar.html`), `#exercise-app` is left with no
 `data-src` at all. Instead, every engine script the topic uses is loaded,
@@ -193,11 +203,14 @@ its `engine` at a brand-new file while reusing an existing CSV via `src`.
 
 **Empareja** (`js/exercise-arrastra.js` — internal id kept as "arrastra" for
 continuity with the file/CSV names) CSV columns — one word bank, shown
-*above* the sentences, built from the `word` column of every row:
+*above* the sentences, built from the `word` column of every row, plus an
+optional `hint` column shown in brackets at the end of the sentence (used
+by Números to show the digit form, e.g. "(20)", next to the blank the
+student fills with "veinte"):
 
 ```
-set,id,before,after,word
-1,1,"Ella","muy cansada hoy.",está
+set,id,before,after,word,hint
+1,1,"Ella","muy cansada hoy.",está,
 ```
 
 **Completa** reuses the typed-answer engine (`js/exercise-typed.js`, the
@@ -221,14 +234,44 @@ existing verb CSVs). Adjetivos' Completa uses `hint` to show the base
 for typing "rápida"; Números' Completa uses `hint` to show the digit, e.g.
 "(20)" as the hint for typing "veinte".
 
+Both `infinitive`/`hint` and `tense` are optional independently — Ser y
+estar's Completa deliberately has neither an `infinitive` nor a `hint`
+column, only `tense`: guessing between *ser* and *estar* is the whole
+point, so no base-form clue is given, and the hint shows just "(tense)"
+on its own. Whenever at least one row in the CSV has a non-empty `tense`,
+the engine also shows a fixed instruction above the exercise — "Todos los
+tiempos verbales de este ejercicio son de indicativo." — since mixing
+tenses within one set could otherwise read as ambiguous about mood
+(subjuntivo forms look different but a student might still wonder).
+Single-tense CSVs like Presente's or Pasado's don't have a `tense` column
+at all, so this instruction never appears there.
+
 **Flashcards** (`js/exercise-flashcards.js`) is deliberately *not* a graded
-quiz — one sentence at a time, "Mostrar respuesta" reveals the answer, then
-the student self-reports "La sabía" / "No la sabía" and moves to the next
-card, ending with a "Sabías X de Y" summary and a "Repetir esta serie"
-button. It only reads the `before`/`after`/`correct` columns, so it can
-point straight at a topic's existing Dos opciones CSV (as above, reusing
-`ser-estar.csv` — no new content file needed); a topic without one just
-needs a plain `set,id,before,after,correct` CSV instead.
+quiz — one card at a time, "Mostrar respuesta" reveals the answer, then the
+student self-reports "La sabía" / "No la sabía" and moves to the next card,
+ending with a "Sabías X de Y" summary and a "Repetir esta serie" button.
+It supports two content shapes, auto-detected from the CSV's columns:
+
+*Sentence mode* (the default) — `set,id,before,after,correct`, the same
+shape as Dos opciones or Completa, so a topic without its own dedicated
+Flashcards file can just point at one of those (extra columns like
+`option_a`/`option_b` or `infinitive` are simply ignored). Optional columns
+build a "(...)" hint shown above the blank, in this order when present:
+`infinitive`/`hint` (base form), `tense`, `subject` (grammatical person,
+e.g. "ella") — e.g. Ser y estar's dedicated `ser-estar-flashcards.csv` has
+`tense`+`subject` but no base form (same reasoning as Completa: guessing
+ser/estar is the point), rendering "(presente, ella)"; Presente's reuses
+its Completa-style CSV, which only has `infinitive`, rendering "(hablar)".
+Once revealed, an optional second "(...)" label appears after the answer,
+built from `gender`/`number` — used by Adjetivos' dedicated Flashcards CSV,
+where the point is recognizing gender/number agreement rather than
+recalling an exact word, e.g. revealing "elegante *(masculino, singular)*".
+
+*Pair mode* — `set,id,term_a,term_b`, for plain vocabulary recall with no
+sentence at all. Números' Flashcards uses this (a digit and its word form,
+e.g. `20,veinte`) — each card randomly shows term_a or term_b as the front
+and reveals the other, so the student practices converting in both
+directions instead of always reading the same one.
 
 **Ordena** (`js/exercise-ordena.js`) shuffles a sentence's words into a word
 bank; the student taps them in the right order to rebuild it. CSV columns:
@@ -274,7 +317,7 @@ this — pass `{ variants: [...] }` and give each type entry a `srcTemplate`
   document.addEventListener('DOMContentLoaded', () => {
     ExerciseCommon.initExerciseTypePage([
       { id: 'empareja', label: 'Empareja', engine: 'arrastra', srcTemplate: '/content/exercises/presente-{type}-empareja.csv' },
-      { id: 'completa', label: 'Completa', engine: 'typed', srcTemplate: '/content/exercises/presente-{type}.csv' },
+      { id: 'completa', label: 'Completa', engine: 'typed', srcTemplate: '/content/exercises/presente-{type}-completa.csv' },
       { id: 'flashcards', label: 'Flashcards', engine: 'flashcards', srcTemplate: '/content/exercises/presente-{type}.csv' },
       { id: 'ordena', label: 'Ordena', engine: 'ordena', srcTemplate: '/content/exercises/presente-{type}-ordena.csv' },
     ], { variants: ['regular', 'irregular', 'reflexivos'] });
@@ -291,11 +334,15 @@ engine. The URL ends up looking like
 `presente.html?tipo=completa&type=irregular&set=2`; switching either
 variant or exercise type independently preserves the other one and resets
 `set` to 1 (new combination, no reason the old series number would still
-line up). Completa reuses the exact same `presente-{type}.csv` files
-Presente always had — nothing changed there — while Empareja and Ordena
-needed their own new CSVs per variant (`presente-regular-empareja.csv`,
-`presente-regular-ordena.csv`, etc.), same column layouts described above,
-just one file per variant instead of one file for the whole topic.
+line up). Every type here has its own CSV per variant
+(`presente-regular-empareja.csv`, `presente-regular-completa.csv`,
+`presente-regular-ordena.csv`, etc.) so the sentences don't repeat between
+types — Flashcards is the deliberate exception, reusing
+`presente-{type}.csv` (the original conjugation file, same one Presente
+always had) since self-testing recall of what you just practiced is useful
+rather than repetitive. Pasado (`exercises/pasado.html`) follows the exact
+same structure, currently scaffolded with 1–2 example rows per file — see
+"Known loose ends" below.
 
 ## Grouping topics behind a dropdown (Verbos)
 
@@ -328,6 +375,46 @@ under Verbos later: add another `<li>` (a link if it's built, a
 category later would just reuse the same `.theme-menu-wrapper` markup with
 a different id.
 
+## Texto (planned — schema only so far)
+
+A future exercise type for cloze passages: a short text (200 words to
+start) with several words removed, either given as a word bank to place
+(easier) or typed from scratch (harder). Two more independent dimensions on
+top of everything above: **category** (Artículos / Verbos / Adjetivos /
+Todo — which kind of word gets blanked) would work as a *variant*, and
+**difficulty** (Fácil / Difícil) would work as a *type* — same
+`initExerciseTypePage({ variants })` pattern already used for Presente and
+Pasado, just applied to a new topic.
+
+The CSV shape is different from every other type so far, since it has to
+reconstruct one continuous passage instead of independent sentences — one
+row per blank, chained together:
+
+```
+set,id,before,after,word,options
+1,1,"Ayer, mi familia y yo",,fuimos,fue|van|iremos
+1,2,a,,la,el|los|una
+1,3,"playa. Hacía",,un,una|el|unos
+```
+
+`before` is the text since the *previous* blank up to this one (for the
+first row, the opening of the passage); `after` is normally empty and only
+holds the closing text on the *last* row of a set — concatenating every
+row's `before` + blank + `after` in order reconstructs the full passage.
+`word` is the correct answer for that blank; `options` is a `|`-separated
+list of decoys shown alongside `word` in the word bank for Fácil difficulty
+(Difícil would ignore `options` entirely and use a typed input instead,
+same as Completa). See `content/exercises/texto-ejemplo.csv` for a full
+worked example (a short beach-trip passage mixing verb, article, and
+adjective blanks, i.e. what a "Todo" category row set would look like).
+
+This is schema-and-example only for now, at your request, so you can look
+over the column layout before committing to it — the interactive engine
+(rendering the passage as one flowing paragraph rather than a numbered
+list, plus the word-bank/typed toggle for difficulty) hasn't been built
+yet. Once you've had a chance to react to the shape of the CSV, or have a
+real 200-word passage ready, that's the natural next step.
+
 ### Writing accented characters (á, é, í, ó, ú, ñ, ¿, ¡) correctly
 
 If you edit these CSVs in Excel and see garbled characters instead of accents,
@@ -355,6 +442,12 @@ free to delete them yourself in File Explorer whenever convenient.
 similarly unused now — Ser y estar's "Parejas" exercise type was removed
 (two-column drag-to-match, subject → conjugated form). Neither file is
 referenced from any page anymore; delete them yourself whenever convenient.
+
+**Pasado is a scaffold, not real content yet.** `exercises/pasado.html` and
+its nine CSVs (`pasado-{regular,irregular,reflexivos}-{completa,empareja,ordena}.csv`)
+exist and are wired up exactly like Presente, but each CSV only has 1–2
+example rows to show the format — replace/extend them the same way you've
+been filling in Presente's sets.
 
 ## Local preview
 

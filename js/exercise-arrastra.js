@@ -14,11 +14,15 @@
  * everywhere without extra plumbing.
  *
  * One CSV per TOPIC (not per set of 10) — new sets are just more rows.
- * Expected CSV columns: set, id, before, after, word
+ * Expected CSV columns: set, id, before, after, word — plus an optional
+ * `hint` column:
  *   set            = which group of ~10 this row belongs to (1, 2, 3...)
  *   before / after = the sentence text split around the blank
  *   word           = the correct word for this blank — also doubles as one
  *                    of the draggable words in that set's word bank
+ *   hint           = optional; shown in brackets at the end of the
+ *                    sentence (e.g. Números shows the digit form, "(20)",
+ *                    next to a blank the student fills with "veinte")
  *
  * Host page needs, before this script:
  *   1. PapaParse (loaded via CDN)
@@ -109,6 +113,15 @@
       sentence.appendChild(slot);
 
       sentence.appendChild(document.createTextNode(` ${row.after}`));
+
+      // Optional trailing hint (e.g. Números shows the digit form so the
+      // student can check which number-word they're placing) — omitted
+      // entirely when the CSV has no `hint` column.
+      const hintText = (row.hint || '').trim();
+      if (hintText) {
+        sentence.appendChild(document.createTextNode(` (${hintText})`));
+      }
+
       item.appendChild(sentence);
       list.appendChild(item);
     });

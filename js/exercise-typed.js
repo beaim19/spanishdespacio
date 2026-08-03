@@ -82,6 +82,18 @@
     const label = window.ExerciseCommon.renderSeriesNav(setNumber, allSets);
     if (label) container.appendChild(label);
 
+    // Only shown when the CSV actually mixes tenses (has a non-empty
+    // `tense` on at least one row) — plain single-tense conjugation CSVs
+    // like Presente's don't need this clarified, since there's no mood
+    // ambiguity to begin with.
+    const hasTense = rows.some((r) => (r.tense || '').trim());
+    if (hasTense) {
+      const instructions = document.createElement('p');
+      instructions.className = 'exercise-instructions';
+      instructions.textContent = 'Todos los tiempos verbales de este ejercicio son de indicativo.';
+      container.appendChild(instructions);
+    }
+
     container.appendChild(buildAccentToolbar());
 
     const list = document.createElement('ol');
@@ -122,9 +134,16 @@
       // adjective, Números types the word form given the digit) — those
       // CSVs use a more accurately-named "hint" column instead; either one
       // works here.
+      // Ser y estar's Completa deliberately has neither `hint` nor
+      // `infinitive` — guessing between ser/estar is the whole point, so
+      // no base-form clue is given, only the tense.
       const tense = (row.tense || '').trim();
       const baseForm = (row.hint || row.infinitive || '').trim();
-      hint.textContent = tense ? `(${baseForm}, ${tense})` : `(${baseForm})`;
+      let hintText = '';
+      if (baseForm && tense) hintText = `(${baseForm}, ${tense})`;
+      else if (tense) hintText = `(${tense})`;
+      else if (baseForm) hintText = `(${baseForm})`;
+      hint.textContent = hintText;
       sentence.appendChild(hint);
 
       const feedback = document.createElement('span');

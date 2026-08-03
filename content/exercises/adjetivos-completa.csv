@@ -1,11 +1,11 @@
 ﻿set,id,before,after,hint,correct
-1,1,El coche es muy,.,rápido,rápido
-1,2,La chica es muy,.,rápido,rápida
-1,3,Los libros son muy,.,interesante,interesantes
-1,4,Las flores son muy,.,bonito,bonitas
-1,5,Mi hermano es muy,.,trabajador,trabajador
-1,6,Mi hermana es muy,.,trabajador,trabajadora
-1,7,El examen fue muy,.,difícil,difícil
-1,8,Las preguntas fueron muy,.,fácil,fáciles
-1,9,Este ejercicio es,.,complicado,complicado
-1,10,Esta lección es,.,complicado,complicada
+1,1,El perro es,.,pequeño,pequeño
+1,2,La mesa es,.,pequeño,pequeña
+1,3,Los coches son,.,nuevo,nuevos
+1,4,Las camisas son,.,nuevo,nuevas
+1,5,Este problema es muy,.,serio,serio
+1,6,Esta situación es muy,.,serio,seria
+1,7,Los chicos están,.,cansado,cansados
+1,8,Las chicas están,.,cansado,cansadas
+1,9,El cielo está,.,despejado,despejado
+1,10,Las calles están,.,despejado,despejadas

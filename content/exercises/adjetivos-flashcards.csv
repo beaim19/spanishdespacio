@@ -1,0 +1,11 @@
+﻿set,id,before,after,hint,gender,number,correct
+1,1,Su vestido es,.,elegante,masculino,singular,elegante
+1,2,Su falda es,.,elegante,femenino,singular,elegante
+1,3,Estos libros son,.,aburrido,masculino,plural,aburridos
+1,4,Estas historias son,.,aburrido,femenino,plural,aburridas
+1,5,El niño está,.,contento,masculino,singular,contento
+1,6,La niña está,.,contento,femenino,singular,contenta
+1,7,Los profesores son,.,amable,masculino,plural,amables
+1,8,Las profesoras son,.,amable,femenino,plural,amables
+1,9,Mi tío es,.,alto,masculino,singular,alto
+1,10,Mi tía es,.,alto,femenino,singular,alta

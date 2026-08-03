@@ -1,11 +1,21 @@
 ﻿set,id,correct,also_correct
-1,1,Yo salgo de casa a las siete de la mañana.,
-1,2,Ella quiere mucho a sus padres.,
-1,3,Ellos conducen su coche para ir a trabajar.,
-1,4,Ustedes duermen en esta habitación.,
-1,5,En esta cocina huele muy bien.,
-1,6,Yo sé cocinar muy bien.,
-1,7,¿Tú puedes venir mañana a casa?,
-1,8,Todos nosotros cabemos en el autobús.,
-1,9,En el parque andamos muchos kilómetros.,
-1,10,Él tiene que traer la tarta.,
+1,1,El bosque tiene muchos árboles distintos.,
+1,2,Creo que vosotros dormís en esta habitación.,
+1,3,Tenemos comida suficiente para la cena. ,
+1,4,El supermercado cierra a las ocho de la tarde. ,
+1,5,Los coches en la plaza parecen extranjeros.,
+1,6,Ahora mismo llueve en las montañas.,
+1,7,Los estudiantes juegan al baloncesto durante el descanso. ,Durante el descanso los estudiantes juegan al baloncesto.
+1,8,Tú dices muchas tonterías. ,
+1,9,Yo traigo el desayuno todos los días. ,Todos los días yo traigo el desayuno.
+1,10,Ustedes conducen de manera diferente a nosotros. ,
+2,1,La niña juega con la pelota en el jardín.,La niña juega en el jardín con la pelota. 
+2,2,Siempre cuento una historia a los niños por la noche. ,Por la noche siempre cuento una historia a los niños. 
+2,3,El perro siente que su amo está lejos. ,
+2,4,Tú das demasiados dulces a tus sobrinos. ,
+2,5,Ellos suelen merendar después del entrenamiento. ,Después del entrenamiento ellos suelen merendar. 
+2,6,La película no comienza hasta las cinco. ,Hasta las cinco no comienza la película. |Hasta la cinco la película no comienza.
+2,7,Yo duermo cada noche en una ciudad diferente. ,Cada noche yo duermo en una ciudad diferente. | Yo duermo en una ciudad diferente cada noche.
+2,8,Yo no conozco bien al vecino de la izquierda. ,
+2,9,Mañana tú almuerzas con el director de la planta. ,Tú almuerzas con el director de la planta mañana. | Tú almuerzas mañana con el director de la planta.
+2,10,Tú siempre pides el informe al final del día. ,Al final del día tú siempre pides el informe. | Al final del día tú pides siempre el informe. 

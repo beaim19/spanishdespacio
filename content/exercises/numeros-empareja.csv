@@ -1,11 +1,11 @@
-﻿set,id,before,after,word
-1,1,Tengo,años.,veinte
-1,2,Hay,días en una semana.,siete
-1,3,En mi clase somos,estudiantes.,treinta
-1,4,Mi casa tiene,habitaciones.,cuatro
-1,5,El año tiene,meses.,doce
-1,6,Compré,manzanas.,seis
-1,7,Necesito,euros para el billete.,cincuenta
-1,8,Hoy cumplo,años.,treinta y dos
-1,9,Este edificio tiene,pisos.,quince
-1,10,En la fiesta había,invitados.,cien
+﻿set,id,before,after,word,hint
+1,1,Tengo,años.,veinte,20
+1,2,Hay,días en una semana.,siete,7
+1,3,En mi clase somos,estudiantes.,treinta,30
+1,4,Mi casa tiene,habitaciones.,cuatro,4
+1,5,El año tiene,meses.,doce,12
+1,6,Compré,manzanas.,seis,6
+1,7,Necesito,euros para el billete.,cincuenta,50
+1,8,Hoy cumplo,años.,treinta y dos,32
+1,9,Este edificio tiene,pisos.,quince,15
+1,10,En la fiesta había,invitados.,cien,100
