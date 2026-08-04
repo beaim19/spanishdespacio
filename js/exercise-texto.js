@@ -10,12 +10,24 @@
  * CSV shape is one row per SET, not one row per blank — the whole passage
  * lives in a single `text` column, with blanks marked inline using
  * [correct|decoy1|decoy2|...]. The first word inside the brackets is the
- * right answer; any further words, separated by "|", are decoys shown
- * alongside it in the Fácil word bank (Difícil ignores them completely —
- * the student just types). This is much closer to writing normal prose
- * than the site's other CSVs (which need one row per sentence/blank): open
- * a doc, write the passage, then wrap whichever words should be blanked in
- * brackets.
+ * right answer; any further words, separated by "|", are parsed but
+ * currently unused (see below) — a tidy passage description either way, so
+ * they're kept in the CSV rather than stripped. This is much closer to
+ * writing normal prose than the site's other CSVs (which need one row per
+ * sentence/blank): open a doc, write the passage, then wrap whichever
+ * words should be blanked in brackets.
+ *
+ * Fácil's word bank only ever shows the CORRECT words (one chip per
+ * blank), not the decoys — a set of small multiple-choice boxes sitting
+ * right above each blank was the first design considered, but with a
+ * ~200-word passage carrying a dozen-plus blanks, that many 44px-tall
+ * button clusters wedged into flowing prose read as cluttered rather than
+ * readable, and broke the "one continuous passage" feel that's the point
+ * of this exercise type. A single word bank above the whole passage (the
+ * same pattern Empareja already uses) reads far more like a normal cloze
+ * exercise, so `decoy1`/`decoy2`/etc. are parsed here but not placed in
+ * the pool — kept in the CSV/parser in case a future per-blank multiple
+ * choice variant wants them.
  *
  *   set,id,text
  *   1,1,"Ayer fuimos a [la|el|los|una] playa."
@@ -151,8 +163,9 @@
         passage.appendChild(slot);
         blanks.push({ el: slot, correct: segment.correct, kind: 'slot' });
 
+        // Only the correct word goes in the pool — see the file header for
+        // why decoys aren't shown here.
         poolWords.push(segment.correct);
-        segment.decoys.forEach((d) => poolWords.push(d));
       } else {
         const input = document.createElement('input');
         input.type = 'text';

@@ -45,6 +45,22 @@
     return (sentence || '').trim().split(/\s+/).filter(Boolean);
   }
 
+  // The capital letter on the first word and the period (or ! / ?) on the
+  // last are hints about where a word belongs, not part of what's actually
+  // being tested — leaving them in the shuffled word bank would give away
+  // the start/end of the sentence before the student has worked anything
+  // out. Only the display text changes here; grading still runs through
+  // normalizeForCompare(), which already ignores case and punctuation, so
+  // this has no effect on what counts as correct.
+  function stripPositionalHints(tokens) {
+    if (tokens.length === 0) return tokens;
+    const result = [...tokens];
+    result[0] = result[0].charAt(0).toLowerCase() + result[0].slice(1);
+    const lastIndex = result.length - 1;
+    result[lastIndex] = result[lastIndex].replace(/[.,!?¿¡]+$/, '');
+    return result;
+  }
+
   // Case- and punctuation-insensitive, so a word moving to the front (and
   // picking up a capital letter) or the period landing on a different
   // word doesn't count against the student — only the order of the words
@@ -141,7 +157,7 @@
         updatePlaceholder();
       }
 
-      const words = shuffle(tokenize(row.correct));
+      const words = shuffle(stripPositionalHints(tokenize(row.correct)));
       words.forEach((wordText, chipIndex) => {
         const chip = document.createElement('button');
         chip.type = 'button';

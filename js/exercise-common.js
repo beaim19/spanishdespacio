@@ -107,10 +107,24 @@ window.ExerciseCommon = (function () {
 
     if (!allSets || allSets.length <= 1) return null;
 
+    // A fragment (not a single element) since this now bundles the "Serie
+    // N" heading with a note underneath it — callers already just do
+    // `container.appendChild(label)`, and appendChild on a DocumentFragment
+    // moves both children into place in order, so no call site needed to
+    // change when this grew from one element to two.
+    const fragment = document.createDocumentFragment();
+
     const label = document.createElement('h2');
     label.className = 'exercise-current-set';
     label.textContent = `Serie ${setNumber}`;
-    return label;
+    fragment.appendChild(label);
+
+    const note = document.createElement('p');
+    note.className = 'exercise-difficulty-note';
+    note.textContent = 'La dificultad de los ejercicios aumenta en cada serie.';
+    fragment.appendChild(note);
+
+    return fragment;
   }
 
   /*
@@ -125,6 +139,18 @@ window.ExerciseCommon = (function () {
 
   function capitalize(word) {
     return word.charAt(0).toUpperCase() + word.slice(1);
+  }
+
+  // A plain capitalize() can't add accents that aren't in the variant id
+  // itself (ids are kept plain-ASCII on purpose, since they show up in the
+  // URL as ?type=articulos) — this covers the cases where the displayed
+  // label needs one. Add to this list as new accented variant ids come up.
+  const VARIANT_LABELS = {
+    articulos: 'Artículos',
+  };
+
+  function labelForVariant(typeId) {
+    return VARIANT_LABELS[typeId] || capitalize(typeId);
   }
 
   /*
@@ -158,7 +184,7 @@ window.ExerciseCommon = (function () {
       params.set('type', typeId);
       params.delete('set');
       a.href = `?${params.toString()}`;
-      a.textContent = capitalize(typeId);
+      a.textContent = labelForVariant(typeId);
       if (typeId === currentType) a.setAttribute('aria-current', 'true');
       li.appendChild(a);
       list.appendChild(li);

@@ -1,11 +1,16 @@
 ﻿set,id,before,after,word
-1,1,Estas galletas están,.,ricas
-1,2,El edificio es,.,moderno
-1,3,La película fue,.,aburrida
-1,4,Los zapatos son,.,caros
-1,5,Mi profesora es muy,.,paciente
-1,6,Los exámenes fueron,.,sencillos
-1,7,Esta ciudad es,.,enorme
-1,8,Sus amigos son muy,.,divertidos
-1,9,La comida está,.,deliciosa
-1,10,El agua está muy,.,fría
+1,1,El perro ,pasea por le parque.,marrón
+1,2,La manzana,está muy rica. ,verde
+1,3,La casa,tiene muchas ventanas.,bonita
+1,4,Las niñas ,comen la merienda.,extranjeras
+1,5,La profesora,sabe muchos idiomas. ,moderna
+2,1,Ayer hicimos los exámenes,.,difíciles
+2,2,Paseamos por el pueblo,.,tranquilo
+2,3,Sus amigos ,son muy divertidos. ,locales
+2,4,La comida de la cantina,es deliciosa.,nueva
+2,5,No puedo subir la cesta,.,pesada
+3,1,El olivo ,tiene muchas aceitunas. ,viejo
+3,2,El bosque,es perfecto para pasear,frondoso
+3,3,Las sillas ,son para el jardín. ,nuevas
+3,4,El chocolate,es muy dulce. ,blanco
+3,5,La tarta ,es para mi cumpleaños.,decorada

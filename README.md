@@ -66,7 +66,15 @@ automatically shows a "‹ 1 2 3 ›" series pager above the questions once
 there's more than one — with only one set, the pager doesn't appear at all.
 Same idea as before (no manual count to maintain), just applied one level
 up: number of *questions* = rows in a set; number of *sets* = distinct `set`
-values in the file.
+values in the file. A set doesn't have to be exactly 10 rows either —
+nothing in any engine assumes a fixed count, it's just whatever rows share
+that `set` value (e.g. some of Adjetivos' sets currently have 5).
+
+Whenever there's more than one series, a fixed note appears right under
+the "Serie N" heading: "La dificultad de los ejercicios aumenta en cada
+serie." — same gate as the heading itself (`renderSeriesNav` in
+`exercise-common.js` now returns both as one fragment), so a single-series
+topic never shows it.
 
 **To add a brand-new topic of this same type:** new CSV
 (`content/exercises/<topic>.csv`), copy `exercises/ser-estar.html` changing
@@ -282,6 +290,17 @@ built from `gender`/`number` — used by Adjetivos' dedicated Flashcards CSV,
 where the point is recognizing gender/number agreement rather than
 recalling an exact word, e.g. revealing "elegante *(masculino, singular)*".
 
+Every card also runs a 5-second auto-reveal countdown — a small text
+countdown plus a shrinking bar (`.flashcard-timer-bar`, animated by
+transitioning its CSS width from 100% to 0% over 5s) — so there's a beat
+of actual time pressure to recall the answer instead of writing it down.
+Clicking "Mostrar respuesta" early still works and just cancels the
+countdown (`clearCountdown()` runs at the top of every `renderCard()`
+call, so advancing, retrying, or manually revealing all clean up whatever
+timer was pending without needing to duplicate that call at each site).
+Self-assessment afterward — "La sabía" / "No la sabía" — is unchanged, so
+the running score still means the same thing it did before.
+
 *Pair mode* — `set,id,term_a,term_b`, for plain vocabulary recall with no
 sentence at all. Números' Flashcards uses this (a digit and its word form,
 e.g. `20,veinte`) — each card randomly shows term_a or term_b as the front
@@ -309,6 +328,18 @@ period to a different word, neither of which the exercise cares about).
 On a wrong answer, the "Orden correcto: ..." reveal sits right under the
 assembled (wrong) sentence, above its own word bank — not down at the
 bottom of the word bank, which read as belonging to the *next* sentence.
+
+The word bank chips also no longer show the capital letter on the first
+word or the trailing period on the last — both are just artifacts of
+*position* in the original sentence, and seeing them in the shuffled bank
+would tell the student where a word belongs before they've worked it out.
+`stripPositionalHints()` lowercases the first token and strips trailing
+`.,!?¿¡` from the last token *before* shuffling, display-only — grading
+still runs through `normalizeForCompare()` on whatever the student
+assembled, which already ignores case and punctuation, so this has no
+effect on what counts as correct. The "Orden correcto: ..." reveal itself
+still shows the real sentence with proper capitalization and punctuation,
+since that's meant to model the actual correct answer, not the bank.
 
 Empareja, Completa's typed input, and Ordena all present themselves as
 "drag/write the thing into place," but the actual interaction (where it
@@ -342,6 +373,22 @@ this — pass `{ variants: [...] }` and give each type entry a `srcTemplate`
   });
 </script>
 ```
+
+Variant tab labels come from the variant id via `capitalize()` by default
+(`regular` → "Regular"), except where that isn't enough — `articulos` needs
+an accent it can't get from capitalizing alone, so `exercise-common.js`
+keeps a small `VARIANT_LABELS` override map (`{ articulos: 'Artículos' }`)
+that `renderVariantNav` checks first. Add to that map if a future variant
+id needs the same treatment.
+
+Visually, this switcher (Regular/Irregular/Reflexivos, and Texto's
+Artículos/Adjetivos/Verbos) is styled as an underline tab strip — a shared
+line with the active tab picked out by a bold orange underline
+(`--color-selected`) — rather than the ghost-pill look used elsewhere on
+the page, specifically because this is the switcher that changes *which*
+content loads below it (the exercise-type pills next to it only change
+*how* you practice the same content), so it needed to read more clearly as
+a real selector.
 
 With `variants` given, the router renders the Regular/Irregular/Reflexivos
 tabs into `#variant-switcher-slot` itself (the container no longer needs
@@ -425,16 +472,28 @@ set,id,text
 ```
 
 Inside the brackets, the first word (before any `|`) is the correct
-answer; any further `|`-separated words are decoys shown alongside it in
-Fácil's word bank (Difícil ignores them). This means authoring a passage
-is just: write the paragraph normally in a doc, then wrap whichever words
-should be blanked in `[correct|decoy1|decoy2]` — no need to split the text
-into separate `before`/`after` fragments across multiple rows, no need to
-keep a running word bank in sync by hand, and no risk of the reconstructed
+answer; any further `|`-separated words are decoys, parsed but not
+currently used (see below). This means authoring a passage is just: write
+the paragraph normally in a doc, then wrap whichever words should be
+blanked in `[correct|decoy1|decoy2]` — no need to split the text into
+separate `before`/`after` fragments across multiple rows, no need to keep
+a running word bank in sync by hand, and no risk of the reconstructed
 passage drifting from what you actually wrote. The one thing to watch:
 since the whole passage is one CSV field containing commas, wrap it in
 double quotes (as in the example above) — plain Excel entry handles this
 automatically as long as you don't manually strip the surrounding quotes.
+
+Fácil's word bank shows only the correct words (one chip per blank, same
+`.word-pool`/`.drop-slot` pattern as Empareja), not the decoys. Small
+multiple-choice boxes sitting right above each individual blank were the
+first design tried, but a ~200-word passage carries a dozen-plus blanks,
+and that many 44px-tall button clusters wedged into flowing prose read as
+cluttered rather than readable — it broke the "one continuous passage"
+feel that's the actual point of a cloze exercise. A single word bank above
+the whole passage reads far more like a normal fill-in-the-blank exercise,
+so the decoy words stay parsed in `parseText()` (kept in the CSV/engine in
+case a future per-blank multiple-choice variant wants them) but aren't
+placed in the pool today.
 
 `js/exercise-texto.js` implements this: `parseText()` splits `text` on the
 `[...]` regex into alternating plain-text and blank segments, then renders

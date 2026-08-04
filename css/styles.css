@@ -497,16 +497,22 @@ a.theme-block:focus-visible {
   background-color: var(--color-hover-tint);
 }
 
-/* Verb-type switcher (Regular / Irregular / Reflexivos) — lives in the
-   green intro band next to the title, same ghost-pill treatment as the
-   series switcher used to have there. */
+/* Verb-type switcher (Regular / Irregular / Reflexivos, and Texto's
+   Artículos / Adjetivos / Verbos) — lives in the green intro band next to
+   the title. Styled as an actual tab strip (a shared underline the tabs
+   sit on, with the active one picked out by a bold color) rather than the
+   ghost-pill treatment used elsewhere on the page, since this is the one
+   switcher that changes what content loads below it (the exercise-type
+   pills change *how* you practice the same content; this changes *which*
+   content) and needed to read as more clearly interactive/tab-like. */
 .type-switcher ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-2);
+  gap: var(--space-3);
   margin: var(--space-2) 0 0 0;
   padding: 0;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.35);
 }
 .type-switcher a {
   display: inline-block;
@@ -514,16 +520,19 @@ a.theme-block:focus-visible {
   color: var(--color-text-inverse);
   text-decoration: none;
   font-weight: 700;
-  font-size: 1.2rem;
-  padding: var(--space-1) var(--space-3);
-  border-radius: 999px;
-  border: 2px solid var(--color-text-inverse);
+  font-size: 1.15rem;
+  padding: var(--space-2) var(--space-1);
+  border-bottom: 4px solid transparent;
+  margin-bottom: -2px; /* sits on top of the shared line above, not below it */
   min-height: 44px;
-  line-height: 1.6;
+  line-height: 1.5;
+}
+.type-switcher a:hover {
+  border-bottom-color: rgba(255, 255, 255, 0.6);
 }
 .type-switcher a[aria-current="true"] {
-  background-color: var(--color-text-inverse);
-  color: var(--color-brand-dark);
+  color: var(--color-text-inverse);
+  border-bottom-color: var(--color-selected);
 }
 
 /* "Serie X" heading above the questions themselves, in the white area —
@@ -533,6 +542,17 @@ a.theme-block:focus-visible {
   color: var(--color-brand);
   font-size: 1.6rem;
   font-weight: 700;
+  margin: 0 0 var(--space-1) 0;
+}
+
+/* Sits right under "Serie N" whenever a topic has more than one series —
+   same gate as the heading above it, since a single-series topic has no
+   difficulty progression to mention. */
+.exercise-difficulty-note {
+  color: var(--color-text);
+  opacity: 0.75;
+  font-style: italic;
+  font-size: 0.95rem;
   margin: 0 0 var(--space-3) 0;
 }
 
@@ -741,6 +761,30 @@ a.theme-block:focus-visible {
   color: var(--color-brand-dark);
   font-weight: 600;
   margin: 0 0 var(--space-3) 0;
+}
+/* Auto-reveal countdown — shown only before the answer is revealed, gives
+   the student a beat of time-pressure to actually recall the answer in
+   their head instead of writing it out, then reveals on its own. */
+.flashcard-countdown {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-brand-dark);
+  margin: 0 0 var(--space-2) 0;
+}
+.flashcard-timer-track {
+  width: 100%;
+  max-width: 220px;
+  height: 6px;
+  background-color: var(--color-hover-tint);
+  border-radius: 999px;
+  margin: 0 auto var(--space-3) auto;
+  overflow: hidden;
+}
+.flashcard-timer-bar {
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-selected-dark);
+  transition: width 5s linear;
 }
 .flashcard-sentence {
   font-size: 1.3rem;

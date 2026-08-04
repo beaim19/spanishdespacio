@@ -25,6 +25,13 @@
  *      other, so the student practices converting in both directions
  *      instead of always reading the same one.
  *
+ * Each card also runs a 5-second auto-reveal countdown (text + a shrinking
+ * bar) so the student has a beat of real time pressure to recall the
+ * answer in their head — clicking "Mostrar respuesta" early still works
+ * and just cancels the countdown. Answering is unchanged: "La sabía"/"No
+ * la sabía" after reveal, same as before, so the running score still means
+ * something.
+ *
  * Host page needs, before this script:
  *   1. PapaParse (loaded via CDN)
  *   2. js/exercise-common.js
@@ -109,7 +116,19 @@
     card.setAttribute('aria-live', 'polite');
     container.appendChild(card);
 
+    // Auto-reveal countdown timers — tracked here so every path that
+    // rebuilds the card (advancing, retrying, or a manual "Mostrar
+    // respuesta" click) can cancel whatever's still pending before it
+    // fires against a card that's no longer on screen.
+    let countdownInterval = null;
+    let revealTimeout = null;
+    function clearCountdown() {
+      if (countdownInterval) { clearInterval(countdownInterval); countdownInterval = null; }
+      if (revealTimeout) { clearTimeout(revealTimeout); revealTimeout = null; }
+    }
+
     function renderCard() {
+      clearCountdown();
       card.innerHTML = '';
 
       if (index >= deck.length) {
@@ -165,6 +184,42 @@
       }
 
       card.appendChild(sentence);
+
+      if (!revealed) {
+        let secondsLeft = 5;
+
+        const countdown = document.createElement('p');
+        countdown.className = 'flashcard-countdown';
+        countdown.textContent = `Se revela en ${secondsLeft}…`;
+        card.appendChild(countdown);
+
+        const track = document.createElement('div');
+        track.className = 'flashcard-timer-track';
+        const bar = document.createElement('div');
+        bar.className = 'flashcard-timer-bar';
+        track.appendChild(bar);
+        card.appendChild(track);
+
+        // The bar starts at its CSS default (100% width); nudging the
+        // width change into the next couple of frames (rather than setting
+        // it immediately) is what lets the 5s CSS transition actually
+        // animate the shrink instead of jumping straight to empty.
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            bar.style.width = '0%';
+          });
+        });
+
+        countdownInterval = setInterval(() => {
+          secondsLeft -= 1;
+          if (secondsLeft > 0) countdown.textContent = `Se revela en ${secondsLeft}…`;
+        }, 1000);
+
+        revealTimeout = setTimeout(() => {
+          revealed = true;
+          renderCard();
+        }, 5000);
+      }
 
       const controls = document.createElement('div');
       controls.className = 'exercise-controls';
