@@ -1,3 +1,4 @@
-﻿set,id,before,after,infinitive,correct
-1,1,Yo,al parque ayer.,ir,fui
-1,2,Ellos,la verdad.,decir,dijeron
+﻿set,id,before,after,infinitive,tense,correct
+1,1,Yo,al parque ayer.,ir,pretérito perfecto simple,fui
+1,2,Ellos,la verdad.,decir,pretérito perfecto simple,dijeron
+1,3,Vosotros,con la ventan abierta.,dormir,pretérito perfecto simple,dormistéis

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Presente — Spanish Despacio</title>
-  <meta name="description" content="Ejercicio interactivo: escribe el verbo en presente para completar cada frase.">
+  <title>Texto — Spanish Despacio</title>
+  <meta name="description" content="Ejercicio interactivo: completa los espacios en blanco de un texto en español.">
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
@@ -16,8 +16,8 @@
     <section class="intro-band">
       <div class="container">
         <a class="back-link-top" href="/exercises.html" aria-label="Volver a Ejercicios">&larr;</a>
-        <h1>Presente</h1>
-        <p>Elige el tipo de verbo y el tipo de ejercicio para practicar el presente. Todas las formas verbales de este ejercicio son en modo indicativo. Cuando termines, pulsa "Comprobar".</p>
+        <h1>Texto</h1>
+        <p>Elige una categoría y un nivel de dificultad, y completa los espacios en blanco del texto. Todas las formas verbales de este ejercicio son en modo indicativo. Cuando termines, pulsa "Comprobar".</p>
         <div id="variant-switcher-slot"></div>
       </div>
     </section>
@@ -36,19 +36,14 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
   <script src="/js/exercise-common.js"></script>
-  <script src="/js/exercise-arrastra.js"></script>
-  <script src="/js/exercise-typed.js"></script>
-  <script src="/js/exercise-flashcards.js"></script>
-  <script src="/js/exercise-ordena.js"></script>
+  <script src="/js/exercise-texto.js"></script>
   <script src="/js/main.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       ExerciseCommon.initExerciseTypePage([
-        { id: 'empareja', label: 'Empareja', engine: 'arrastra', srcTemplate: '/content/exercises/presente-{type}-empareja.csv' },
-        { id: 'completa', label: 'Completa', engine: 'typed', srcTemplate: '/content/exercises/presente-{type}-completa.csv' },
-        { id: 'flashcards', label: 'Flashcards', engine: 'flashcards', srcTemplate: '/content/exercises/presente-{type}.csv' },
-        { id: 'ordena', label: 'Ordena', engine: 'ordena', srcTemplate: '/content/exercises/presente-{type}-ordena.csv' },
-      ], { variants: ['regular', 'irregular', 'reflexivos'] });
+        { id: 'facil', label: 'Fácil', engine: 'textoFacil', srcTemplate: '/content/exercises/texto-{type}.csv' },
+        { id: 'dificil', label: 'Difícil', engine: 'textoDificil', srcTemplate: '/content/exercises/texto-{type}.csv' },
+      ], { variants: ['articulos', 'adjetivos', 'verbos'] });
     });
   </script>
 </body>

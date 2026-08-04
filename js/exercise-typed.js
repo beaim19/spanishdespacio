@@ -82,18 +82,6 @@
     const label = window.ExerciseCommon.renderSeriesNav(setNumber, allSets);
     if (label) container.appendChild(label);
 
-    // Only shown when the CSV actually mixes tenses (has a non-empty
-    // `tense` on at least one row) — plain single-tense conjugation CSVs
-    // like Presente's don't need this clarified, since there's no mood
-    // ambiguity to begin with.
-    const hasTense = rows.some((r) => (r.tense || '').trim());
-    if (hasTense) {
-      const instructions = document.createElement('p');
-      instructions.className = 'exercise-instructions';
-      instructions.textContent = 'Todos los tiempos verbales de este ejercicio son de indicativo.';
-      container.appendChild(instructions);
-    }
-
     container.appendChild(buildAccentToolbar());
 
     const list = document.createElement('ol');

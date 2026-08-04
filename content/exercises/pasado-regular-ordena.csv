@@ -1,3 +1,21 @@
 ﻿set,id,correct,also_correct
-1,1,Ayer cerré la puerta con llave.,
+1,1,Ayer yo cerré la puerta con llave.,
 1,2,Tú estudiaste mucho para el examen.,
+1,3,La semana pasada yo copié las recetas.,Yo copié las recetas la semana pasada. 
+1,4,Durante las vacaciones la niña coloreaba su libro.,La niña coloreaba su libro durante las vacaciones.
+1,5,El payaso imitaba muy bien a los turistas. ,
+1,6,El alcalde votó a primera hora. ,A primera hora el alcalde votó. |A primera hora votó el alcalde. 
+1,7,El verano pasado nosostros viajamos a Uruguay ,
+1,8,Las mujeres regateaban los precios en el mercado.,En el mercado las mujeres regateaban los precios. 
+1,9,Vosotros planeasteis el viaje en solo dos días. ,En solo dos días vosotros planeasteis el viaje. 
+1,10,La panadera horneaba el pan cada mañana. ,Cada mañana la panadera horneaba el pan. 
+2,1,Esta mañana yo he cortado la tela para el vestido. ,Yo he cortado la tela para el vestido esta mañana. 
+2,2,Vosotros roncábais demasiado alto. ,
+2,3,Ayer yo grabé mi primer documental. ,Yo grabé mi primer documental ayer. 
+2,4,El año pasado yo gasté mucho dinero. ,Yo gasté mucho dinero el año pasado. 
+2,5,La máquina funcionaba esta mañana. ,Esta mañana la máquina funcionaba. 
+2,6,El hombre planchaba la camisa cada día. ,Cada día el hombre planchaba la camisa. 
+2,7,Cuando vivía en Sevilla ella patinaba todos los sábados. ,Ella patinaba todos los sábados cuando vivía en Sevilla. 
+2,8,De joven mi padre pescaba en el pantano. ,Mi padre pescaba en el pantano de joven. 
+2,9,Los niños sumaban en la clase de matemáticas. ,En la clase de matemátcias los niños sumaban.
+2,10,Yo suspendí mi primer examen en la universidad. ,En la universidad yo suspendí mi primer examen. 

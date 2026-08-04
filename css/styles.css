@@ -767,6 +767,13 @@ a.theme-block:focus-visible {
    Each sentence gets its own assembly line (where tapped words land, in
    order) and its own small word bank below it, reusing the shared
    .word-pool/.pool-chip styling from Empareja. */
+/* The reveal on a wrong answer sits right under the assembly line here
+   (not inline mid-sentence, as it is for Arrastra) — override the shared
+   .drop-slot-reveal spacing just in this context. */
+.ordena-assembly + .drop-slot-reveal {
+  display: block;
+  margin: var(--space-1) 0 var(--space-2) 0;
+}
 .ordena-assembly {
   display: flex;
   flex-wrap: wrap;
@@ -883,6 +890,21 @@ a.theme-block:focus-visible {
   color: var(--color-tab-dark);
   font-style: italic;
   font-size: 0.95rem;
+}
+
+/* --- Exercises: Texto (cloze passage) ---
+   The passage reads as one continuous paragraph (not a numbered list like
+   the other exercise types), so blanks need enough line-height to keep
+   dashed slots/typed inputs from crowding the line above and below. */
+.texto-passage {
+  font-size: 1.1rem;
+  line-height: 2.6;
+}
+.texto-slot {
+  margin: 0 var(--space-1);
+}
+.texto-input {
+  margin: 0 var(--space-1);
 }
 
 /* --- Buttons --- */

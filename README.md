@@ -10,10 +10,11 @@ custom domain `spanishdespacio.com` via Porkbun DNS.
 index.html               Home page
 podcasts.html             Podcasts, organized by theme (anchor-nav index)
 exercises.html            Exercises index — Ser y estar / Por y para / Adjetivos /
-                          Números as top-level topics, plus "Verbos" as a
-                          dropdown grouping every verb tense (see below)
+                          Números / Texto as top-level topics, plus "Verbos"
+                          as a dropdown grouping every verb tense (see below)
 exercises/*.html          One page per topic (ser-estar.html, por-para.html,
-                          adjetivos.html, numeros.html, presente.html, ...)
+                          adjetivos.html, numeros.html, texto.html,
+                          presente.html, ...)
 dele.html                 DELE A2 Shiny app (iframe)
 about.html                About / contact
 privacy.html              Privacy & cookies policy
@@ -29,6 +30,8 @@ js/exercise-typed.js      Typed-answer exercise engine (Completa) — also
                           reused, unmodified, as Presente's conjugation drill
 js/exercise-flashcards.js Self-paced reveal-and-self-assess exercise engine (Flashcards)
 js/exercise-ordena.js     Sentence word-reordering exercise engine (Ordena)
+js/exercise-texto.js      Cloze-passage exercise engines (Texto: Fácil word
+                          bank + Difícil typed input, sharing one CSV/parser)
 content/exercises/        Exercise content as CSV — see below
 partials/header.html      Shared nav, injected by main.js
 partials/footer.html      Shared footer, injected by main.js
@@ -238,13 +241,25 @@ Both `infinitive`/`hint` and `tense` are optional independently — Ser y
 estar's Completa deliberately has neither an `infinitive` nor a `hint`
 column, only `tense`: guessing between *ser* and *estar* is the whole
 point, so no base-form clue is given, and the hint shows just "(tense)"
-on its own. Whenever at least one row in the CSV has a non-empty `tense`,
-the engine also shows a fixed instruction above the exercise — "Todos los
-tiempos verbales de este ejercicio son de indicativo." — since mixing
-tenses within one set could otherwise read as ambiguous about mood
-(subjuntivo forms look different but a student might still wonder).
-Single-tense CSVs like Presente's or Pasado's don't have a `tense` column
-at all, so this instruction never appears there.
+on its own.
+
+The "these are all indicativo" disclaimer is no longer generated
+conditionally by the typed-answer engine — it's now a fixed sentence in
+each topic page's intro paragraph (in the green band, next to the title):
+**"Todas las formas verbales de este ejercicio son en modo indicativo."**
+It appears on every topic page whose exercises aren't subjuntivo or
+imperativo (currently all of them — Ser y estar, Presente, Pasado, Por y
+para's verb-based sentences, etc.), and will simply be dropped from a
+future subjuntivo/imperativo topic's intro text instead of needing any
+code change.
+
+Pasado's Completa (and, since Flashcards reuses the same CSV, its
+Flashcards too) mixes five past-indicative tenses within one set, so
+`tense` there is one of: *pretérito perfecto simple*, *pretérito
+imperfecto*, *pretérito perfecto compuesto*, *pretérito anterior*, or
+*pretérito pluscuamperfecto* — same `tense` column and same "(infinitivo,
+tense)" bracket rendering as Ser y estar, just with past-tense values
+instead of ser/estar's indicativo-mood values.
 
 **Flashcards** (`js/exercise-flashcards.js`) is deliberately *not* a graded
 quiz — one card at a time, "Mostrar respuesta" reveals the answer, then the
@@ -291,6 +306,9 @@ if the sentence only has one natural order. Grading ignores case and
 punctuation entirely (only word order is actually being tested — moving a
 word to the front changes its capitalization and can shift the final
 period to a different word, neither of which the exercise cares about).
+On a wrong answer, the "Orden correcto: ..." reveal sits right under the
+assembled (wrong) sentence, above its own word bank — not down at the
+bottom of the word bank, which read as belonging to the *next* sentence.
 
 Empareja, Completa's typed input, and Ordena all present themselves as
 "drag/write the thing into place," but the actual interaction (where it
@@ -375,45 +393,66 @@ under Verbos later: add another `<li>` (a link if it's built, a
 category later would just reuse the same `.theme-menu-wrapper` markup with
 a different id.
 
-## Texto (planned — schema only so far)
+## Texto (cloze passage)
 
-A future exercise type for cloze passages: a short text (200 words to
-start) with several words removed, either given as a word bank to place
-(easier) or typed from scratch (harder). Two more independent dimensions on
-top of everything above: **category** (Artículos / Verbos / Adjetivos /
-Todo — which kind of word gets blanked) would work as a *variant*, and
-**difficulty** (Fácil / Difícil) would work as a *type* — same
-`initExerciseTypePage({ variants })` pattern already used for Presente and
-Pasado, just applied to a new topic.
+A short passage (aiming for ~200 words, longer later) with several words
+removed, either given as a word bank to place (**Fácil**) or typed from
+scratch (**Difícil**). Category (**Artículos** / **Adjetivos** / **Verbos**
+— which kind of word gets blanked) works as a *variant*, and difficulty
+works as a *type* — the same `initExerciseTypePage({ variants })` pattern
+already used for Presente and Pasado, applied to `exercises/texto.html`:
 
-The CSV shape is different from every other type so far, since it has to
-reconstruct one continuous passage instead of independent sentences — one
-row per blank, chained together:
-
-```
-set,id,before,after,word,options
-1,1,"Ayer, mi familia y yo",,fuimos,fue|van|iremos
-1,2,a,,la,el|los|una
-1,3,"playa. Hacía",,un,una|el|unos
+```html
+ExerciseCommon.initExerciseTypePage([
+  { id: 'facil', label: 'Fácil', engine: 'textoFacil', srcTemplate: '/content/exercises/texto-{type}.csv' },
+  { id: 'dificil', label: 'Difícil', engine: 'textoDificil', srcTemplate: '/content/exercises/texto-{type}.csv' },
+], { variants: ['articulos', 'adjetivos', 'verbos'] });
 ```
 
-`before` is the text since the *previous* blank up to this one (for the
-first row, the opening of the passage); `after` is normally empty and only
-holds the closing text on the *last* row of a set — concatenating every
-row's `before` + blank + `after` in order reconstructs the full passage.
-`word` is the correct answer for that blank; `options` is a `|`-separated
-list of decoys shown alongside `word` in the word bank for Fácil difficulty
-(Difícil would ignore `options` entirely and use a typed input instead,
-same as Completa). See `content/exercises/texto-ejemplo.csv` for a full
-worked example (a short beach-trip passage mixing verb, article, and
-adjective blanks, i.e. what a "Todo" category row set would look like).
+Both types point at the *same* CSV per category — Difícil just doesn't
+render the decoy words, it only uses the typed input — so each category is
+a single file to maintain, not one per difficulty.
 
-This is schema-and-example only for now, at your request, so you can look
-over the column layout before committing to it — the interactive engine
-(rendering the passage as one flowing paragraph rather than a numbered
-list, plus the word-bank/typed toggle for difficulty) hasn't been built
-yet. Once you've had a chance to react to the shape of the CSV, or have a
-real 200-word passage ready, that's the natural next step.
+The CSV schema replaces last turn's chained-rows draft
+(`content/exercises/texto-ejemplo.csv`, now superseded — see "Known loose
+ends") with something much closer to writing normal prose: **one row per
+set**, with the whole passage in a single `text` column, and each blank
+marked inline with square brackets:
+
+```
+set,id,text
+1,1,"Ayer fuimos a [la|el|los|una] playa. Hacía [un|una|unos] calor increíble."
+```
+
+Inside the brackets, the first word (before any `|`) is the correct
+answer; any further `|`-separated words are decoys shown alongside it in
+Fácil's word bank (Difícil ignores them). This means authoring a passage
+is just: write the paragraph normally in a doc, then wrap whichever words
+should be blanked in `[correct|decoy1|decoy2]` — no need to split the text
+into separate `before`/`after` fragments across multiple rows, no need to
+keep a running word bank in sync by hand, and no risk of the reconstructed
+passage drifting from what you actually wrote. The one thing to watch:
+since the whole passage is one CSV field containing commas, wrap it in
+double quotes (as in the example above) — plain Excel entry handles this
+automatically as long as you don't manually strip the surrounding quotes.
+
+`js/exercise-texto.js` implements this: `parseText()` splits `text` on the
+`[...]` regex into alternating plain-text and blank segments, then renders
+the whole thing as one flowing `<p class="texto-passage">` (not a numbered
+list, since continuous reading is the point) with either `<button>` drop
+slots (Fácil, reusing the Empareja click-to-place pattern and its
+`.drop-slot`/`.pool-chip` styling) or `<input>` boxes (Difícil, reusing the
+Completa/typed accent-toolbar and grow-on-input behavior) standing in for
+each blank. Both engines share the same parsing, grading, and retry logic;
+they only differ in how a blank is presented and read back.
+
+Three categories are live now: `texto-articulos.csv` (definite/indefinite
+articles), `texto-adjetivos.csv` (gender/number agreement, decoys are the
+same adjective in the wrong gender/number), and `texto-verbos.csv`
+(present-tense subject-verb agreement, decoys are the same verb conjugated
+for a different subject). Each currently has one worked passage (set 1) as
+a starting point — add more the same way as any other topic, a new `set`
+number with its own `text` row.
 
 ### Writing accented characters (á, é, í, ó, ú, ñ, ¿, ¡) correctly
 
@@ -445,9 +484,17 @@ referenced from any page anymore; delete them yourself whenever convenient.
 
 **Pasado is a scaffold, not real content yet.** `exercises/pasado.html` and
 its nine CSVs (`pasado-{regular,irregular,reflexivos}-{completa,empareja,ordena}.csv`)
-exist and are wired up exactly like Presente, but each CSV only has 1–2
+exist and are wired up exactly like Presente, but each CSV only has 2–3
 example rows to show the format — replace/extend them the same way you've
-been filling in Presente's sets.
+been filling in Presente's sets. The three `-completa.csv` files (also
+reused by Flashcards) already show the `tense` column in use with a mix of
+past-indicative tenses; the six `-empareja.csv`/`-ordena.csv` files still
+need a real tense filled in per row before you extend them.
+
+`content/exercises/texto-ejemplo.csv` is superseded by the bracket-syntax
+schema described above (`texto-articulos.csv`/`texto-adjetivos.csv`/`texto-verbos.csv`)
+and is no longer referenced from any page — delete it yourself whenever
+convenient.
 
 ## Local preview
 

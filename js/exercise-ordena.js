@@ -218,7 +218,10 @@
         const reveal = document.createElement('span');
         reveal.className = 'drop-slot-reveal';
         reveal.textContent = `Orden correcto: ${acceptedDisplay[0]}`;
-        item.appendChild(reveal);
+        // Right after the assembly (the sentence itself), not after the
+        // whole word bank below it — .ordena-assembly is a block-level flex
+        // container, so this still lands on its own line right underneath.
+        assembly.after(reveal);
       }
     });
 
