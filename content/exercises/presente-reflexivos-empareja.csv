@@ -1,6 +1,6 @@
-﻿set,id,before,after,word
-1,1,Yo,a las siete todos los días.,me levanto
-1,2,Ella,antes de desayunar.,se ducha
+﻿set,id,before,after,word,translation
+1,1,Yo,a las siete todos los días.,me levanto,I get up
+1,2,Ella,antes de desayunar.,se ducha,she showers
 1,3,Nosotros,en estas sillas.,nos sentamos
 1,4,Los niños,los dientes cada noche.,se cepillan
 1,5,El bebé,mucho cuando come.,se mancha

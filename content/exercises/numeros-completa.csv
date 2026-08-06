@@ -1,6 +1,6 @@
 ﻿set,id,before,after,hint,correct
-1,1,Tengo,años.,20,veinte
-1,2,Hay,días en una semana.,7,siete
+1,1,Tengo,{años|years}.,20,veinte
+1,2,Hay,{días|days} en una semana.,7,siete
 1,3,En mi clase somos,estudiantes.,30,treinta
 1,4,Mi casa tiene,habitaciones.,4,cuatro
 1,5,El año tiene,meses.,12,doce

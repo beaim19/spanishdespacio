@@ -1,21 +1,21 @@
-set,id,before,after,tense,correct
-1,1,"Cuando era pequeña, mi hermana",muy tímida.,pretérito imperfecto,era
-1,2,"El año que viene, nosotros",más experimentados.,futuro,seremos
-1,3,"Ayer, cuando llegamos, ellos ya",en el hotel.,pretérito pluscuamperfecto,habían estado
-1,4,"Ahora mismo, yo",muy cansado.,presente,estoy
-1,5,"De niño, tú",muy travieso.,pretérito imperfecto,eras
-1,6,"Mañana, la reunión",a las diez.,futuro,será
-1,7,"Antes de la boda, los novios ya",juntos diez años.,pretérito pluscuamperfecto,habían estado
-1,8,"Hoy, vosotros",muy simpáticos.,presente,sois
-1,9,"En esa época, nosotros",estudiantes.,pretérito imperfecto,éramos
-1,10,"El próximo mes, ustedes",en Madrid.,futuro,estarán
-2,1,Las clases,en el aula grande.,futuro,serán
-2,2,Todos mis primos ,mayores que yo. ,presente,son
-2,3,Antesdeayer la cassa,muy sucia.,pretérito imperfecto,estaba
-2,4,"Hoy, la casa ",muy limpia.,presente,está
-2,5,Mientras yo,"en el supermercado, se ha ido la luz.",pretérito imperfecto,estaba
-2,6,"Después de vuestros estudios, vosotros ",grandes médicos.,futuro,seréis
-2,7,En la actuación del año pasado yo,Romeo.,pretérito perfecto simple,fui
-2,8,Me gusta mucho cuando,todos en silencio.,presente,estáis
-2,9,Las flores que compré ayer,muy caras. ,pretérico perfecto simple,fueron
-2,10,Ustedes,bienvenidos en mi casa. ,presente,son
+﻿set,id,before,after,tense,correct
+1,1,"Cuando era pequeña, mi {hermana|sister}",muy {tímida|shy}.,pretérito imperfecto,era
+1,2,"El año {que viene|next}, nosotros",más {experimentados|experienced}.,futuro,seremos
+1,3,"Ayer, cuando {llegamos|arrived}, ellos ya",en el hotel.,pretérito pluscuamperfecto,habían estado
+1,4,"{Ahora mismo|right now}, yo",muy {cansado|tired}.,presente,estoy
+1,5,"De niño, tú",muy {travieso|mischievous}.,pretérito imperfecto,eras
+2,1,"Mañana, la {reunión|meeting}",a las diez.,futuro,será
+2,2,"Antes de la {boda|wedding}, los novios ya",juntos diez años.,pretérito pluscuamperfecto,habían estado
+2,3,"Hoy, vosotros",muy {simpáticos|friendly}.,presente,sois
+2,4,"En esa época, nosotros",estudiantes.,pretérito imperfecto,éramos
+2,5,"El {próximo|next} mes, ustedes",en Madrid.,futuro,estarán
+3,1,Las clases,en el {aula|classroom} grande.,futuro,serán
+3,2,Todos mis {primos|cousins} ,mayores que yo. ,presente,son
+3,3,{Antesdeayer|day before yesterday} la casa,muy sucia.,pretérito imperfecto,estaba
+3,4,"Hoy, la casa ",muy limpia.,presente,está
+3,5,Mientras yo,"en el supermercado, se ha ido la luz.",pretérito imperfecto,estaba
+4,1,"{Después|after} de vuestros estudios, vosotros ",grandes médicos.,futuro,seréis
+4,2,En la {actuación|show} del año pasado yo,Romeo.,pretérito perfecto simple,fui
+4,3,Me gusta mucho cuando,todos en silencio.,presente,estáis
+4,4,Las {flores|flowers} que compré ayer,muy caras. ,pretérico perfecto simple,fueron
+4,5,Ustedes,{bienvenidos|welcomed} en mi casa. ,presente,son

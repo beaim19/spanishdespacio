@@ -1,6 +1,6 @@
-﻿set,id,before,after,word
-1,1,Yo,tarde ayer.,me desperté
-1,2,Ellos,mucho en la playa.,se broncearon
+﻿set,id,before,after,word,translation
+1,1,Yo,tarde ayer.,me desperté,I woke up
+1,2,Ellos,mucho en la playa.,se broncearon,they tanned
 1,3,Ella ,muy simpática con el tiempo. ,se volvió
 1,4,Los estudiantes,para el master el primer día. ,se inscribieron
 1,5,Vosotros ,demasiado temprano. ,os fuisteis

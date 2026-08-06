@@ -13,6 +13,11 @@
  *                       not the conjugation)
  *   correct           = must exactly match option_a or option_b's text
  *
+ * `before`/`after` can also mark individual words for a hover/long-press
+ * translation using {word|translation} — see renderTextWithHints() in
+ * exercise-common.js. Entirely optional; plain text with no braces
+ * renders exactly as before.
+ *
  * Host page needs, before this script:
  *   1. PapaParse (loaded via CDN)
  *   2. js/exercise-common.js
@@ -64,7 +69,7 @@
 
       const sentence = document.createElement('p');
       sentence.className = 'exercise-sentence';
-      sentence.appendChild(document.createTextNode(`${row.before} `));
+      sentence.appendChild(window.ExerciseCommon.renderTextWithHints(`${row.before} `));
 
       const group = document.createElement('span');
       group.className = 'option-group';
@@ -82,12 +87,13 @@
       });
 
       sentence.appendChild(group);
-      sentence.appendChild(document.createTextNode(` ${row.after}`));
+      sentence.appendChild(window.ExerciseCommon.renderTextWithHints(` ${row.after}`));
       item.appendChild(sentence);
       list.appendChild(item);
     });
 
     container.appendChild(list);
+    window.ExerciseCommon.attachHintLongPress(container);
 
     const controls = document.createElement('div');
     controls.className = 'exercise-controls';

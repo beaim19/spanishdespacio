@@ -21,6 +21,10 @@
  *                  case-insensitive but accent-sensitive (á/a/etc. still
  *                  have to be right — that's what the accent toolbar is for).
  *
+ * `before`/`after` can also mark individual words for a hover/long-press
+ * translation using {word|translation} — see renderTextWithHints() in
+ * exercise-common.js. Optional; plain text with no braces is unaffected.
+ *
  * Host page needs, before this script: PapaParse, js/exercise-common.js,
  * and either:
  *   <div id="exercise-app" data-src="/content/exercises/presente.csv"></div>
@@ -94,7 +98,7 @@
 
       const sentence = document.createElement('p');
       sentence.className = 'exercise-sentence';
-      sentence.appendChild(document.createTextNode(`${row.before} `));
+      sentence.appendChild(window.ExerciseCommon.renderTextWithHints(`${row.before} `));
 
       const input = document.createElement('input');
       input.type = 'text';
@@ -109,7 +113,7 @@
       if (!lastFocusedInput) lastFocusedInput = input;
       sentence.appendChild(input);
 
-      sentence.appendChild(document.createTextNode(` ${row.after} `));
+      sentence.appendChild(window.ExerciseCommon.renderTextWithHints(` ${row.after} `));
 
       const hint = document.createElement('span');
       hint.className = 'exercise-hint';
@@ -143,6 +147,7 @@
     });
 
     container.appendChild(list);
+    window.ExerciseCommon.attachHintLongPress(container);
 
     const controls = document.createElement('div');
     controls.className = 'exercise-controls';

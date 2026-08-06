@@ -42,6 +42,12 @@
  *   2. js/exercise-common.js
  *   3. A container: <div id="exercise-app" data-src="/content/exercises/texto-verbos.csv"></div>
  *
+ * The surrounding (non-blank) text can also mark individual words for a
+ * hover/long-press translation using {word|translation} — a separate,
+ * curly-brace syntax from this file's own square-bracket blanks, so a
+ * passage can freely use both in the same `text` field. See
+ * renderTextWithHints() in exercise-common.js.
+ *
  * Registers window.ExerciseEngines.textoFacil and .textoDificil.
  */
 
@@ -150,7 +156,12 @@
 
     segments.forEach((segment) => {
       if (segment.type === 'text') {
-        passage.appendChild(document.createTextNode(segment.value));
+        // {word|translation} is a separate syntax from this file's own
+        // [correct|decoy] blanks — curly vs. square braces — so a passage
+        // can freely mix both: [...] still marks a blank to fill, {...}
+        // marks a word in the surrounding (already-given) text as
+        // hoverable/long-press-able for its translation.
+        passage.appendChild(window.ExerciseCommon.renderTextWithHints(segment.value));
         return;
       }
 
@@ -186,8 +197,8 @@
       }
     });
 
-    container.appendChild(passage);
-
+    // Pool built (and, for Fácil, appended) BEFORE the passage — the word
+    // bank needs to sit above the text, same as Empareja, not below it.
     let pool = null;
     if (mode === 'facil') {
       pool = document.createElement('div');
@@ -258,6 +269,9 @@
         el.addEventListener('click', () => toggleSlot(el));
       });
     }
+
+    container.appendChild(passage);
+    window.ExerciseCommon.attachHintLongPress(container);
 
     const controls = document.createElement('div');
     controls.className = 'exercise-controls';

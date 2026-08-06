@@ -1,6 +1,6 @@
 ﻿set,id,before,after,infinitive,correct
-1,1,Yo,un libro cada semana.,leer,leo
-1,2,Tú,cartas a tus amigos.,escribir,escribes
+1,1,Yo,un {libro|book} cada semana.,leer,leo
+1,2,Tú,{cartas|letters} a tus amigos.,escribir,escribes
 1,3,Nosotros,juntos los domingos.,comer,comemos
 1,4,Ella,su habitación todos los sábados.,limpiar,limpia
 1,5,Vosotros,muy bien.,bailar,bailáis

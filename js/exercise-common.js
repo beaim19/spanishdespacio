@@ -128,6 +128,115 @@ window.ExerciseCommon = (function () {
   }
 
   /*
+   * Word-level translation hints — {palabra|translation} written inline
+   * inside a sentence field marks just that one word as hoverable, not the
+   * whole sentence. Deliberately curly braces, not square brackets, so
+   * this never collides with Texto's [correct|decoy] blank syntax — a
+   * Texto passage can carry both in the same `text` field. Desktop shows
+   * the tooltip on :hover/:focus for free via CSS alone; touch has no
+   * hover, so attachHintLongPress() below adds a press-and-hold
+   * equivalent.
+   */
+  function buildHintSpan(word, translation) {
+    const span = document.createElement('span');
+    span.className = 'hint-word';
+    span.tabIndex = 0;
+    span.appendChild(document.createTextNode(word));
+    if (translation) {
+      span.setAttribute('aria-label', `${word}: ${translation}`);
+      const tooltip = document.createElement('span');
+      tooltip.className = 'hint-tooltip';
+      tooltip.setAttribute('role', 'tooltip');
+      tooltip.textContent = translation;
+      span.appendChild(tooltip);
+    }
+    return span;
+  }
+
+  // Parses {word|translation} out of a sentence fragment and returns a
+  // DocumentFragment mixing plain text nodes with hoverable spans — drop
+  // this in wherever a `before`/`after`/passage string used to go straight
+  // into document.createTextNode(). A run with no braces at all just comes
+  // back as a single text node, so this is safe to use unconditionally.
+  function renderTextWithHints(text) {
+    const fragment = document.createDocumentFragment();
+    const str = text || '';
+    const regex = /\{([^}|]+)(?:\|([^}]*))?\}/g;
+    let lastIndex = 0;
+    let match = regex.exec(str);
+    while (match !== null) {
+      if (match.index > lastIndex) {
+        fragment.appendChild(document.createTextNode(str.slice(lastIndex, match.index)));
+      }
+      fragment.appendChild(buildHintSpan(match[1].trim(), (match[2] || '').trim()));
+      lastIndex = regex.lastIndex;
+      match = regex.exec(str);
+    }
+    if (lastIndex < str.length) {
+      fragment.appendChild(document.createTextNode(str.slice(lastIndex)));
+    }
+    return fragment;
+  }
+
+  // For the few places a sentence has to stay a plain STRING rather than
+  // become DOM nodes (e.g. Ordena's "Orden correcto: ..." reveal, or a
+  // grading comparison) — strips {word|translation} down to just "word",
+  // same text a student would actually see.
+  function stripHints(text) {
+    return (text || '').replace(/\{([^}|]+)(?:\|[^}]*)?\}/g, '$1').trim();
+  }
+
+  // Touch has no :hover, so this is the press-and-hold equivalent — finds
+  // every hoverable word/chip under `root` that actually carries a tooltip
+  // and wires up a ~500ms long-press to reveal it via a `.hint-visible`
+  // class (CSS shows the tooltip on :hover, :focus, OR .hint-visible).
+  // Also swallows the synthetic click a long-press would otherwise still
+  // fire afterward — without that, holding a word bank chip to check its
+  // translation would also select/place it, which isn't what a long-press
+  // is for. Call this once after an engine finishes rendering into the
+  // page (safe to call more than once on the same page; each element only
+  // gets listeners attached the first time a search find it, since nothing
+  // here is re-queried elsewhere).
+  function attachHintLongPress(root) {
+    if (!root) return;
+    const LONG_PRESS_MS = 500;
+
+    root.querySelectorAll('.hint-word, .pool-chip, .ordena-word').forEach((el) => {
+      if (!el.querySelector('.hint-tooltip') || el.dataset.hintPressWired) return;
+      el.dataset.hintPressWired = 'true';
+
+      let pressTimer = null;
+      let longPressed = false;
+      let autoHideTimer = null;
+
+      function showHint() {
+        document.querySelectorAll('.hint-visible').forEach((other) => {
+          if (other !== el) other.classList.remove('hint-visible');
+        });
+        el.classList.add('hint-visible');
+        clearTimeout(autoHideTimer);
+        autoHideTimer = setTimeout(() => el.classList.remove('hint-visible'), 3000);
+      }
+
+      el.addEventListener('touchstart', () => {
+        longPressed = false;
+        pressTimer = setTimeout(() => {
+          longPressed = true;
+          showHint();
+        }, LONG_PRESS_MS);
+      }, { passive: true });
+
+      el.addEventListener('touchend', (e) => {
+        clearTimeout(pressTimer);
+        if (longPressed) e.preventDefault();
+      });
+
+      el.addEventListener('touchmove', () => clearTimeout(pressTimer));
+      el.addEventListener('touchcancel', () => clearTimeout(pressTimer));
+    });
+  }
+
+  /*
    * Verb-type support (regular/irregular/reflexivos, etc.) — a second,
    * independent dimension from "set". Reads ?type= from the URL, defaults
    * to the first variant if it's missing or not recognized.
@@ -304,5 +413,8 @@ window.ExerciseCommon = (function () {
     getRequestedExerciseType,
     renderExerciseTypeNav,
     initExerciseTypePage,
+    renderTextWithHints,
+    stripHints,
+    attachHintLongPress,
   };
 })();

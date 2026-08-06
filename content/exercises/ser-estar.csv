@@ -1,31 +1,31 @@
 ﻿set,id,before,after,option_a,option_b,correct
-1,1,Ella,hoy muy cansada.,es,está,está
-1,2,Nosotros,turistas y visitamos España.,somos,estamos,somos
-1,3,,muy contento porque no llueve.,Soy,Estoy,Estoy
+1,1,Ella,hoy muy {cansada|tired}.,es,está,está
+1,2,Nosotros,{turistas|tourists} y visitamos España.,somos,estamos,somos
+1,3,,muy contento porque no {llueve|rains}.,Soy,Estoy,Estoy
 1,4,Sus padres,de vacaciones.,están,son,están
-1,5,Ella,profesora de infantil. ,está,es,es
-1,6,Mi abuela,de Argentina.,es,está,es
-1,7,Vosotros,muy simpáticos.,estáis,sois,sois
-1,8,Ella,una niña muy alta.,es,está,es
-1,9,Mi casa,en un barrio viejo.,es,está,está
-1,10,Nosotros,interesados en este tema. ,estamos,somos,estamos
-2,1,La comida hoy,muy rica.,es,está,está
-2,2,Cada día,más contento.,soy,estoy,estoy
-2,3,Mi actriz favorita,Penélope Cruz.,está,es,es
-2,4,Esa mujer de allí,famosa.,está,es,es
-2,5,Tenemos que ,despiertos a las cinco. ,ser,estar,estar
-2,6,Las dos casas,muy grandes.,están,son,son
-2,7,¿,de paseo por el parque?,Sois,Estáis,Estáis
-2,8,Mañana voy a ,en casa a las seis. ,estar,ser,estar
-2,9,Ella,muy amable conmigo.,es,está,es
-2,10,Las bicicletas,muy rotas.,están,son,están
-3,1,La playa ,vacía a primera hora. ,es,está,está
-3,2,¿Tú,el enfermero de esta planta?,estás,eres,eres
-3,3,Su vuelo,retrasado una hora. ,está,es,está
-3,4,Nostros,estamos despiertos a las siete.,somos,estamos,estamos
-3,5,Yo,sediento después del ejercicio.,soy,estoy,estoy
-3,6,Mi prima,abogada.,está,es,es
-3,7,Las cosas nunca,como parecen.,son,están,son
-3,8,Usted,muy agradable con los niños.,está,es,es
-3,9,Su maestra,bastante competente.,está,es,es
-3,10,Vosotros nunca,contentos.,sois,estáis,estáis
+1,5,Ella,profesora de {infantil|kindergarden}. ,está,es,es
+2,1,Mi abuela,de Argentina.,es,está,es
+2,2,Vosotros,muy {simpáticos|friendly}.,estáis,sois,sois
+2,3,Ella,una niña muy {alta|tall}.,es,está,es
+2,4,Mi casa,en un {barrio|neighborhood} viejo.,es,está,está
+2,5,Nosotros,interesados en este {tema|subject}. ,estamos,somos,estamos
+3,1,La comida hoy,muy rica.,es,está,está
+3,2,Cada día,más contento.,soy,estoy,estoy
+3,3,Mi actriz favorita,Penélope Cruz.,está,es,es
+3,4,Esa mujer de allí,famosa.,está,es,es
+3,5,Tenemos que ,{despiertos|woken up} a las cinco. ,ser,estar,estar
+4,1,Las dos casas,muy grandes.,están,son,son
+4,2,¿,de {paseo|walk} por el parque?,Sois,Estáis,Estáis
+4,3,Mañana voy a ,en casa a las seis. ,estar,ser,estar
+4,4,Ella,muy {amable|nice} conmigo.,es,está,es
+4,5,Las bicicletas,muy {rotas|broken}.,están,son,están
+5,1,La playa ,vacía a {primera|first} hora. ,es,está,está
+5,2,¿Tú,el {enfermero|nurse} de esta {planta|floor}?,estás,eres,eres
+5,3,Su vuelo,retrasado una hora. ,está,es,está
+5,4,Nostros,estamos despiertos a las siete.,somos,estamos,estamos
+5,5,Yo,{sediento|thirsty} después del ejercicio.,soy,estoy,estoy
+6,1,Mi prima,{abogada|lawyer}.,está,es,es
+6,2,Las cosas nunca,como parecen.,son,están,son
+6,3,Usted,muy agradable con los niños.,está,es,es
+6,4,Su maestra,{bastante|enough} profesional.,está,es,es
+6,5,Vosotros nunca,contentos.,sois,estáis,estáis

@@ -1,6 +1,6 @@
 ﻿set,id,correct,also_correct
-1,1,Yo me desperté tarde ayer.,Ayer yo me desperté tarde. 
-1,2,Ellos se broncearon mucho en la playa.,
+1,1,Yo me desperté {tarde|late} ayer.,Ayer yo me desperté tarde.
+1,2,Ellos se broncearon mucho en la {playa|beach}.,
 1,3,Vosotros os reisteis mucho con esa película.,
 1,4,Los atletas se fueron temprano a casa. ,
 1,5,El agua se heló rápidamente.,

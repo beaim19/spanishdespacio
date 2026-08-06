@@ -1,6 +1,6 @@
 ﻿set,id,correct,also_correct
-1,1,Nosotros fuimos a la fiesta el sábado.,El sábado nostros fuimos a la fiesta.
-1,2,Ella dijo que no podía venir.,
+1,1,Nosotros fuimos a la {fiesta|party} el sábado.,El sábado nostros fuimos a la fiesta.
+1,2,Ella dijo que no podía {venir|to come}.,
 1,3,El payaso entretenía a los niños.,
 1,4,Esta mañana nevaba mucho. ,Nevaba mucho esta mañana. 
 1,5,Los niños repetían la frase.,

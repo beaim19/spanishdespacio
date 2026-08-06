@@ -1,6 +1,6 @@
 ﻿set,id,before,after,infinitive,tense,correct
-1,1,Yo,la puerta esta mañana.,cerrar,pretérito perfecto simple,cerré
-1,2,Ella,en Barcelona hace muchos años.,vivir,pretérito imperfecto,vivía
+1,1,Yo,la {puerta|door} esta mañana.,cerrar,pretérito perfecto simple,cerré
+1,2,Ella,en Barcelona hace muchos {años|years}.,vivir,pretérito imperfecto,vivía
 1,3,Vosotros ,muchos helados durante las vacaciones.,comer,pretérito imperfecto,comíais
 1,4,El suelo,al cruzar el pasillo.,crujir,pretérito perfecto simple,crujió
 1,5,Los perros,la entrada a la casa. ,ensuciar,pretérito perfecto simple,ensuciaron

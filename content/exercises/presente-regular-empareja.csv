@@ -1,6 +1,6 @@
-﻿set,id,before,after,word
-1,1,Yo,español todos los días.,hablo
-1,2,Ella,en Madrid.,vive
+﻿set,id,before,after,word,translation
+1,1,Yo,español todos los días.,hablo,I speak
+1,2,Ella,en Madrid.,vive,she lives
 1,3,Su perro,muy deprisa.,corre
 1,4,Tú,muy despacio.,caminas
 1,5,Ustedes,con muy poco equipaje.,viajan

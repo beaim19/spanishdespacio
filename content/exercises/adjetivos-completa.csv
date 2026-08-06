@@ -1,11 +1,16 @@
 ﻿set,id,before,after,hint,correct
-1,1,El perro es,.,pequeño,pequeño
-1,2,La mesa es,.,pequeño,pequeña
+1,1,El {perro|dog} es,.,pequeño,pequeño
+1,2,La {mesa|table} es,.,pequeño,pequeña
 1,3,Los coches son,.,nuevo,nuevos
 1,4,Las camisas son,.,nuevo,nuevas
 1,5,Este problema es muy,.,serio,serio
-1,6,Esta situación es muy,.,serio,seria
-1,7,Los chicos están,.,cansado,cansados
-1,8,Las chicas están,.,cansado,cansadas
-1,9,El cielo está,.,despejado,despejado
-1,10,Las calles están,.,despejado,despejadas
+2,1,Esta situación es muy,.,serio,seria
+2,2,Los chicos están,.,cansado,cansados
+2,3,Las chicas están,.,cansado,cansadas
+2,4,El cielo está,.,despejado,despejado
+2,5,Las calles están,.,despejado,despejadas
+3,1,La luna,es muy bonita.,lleno,llena
+3,2,Los tomates,están muy ricos.,fresco,frescos
+3,3,El pimiento,es rojo. ,picante,picante
+3,4,Las calles,brillan por la noche. ,mojada,mojadas
+3,5,Todas las bicicletas,cuestan 20 euros. ,azul,azules

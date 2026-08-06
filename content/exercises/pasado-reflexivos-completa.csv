@@ -1,6 +1,6 @@
 ﻿set,id,before,after,infinitive,tense,correct
-1,1,Nosotros,muy temprano durante las vacaciones.,levantarse,pretérito imperfecto,nos levantábamos
-1,2,Tú ,en la fiesta.,colarse,pretérito perfecto simple,te colaste
+1,1,Nosotros,muy temprano durante las {vacaciones|vacation}.,levantarse,pretérito imperfecto,nos levantábamos
+1,2,Tú ,en la {fiesta|party}.,colarse,pretérito perfecto simple,te colaste
 1,3,Vosotros,con el fantasma.,asustarse,pretérito imperfecto,os asustabais
 1,4,Ellos,ayer para la excursión. ,prepararse,pretérito perfecto simple,se prepararon
 1,5,Vosotros,con el rosal. ,pincharse,pretérito perfecto simple,os pinchasteis

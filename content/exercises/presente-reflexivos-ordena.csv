@@ -1,6 +1,6 @@
 ﻿set,id,correct,also_correct
-1,1,Yo me acuesto muy temprano.,
-1,2,Nosotros nos lavamos las manos antes de comer. ,Antes de comer nosotros nos lavamos las manos. 
+1,1,Yo me acuesto muy {temprano|early}.,
+1,2,Nosotros nos lavamos las {manos|hands} antes de comer. ,Antes de comer nosotros nos lavamos las manos.
 1,3,Ustedes se peinan con un estilo muy moderno. ,
 1,4,Los gatos se estiran antes y después de dormir. ,Los gatos se estiran después y antes de dormir. 
 1,5,Su sobrina se cae a menudo del columpio. ,

@@ -1,6 +1,6 @@
 ﻿set,id,before,after,infinitive,correct
-1,1,Yo,demasiado por todo.,preocuparse,me preocupo
-1,2,Ella,fácilmente.,enamorarse,se enamora
+1,1,Yo,demasiado por {todo|everything}.,preocuparse,me preocupo
+1,2,Ella,{fácilmente|easily}.,enamorarse,se enamora
 1,3,Nosotros,mucho en las fiestas.,divertirse,nos divertimos
 1,4,Los estudiantes,en las clases largas.,aburrirse,se aburren
 1,5,Tú,de todo.,quejarse,te quejas

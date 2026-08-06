@@ -23,6 +23,17 @@
  *                  "Hoy ella está muy cansada|Ella hoy está muy cansada"
  *                  Leave blank if the sentence only has one natural order.
  *
+ * `correct` can also mark individual words for a hover/long-press
+ * translation using {word|translation} — e.g. "Ella {compró|bought} un
+ * regalo." — same {...} syntax as every other engine (see
+ * renderTextWithHints() in exercise-common.js), just applied to a sentence
+ * that gets tokenized into chips instead of rendered as running text. Only
+ * mark single words this way, not phrases — a chip has to correspond to
+ * one thing the student physically places, so bracketing multiple words
+ * together would remove them from the word-order test entirely. Optional;
+ * `also_correct` doesn't need brackets repeated in it — a translation only
+ * has to be defined once, on `correct`.
+ *
  * Host page needs, before this script:
  *   1. PapaParse (loaded via CDN)
  *   2. js/exercise-common.js
@@ -41,8 +52,20 @@
     return copy;
   }
 
-  function tokenize(sentence) {
-    return (sentence || '').trim().split(/\s+/).filter(Boolean);
+  // Splits a sentence into { display, translation } tokens — brace-aware,
+  // so a {word|translation} unit stays one token even when the English
+  // translation itself contains spaces (e.g. "{cansado|tired out}"),
+  // rather than getting torn apart by a plain whitespace split.
+  function tokenizeWithHints(sentence) {
+    const str = (sentence || '').trim();
+    if (!str) return [];
+    const rawTokens = str.match(/\{[^}]*\}[.,!?¿¡]*|\S+/g) || [];
+    return rawTokens.map((token) => {
+      const match = token.match(/^\{([^}|]*)(?:\|([^}]*))?\}([.,!?¿¡]*)$/);
+      if (!match) return { display: token, translation: '' };
+      const [, word, translation, trailing] = match;
+      return { display: `${word}${trailing || ''}`, translation: (translation || '').trim() };
+    });
   }
 
   // The capital letter on the first word and the period (or ! / ?) on the
@@ -54,10 +77,10 @@
   // this has no effect on what counts as correct.
   function stripPositionalHints(tokens) {
     if (tokens.length === 0) return tokens;
-    const result = [...tokens];
-    result[0] = result[0].charAt(0).toLowerCase() + result[0].slice(1);
+    const result = tokens.map((t) => ({ ...t }));
+    result[0].display = result[0].display.charAt(0).toLowerCase() + result[0].display.slice(1);
     const lastIndex = result.length - 1;
-    result[lastIndex] = result[lastIndex].replace(/[.,!?¿¡]+$/, '');
+    result[lastIndex].display = result[lastIndex].display.replace(/[.,!?¿¡]+$/, '');
     return result;
   }
 
@@ -104,9 +127,14 @@
     list.className = 'exercise-list';
 
     rows.forEach((row, rowIndex) => {
+      // stripHints() here since acceptedDisplay/acceptedNormalized end up
+      // as plain strings (the "Orden correcto: ..." reveal text, and the
+      // grading comparison) — {word|translation} markup would otherwise
+      // show up literally instead of becoming a hoverable span, which only
+      // happens for the word-bank chips built from tokenizeWithHints below.
       const acceptedDisplay = [row.correct]
         .concat((row.also_correct || '').split('|'))
-        .map((s) => (s || '').trim())
+        .map((s) => window.ExerciseCommon.stripHints((s || '').trim()))
         .filter(Boolean);
       const acceptedNormalized = acceptedDisplay.map(normalizeForCompare);
 
@@ -142,10 +170,17 @@
         const word = document.createElement('button');
         word.type = 'button';
         word.className = 'ordena-word';
-        word.textContent = chip.textContent;
+        // dataset.word (not textContent) is the actual word — chip.textContent
+        // would also pull in the tooltip's translation text once one is
+        // attached, since textContent concatenates ALL descendant text.
+        word.dataset.word = chip.dataset.word;
+        word.appendChild(document.createTextNode(chip.dataset.word));
+        const tooltip = chip.querySelector('.hint-tooltip');
+        if (tooltip) word.appendChild(tooltip.cloneNode(true));
         word.dataset.chipId = chip.dataset.chipId;
         word.addEventListener('click', () => removeWord(word, chip));
         assembly.appendChild(word);
+        window.ExerciseCommon.attachHintLongPress(assembly);
         updatePlaceholder();
       }
 
@@ -157,13 +192,21 @@
         updatePlaceholder();
       }
 
-      const words = shuffle(stripPositionalHints(tokenize(row.correct)));
-      words.forEach((wordText, chipIndex) => {
+      const words = shuffle(stripPositionalHints(tokenizeWithHints(row.correct)));
+      words.forEach((token, chipIndex) => {
         const chip = document.createElement('button');
         chip.type = 'button';
         chip.className = 'pool-chip';
-        chip.textContent = wordText;
         chip.dataset.chipId = String(chipIndex);
+        chip.dataset.word = token.display;
+        chip.appendChild(document.createTextNode(token.display));
+        if (token.translation) {
+          const tooltip = document.createElement('span');
+          tooltip.className = 'hint-tooltip';
+          tooltip.setAttribute('role', 'tooltip');
+          tooltip.textContent = token.translation;
+          chip.appendChild(tooltip);
+        }
         chip.addEventListener('click', () => addWord(chip));
         bank.appendChild(chip);
       });
@@ -174,6 +217,7 @@
     });
 
     container.appendChild(list);
+    window.ExerciseCommon.attachHintLongPress(container);
 
     const controls = document.createElement('div');
     controls.className = 'exercise-controls';
@@ -222,8 +266,11 @@
       const acceptedNormalized = item.dataset.correctNormalized.split('|');
       const acceptedDisplay = item.dataset.correct.split('|');
       const assembly = item.querySelector('.ordena-assembly');
+      // dataset.word, not textContent — a placed word's textContent would
+      // also include its cloned .hint-tooltip translation text once one is
+      // attached, which would otherwise leak into the grading comparison.
       const attempt = [...assembly.querySelectorAll('.ordena-word')]
-        .map((w) => w.textContent.trim())
+        .map((w) => (w.dataset.word || '').trim())
         .join(' ');
 
       if (acceptedNormalized.includes(normalizeForCompare(attempt))) {

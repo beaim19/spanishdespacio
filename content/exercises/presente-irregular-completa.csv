@@ -1,6 +1,6 @@
 ﻿set,id,before,after,infinitive,correct
-1,1,Yo,mucho antes de decidir.,pensar,pienso
-1,2,Ella,la puerta con llave.,cerrar,cierra
+1,1,Yo,mucho antes de {decidir|deciding}.,pensar,pienso
+1,2,Ella,la {puerta|door} con llave.,cerrar,cierra
 1,3,Nosotros,tarde los viernes.,volver,volvemos
 1,4,Ellos,ayuda cuando la necesitan.,pedir,piden
 1,5,Tú,las instrucciones al pie de la letra.,seguir,sigues

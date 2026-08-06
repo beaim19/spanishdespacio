@@ -1,8 +1,8 @@
 /*
  * "Flashcards" exercise engine: one card at a time, self-paced review
- * instead of a graded quiz. The student thinks of the answer, reveals it,
- * then self-reports whether they knew it or not — same idea as a physical
- * flashcard deck, not multiple choice or typing.
+ * instead of a graded quiz. The student thinks of the answer, reveals it
+ * (or lets the countdown reveal it for them), then moves on — same idea as
+ * a physical flashcard deck, not multiple choice or typing.
  *
  * Two content shapes, auto-detected from the CSV's columns:
  *
@@ -25,12 +25,18 @@
  *      other, so the student practices converting in both directions
  *      instead of always reading the same one.
  *
- * Each card also runs a 5-second auto-reveal countdown (text + a shrinking
- * bar) so the student has a beat of real time pressure to recall the
- * answer in their head — clicking "Mostrar respuesta" early still works
- * and just cancels the countdown. Answering is unchanged: "La sabía"/"No
- * la sabía" after reveal, same as before, so the running score still means
- * something.
+ * Each card also runs a 10-second auto-reveal countdown (text + a
+ * shrinking bar) so the student has a beat of real time pressure to
+ * recall the answer in their head — clicking "Mostrar respuesta" early
+ * still works and just cancels the countdown. After reveal, a single
+ * "Siguiente" button moves to the next card — there's no self-assessment
+ * step (no "La sabía"/"No la sabía") and no running score, on purpose:
+ * this is meant as fast-paced repetition, not a graded quiz.
+ *
+ * In sentence mode, `before`/`after` can also mark individual words for a
+ * hover/long-press translation using {word|translation} — see
+ * renderTextWithHints() in exercise-common.js. Optional; plain text with
+ * no braces is unaffected.
  *
  * Host page needs, before this script:
  *   1. PapaParse (loaded via CDN)
@@ -102,14 +108,14 @@
     instructions.className = 'exercise-instructions';
     instructions.textContent = pairMode
       ? 'Piensa la respuesta y pulsa "Mostrar respuesta" para comprobarla. A veces se muestra en cifras, a veces en palabras.'
-      : 'Piensa la respuesta y pulsa "Mostrar respuesta" para comprobarla. Después indica si la sabías o no.';
+      : 'Piensa la respuesta y pulsa "Mostrar respuesta" para comprobarla.';
     container.appendChild(instructions);
 
+    const COUNTDOWN_SECONDS = 10;
     const deck = shuffle(rows);
     let index = 0;
     let revealed = false;
     let flipped = Math.random() < 0.5; // pair mode only: which term is the front
-    const tally = { know: 0, dontKnow: 0 };
 
     const card = document.createElement('div');
     card.className = 'flashcard';
@@ -162,16 +168,21 @@
         const correct = (row.correct || '').trim();
         const frontHint = buildFrontHint(row);
         if (!revealed) {
-          let text = `${row.before} ______ ${row.after}`;
-          if (frontHint) text += ` ${frontHint}`;
-          sentence.textContent = text.trim();
+          // Built from appended nodes (not a single textContent assignment)
+          // specifically so renderTextWithHints() can turn any {word|
+          // translation} in before/after into real hoverable spans instead
+          // of showing the raw braces as literal text.
+          sentence.appendChild(window.ExerciseCommon.renderTextWithHints(`${row.before} `));
+          sentence.appendChild(document.createTextNode('______'));
+          sentence.appendChild(window.ExerciseCommon.renderTextWithHints(` ${row.after}`));
+          if (frontHint) sentence.appendChild(document.createTextNode(` ${frontHint}`));
         } else {
-          sentence.appendChild(document.createTextNode(`${row.before} `));
+          sentence.appendChild(window.ExerciseCommon.renderTextWithHints(`${row.before} `));
           const answer = document.createElement('strong');
           answer.className = 'flashcard-answer';
           answer.textContent = correct;
           sentence.appendChild(answer);
-          sentence.appendChild(document.createTextNode(` ${row.after}`));
+          sentence.appendChild(window.ExerciseCommon.renderTextWithHints(` ${row.after}`));
           if (frontHint) sentence.appendChild(document.createTextNode(` ${frontHint}`));
           const backLabel = buildBackLabel(row);
           if (backLabel) {
@@ -186,7 +197,7 @@
       card.appendChild(sentence);
 
       if (!revealed) {
-        let secondsLeft = 5;
+        let secondsLeft = COUNTDOWN_SECONDS;
 
         const countdown = document.createElement('p');
         countdown.className = 'flashcard-countdown';
@@ -202,8 +213,8 @@
 
         // The bar starts at its CSS default (100% width); nudging the
         // width change into the next couple of frames (rather than setting
-        // it immediately) is what lets the 5s CSS transition actually
-        // animate the shrink instead of jumping straight to empty.
+        // it immediately) is what lets the CSS transition actually animate
+        // the shrink instead of jumping straight to empty.
         requestAnimationFrame(() => {
           requestAnimationFrame(() => {
             bar.style.width = '0%';
@@ -218,7 +229,7 @@
         revealTimeout = setTimeout(() => {
           revealed = true;
           renderCard();
-        }, 5000);
+        }, COUNTDOWN_SECONDS * 1000);
       }
 
       const controls = document.createElement('div');
@@ -235,29 +246,16 @@
         });
         controls.appendChild(showBtn);
       } else {
-        const knowBtn = document.createElement('button');
-        knowBtn.type = 'button';
-        knowBtn.className = 'btn btn-primary';
-        knowBtn.textContent = 'La sabía';
-        knowBtn.addEventListener('click', () => {
-          tally.know += 1;
-          advance();
-        });
-
-        const dontKnowBtn = document.createElement('button');
-        dontKnowBtn.type = 'button';
-        dontKnowBtn.className = 'btn btn-secondary';
-        dontKnowBtn.textContent = 'No la sabía';
-        dontKnowBtn.addEventListener('click', () => {
-          tally.dontKnow += 1;
-          advance();
-        });
-
-        controls.appendChild(knowBtn);
-        controls.appendChild(dontKnowBtn);
+        const nextBtn = document.createElement('button');
+        nextBtn.type = 'button';
+        nextBtn.className = 'btn btn-primary';
+        nextBtn.textContent = 'Siguiente';
+        nextBtn.addEventListener('click', () => advance());
+        controls.appendChild(nextBtn);
       }
 
       card.appendChild(controls);
+      window.ExerciseCommon.attachHintLongPress(card);
     }
 
     function advance() {
@@ -273,7 +271,7 @@
 
       const result = document.createElement('p');
       result.className = 'exercise-result';
-      result.textContent = `Sabías ${tally.know} de ${deck.length}.`;
+      result.textContent = `Has terminado esta serie de ${deck.length} tarjetas.`;
       summary.appendChild(result);
 
       const retryBtn = document.createElement('button');
@@ -285,8 +283,6 @@
         index = 0;
         revealed = false;
         flipped = Math.random() < 0.5;
-        tally.know = 0;
-        tally.dontKnow = 0;
         renderCard();
       });
       summary.appendChild(retryBtn);

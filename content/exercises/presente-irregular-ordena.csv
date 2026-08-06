@@ -1,6 +1,6 @@
 ﻿set,id,correct,also_correct
-1,1,El bosque tiene muchos árboles distintos.,
-1,2,Creo que vosotros dormís en esta habitación.,
+1,1,El bosque tiene muchos {árboles|trees} distintos.,
+1,2,Creo que vosotros dormís en esta {habitación|room}.,
 1,3,Tenemos comida suficiente para la cena. ,
 1,4,El supermercado cierra a las ocho de la tarde. ,
 1,5,Los coches en la plaza parecen extranjeros.,

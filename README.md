@@ -28,7 +28,8 @@ js/exercise-choice2.js    "Pick between two options" exercise engine (Dos opcion
 js/exercise-arrastra.js   "Drag a word into the blank" exercise engine (Empareja)
 js/exercise-typed.js      Typed-answer exercise engine (Completa) — also
                           reused, unmodified, as Presente's conjugation drill
-js/exercise-flashcards.js Self-paced reveal-and-self-assess exercise engine (Flashcards)
+js/exercise-flashcards.js Self-paced reveal exercise engine (Flashcards) — timed
+                          auto-reveal, no self-assessment or score
 js/exercise-ordena.js     Sentence word-reordering exercise engine (Ordena)
 js/exercise-texto.js      Cloze-passage exercise engines (Texto: Fácil word
                           bank + Difícil typed input, sharing one CSV/parser)
@@ -290,16 +291,19 @@ built from `gender`/`number` — used by Adjetivos' dedicated Flashcards CSV,
 where the point is recognizing gender/number agreement rather than
 recalling an exact word, e.g. revealing "elegante *(masculino, singular)*".
 
-Every card also runs a 5-second auto-reveal countdown — a small text
+Every card also runs a 10-second auto-reveal countdown — a small text
 countdown plus a shrinking bar (`.flashcard-timer-bar`, animated by
-transitioning its CSS width from 100% to 0% over 5s) — so there's a beat
-of actual time pressure to recall the answer instead of writing it down.
-Clicking "Mostrar respuesta" early still works and just cancels the
-countdown (`clearCountdown()` runs at the top of every `renderCard()`
-call, so advancing, retrying, or manually revealing all clean up whatever
-timer was pending without needing to duplicate that call at each site).
-Self-assessment afterward — "La sabía" / "No la sabía" — is unchanged, so
-the running score still means the same thing it did before.
+transitioning its CSS width from 100% to 0% over `COUNTDOWN_SECONDS`) — so
+there's a beat of actual time pressure to recall the answer instead of
+writing it down. Clicking "Mostrar respuesta" early still works and just
+cancels the countdown (`clearCountdown()` runs at the top of every
+`renderCard()` call, so advancing, retrying, or manually revealing all
+clean up whatever timer was pending without needing to duplicate that call
+at each site). After reveal, a single "Siguiente" button moves to the next
+card — there's no "La sabía"/"No la sabía" self-assessment step anymore
+and no running score in the end-of-deck summary (just "Has terminado esta
+serie de N tarjetas."); this is meant as fast repetition, not a graded
+quiz.
 
 *Pair mode* — `set,id,term_a,term_b`, for plain vocabulary recall with no
 sentence at all. Números' Flashcards uses this (a digit and its word form,
@@ -423,12 +427,23 @@ of every tense getting its own top-level row:
     <span class="theme-block-arrow theme-menu-caret" aria-hidden="true">&darr;</span>
   </button>
   <ul class="theme-menu" id="verbos-menu">
-    <li><a href="/exercises/presente.html">Presente</a></li>
+    <li><a href="/exercises/presente.html">Presente (Modo Indicativo)</a></li>
     <li class="theme-menu-empty-item">Pasado <em>(Próximamente)</em></li>
     <!-- ...one <li> per tense... -->
   </ul>
 </div>
 ```
+
+The link text for indicativo tenses includes "(Modo Indicativo)" right in
+the label (e.g. "Presente (Modo Indicativo)", "Pasado (Modo Indicativo)")
+since Subjuntivo and Imperativo will eventually live in this same dropdown
+— the mood needs to be visible in the menu itself, not just inside each
+topic's intro paragraph. Current lineup: Presente and Pasado (built,
+Modo Indicativo), Futuro and Condicional (Próximamente, Modo Indicativo),
+Subjuntivo and Imperativo (Próximamente, no mood suffix — their own
+structure, likely quite different from the indicativo tenses, is still to
+be figured out). "Pasado perfecto" was removed from the list — not a
+separate tense being planned for right now.
 
 `js/theme-menu.js` wires up any `.theme-menu-wrapper` it finds on the page:
 click/tap toggles it (works on touch and via Enter/Space on the button,
@@ -484,7 +499,8 @@ double quotes (as in the example above) — plain Excel entry handles this
 automatically as long as you don't manually strip the surrounding quotes.
 
 Fácil's word bank shows only the correct words (one chip per blank, same
-`.word-pool`/`.drop-slot` pattern as Empareja), not the decoys. Small
+`.word-pool`/`.drop-slot` pattern as Empareja), not the decoys, and — like
+Empareja — sits above the passage, not below it. Small
 multiple-choice boxes sitting right above each individual blank were the
 first design tried, but a ~200-word passage carries a dozen-plus blanks,
 and that many 44px-tall button clusters wedged into flowing prose read as
@@ -512,6 +528,87 @@ same adjective in the wrong gender/number), and `texto-verbos.csv`
 for a different subject). Each currently has one worked passage (set 1) as
 a starting point — add more the same way as any other topic, a new `set`
 number with its own `text` row.
+
+## Word-level translation hints
+
+Any sentence field — `before`/`after` (Dos opciones, Completa, Flashcards),
+Ordena's `correct`, or Texto's `text` — can mark an individual word (or
+short phrase) for a hover/long-press English translation, without
+translating the whole sentence:
+
+```
+1,1,Ella,hoy muy {cansada|tired}.,es,está,está
+```
+
+`{word|translation}` — curly braces, not square brackets, specifically so
+this never collides with Texto's own `[correct|decoy]` blank syntax; a
+Texto passage can freely use both in the same `text` field. The word
+renders with a dotted underline; hovering it on desktop (or long-pressing
+it on a touchscreen, ~500ms) shows the translation in a small tooltip.
+Entirely optional — plain text with no braces renders exactly as it always
+did, so nothing breaks by leaving a sentence untranslated.
+
+`renderTextWithHints()` in `js/exercise-common.js` does the parsing and
+DOM-building, and is what every sentence-based engine now calls instead of
+`document.createTextNode()` directly. `attachHintLongPress()`, also in
+`exercise-common.js`, wires up the press-and-hold behavior for touch —
+call it once after an engine finishes rendering into the page (every
+engine's render function already does this). `stripHints()` strips the
+markup down to plain "word" for the handful of places a sentence has to
+stay a plain *string* rather than become DOM nodes — Ordena's "Orden
+correcto: ..." reveal text and its grading comparison, specifically, since
+those can't contain literal `{}` characters.
+
+**Empareja is the one exception** to the brace syntax: its word-bank chips
+come from a dedicated `word` column already (one whole word per row), so
+there's no surrounding sentence text to bracket a word within — the chip
+*is* the word. It gets its own optional `translation` column instead:
+
+```
+set,id,before,after,word,translation
+1,1,Mi hermano,médico.,es,is
+```
+
+`before`/`after` in that same file can still use `{word|translation}`
+brackets for the surrounding sentence text — the column only covers the
+chip word itself.
+
+**Ordena** is a middle case: chips come from tokenizing the `correct`
+sentence (there's no per-word column to hang a translation off), but
+there's also no plain running text to bracket into — so brackets go
+directly in `correct`, same as Choice2/Completa, but get picked up by a
+tokenizer instead of a text renderer:
+
+```
+set,id,correct,also_correct
+1,1,Yo soy de {Inglaterra|England}.,
+```
+
+Only mark single words this way in Ordena, not phrases — a chip has to
+correspond to one thing the student physically drags into place, so
+bracketing several words together would silently remove them from the
+word-order test. `tokenizeWithHints()` in `js/exercise-ordena.js` is
+brace-aware (so an English translation containing its own spaces, like
+`{cansado|tired out}`, still stays one token) and keeps working correctly
+with `stripPositionalHints()` (the capital-letter/period stripping from a
+few turns back — that still only touches the *display* text, translations
+ride along unaffected) and with `also_correct`'s alternate word orders
+(which don't need the brackets repeated — a translation only has to be
+defined once, on `correct`).
+
+One implementation detail worth knowing if you're ever debugging a chip:
+once a chip or slot carries a `.hint-tooltip` child, its `.textContent`
+includes the translation text too (`textContent` concatenates every
+descendant text node, tooltip included) — so both Empareja and Ordena
+track the actual word separately in a `dataset.word` attribute and read
+*that* for placing/grading, never `.textContent`, specifically to avoid
+the translation leaking into an answer comparison.
+
+This is seeded with two example sentences per topic/type across every CSV
+site-wide (Ser y estar, Por y para, Adjetivos, Números, Presente, Pasado,
+Texto) so the syntax is visible in context wherever you go to fill in the
+rest — the translations chosen are just quick examples, not vetted for
+being the ideal word to gloss in each sentence.
 
 ### Writing accented characters (á, é, í, ó, ú, ñ, ¿, ¡) correctly
 

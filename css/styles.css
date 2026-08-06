@@ -784,7 +784,7 @@ a.theme-block:focus-visible {
   height: 100%;
   width: 100%;
   background-color: var(--color-selected-dark);
-  transition: width 5s linear;
+  transition: width 10s linear;
 }
 .flashcard-sentence {
   font-size: 1.3rem;
@@ -949,6 +949,55 @@ a.theme-block:focus-visible {
 }
 .texto-input {
   margin: 0 var(--space-1);
+}
+
+/* --- Word-level translation hints ---
+   .hint-word wraps a single translatable word inside plain sentence text
+   (choice2/typed/flashcards/texto), where it isn't already inside a
+   button. .pool-chip and .ordena-word (Empareja/Ordena's word-bank chips)
+   carry the same .hint-tooltip child directly instead, since those
+   buttons are already the pressable unit — nesting a second focusable
+   element inside a <button> would be invalid.
+   Desktop gets the tooltip for free via :hover/:focus. Touch has no
+   :hover, so js/exercise-common.js's attachHintLongPress() toggles the
+   .hint-visible class after a press-and-hold instead. */
+.hint-word {
+  position: relative;
+  border-bottom: 1px dotted var(--color-brand-dark);
+  cursor: help;
+}
+.pool-chip,
+.ordena-word {
+  position: relative;
+}
+.hint-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-6px);
+  background-color: var(--color-text);
+  color: var(--color-text-inverse);
+  font-size: 0.8rem;
+  font-weight: 400;
+  font-style: normal;
+  white-space: nowrap;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+  z-index: 20;
+}
+.hint-word:hover .hint-tooltip,
+.hint-word:focus .hint-tooltip,
+.hint-word.hint-visible .hint-tooltip,
+.pool-chip:hover .hint-tooltip,
+.pool-chip:focus .hint-tooltip,
+.pool-chip.hint-visible .hint-tooltip,
+.ordena-word:hover .hint-tooltip,
+.ordena-word:focus .hint-tooltip,
+.ordena-word.hint-visible .hint-tooltip {
+  opacity: 1;
 }
 
 /* --- Buttons --- */

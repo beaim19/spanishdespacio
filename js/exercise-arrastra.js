@@ -14,15 +14,23 @@
  * everywhere without extra plumbing.
  *
  * One CSV per TOPIC (not per set of 10) — new sets are just more rows.
- * Expected CSV columns: set, id, before, after, word — plus an optional
- * `hint` column:
+ * Expected CSV columns: set, id, before, after, word — plus optional
+ * `hint` and `translation` columns:
  *   set            = which group of ~10 this row belongs to (1, 2, 3...)
- *   before / after = the sentence text split around the blank
+ *   before / after = the sentence text split around the blank — can also
+ *                    mark individual words with {word|translation} for a
+ *                    hover/long-press hint, same as every other engine
+ *                    (see renderTextWithHints() in exercise-common.js)
  *   word           = the correct word for this blank — also doubles as one
  *                    of the draggable words in that set's word bank
  *   hint           = optional; shown in brackets at the end of the
  *                    sentence (e.g. Números shows the digit form, "(20)",
  *                    next to a blank the student fills with "veinte")
+ *   translation    = optional; a hover/long-press translation for the
+ *                    `word` chip itself. A separate column rather than
+ *                    {word|translation} braces, since the chip already IS
+ *                    just one word on its own — there's no surrounding
+ *                    sentence text to bracket it within.
  *
  * Host page needs, before this script:
  *   1. PapaParse (loaded via CDN)
@@ -79,13 +87,24 @@
     pool.setAttribute('role', 'group');
     pool.setAttribute('aria-label', 'Banco de palabras');
 
-    const words = shuffle(rows.map((row) => (row.word || '').trim()));
-    words.forEach((word, chipIndex) => {
+    const words = shuffle(rows.map((row) => ({
+      word: (row.word || '').trim(),
+      translation: (row.translation || '').trim(),
+    })));
+    words.forEach((entry, chipIndex) => {
       const chip = document.createElement('button');
       chip.type = 'button';
       chip.className = 'pool-chip';
-      chip.textContent = word;
       chip.dataset.chipId = String(chipIndex);
+      chip.dataset.word = entry.word;
+      chip.appendChild(document.createTextNode(entry.word));
+      if (entry.translation) {
+        const tooltip = document.createElement('span');
+        tooltip.className = 'hint-tooltip';
+        tooltip.setAttribute('role', 'tooltip');
+        tooltip.textContent = entry.translation;
+        chip.appendChild(tooltip);
+      }
       pool.appendChild(chip);
     });
 
@@ -101,7 +120,7 @@
 
       const sentence = document.createElement('p');
       sentence.className = 'exercise-sentence';
-      sentence.appendChild(document.createTextNode(`${row.before} `));
+      sentence.appendChild(window.ExerciseCommon.renderTextWithHints(`${row.before} `));
 
       const slot = document.createElement('button');
       slot.type = 'button';
@@ -112,7 +131,7 @@
       slot.setAttribute('aria-label', 'Espacio para completar, pulsa para colocar o quitar la palabra elegida');
       sentence.appendChild(slot);
 
-      sentence.appendChild(document.createTextNode(` ${row.after}`));
+      sentence.appendChild(window.ExerciseCommon.renderTextWithHints(` ${row.after}`));
 
       // Optional trailing hint (e.g. Números shows the digit form so the
       // student can check which number-word they're placing) — omitted
@@ -127,6 +146,7 @@
     });
 
     container.appendChild(list);
+    window.ExerciseCommon.attachHintLongPress(container);
 
     function selectChip(chip) {
       if (chip.disabled) return;
@@ -156,16 +176,26 @@
         slot.textContent = '______';
         slot.dataset.filled = 'false';
         delete slot.dataset.chipId;
+        delete slot.dataset.word;
         slot.classList.remove('drop-slot-filled');
         return;
       }
 
       if (!selectedChip) return;
 
-      slot.textContent = selectedChip.textContent;
+      // dataset.word (not textContent) is the actual word — once a chip
+      // carries a .hint-tooltip child, chip.textContent would pull in the
+      // translation too, since textContent concatenates every descendant
+      // text node.
+      slot.textContent = '';
+      slot.appendChild(document.createTextNode(selectedChip.dataset.word));
+      const tooltip = selectedChip.querySelector('.hint-tooltip');
+      if (tooltip) slot.appendChild(tooltip.cloneNode(true));
+      slot.dataset.word = selectedChip.dataset.word;
       slot.dataset.filled = 'true';
       slot.dataset.chipId = selectedChip.dataset.chipId;
       slot.classList.add('drop-slot-filled');
+      window.ExerciseCommon.attachHintLongPress(slot);
 
       selectedChip.classList.remove('pool-chip-selected');
       selectedChip.disabled = true;
@@ -229,7 +259,8 @@
       const slot = item.querySelector('.drop-slot');
       const sentence = item.querySelector('.exercise-sentence');
       const filled = slot.dataset.filled === 'true';
-      const placedText = filled ? slot.textContent.trim() : '';
+      // dataset.word, not textContent — see the note above where it's set.
+      const placedText = filled ? (slot.dataset.word || '').trim() : '';
 
       if (filled && placedText === correctAnswer) {
         slot.classList.add('drop-slot-correct');
@@ -254,6 +285,7 @@
       slot.textContent = '______';
       slot.dataset.filled = 'false';
       delete slot.dataset.chipId;
+      delete slot.dataset.word;
       slot.classList.remove('drop-slot-filled', 'drop-slot-correct', 'drop-slot-incorrect');
     });
     list.querySelectorAll('.drop-slot-reveal').forEach((reveal) => reveal.remove());

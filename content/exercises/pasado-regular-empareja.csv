@@ -1,6 +1,6 @@
-﻿set,id,before,after,word
-1,1,Yo,la ventana anoche.,cerré
-1,2,Tú,mucho la semana pasada.,estudiaste
+﻿set,id,before,after,word,translation
+1,1,Yo,la ventana anoche.,cerré,I closed
+1,2,Tú,mucho la semana pasada.,estudiaste,you studied
 1,3,Ayer vosotros,mucho agua. ,bebisteis
 1,4,Cuando era niña ella,con una voz muy bonita.,cantaba
 1,5,Su padre,la compañía en los años noventa.,fundó

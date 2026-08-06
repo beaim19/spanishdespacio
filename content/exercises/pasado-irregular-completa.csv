@@ -1,6 +1,6 @@
 ﻿set,id,before,after,infinitive,tense,correct
-1,1,Yo,al parque ayer.,ir,pretérito perfecto simple,fui
-1,2,Ellos,la verdad.,decir,pretérito perfecto simple,dijeron
+1,1,Yo,al {parque|park} ayer.,ir,pretérito perfecto simple,fui
+1,2,Ellos,la {verdad|truth}.,decir,pretérito perfecto simple,dijeron
 1,3,Vosotros,con la ventan abierta.,dormir,pretérito perfecto simple,dormisteis
 1,4,Tú ,con la cabeza.,asentir,pretérito imperfecto,asentías
 1,5,Nosotros,ganar.,merecer,pretérito imperfecto,merecíamos

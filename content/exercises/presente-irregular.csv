@@ -1,6 +1,6 @@
 ﻿set,id,before,after,infinitive,correct
-1,1,Yo,de casa a las siete de la mañana.,salir,salgo
-1,2,Ella,mucho a sus padres.,querer,quiere
+1,1,Yo,de {casa|home} a las siete de la mañana.,salir,salgo
+1,2,Ella,mucho a sus {padres|parents}.,querer,quiere
 1,3,Ellos ,su coche para ir a trabajar.,conducir,conducen
 1,4,Ustedes,en esta habitación.,dormir,duermen
 1,5,En esta cocina,muy bien.,oler,huele

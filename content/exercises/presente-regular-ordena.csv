@@ -1,6 +1,6 @@
 ﻿set,id,correct,also_correct
-1,1,Me gusta mucho visitar nuevos países.,
-1,2,Los pájaros beben agua en la fuente.,
+1,1,Me gusta mucho visitar nuevos {países|countries}.,
+1,2,Los {pájaros|birds} beben agua en la fuente.,
 1,3,Ustedes caminan demasiado rápido para mí. ,
 1,4,Los niños escuchan con atención al maestro.,
 1,5,Todas las mañanas estudio un poco de español. ,Estudio un poco de español todas las mañanas.

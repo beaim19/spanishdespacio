@@ -1,21 +1,21 @@
-﻿set,id,before,after,word
-1,1,Mi hermano,médico.,es
-1,2,Nosotros,muy cansados después del viaje.,estamos
-1,3,El café,frío.,está
-1,4,Ellos,de España.,son
-1,5,Yo,estudiando para el examen.,estoy
-1,6,Tú,muy simpático.,eres
-1,7,La reunión,a las tres.,es
-1,8,Vosotros,en la playa.,estáis
-1,9,Ella,enferma hoy.,está
-1,10,Nosotras,profesoras.,somos
-2,1,Yo ,hoy super contenta.,estoy
-2,2,Mi gato ,escondido debajo de la cama.,está
-2,3,Los vecinos ,de Turquía.,son
-2,4,Ustedes ,como de la familia. ,son
-2,5,Su hija ,muy inteligente.,es
-2,6,Tú lo,haciendo muy bien.,estás
-2,7,Yo,usuario del metro. ,soy
-2,8,Tú siempre,el primero en llegar.,eres
-2,9,Todas las maletas,en el piso de abajo. ,están
-2,10,El sol ,muy bajo en el horizonte.,está
+﻿set,id,before,after,word,translation
+1,1,Mi hermano,médico.,es,is
+1,2,Nosotros,muy cansados después del viaje.,estamos,we are
+1,3,El café,frío.,está,is
+1,4,Ellos,de España.,son,are
+1,5,Yo,estudiando para el examen.,estoy,am
+2,1,Tú,muy simpático.,eres,are
+2,2,La reunión,a las tres.,es,is
+2,3,Vosotros,en la playa.,estáis,are
+2,4,Ella,enferma hoy.,está,is
+2,5,Nosotras,profesoras.,somos,we are
+3,1,Yo ,hoy super contenta.,estoy,am
+3,2,Mi gato ,escondido debajo de la cama.,está,is
+3,3,Los vecinos ,de Turquía.,son,are
+3,4,Ustedes ,como de la familia. ,son,are
+3,5,Su hija ,muy inteligente.,es,is
+4,1,Tú lo,haciendo muy bien.,estás,are
+4,2,Yo,usuario del metro. ,soy,am
+4,3,Tú siempre,el primero en llegar.,eres,are
+4,4,Todas las maletas,en el piso de abajo. ,están,are
+4,5,El sol ,muy bajo en el horizonte.,está,is
