@@ -573,6 +573,24 @@ set,id,before,after,word,translation
 brackets for the surrounding sentence text — the column only covers the
 chip word itself.
 
+**Completa** has a similar small exception for the infinitive shown in its
+hint bracket, e.g. `(hablar, presente)`. Since that infinitive isn't part
+of the sentence text either, it gets its own optional `translation` column
+in the six verb Completa CSVs (`presente-regular-completa.csv`,
+`presente-irregular-completa.csv`, `presente-reflexivos-completa.csv`,
+`pasado-regular-completa.csv`, `pasado-irregular-completa.csv`,
+`pasado-reflexivos-completa.csv`):
+
+```
+set,id,before,after,infinitive,correct,translation
+1,1,Yo,un {libro|book} cada semana.,leer,leo,to read
+```
+
+When present, the hint renders as `(leer - to read, presente)`; leave it
+blank and the hint falls back to `(leer, presente)` exactly as before —
+entirely optional, same as everywhere else. `before`/`after` can still
+carry their own `{word|translation}` braces independently.
+
 **Ordena** is a middle case: chips come from tokenizing the `correct`
 sentence (there's no per-word column to hang a translation off), but
 there's also no plain running text to bracket into — so brackets go

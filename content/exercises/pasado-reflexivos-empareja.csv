@@ -1,21 +1,21 @@
 ﻿set,id,before,after,word,translation
-1,1,Yo,tarde ayer.,me desperté,I woke up
-1,2,Ellos,mucho en la playa.,se broncearon,they tanned
-1,3,Ella ,muy simpática con el tiempo. ,se volvió
-1,4,Los estudiantes,para el master el primer día. ,se inscribieron
-1,5,Vosotros ,demasiado temprano. ,os fuisteis
-1,6,Ustedes nunca,de venir a la fiesta.,se arrepintieron
-1,7,Los amigos,en un campamento.,se conocieron
-1,8,Los dinosaurios,hace mucho tiempo. ,se extinguieron
-1,9,Los niños pequeños,fácilmente con las fotos. ,se impresionaban
-1,10,Tú,ayer a una buena hora. ,te levantaste
-2,1,El cartero,las cartas con la dirección equivocada. ,se llevó
-2,2,El camino,a los 10 km. ,se bifurcaba
-2,3,Los perros ,muy bien durante la visita. ,se portaron
-2,4,La serpiente,sobre sí misma. ,se enrosca
-2,5,Despué del baño ella,el pelo con el secador. ,se secó
-2,6,La jueza,de todos los casos a la vez. ,se ocupaba
-2,7,Vosotros,de viaje en agosto. ,os marchasteis
-2,8,Vosotros,con el ciclo de cine. ,os entusiasmasteis
-2,9,En el campamento los niños,cada mañana. ,se duchaban
-2,10,Yo,con pasar el examen. ,me conformaba
+1,1,Yo,{tarde|late} {ayer|yesterday}.,me desperté,to wake up
+1,2,Ellos,mucho en la {playa|beach}.,se broncearon,to tan
+1,3,Ella ,muy {simpática|friendly} con el {tiempo|time}. ,se volvió,to come back
+1,4,Los estudiantes,para el master el {primer|first} día. ,se inscribieron,to sign in
+1,5,Vosotros ,{demasiado|too} {temprano|early}. ,os fuisteis,to leave
+2,1,Ustedes nunca,de {venir|to come} a la {fiesta|party}.,se arrepintieron,to regret
+2,2,Los {amigos|friends},en un {campamento|camp}.,se conocieron,to meet
+2,3,Los dinosaurios,hace mucho {tiempo|time}. ,se extinguieron,to extinguish
+2,4,Los niños pequeños,{fácilmente|easily} con las fotos. ,se impresionaban,to be impressed
+2,5,Tú,{ayer|yesterday} a una buena {hora|time}. ,te levantaste,to get up
+3,1,El {cartero|postman},las {cartas|letters} con la {dirección|address} {equivocada|wrong}. ,se llevó,to take
+3,2,El {camino|path},a los 10 km. ,se bifurcaba,to branch
+3,3,Los {perros|dogs} ,muy bien durante la {visita|visit}. ,se portaron,to behave
+3,4,La {serpiente|snake},{sobre|over} {sí misma|itself}. ,se enrosca,to curl
+3,5,{Después|after} del baño ella,el {pelo|hair} con el {secador|hairdryer}. ,se secó,to dry
+4,1,La {jueza|judge},de todos los {casos|cases} {a la vez|at the same time}. ,se ocupaba,to attend to
+4,2,Vosotros,de {viaje|trip} en agosto. ,os marchasteis,to leave
+4,3,Vosotros,con el {ciclo de cine|film series}. ,os entusiasmasteis,to get excited
+4,4,En el {campamento|camp} los niños,cada {mañana|morning}. ,se duchaban,to shower
+4,5,Yo,con {pasar|to pass} el {examen|test}. ,me conformaba,to conform

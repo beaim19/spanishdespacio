@@ -1,21 +1,21 @@
-﻿set,id,before,after,infinitive,correct
-1,1,Yo,demasiado por {todo|everything}.,preocuparse,me preocupo
-1,2,Ella,{fácilmente|easily}.,enamorarse,se enamora
-1,3,Nosotros,mucho en las fiestas.,divertirse,nos divertimos
-1,4,Los estudiantes,en las clases largas.,aburrirse,se aburren
+﻿set,id,before,after,infinitive,correct,translation
+1,1,Yo,demasiado por {todo|everything}.,preocuparse,me preocupo,to worry
+1,2,Ella,{fácilmente|easily}.,enamorarse,se enamora,to fall in love
+1,3,Nosotros,mucho en las {fiestas|parties}.,divertirse,nos divertimos
+1,4,Los estudiantes,en las clases {largas|long}.,aburrirse,se aburren
 1,5,Tú,de todo.,quejarse,te quejas
-1,6,Ustedes,de nuestro cumpleaños.,acordarse,se acuerdan
-1,7,Yo,a veces.,equivocarse,me equivoco
-1,8,Ella,antes de salir.,maquillarse,se maquilla
-1,9,Nosotros,cada mes.,reunirse,nos reunimos
-1,10,Vosotros,sin razón.,preocuparse,os preocupáis
-2,1,Vosotros siempre,de los chistes más graciosos.,acordarse,os acordáis
-2,2,Mi hermana y yo,por la salud de la profesora. ,interesarse,nos interesamos
-2,3,Tú,en los detalles más extraños. ,fijarse,te fijas
-2,4,Los jugadores,para ganar el partido.,esforzarse,se esfuerzan
-2,5,Yo ,en la siguiente parada. ,bajarse,me bajo
-2,6,Estos niños,siempre en el recreo. ,pelearse,se pelean
-2,7,El gato,después de cada siesta. ,estirarse,se estira
-2,8,La niña ,la ropa ella sola. ,ponerse,se pone
-2,9,Vosotros,frecuentemente en el bosque. ,perderse,os perdéis
-2,10,Ustedes,de persona. ,confundirse,se confunden
+2,1,Ustedes,de nuestro {cumpleaños|birthday}.,acordarse,se acuerdan
+2,2,Yo,{a veces|sometimes}.,equivocarse,me equivoco
+2,3,Ella,{antes|before} de salir.,maquillarse,se maquilla
+2,4,Nosotros,{cada|every} mes.,reunirse,nos reunimos
+2,5,Vosotros,sin {razón|reason}.,preocuparse,os preocupáis
+3,1,Vosotros siempre,de los {chistes|jokes} más {graciosos|funny}.,acordarse,os acordáis
+3,2,Mi hermana y yo,por la {salud|health} de la profesora. ,interesarse,nos interesamos
+3,3,Tú,en los {details|detalles} más {extraños|strange}. ,fijarse,te fijas
+3,4,Los jugadores,para {ganar|win} el {partido|game}.,esforzarse,se esfuerzan
+3,5,Yo ,en la {siguiente|next} {parada|stop}. ,bajarse,me bajo
+4,1,Estos niños,{siempre|always} en el {recreo|recess}. ,pelearse,se pelean
+4,2,El gato,{después|after} de cada {siesta|nap}. ,estirarse,se estira
+4,3,La niña ,la {ropa|clothes} ella sola. ,ponerse,se pone
+4,4,Vosotros,{frecuentemente|often} en el {bosque|forest}. ,perderse,os perdéis
+4,5,Ustedes,de {persona|person}. ,confundirse,se confunden

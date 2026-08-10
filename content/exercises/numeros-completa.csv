@@ -1,11 +1,16 @@
 ﻿set,id,before,after,hint,correct
 1,1,Tengo,{años|years}.,20,veinte
-1,2,Hay,{días|days} en una semana.,7,siete
-1,3,En mi clase somos,estudiantes.,30,treinta
-1,4,Mi casa tiene,habitaciones.,4,cuatro
+1,2,Hay,{días|days} en una {semana|week}.,7,siete
+1,3,En mi {clase|classroom} somos,estudiantes.,30,treinta
+1,4,Mi {casa|house} tiene,habitaciones.,4,cuatro
 1,5,El año tiene,meses.,12,doce
-1,6,Compré,manzanas.,6,seis
-1,7,Necesito,euros para el billete.,50,cincuenta
-1,8,Hoy cumplo,años.,32,treinta y dos
-1,9,Este edificio tiene,pisos.,15,quince
-1,10,En la fiesta había,invitados.,100,cien
+2,1,Compré,{manzanas|apples}.,6,seis
+2,2,Necesito,euros para el {billete|ticket}.,50,cincuenta
+2,3,Hoy {cumplo|have a birthday},años.,32,treinta y dos
+2,4,Este {edificio|building} tiene,pisos.,15,quince
+2,5,En la {fiesta|party} había,{invitados|guests}.,100,cien
+3,1,La {entrada|ticket} costaba,euros. ,5,cinco
+3,2,,{golondrinas|swallow} hacían el {nido|nest}. ,3,tres
+3,3,Necesito,kilos de {harina|flour}. ,25,veinticinco
+3,4,Había,niños en el {campamento|summer camp}. ,43,cuarenta y tres
+3,5,Todo está en la {caseta|stall},.,64,Sesenta y cuatro

@@ -1,11 +1,11 @@
 ﻿set,id,before,after,option_a,option_b,correct
 1,1,El {coche|car} es muy,.,rápido,rápida,rápido
 1,2,La {chica|girl} es muy,.,alto,alta,alta
-1,3,Los libros son muy,.,interesante,interesantes,interesantes
-1,4,Las flores son muy,.,bonitos,bonitas,bonitas
-1,5,Mi hermano es muy,.,trabajador,trabajadora,trabajador
-2,1,Mi hermana es muy,.,trabajador,trabajadora,trabajadora
-2,2,El examen fue muy,.,difícil,difíciles,difícil
-2,3,Las preguntas fueron muy,.,fácil,fáciles,fáciles
-2,4,Este ejercicio es,.,complicado,complicada,complicado
-2,5,Esta lección es,.,complicado,complicada,complicada
+1,3,Los {libros|books} son muy,.,interesante,interesantes,interesantes
+1,4,Las {flores|flowers} son muy,.,bonitos,bonitas,bonitas
+1,5,Mi {hermano|brother} es muy,.,trabajador,trabajadora,trabajador
+2,1,Mi {hermana|sister} es muy,.,trabajador,trabajadora,trabajadora
+2,2,El {examen|test} fue muy,.,difícil,difíciles,difícil
+2,3,Las {preguntas|questions} fueron muy,.,fácil,fáciles,fáciles
+2,4,Este {ejercicio|exercise} es,.,complicado,complicada,complicado
+2,5,Esta {lección|lesson} es,.,complicado,complicada,complicada

@@ -1,21 +1,21 @@
 ﻿set,id,correct,also_correct
-1,1,Ayer yo cerré la puerta con {llave|key}.,
+1,1,Ayer yo {cerré|close} la {puerta|door} con {llave|key}.,
 1,2,Tú estudiaste mucho para el {examen|exam}.,
-1,3,La semana pasada yo copié las recetas.,Yo copié las recetas la semana pasada. 
-1,4,Durante las vacaciones la niña coloreaba su libro.,La niña coloreaba su libro durante las vacaciones.
-1,5,El payaso imitaba muy bien a los turistas. ,
-1,6,El alcalde votó a primera hora. ,A primera hora el alcalde votó. |A primera hora votó el alcalde. 
-1,7,El verano pasado nosostros viajamos a Uruguay ,
-1,8,Las mujeres regateaban los precios en el mercado.,En el mercado las mujeres regateaban los precios. 
-1,9,Vosotros planeasteis el viaje en solo dos días. ,En solo dos días vosotros planeasteis el viaje. 
-1,10,La panadera horneaba el pan cada mañana. ,Cada mañana la panadera horneaba el pan. 
-2,1,Esta mañana yo he cortado la tela para el vestido. ,Yo he cortado la tela para el vestido esta mañana. 
-2,2,Vosotros roncábais demasiado alto. ,
-2,3,Ayer yo grabé mi primer documental. ,Yo grabé mi primer documental ayer. 
-2,4,El año pasado yo gasté mucho dinero. ,Yo gasté mucho dinero el año pasado. 
-2,5,La máquina funcionaba esta mañana. ,Esta mañana la máquina funcionaba. 
-2,6,El hombre planchaba la camisa cada día. ,Cada día el hombre planchaba la camisa. 
-2,7,Cuando vivía en Sevilla patinaba todos los sábados. ,Patinaba todos los sábados cuando vivía en Sevilla. 
-2,8,De joven mi padre pescaba en el pantano. ,Mi padre pescaba en el pantano de joven. 
-2,9,Los niños sumaban en la clase de matemáticas. ,En la clase de matemátcias los niños sumaban.
-2,10,Yo suspendí mi primer examen en la universidad. ,En la universidad yo suspendí mi primer examen. 
+1,3,La {semana|week} {pasada|past} yo {copié|to copy} las {recetas|recipes}.,Yo copié las recetas la semana pasada. 
+1,4,Durante las {vacaciones|vacation} la {niña|girl} {coloreaba|to color} su {libro|book}.,La niña coloreaba su libro durante las vacaciones.
+1,5,El {payaso|clown} {imitaba|to imitate} muy bien a los turistas. ,
+2,1,El {alcalde|mayor} {votó|to vote} a {primera|first} hora. ,A primera hora el alcalde votó. |A primera hora votó el alcalde. 
+2,2,El {verano|summer} {pasado|past} nosostros {viajamos|to travel} a Uruguay ,
+2,3,Las {mujeres|women} {regateaban|to haggle} los {precios|prices} en el mercado.,En el mercado las mujeres regateaban los precios. 
+2,4,Vosotros {planeasteis|to plan} el {viaje|trip} en solo dos días. ,En solo dos días vosotros planeasteis el viaje. 
+2,5,La {panadera|baker} {horneaba|to bake} el {pan|bread} cada {mañana|morning}. ,Cada mañana la panadera horneaba el pan. 
+3,1,Esta {mañana|morning} yo he {cortado|to cut} la {tela|fabric} para el {vestido|dress}. ,Yo he cortado la tela para el vestido esta mañana. 
+3,2,Vosotros {roncábais|to snore} demasiado {alto|loud}. ,
+3,3,Ayer yo {grabé|to record} mi {primer|first} {documental|documentary}. ,Yo grabé mi primer documental ayer. 
+3,4,El año {pasado|last} yo {gasté|to spend} mucho {dinero|money}. ,Yo gasté mucho dinero el año pasado. 
+3,5,La {máquina|machine} {funcionaba|to work} esta mañana. ,Esta mañana la máquina funcionaba. 
+4,1,El hombre {planchaba|to iron} la {camisa|shirt} cada día. ,Cada día el hombre planchaba la camisa. 
+4,2,Cuando {vivía|to live} en Sevilla {patinaba|to skate} todos los {sábados|Saturdays}. ,Patinaba todos los sábados cuando vivía en Sevilla. 
+4,3,De joven mi padre {pescaba|to fish} en el {pantano|swamp}. ,Mi padre pescaba en el pantano de joven. 
+4,4,Los niños {sumaban|to add up} en la clase de {matemáticas|math}. ,En la clase de matemátcias los niños sumaban.
+4,5,Yo {suspendí|to fail} mi {primer|first} {examen|test} en la universidad. ,En la universidad yo suspendí mi primer examen. 

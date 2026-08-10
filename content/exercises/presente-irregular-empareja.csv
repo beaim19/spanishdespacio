@@ -1,21 +1,21 @@
 ﻿set,id,before,after,word,translation
-1,1,Yo,de casa a las siete de la mañana.,salgo,I leave
-1,2,Ella,mucho a sus padres.,quiere,she loves
-1,3,Ellos,su coche para ir a trabajar.,conducen
-1,4,Ustedes,en esta habitación.,duermen
-1,5,En esta cocina,muy bien.,huele
-1,6,Yo,cocinar muy bien.,sé
-1,7,¿Tú,venir mañana a casa?,puedes
-1,8,Todos nosotros,en el autobús.,cabemos
-1,9,En el parque,muchos kilómetros.,andamos
-1,10,Él,que traer la tarta.,tiene
-2,1,El hotel ,dinero durante el invierno.,pierde 
-2,2,Yo no ,quién está en la lista. ,elijo
-2,3,Ellos,jugar en el campo al aire libre.,prefieren
-2,4,Nosotros,los coches al pasar cerca de la ventana. ,sentimos
-2,5,El doctor,visitar a todos los pacientes antes de las diez. ,suele
-2,6,Los alumnos,al fútbol aunque llueva. ,juegan
-2,7,Vosotros ,en la habitación del fondo. ,dormís
-2,8,Cada día yo,café para todos. ,hago
-2,9,Vosotros ,siempre en el mejor momento.,venís
-2,10,La abogada,a todas las personas en el juzgado. ,conoce
+1,1,Yo,de {casa|home} a las siete de la {mañana|morning}.,salgo,to leave
+1,2,Ella,mucho a sus {padres|parents}.,quiere,to love
+1,3,Ellos,su {coche|car} para ir a {trabajar|to work}.,conducen,to drive
+1,4,Ustedes,en esta {habitación|room}.,duermen,to sleep
+1,5,En esta {cocina|kitchen},muy bien.,huele,to smell
+2,1,Yo,{cocinar|to cook} muy bien.,sé,to know
+2,2,¿Tú,venir {mañana|tomorrow} a casa?,puedes,can
+2,3,Todos nosotros,en el {autobús|bus}.,cabemos,to fit
+2,4,En el {parque|park},muchos kilómetros.,andamos,to walk
+2,5,Él,que {traer|to bring} la {tarta|cake}.,tiene,to have
+3,1,El hotel ,{dinero|money} durante el {invierno|winter}.,pierde ,to lose
+3,2,Yo no ,{quién|who} está en la {lista|list}. ,elijo,to choose
+3,3,Ellos,{jugar|to play} en el campo al {aire libre|outdoors}.,prefieren,to prefer
+3,4,Nosotros,los {coches|cars} al pasar {cerca|near} de la {ventana|window}. ,sentimos,to feel
+3,5,El doctor,a todos los {pacientes|patients} antes de las diez. ,visita,to visit
+4,1,Los alumnos,al fútbol aunque {llueva|llover}. ,juegan,to play
+4,2,Vosotros ,en la {habitación|room} del {fondo|in the back}. ,dormís,to sleep
+4,3,Cada día yo,café para todos. ,hago,to do
+4,4,Vosotros ,siempre en el {mejor|best} momento.,venís,to come
+4,5,La {abogada|lawyer},a todas las personas en el {juzgado|court}. ,conoce,to know

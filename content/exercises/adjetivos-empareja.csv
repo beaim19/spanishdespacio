@@ -1,16 +1,16 @@
 ﻿set,id,before,after,word,translation
-1,1,El perro ,pasea por le parque.,marrón,brown
-1,2,La manzana,está muy rica. ,verde,green
-1,3,Los hoteles,tienen muchas ventanas.,altos
-1,4,Las niñas ,comen la merienda.,extranjeras
-1,5,La profesora,sabe muchos idiomas. ,nueva
-2,1,Ayer hicimos los exámenes,.,difíciles
-2,2,Paseamos por el pueblo,.,tranquilo
-2,3,Sus amigos ,son muy divertidos. ,locales
-2,4,La comida de la cantina,es deliciosa.,nueva
-2,5,No puedo subir la cesta,.,pesada
-3,1,El olivo ,tiene muchas aceitunas. ,viejo
-3,2,El bosque,es perfecto para pasear,frondoso
-3,3,Las sillas ,son para el jardín. ,nuevas
-3,4,El chocolate,es muy dulce. ,blanco
-3,5,La tarta ,es para mi cumpleaños.,decorada
+1,1,El {perro|dog} ,{pasea|to walk} por le {parque|park}.,marrón,brown
+1,2,La {manzana|apple},está muy {rica|tasty}. ,verde,green
+1,3,Los hoteles,tienen muchas {ventanas|windows}.,altos,tall
+1,4,Las niñas ,{comen|to eat} la {merienda|afternoon snack}.,extranjeras,foreign
+1,5,La profesora,{sabe|to know} muchos {idiomas|languages}. ,nueva,new
+2,1,Ayer hicimos los exámenes,.,difíciles,difficult
+2,2,Paseamos por el pueblo,.,tranquilo,quiet
+2,3,Sus {amigos|friends} ,son muy {divertidos|funny}. ,locales,local
+2,4,La {comida|food} de la {cantina|cafeteria},es {deliciosa|delicious}.,nueva,new
+2,5,No puedo {subir|to bring up} la {cesta|basket},.,pesada,heavy
+3,1,El {olivo|olive tree} ,tiene muchas {aceitunas|olives}. ,viejo,old
+3,2,El {bosque|forest},es perfecto para {pasear|to walk},frondoso,leafy
+3,3,Las {sillas|chairs} ,son para el {jardín|garden}. ,nuevas,new
+3,4,El chocolate,es muy {dulce|sweet}. ,blanco,white
+3,5,La {tarta|cake} ,es para mi {cumpleaños|brithday}.,decorada,decorated

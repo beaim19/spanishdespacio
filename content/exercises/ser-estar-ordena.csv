@@ -3,7 +3,7 @@
 1,2,Tú estás en el {parque|park}. ,
 1,3,Nosotros somos {hermanos|siblings}.,
 1,4,Ella es {escritora|writer}. ,
-1,5,Vosotros estáis de vacaciones.,
+1,5,Vosotros estáis de {vacaciones|vacation}.,
 2,1,Ustedes son {bienvenidos|welcomed}.,
 2,2,Tú eres muy {amable|nice}. ,
 2,3,Yo estoy {contento|happy}.,
@@ -20,10 +20,10 @@
 4,4,Ellos están en el mercado. ,
 4,5,Tú eres la {encargada|manager}. ,La encargada eres tú. 
 5,1,Yo estoy {esperando|waiting} el autobús.,
-5,2,Ellos están {comiendo|eating} helado ahora. ,Ahora ellos están comiendo helado. 
+5,2,Ellos están {comiendo|eating} {helado|ice cream} ahora. ,Ahora ellos están comiendo helado. 
 5,3,Vosotras sois siempre las favoritas. ,Vosotras sois las favoritas siempre. 
 5,4,Él es el chico más {alto|tall}. ,
-5,5,Ella está visitando a sus padres hoy. ,Hoy ella está visitando a sus padres. |Ella está hoy visitando a sus padres. 
+5,5,Ella está {visitando|visiting} a sus padres hoy. ,Hoy ella está visitando a sus padres. |Ella está hoy visitando a sus padres. 
 6,1,Yo soy el {alcalde|mayor} del pueblo. ,El alcalde del pueblo soy yo. 
 6,2,Ustedes están aquí como en su casa. ,
 6,3,Vosotros estáis en el museo de la ciudad.,
@@ -32,19 +32,19 @@
 7,1,Ella está muy {cansada|tired} hoy.,Hoy ella está muy cansada.|ella está hoy muy cansada.
 7,2,Nosotros somos profesores de español.,
 7,3,El libro es muy interesante.,
-7,4,Ellos están en la {playa|beacj} {ahora mismo|right now}.,Ahora mismo ellos están en la playa.|ellos están ahora mismo en la playa
-7,5,Mi hermano es muy simpático.,
+7,4,Ellos están en la {playa|beach} {ahora mismo|right now}.,Ahora mismo ellos están en la playa.|ellos están ahora mismo en la playa
+7,5,Mi {hermano|brother} es muy simpático.,
 8,1,Los niños están {jugando|playing} en el parque.,Los niños en el parque están jugando.
 8,2,La casa de mis vecinos está {encantada|haunted}.,
 8,3,{Dentro de poco|shortly} ustedes estarán {volando|flying} hacia México.,Ustedes estarán volando hacia México dentro de poco.|Ustedes estarán dentro de poco volando hacia México.
-8,4,Las explicaciones fueron muy {claras|clear} desde el principio.,Desde el principio las explicaciones fueron muy claras.|Las explicaciones fueron desde el principio muy claras. 
+8,4,Las {explicaciones|explanations} fueron muy {claras|clear} desde el {principio|beginning}.,Desde el principio las explicaciones fueron muy claras.|Las explicaciones fueron desde el principio muy claras. 
 8,5,El árbol está {caído|fallen} {en medio|in the middle} del camino. ,
-9,1,Las {mariposas}butterflies} eran de muchos colores distintos. ,
+9,1,Las {mariposas|butterflies} eran de muchos colores distintos. ,
 9,2,Los {árboles frutales|fruit tree} estaban cargados de frutas. ,
 9,3,El mapa de mi madre era muy {antiguo|old}. ,
-9,4,Las {olas|waves} en el mar eran muy pequeñas. ,
+9,4,Las {olas|waves} en el {mar|sea} eran muy pequeñas. ,
 9,5,No sé por qué el {maestro|teacher} estaba {enfadado|angry}. ,El maestro estaba enfadado no sé por qué.
-10,1,Mientras yo cocino ustedes pueden estar en la {terraza|terrace}.,Ustedes pueden estar en la terraza mientras yo cocino.
+10,1,{Mientras|while| yo cocino ustedes pueden estar en la {terraza|terrace}.,Ustedes pueden estar en la terraza mientras yo cocino.
 10,2,En dos días estaré en Chile con mi familia. ,Estaré en Chile con mi familia en dos días. 
 10,3,Mañana el día será muy {caluroso|warm}. ,El día será muy caluroso mañana.
 10,4,La {cesta|basket} de la compra está muy llena. ,

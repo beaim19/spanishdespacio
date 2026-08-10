@@ -1,21 +1,21 @@
 ﻿set,id,correct,also_correct
 1,1,Yo me acuesto muy {temprano|early}.,
 1,2,Nosotros nos lavamos las {manos|hands} antes de comer. ,Antes de comer nosotros nos lavamos las manos.
-1,3,Ustedes se peinan con un estilo muy moderno. ,
-1,4,Los gatos se estiran antes y después de dormir. ,Los gatos se estiran después y antes de dormir. 
-1,5,Su sobrina se cae a menudo del columpio. ,
-1,6,Todos nosotros nos callamos durante el juego. ,Durante el juego todos nosotros nos callamos. 
-1,7,Me mojo el pelo por la mañana. ,Por la mañana me mojo el pelo. 
-1,8,El autobús se mueve muy despacio. ,
-1,9,Su prima se casa este viernes. ,Este viernes su prima se casa. |Este viernes se casa su prima. 
-1,10,Vosotros os divertís en la fiesta. ,
-2,1,Las nadadoras se conforman con una piscina mediana. ,
-2,2,Vosotros os excusáis por no venir a clase. ,
-2,3,Él se enamora muy fácilmente. ,
-2,4,Hoy nos bañamos en el lago. ,Nos bañamos en el lago hoy. 
-2,5,Ustedes se divierten en todas las fiestas de cumpleaños. ,
-2,6,Nostros nos retiramos ya a la cama. ,
-2,7,Te ríes de una manera muy graciosa. ,
-2,8,Los barcos se deplazan suavemente por el agua. ,
-2,9,Me mantengo en forma porque voy al gimnasio. ,Porque voy al gimnasio me mantengo en forma. 
-2,10,Lucía se distrae con una mosca. ,
+1,3,Ustedes se {peinan|to comb} con un {estilo|style} muy moderno. ,
+1,4,Los {gatos|cats} se {estiran|to stretch} {antes|before} y {después|after} de {dormir|sleep}. ,Los gatos se estiran después y antes de dormir. 
+1,5,Su {sobrina|niece} se cae {a menudo|often} del {columpio|swing}. ,
+2,1,Todos nosotros nos {callamos|to stop talking} durante el {juego|game}. ,Durante el juego todos nosotros nos callamos. 
+2,2,Me {mojo|to make wet} el {pelo|hair} por la {mañana|morning}. ,Por la mañana me mojo el pelo. 
+2,3,El {autobús|bus} se {mueve|to move} muy {despacio|slow}. ,
+2,4,Su {prima|cousin} se {casa|to get married} este {viernes|Friday}. ,Este viernes su prima se casa. |Este viernes se casa su prima. 
+2,5,Vosotros os {divertís|to have fun} en la {fiesta|party}. ,
+3,1,Las {nadadoras|swimmers} se {conforman|to conform} con una {piscina|swimming pool} mediana. ,
+3,2,Vosotros os {excusáis|to excuse} por no {venir|to come} a clase. ,
+3,3,Él se {enamora|to fall in love} muy {fácilmente|easily}. ,
+3,4,Hoy nos {bañamos|to swim} en el {lago|lake}. ,Nos bañamos en el lago hoy. 
+3,5,Ustedes se {divierten|to have fun} en todas las {fiestas|parties} de cumpleaños. ,
+4,1,Nostros nos {retiramos|to leave} ya a la {cama|bed}. ,
+4,2,Te {ríes|to laugh} de una manera muy {graciosa|funny}. ,
+4,3,Los {barcos|boats} se deplazan {suavemente|smoothly} por el agua. ,
+4,4,Me {mantengo|to keep in shape} en forma porque voy al {gimnasio|gym}. ,Porque voy al gimnasio me mantengo en forma. 
+4,5,Lucía se {distrae|to get distracted} con una {mosca|fly}. ,

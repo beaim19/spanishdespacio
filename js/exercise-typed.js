@@ -10,13 +10,19 @@
  *
  * One CSV per topic, same "set" convention as exercise-choice2.js — see
  * js/exercise-common.js. Expected columns: set, id, before, after,
- * infinitive, correct — plus an optional tense column (used by the
- * "Completa" exercise type, where one set can mix several indicative
- * tenses, so the hint needs to say which one is expected):
+ * infinitive, correct — plus optional tense and translation columns (used
+ * by the "Completa" exercise type, where one set can mix several
+ * indicative tenses, so the hint needs to say which one is expected):
  *   before/after = sentence text around the blank
  *   infinitive   = shown in the hint after the sentence
  *   tense        = optional; if present, shown alongside the infinitive,
  *                  e.g. "(estar, pretérito imperfecto)"
+ *   translation  = optional; an English translation of the infinitive/hint
+ *                  base form, e.g. "(hablar - to speak, presente)" — a
+ *                  separate column rather than {word|translation} braces,
+ *                  since `infinitive`/`hint` is already just the one base
+ *                  form on its own, same reasoning as Empareja's
+ *                  `translation` column for its `word` chips.
  *   correct      = the correctly conjugated form. Matching is
  *                  case-insensitive but accent-sensitive (á/a/etc. still
  *                  have to be right — that's what the accent toolbar is for).
@@ -131,10 +137,16 @@
       // no base-form clue is given, only the tense.
       const tense = (row.tense || '').trim();
       const baseForm = (row.hint || row.infinitive || '').trim();
+      // Optional translation of the base form itself, e.g. "hablar" ->
+      // "hablar - to speak" — folded into baseForm before it's combined
+      // with tense below, so the rest of the joining logic doesn't need
+      // to know translation exists at all.
+      const translation = (row.translation || '').trim();
+      const baseFormWithTranslation = baseForm && translation ? `${baseForm} - ${translation}` : baseForm;
       let hintText = '';
-      if (baseForm && tense) hintText = `(${baseForm}, ${tense})`;
+      if (baseFormWithTranslation && tense) hintText = `(${baseFormWithTranslation}, ${tense})`;
       else if (tense) hintText = `(${tense})`;
-      else if (baseForm) hintText = `(${baseForm})`;
+      else if (baseFormWithTranslation) hintText = `(${baseFormWithTranslation})`;
       hint.textContent = hintText;
       sentence.appendChild(hint);
 
