@@ -1,16 +1,121 @@
-﻿set,id,before,after,hint,correct
-1,1,El {perro|dog} es,.,pequeño,pequeño
-1,2,La {mesa|table} es,.,pequeño,pequeña
-1,3,Los {coches|cars} son,.,nuevo,nuevos
-1,4,Las {camisas|shirts} son,.,nuevo,nuevas
-1,5,Este problema es muy,.,serio,serio
-2,1,Esta {situación|situation} es muy,.,serio,seria
-2,2,Los {chicos|guys} están,.,cansado,cansados
-2,3,Las {chicas|girls} están,.,cansado,cansadas
-2,4,El {cielo|sky} está,.,despejado,despejado
-2,5,Las {calles|streets} están,.,despejado,despejadas
-3,1,La {luna|moon},es muy bonita.,lleno,llena
-3,2,Los tomates,están muy ricos.,fresco,frescos
-3,3,El {pimiento|pepper},es rojo. ,picante,picante
-3,4,Las {calles|streets}  ,brillan por la noche. ,mojada,mojadas
-3,5,Todas las {bicicletas|bikes},cuestan 20 euros. ,azul,azules
+﻿set,id,before,after,hint,correct,translation,level
+1,1,El {perro|dog} es,.,pequeño,pequeño,small,A1
+1,2,La {mesa|table} es,.,pequeño,pequeña,small,A1
+1,3,Los {coches|cars} son,.,nuevo,nuevos,new,A1
+1,4,Las {camisas|shirts} son,.,nuevo,nuevas,new,A1
+1,5,Este problema es muy,.,serio,serio,serious,A1
+2,1,Esta {situación|situation} es muy,.,serio,seria,serious,A1
+2,2,Los {chicos|guys} están,.,cansado,cansados,tired,A1
+2,3,Las {chicas|girls} están,.,cansado,cansadas,tired,A1
+2,4,El {cielo|sky} está,.,despejado,despejado,clear,A1
+2,5,Las {calles|streets} están,.,despejado,despejadas,clear,A1
+3,1,La {luna|moon},es muy bonita.,lleno,llena,full,A1
+3,2,Los tomates,están muy ricos.,fresco,frescos,fresh,A1
+3,3,El {pimiento|pepper},es rojo. ,picante,picante,spicy,A1
+3,4,Las {calles|streets}  ,brillan por la noche. ,mojada,mojadas,wet,A1
+3,5,Todas las {bicicletas|bikes},cuestan 20 euros. ,azul,azules,blue,A1
+4,1,Su madre tiene los {ojos|eyes},.,claro,claros,clear,A1
+4,2,Es una niña muy,.,tímido,tímida,shy,A1
+4,3,Yo vivo en una calle,y bonita. ,ancho,ancha,wide,A1
+4,4,Ella es de nacionalidad,.,español,española,Spanish,A1
+4,5,Me gusta el {vino|wine},.,blanco,blanco,white,A1
+5,1,Él {escucha|to listen} una {canción|song},.,moderno,moderna,modern,A1
+5,2,Los ejercicios de francés son,.,fácil,fáciles,easy,A1
+5,3,Yo leo muchos {periódicos|newspapers},.,marroquí,marroquíes,Moroccan,A1
+5,4,Yo le escribo una {postal|postcard},.,divertido,divertida,funny,A1
+5,5,Luisa vive en un {piso|apartment} muy,.,céntrico,céntrico,downtown,A1
+6,1,La {gata|cat} de Sara es ,.,dócil,dócil,docile,A1
+6,2,Ella tiene un médico,.,nuevo,nuevo,new,A1
+6,3,Los {pantalones|pants},son muy bonitos. ,rojo,rojos,red,A1
+6,4,En el {cuento|tale} hay una {reina|queen},.,mal,mala,bad,A1
+6,5,Me gustan las {playas|beaches},del Norte. ,limpio,limpias,clean,A1
+1,1,Ana lleva el {pelo|hair},.,rizado,rizado,curly,A1
+1,2,¿Dónde viven los {maestros|teachers},que tenemos?,nuevos,nuevo,new,A1
+1,3,Para comer él quiere una pizza,.,grande,grande,big,A2
+1,4,Le duele una {muela|molar tooth},.,delantero,delantera,front,A2
+1,5,Llevo mi {paraguas|umbrella},porque llueve. ,colorido,colorido,colorful,A2
+2,1,Para {bailar|to dance} ballet me gusta la música,.,clásico,clásica,classical,A2
+2,2,{Necesito|to need} agua,para {cocinar|to cook} el {arroz|rice}. ,caliente,caliente,hot,A2
+2,3,Candela {toca|to play} el piano y {canta|to sing} con una {voz|voice} muy,.,potente,potente,powerful,A2
+2,4,Era un {lago|lake} de aguas,.,transparente,transparentes,transparent,A2
+2,5,El {aula|classroom},es perfecta para {conferencias|conferences}. ,magno,magna,great,A2
+3,1,Es un {barrio|neighborhood},para vivir {tranquilos|quiet}. ,agradable,agradable,nice,A2
+3,2,{Anoche|lat night} había una {luna|moon},en el cielo. ,brillante,brillante,shiny,A2
+3,3,El {ave|bird},vuela alto. ,rapaz,rapaz,prey bird,A2
+3,4,Mis {sobrinos|nephews} viven en una,ciudad con muchos {árboles|trees}. ,lindo,linda,beautiful,A2
+3,5,La {semana|week},fui al cine. ,pasado,pasada,past,A2
+4,1,Esta {tarta|cake} es tan ,como la de chocolate. ,dulce,dulce,sweet,A2
+4,2,Era un {cliente|client} ,.,ejemplar,ejemplar,modelo,A2
+4,3,Me gusta {caminar|to walk} por la calle,.,peatonal,peatonal,pedestrian street,A2
+4,4,La {chica|girl} que estaba en el fiesta es la {hija|daugther},de María. ,menor,menor,youngest,A2
+4,5,Su padre es una persona,y amable. ,generoso,generosa,generous,A2
+5,1,Mateo hizo uno {dibujos|drawings},en la clase de arte. ,precioso,preciosos,beautiful,A2
+5,2,Estos {senderos|paths} son,que los de ayer. ,mejor,mejores,better,A2
+5,3,Este {tema|theme} es más ,que el tema de ayer. ,sencillo,sencillo,simple,A2
+5,4,Esta {bebida|beverage} es,fría que caliente. ,peor,peor ,worse,A2
+5,5,Ellos viven ahora en una {ciudad|citty} muy,.,industrial,industrial,industrial,A2
+6,1,Había unas veinte {flores|flowers},en el jardín. ,amarillo,amarillas,yellow,A2
+6,2,Su {jefa|boss} era una {arquitecta|architect} muy,.,exigente,exigente,demanding,A2
+6,3,No me gustan nada las {comidas|foods},.,pesado,pesadas,heavy,A2
+6,4,Las {hojas|leaves} de estos árboles son,en la {parte alta|upper part}. ,mayor,mayores,bigger,A2
+6,5,Este {palo|stick} es menos,que este otro. ,resistente,resistente,resistant,A2
+1,1,Cuando viajo me gusta comer las comidas,del país. ,tradicional,tradicionales,traditional,B1
+1,2,"Tienes que poner el {lavavajillas|dishwasher}, los platos",están en el {fregadero|sink}. ,sucio,sucios,dirty,B1
+1,3,El {partido|mathc} de ayer fue un ,partido.,grande,gran,big,B1
+1,4,Manuel tuvo muy ,{actitud|attitude} durante el partido. ,malo,mala,bad,B1
+1,5,Aquellas fueron las ,{tormentas|storms} de mi vida. ,peor,peores,worst,B1
+2,1,{Aliñó|dress} la ensalada con ese vinagre,que no gustaba a nadie. ,agrio,agrio,sour,B1
+2,2,Llegó del {campamento|camp} con las {rodillas|knees},.,magullado,magulladas,bruised,B1
+2,3,La clase de chino es igual de,que la de japonés. ,difícil,difícil,difficult,B1
+2,4,Le dijeron que su {alimentación|diet} debe ser,. ,sano,sana,healthy,B1
+2,5,El vino tenía un sabor muy,y no lo bebí. ,desagradable,desagradable,disgusting,B1
+3,1,Vivían en un {caserón|big house},donde hacía mucho frío. ,enorme,enorme,huge,B1
+3,2,Creo que es un ,perro cuando duerme. ,bueno,buen,good,B1
+3,3,Compra yogures,", por favor. ",natural,naturales,plain,B1
+3,4,En agosto se {celebran|to clebrate} las fiestas,de su pueblo. ,popular,populares,popular,B1
+3,5,Pedro y Sara son los más,del equipo. ,rápido,rapidos,fast,B1
+4,1,Tenían bastentes animales,en la {granja|farm}. ,doméstico,domésticos,domestic,B1
+4,2,"Me gusta estudiar {idiomas|languages}, sobre todo inglés",.,antiguo,antiguo,old,B1
+4,3,El agua de la {fuente|fountain} tenía un,"sabor, por lo que no bebimos. ",malo,mal,bad,B1
+4,4,Viven en una zona de clima muy,.,húmedo,húmedo,humid,B1
+4,5,La {mayoria|most} de los niños prefería la comida,.,salado,salada,salty,B1
+5,1,El sábado celebraron una boda,en el ayuntamiento. ,civil,civil,non-religious wedding,B1
+5,2,Este grupo de turistas alemanes es muy,.,activo,activo,active,B1
+5,3,Mi,{pensamiento|thought} fue salir corriendo. ,primero,primer,first,B1
+5,4,Para,"{seguridad|safety}, hay que ponerse el cinturón.",mayor,mayor,greater,B1
+5,5,Había un {montón|pile} grande de bolsas,a la puerta del {albergue|hostel}. ,reciclado,recicladas,recycled,B1
+6,1,Toda su vida ha tenido,suerte. ,bueno,buena,good,B1
+6,2,El pequeño era el menos,del grupo.,hábil,hábil,skilled,B1
+6,3,La hija de Marisa es de carácter,.,fuerte,fuerte,strong,B1
+6,4,Ganó al fin en la ,partida de {ajedrez|chess}. ,tercero,tercera,third,B1
+6,5,Ayer visitamos el casco,de Toledo. ,histórico,histórico,historical,B1
+1,1,Después de la ,crisis nada fue igual. ,grande,gran,big,B2
+1,2,Laura volvió tan,"de su viaje, que nos invitó a todos a cenar. ",feliz,feliz,happy,B2
+1,3,Era un aula grande y además muy,.,decorado,decorada,decorated,B2
+1,4,Los primeros años vivieron en la ciudad,.,universitario,universitaria,University,B2
+1,5,Lo más,de la película fue el final. ,interesante,interesante,interesting,B2
+2,1,A la hora de la siesta siempre ponían música,.,infantil,infantil,children's,B2
+2,2,Beltrán es más,de lo que me imaginaba. ,alto,alto,tall,B2
+2,3,Con el movimiento del tren las abuelas dormían,.,tranquilo,tranquilos,calm,B2
+2,4,El campo de fútbol,está muy bien conservado. ,municipal,municipal,local,B2
+2,5,Durante el viaje me di cuenta de que es un país muy,.,cosmopolita,cosmopolita,cosmopolitan,B2
+3,1,Para su cumpleaños quería un reloj,.,digital,digital,digital,B2
+3,2,Las reuniones,le parecían muy aburridas. ,familiar,familiares,familiar,B2
+3,3,Dijeron que solo querían invitar a familiares,a la boda. ,cercano,cercanos,close,B2
+3,4,En clase tenemos que aprender la lista de animales,de la zona. ,terrestre,terrestres,land,B2
+3,5,Tras horas de trabajo dejó el jardín,.,impecable,impecable,flawless,B2
+4,1,Sus tíos viven cerca de la zona,al Oeste de la ciudad. ,ajardinado,ajardinada,landscaped,B2
+4,2,La empresa vende productos,de puerta a puerta. ,congelado,congelados,frozen,B2
+4,3,Esa zona del país es de clima,.,suave,suave,mild,B2
+4,4,Los días,le inspiraban para hacer fotos. ,otoñal,otoñales,autumn,B2
+4,5,Debido a su enfermedad solo puede comer pan,.,integral,integral,wholegrain,B2
+5,1,Tenemos que recoger flores,para el herbario. ,silvestre,silvestres,wild,B2
+5,2,Lo,de vivir aquí son los parques cercanos. ,bueno,bueno,good,B2
+5,3,Cone estas temperaturas,debemos salir de paseo. ,primaveral,primaverales,spring-like,B2
+5,4,En todas las fuentes de la ruta el agua era,.,potable,potable,drinkable,B2
+5,5,Mis sobrinas ya viven,en el centro de la ciudad. ,solo,solas,by themselves,B2
+6,1,Toda la costa es zona,y está muy protegida. ,virgen,virgen,untouched,B2
+6,2,Es importante que conservemos el medio,.,ambiente,ambiente,environment,B2
+6,3,Ana y Lucas van a una escuela,.,bilingüe,bilingüe,bilingual,B2
+6,4,Ayer tuve que llevar a mi perro a la clínica,.,veterinario,veterinaria,vet,B2
+6,5,Sus maestros siempre dijeron que era una alumna,.,brillante,brillante,brilliant,B2

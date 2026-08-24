@@ -1,21 +1,21 @@
-﻿set,id,before,after,infinitive,tense,correct,translation
-1,1,Yo,la {puerta|door} esta mañana.,cerrar,pretérito perfecto simple,cerré,to close
-1,2,Ella,en Barcelona hace muchos {años|years}.,vivir,pretérito imperfecto,vivía,to live
-1,3,Vosotros ,muchos {helados|ice creams} durante las {vacaciones|vacation}.,comer,pretérito imperfecto,comíais
-1,4,El suelo,al {cruzar|to cross} el {pasillo|hallway}.,crujir,pretérito perfecto simple,crujió
-1,5,Los perros,la {entrada|entrance} a la casa. ,ensuciar,pretérito perfecto simple,ensuciaron
-2,1,Ustedes,el {functionamiento|perfoemance} de la {máquina|machine}. ,mejorar,pretérito perfecto simple,mejoraron
-2,2,La abuela,a sus {nietas|granddaugthers} cada {mañana|morning}. ,peinar,pretérito imperfecto,peinaba
-2,3,Todas las noches,algo de {comida|food}. ,sobrar,pretérito imperfecto,sobraba
-2,4,Vosotros ,mucho en {llegar|to arrive}.,tardar,pretérito perfecto simple,tardasteis
-2,5,Tú ,por {encima|over} del {muro|wall}. ,saltar,pretérito perfecto simple,saltaste
-3,1,Los aficionados,durante el {partido|game}.,sufrir,pretérito perfecto simple,sufrieron
-3,2,Tú ,muchas horas esta {semana|week}. ,trabajar,pretérito perfecto simple,trabajaste
-3,3,Marta y yo ,por el {bosque|forest} todas las {tardes|afternoons}. ,pasear,pretérito imperfecto,paseábamos
-3,4,Los alumnos,el {libro|book} en silencio. ,leer,pretérito imperfecto,leían
-3,5,Los hermanos,su {dinero|money} en {dulces|sweets}. ,gastar,pretérito perfecto simple,gastaron
-4,1,El sistema no,durante la {prueba|test}.,fallar,pretérito perfecto simple,falló
-4,2,Las piedras,la {tuberia|pipe} {tras|after} cada lluvia. ,estropear,pretérito imperfecto,estropeaban
-4,3,Vosotros ,mucho {anoche|last night}. ,estudiar,pretérito perfecto simple,estudiasteis
-4,4,Cada verano el jardinero ,{hoyos|holes} para las {flores|flowers}. ,cavar,pretérito imperfecto,cavaba
-4,5,Todos los días del campamento las amigas,sin {descanso|rest}. ,bailar,pretérito imperfecto,bailaban
+﻿set,id,before,after,infinitive,tense,correct,translation,level
+1,1,Yo,la {puerta|door} esta mañana.,cerrar,pretérito perfecto simple,cerré,to close,A2
+1,2,Ella,en Barcelona hace muchos {años|years}.,vivir,pretérito imperfecto,vivía,to live,A2
+1,3,Vosotros ,muchos {helados|ice creams} durante las {vacaciones|vacation}.,comer,pretérito imperfecto,comíais,to eat,A2
+1,4,El suelo,al {cruzar|to cross} el {pasillo|hallway}.,crujir,pretérito perfecto simple,crujió,to squeak,A2
+1,5,Los perros,la {entrada|entrance} a la casa. ,ensuciar,pretérito perfecto simple,ensuciaron,to make dirty,A2
+2,1,Ustedes,el {functionamiento|perfoemance} de la {máquina|machine}. ,mejorar,pretérito perfecto simple,mejoraron,to improve,A2
+2,2,La abuela,a sus {nietas|granddaugthers} cada {mañana|morning}. ,peinar,pretérito imperfecto,peinaba,to brush,A2
+2,3,Todas las noches,algo de {comida|food}. ,sobrar,pretérito imperfecto,sobraba,to be left over,A2
+2,4,Vosotros ,mucho en {llegar|to arrive}.,tardar,pretérito perfecto simple,tardasteis,to take long,A2
+2,5,Tú ,por {encima|over} del {muro|wall}. ,saltar,pretérito perfecto simple,saltaste,to jump,A2
+3,1,Los aficionados,durante el {partido|game}.,sufrir,pretérito perfecto simple,sufrieron,to suffer,A2
+3,2,Tú ,muchas horas esta {semana|week}. ,trabajar,pretérito perfecto simple,trabajaste,to work,A2
+3,3,Marta y yo ,por el {bosque|forest} todas las {tardes|afternoons}. ,pasear,pretérito imperfecto,paseábamos,to walk,A2
+3,4,Los alumnos,el {libro|book} en silencio. ,leer,pretérito imperfecto,leían,to read,A2
+3,5,Los hermanos,su {dinero|money} en {dulces|sweets}. ,gastar,pretérito perfecto simple,gastaron,to spend,A2
+4,1,El sistema no,durante la {prueba|test}.,fallar,pretérito perfecto simple,falló,to fail,A2
+4,2,Las piedras,la {tuberia|pipe} {tras|after} cada lluvia. ,estropear,pretérito imperfecto,estropeaban,to spoil,A2
+4,3,Vosotros ,mucho {anoche|last night}. ,estudiar,pretérito perfecto simple,estudiasteis,to study,A2
+4,4,Cada verano el jardinero ,{hoyos|holes} para las {flores|flowers}. ,cavar,pretérito imperfecto,cavaba,to dig,A2
+4,5,Todos los días del campamento las amigas,sin {descanso|rest}. ,bailar,pretérito imperfecto,bailaban,to dance,A2

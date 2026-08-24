@@ -6,21 +6,52 @@
  * future exercise type — written once here so adding a new exercise type
  * never means re-implementing CSV loading.
  *
+ * When a CSV also has a `level` column (A1/A2/B1/B2), loadCsvSet() filters
+ * to one level (?level=, default the first level present) BEFORE "set" is
+ * ever looked at — see renderLevelNav()'s comment for the set-numbering
+ * convention this depends on, and the README's "CEFR levels" section for
+ * the full picture.
+ *
  * Requires PapaParse to be loaded before this script.
  */
 window.ExerciseCommon = (function () {
   async function loadCsvSet(src) {
-    const requestedSet = (new URLSearchParams(window.location.search).get('set') || '1').trim();
+    const params = new URLSearchParams(window.location.search);
+    const requestedSet = (params.get('set') || '1').trim();
 
     const res = await fetch(src);
     if (!res.ok) throw new Error(`${src} respondió ${res.status}`);
     const csvText = await res.text();
     const { data } = Papa.parse(csvText, { header: true, skipEmptyLines: true });
 
-    const allSets = [...new Set(data.map((r) => (r.set || '').trim()).filter(Boolean))];
-    const rows = data.filter((r) => (r.set || '').trim() === requestedSet);
+    // Levels (A1/A2/B1/B2) are a fourth, independent filtering dimension —
+    // optional, since not every CSV has a `level` column. When it's there,
+    // rows get narrowed down to one level FIRST, before "set" is ever
+    // looked at — see renderLevelNav()'s comment below for why set numbers
+    // are expected to restart at 1 within each level. A CSV with no level
+    // column at all behaves exactly as before (availableLevels comes back
+    // empty, nothing gets filtered); a CSV where every row shares the same
+    // single level still "filters" to that level, but since every row
+    // already matches, the visible result is identical to not filtering at
+    // all — either way, renderLevelNav() below won't show a switcher for
+    // just one option.
+    const availableLevels = [...new Set(data.map((r) => (r.level || '').trim()).filter(Boolean))]
+      .sort((a, b) => a.localeCompare(b));
+    const requestedLevelParam = (params.get('level') || '').trim();
+    const requestedLevel = availableLevels.length === 0
+      ? ''
+      : (availableLevels.includes(requestedLevelParam) ? requestedLevelParam : availableLevels[0]);
 
-    return { rows, requestedSet, allSets, totalSets: allSets.length };
+    const levelRows = availableLevels.length === 0
+      ? data
+      : data.filter((r) => (r.level || '').trim() === requestedLevel);
+
+    const allSets = [...new Set(levelRows.map((r) => (r.set || '').trim()).filter(Boolean))];
+    const rows = levelRows.filter((r) => (r.set || '').trim() === requestedSet);
+
+    return {
+      rows, requestedSet, allSets, totalSets: allSets.length, availableLevels, requestedLevel,
+    };
   }
 
   /*
@@ -107,24 +138,10 @@ window.ExerciseCommon = (function () {
 
     if (!allSets || allSets.length <= 1) return null;
 
-    // A fragment (not a single element) since this now bundles the "Serie
-    // N" heading with a note underneath it — callers already just do
-    // `container.appendChild(label)`, and appendChild on a DocumentFragment
-    // moves both children into place in order, so no call site needed to
-    // change when this grew from one element to two.
-    const fragment = document.createDocumentFragment();
-
     const label = document.createElement('h2');
     label.className = 'exercise-current-set';
     label.textContent = `Serie ${setNumber}`;
-    fragment.appendChild(label);
-
-    const note = document.createElement('p');
-    note.className = 'exercise-difficulty-note';
-    note.textContent = 'La dificultad de los ejercicios aumenta en cada serie.';
-    fragment.appendChild(note);
-
-    return fragment;
+    return label;
   }
 
   /*
@@ -304,6 +321,51 @@ window.ExerciseCommon = (function () {
   }
 
   /*
+   * Renders the A1 / A2 / B1 / B2 tabs into the page's #level-switcher-slot
+   * — same spot in the green intro band as the verb-type variant tabs
+   * (stacks right below them when a topic has both, e.g. Presente). No-op
+   * if the topic's CSV has no `level` column yet, or only tags everything
+   * with a single level — same "don't show a switcher for one option" rule
+   * every other nav here follows.
+   *
+   * Switching level always resets "set" back to page 1 (never "type" or
+   * "tipo" — level is independent of those). This matters because set
+   * numbers are meant to restart at 1 within each level block in the CSV
+   * (see the README's "CEFR levels" section) — loadCsvSet() computes
+   * `allSets` from whichever level is currently selected, so carrying an
+   * old set number over to a different level would either point at
+   * nothing or, worse, silently land on a same-numbered but unrelated set.
+   */
+  function renderLevelNav(availableLevels, currentLevel) {
+    const slot = document.getElementById('level-switcher-slot');
+    if (!slot) return;
+    slot.innerHTML = '';
+
+    if (!availableLevels || availableLevels.length <= 1) return;
+
+    const nav = document.createElement('nav');
+    nav.className = 'type-switcher level-switcher';
+    nav.setAttribute('aria-label', 'Elegir nivel');
+
+    const list = document.createElement('ul');
+    availableLevels.forEach((level) => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      const params = new URLSearchParams(window.location.search);
+      params.set('level', level);
+      params.delete('set');
+      a.href = `?${params.toString()}`;
+      a.textContent = level;
+      if (level === currentLevel) a.setAttribute('aria-current', 'true');
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+
+    nav.appendChild(list);
+    slot.appendChild(nav);
+  }
+
+  /*
    * Exercise-TYPE support (Dos opciones / Arrastra / Parejas, etc.) — a
    * topic can offer several fundamentally different exercise mechanics,
    * each with its own engine and its own CSV. This is a third, independent
@@ -410,6 +472,7 @@ window.ExerciseCommon = (function () {
     renderSeriesNav,
     getRequestedType,
     renderVariantNav,
+    renderLevelNav,
     getRequestedExerciseType,
     renderExerciseTypeNav,
     initExerciseTypePage,

@@ -1,21 +1,111 @@
-﻿set,id,before,after,word,translation
-1,1,Mi {hermano|brother},médico.,es,is
-1,2,Nosotros,muy {cansados|tired} después del {viaje|trip}.,estamos,we are
-1,3,El café,{frío|cold}.,está,is
-1,4,Ellos,de España.,son,are
-1,5,Yo,{estudiando|to study} para el {examen|test}.,estoy,am
-2,1,Tú,muy {simpático|friendly}.,eres,are
-2,2,La {reunión|meeting},a las tres.,es,is
-2,3,Vosotros,en la {playa|beach}.,estáis,are
-2,4,Ella,{enferma|sick} hoy.,está,is
-2,5,Nosotras,{profesoras|teachers}.,somos,we are
-3,1,Yo ,hoy super {contenta|happy}.,estoy,am
-3,2,Mi gato ,{escondido|to hide} {debajo|under} de la {cama|bed}.,está,is
-3,3,Los {vecinos|neighbords} ,de Turquía.,son,are
-3,4,Ustedes ,{como|like} de la familia. ,son,are
-3,5,Su hija ,muy {inteligente|smart}.,es,is
-4,1,Tú lo,{haciendo|to do} muy bien.,estás,are
-4,2,Yo,{usuario|user} del {metro|subway}. ,soy,am
-4,3,Tú siempre,el {primero|frist} en llegar.,eres,are
-4,4,Todas las {maletas|suitcases},en el {piso|apartment} de abajo. ,están,are
-4,5,El sol ,muy {bajo|low} en el {horizonte|horizon}.,está,is
+﻿set,id,before,after,word,translation,level
+1,1,Ellos,de Irlanda.,son,are,A1
+1,2,Mi {hermano|brother},médico.,es,is,A1
+1,3,El café,muy {frío|cold}.,está,is,A1
+1,4,Nosotras,{profesoras|teachers}.,somos,are,A1
+1,5,Ellas,{enferma|sick} hoy.,están,are,A1
+2,1,Ellas,muy {simpáticas|friendly}. ,son,are,A1
+2,2,Nosotros ,{camareros|waiters}.,somos,are,A1
+2,3,Mi {compañero|colleague},en {paro|unemployed}. ,está,is,A1
+2,4,Este ,el {precio|prize} de la {mesa|table}. ,es,is,A1
+2,5,Nosotros,en la {farmacia|pharmacy}.,estamos,are,A1
+3,1,Tú,muy {simpático|friendly}.,eres,are,A1
+3,2,Su hija ,muy {inteligente|smart}.,es,is,A1
+3,3,Vosotros,en la {playa|beach}.,estáis,are,A1
+3,4,Yo ,muy {tímida|shy}.,soy,am,A1
+3,5,Tú ,en clase de español. ,estás,are,A1
+4,1,¿De quién es,este {gato|cat}?,es,is,A1
+4,2,Yo {también|too},argentino. ,soy,am,A1
+4,3,Tú y yo,en {clase|class}. ,estamos,are,A1
+4,4,Yo {vivo|to live} en un {pueblo|town} que,{cerca|near} de un {río|river}. ,está,is,A1
+4,5,¿Qué ,esta {cosa|thing}?,es,is,A1
+1,1,Los {actores|actors},{nerviosos|nervous} por la {obra de treatro|performance}. ,están,are,A2
+1,2,Luis,{hijo único|an only child}. ,es,is,A2
+1,3,Las {periodistas|journalists},{presentadoras|hosts} del programa de noche. ,son,are,A2
+1,4,Su {cara|face} ,muy {sucia|dirty}. ,está,is,A2
+1,5,Los {vecinos|neighbords} ,{de visita|visiting}. ,están,are,A2
+1,6,¡Qué interesantes,estos museos!,son,are,A2
+2,1,Ella ,{optimista|optimistic}. ,es,is,A2
+2,2,Nosotros,más {cansados|tired} que vosotros.,estamos,are,A2
+2,3,Vosotros,{cerca|near} de la {estación|station}.,estáis,are,A2
+2,4,Los {vecinos|neighbords} ,de Turquía.,son,are,A2
+2,5,Nosotros,como {nuestro|our} padre.,somos,are,A2
+2,6,Mi gato ,{durmiendo|sleeping} {debajo|under} de la {cama|bed}.,está,is,A2
+3,1,La {reunión|meeting},a las tres.,es,is,A2
+3,2,Ustedes ,{como|like} de la familia. ,son,are,A2
+3,3,Para ti,{fácil|easy} {estudiar|to study} matemáticas. ,es,is,A2
+3,4,El sol ,muy {bajo|low} a esta hora.,está,is,A2
+3,5,Todas las {maletas|suitcases},en el {piso|apartment} de abajo. ,están,are,A2
+3,6,Hablo con ustedes y ustedes,{escuchando|listening}. ,están,are,A2
+4,1,Tú lo,{haciendo|to do} muy bien.,estás,are,A2
+4,2,Yo,{usuario|user} del {metro|subway}. ,soy,am,A2
+4,3,Tú siempre,el {primero|first} en llegar.,eres,are,A2
+4,4,Yo,{estudiando|to study} para el {examen|test}.,estoy,am,A2
+4,5,Ese viaje no,"mal, pero preferimos otro. ",está,is,A2
+4,6,La casa,"{luminosa|bright}, por eso me gusta. ",es,is,A2
+5,1,¿Para quién,este {regalo|present}?,es,is,A2
+5,2,Las {manzanas|apples},{bastante|quite} mal. ,están,are,A2
+5,3,La mesa que me gusta,{rota|broken}. ,está,is,A2
+5,4,¿,de acuerdo con ella?,estás,are,A2
+5,5,Creo que ustedes no,suficiente {talentosos|talented} para la {banda|band}.  ,son,are,A2
+5,6,¿Qué tipo de persona,?,eres,are,A2
+1,1,Después del viaje en autobús,muy mareado y no puedo comer nada. ,estoy,am,B1
+1,2,"No encuentro habitación, los hoteles",completos. ,están,are,B1
+1,3,No podemos ir porque el coche,estropeado. ,está,is,B1
+1,4,Con los años me he dado cuenta de que,muy maleducado. ,soy,am,B1
+1,5,Toda su familia,bastante conservadora. ,es,is,B1
+1,6,Los dibujos de las camisetas ,todo un éxito. ,son,are,B1
+2,1,Este trimestre Nacho y yo,los más altos del equipo. ,somos,are,B1
+2,2,Después de tantos días en la playa,muy moreno. ,estás,are,B1
+2,3,Mi parte favorita del año,las vacaciones.,son,are,B1
+2,4,"No hay nada que hacer, ",aburridos. ,estamos,are,B1
+2,5,Tristemente los dos países,en guerra. ,están,are,B1
+2,6,"¡Lo resolviste, ",un genio!,eres,are,B1
+3,1,Mi hermano,muy {aburrido|boring} cuando no tiene nada que hacer.,está,is,B1
+3,2,Este libro,bastante aburrido.,es,is,B1
+3,3,El pescado,muy {rico|tasty} hoy.,está,is,B1
+3,4,Mi tío,"{rico|rich}, tiene tres casas.",es,is,B1
+3,5,"Cuando llegamos, la tienda ya",cerrada.,estaba,was,B1
+3,6,¿Quién,la chica de ayer?,era,was,B1
+4,1,El texto,escrito con {tinta|ink} azul. ,está,is,B1
+4,2,No,sentados con nadie más. ,estáis,are,B1
+4,3,Los niños que {cuido|take care},muy {ruidosos|noisy}. ,son,are,B1
+4,4,¿Qué ,lo que más te {gustó|to like}?,es,is,B1
+4,5,Supongo que,"parte del grupo, por lo que os doy la bienvenida. ",sois,are,B1
+4,6,No,{seguros|sure} de si podrán venir al teatro. ,están,are,B1
+5,1,En este {barrio|neighborhood} se venden {pisos|apartments} y ,grandes. ,son,are,B1
+5,2,¿Con quién ,ayer en la plaza?,estabas,were,B1
+5,3,,{obligatorio|mandatory} caminar {por la derecha|on the right}. ,es,is,B1
+5,4,,demostrado que vivir en el campo es {saludable|healthy}. ,está,is,B1
+5,5,"Si no han {llamado|called}, es seguro que {aún|still}",en casa. ,están,are,B1
+5,6,"De joven en tu escuela,",bueno jugando al fútbol?,eras,are,B1
+1,1,Su padre,a régimen por orden del doctor. ,está,is,B2
+1,2,Después del accidente,muy deprimido y necesito medicinas. ,estoy,am,B2
+1,3,Mi sobrino ,siempre el centro de la fiesta. ,es,is,B2
+1,4,Las camisas que tanto me gustas,de oferta. ,están,are,B2
+1,5,"Los quiero mucho, ",como de la familia. ,son,are,B2
+1,6,Desde hace años,coleccionista de monedas antiguas. ,soy,am,B2
+2,1,Me gusta esa playa pero el agua,muy fría. ,está,is,B2
+2,2,Ahora no trabajo porque,de baja. ,estoy,am,B2
+2,3,Los dos hermanos gemelos,idénticos. ,son,are,B2
+2,4,Desde que nací,del club de mi barrio. ,soy,am,B2
+2,5,Todos ellos,acusados por robo. ,están,are,B2
+2,6,Miguel,subcampeón de boxeo. ,es,is,B2
+3,1,El puente,{construido|built} por los romanos.,fue,was,B2
+3,2,"Cuando llegamos, la cena ya",preparada.,estaba,was,B2
+3,3,Mi tío,"muy {listo|clever}, siempre tiene una solución.",es,is,B2
+3,4,La cadena de la bicicleta ,ya lista para la carrera. ,está,is,B2
+3,5,"De joven, mi abuelo",{capaz|capable} de correr una maratón.,era,was,B2
+3,6,"Cuando era niña, mi madre",en el hospital toda una semana. ,estuvo,was,B2
+4,1,Sus muchos años de experiencia no,suficientes para la plaza. ,eran,were,B2
+4,2,La mitad de la tarta,para llevar a casa para repartirla. ,es,is,B2
+4,3,Estoy seguro de que las llaves,ayer sobre la mesa. ,estaban,were,B1
+4,4,"Vosotros, que sabéis informática, ",preparados para el problema. ,estáis,are,B2
+4,5,No hay duda de que tú y tu equipo,los mejores candidatos. ,sois,are,B2
+4,6,Me ha dicho que Daniel,totalmente de acuerdo con nosotros. ,está,is,B2
+5,1,Se lo di ayer a María y ví que,agradecida. ,estaba,was,B2
+5,2,Todas las personas,iguales. ,somos,are,B2
+5,3,"Si todo sale bien, mañana",listos para viajar.,estaremos,will be,B2
+5,4,Mañana en el teatro,atentos con los espectadores.,seremos,will be,B2
+5,5,No tenía ni idea de la hora que,.,era,was,B2
+5,6,"Ya que tenemos autobús, ",dispuestos a {asistir|attend} al concierto. ,estamos,are,B2

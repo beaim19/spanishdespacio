@@ -1,16 +1,16 @@
-﻿set,id,before,after,hint,correct
-1,1,Tengo,{años|years}.,20,veinte
-1,2,Hay,{días|days} en una {semana|week}.,7,siete
-1,3,En mi {clase|classroom} somos,estudiantes.,30,treinta
-1,4,Mi {casa|house} tiene,habitaciones.,4,cuatro
-1,5,El año tiene,meses.,12,doce
-2,1,Compré,{manzanas|apples}.,6,seis
-2,2,Necesito,euros para el {billete|ticket}.,50,cincuenta
-2,3,Hoy {cumplo|have a birthday},años.,32,treinta y dos
-2,4,Este {edificio|building} tiene,pisos.,15,quince
-2,5,En la {fiesta|party} había,{invitados|guests}.,100,cien
-3,1,La {entrada|ticket} costaba,euros. ,5,cinco
-3,2,,{golondrinas|swallow} hacían el {nido|nest}. ,3,tres
-3,3,Necesito,kilos de {harina|flour}. ,25,veinticinco
-3,4,Había,niños en el {campamento|summer camp}. ,43,cuarenta y tres
-3,5,Todo está en la {caseta|stall},.,64,Sesenta y cuatro
+﻿set,id,before,after,hint,correct,level
+1,1,Tengo,{años|years}.,20,veinte,A1
+1,2,Hay,{días|days} en una {semana|week}.,7,siete,A1
+1,3,En mi {clase|classroom} somos,estudiantes.,30,treinta,A1
+1,4,Mi {casa|house} tiene,habitaciones.,4,cuatro,A1
+1,5,El año tiene,meses.,12,doce,A1
+2,1,Compré,{manzanas|apples}.,6,seis,A1
+2,2,Necesito,euros para el {billete|ticket}.,50,cincuenta,A1
+2,3,Hoy {cumplo|have a birthday},años.,32,treinta y dos,A1
+2,4,Este {edificio|building} tiene,pisos.,15,quince,A1
+2,5,En la {fiesta|party} había,{invitados|guests}.,100,cien,A1
+3,1,La {entrada|ticket} costaba,euros. ,5,cinco,A1
+3,2,,{golondrinas|swallow} hacían el {nido|nest}. ,3,tres,A1
+3,3,Necesito,kilos de {harina|flour}. ,25,veinticinco,A1
+3,4,Había,niños en el {campamento|summer camp}. ,43,cuarenta y tres,A1
+3,5,Todo está en la {caseta|stall},.,64,Sesenta y cuatro,A1

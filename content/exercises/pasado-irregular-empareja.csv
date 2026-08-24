@@ -1,21 +1,21 @@
-﻿set,id,before,after,word,translation
-1,1,Nosotros,a la {fiesta|party} el {sábado|Saturday}.,fuimos,to go
-1,2,Ella,que no podía {venir|to come}.,dijo,to say
-1,3,Yo,toda la {atención|attention}.,agradezco,to be grateful
-1,4,Ayer,durante todo el {día|day}. ,nevó,to snow
-1,5,Las {flores|flowers},muy bien. ,olían,to smell
-2,1,Ustedes,{dormir|to sleep} en el hotel. ,preferían,to prefer
-2,2,El coche,en la {carretera|road}. ,torció,to turn
-2,3,Los {patos|ducks},muy {alto|high}. ,volaban,to fly
-2,4,{Ayer|yesterday} yo,los {huevos|eggs}.,herví,to boil
-2,5,La {costurera|tailor},las {telas|fabric} con la {cinta|measuring tape}. ,medía,to measure
-3,1,Yo no,bien las instrucciones. ,oí,to hear
-3,2,Vosotros ,muy {contentos|happy} en la {fiesta|party}. ,parecíais,to seem
-3,3,La niña,ir {ayer|yesterday} al parque. ,quería,to want
-3,4,El {alcalde|mayor},muy bien durante cuatro años. ,gobernó,to govern
-3,5,El {golfista|golf player},muchos de sus {tiros|shots}. ,erró,to miss
-4,1,Los niños,sus {abrigos|coats} en la {percha|hanger}. ,colgaron,to hang
-4,2,Las {gotas|drops} de {lluvia|rain} ,{lentamente|slowly}. ,caían,to fall
-4,3,Ustedes,en una {ciudad|city} muy {bonita|beautiful}. ,crecieron,to grow up
-4,4,El {ladrón|thief} ,la {puerta|door} para entrar en la {casa|house}. ,forzó,to force
-4,5,La profesora ,siempre a los {alumnos|students}. ,contaba,to count
+﻿set,id,before,after,word,translation,level
+1,1,Nosotros,a la {fiesta|party} el {sábado|Saturday}.,fuimos,to go,A2
+1,2,Ella,que no podía {venir|to come}.,dijo,to say,A2
+1,3,Yo,toda la {atención|attention}.,agradezco,to be grateful,A2
+1,4,Ayer,durante todo el {día|day}. ,nevó,to snow,A2
+1,5,Las {flores|flowers},muy bien. ,olían,to smell,A2
+2,1,Ustedes,{dormir|to sleep} en el hotel. ,preferían,to prefer,A2
+2,2,El coche,en la {carretera|road}. ,torció,to turn,A2
+2,3,Los {patos|ducks},muy {alto|high}. ,volaban,to fly,A2
+2,4,{Ayer|yesterday} yo,los {huevos|eggs}.,herví,to boil,A2
+2,5,La {costurera|tailor},las {telas|fabric} con la {cinta|measuring tape}. ,medía,to measure,A2
+3,1,Yo no,bien las instrucciones. ,oí,to hear,A2
+3,2,Vosotros ,muy {contentos|happy} en la {fiesta|party}. ,parecíais,to seem,A2
+3,3,La niña,ir {ayer|yesterday} al parque. ,quería,to want,A2
+3,4,El {alcalde|mayor},muy bien durante cuatro años. ,gobernó,to govern,A2
+3,5,El {golfista|golf player},muchos de sus {tiros|shots}. ,erró,to miss,A2
+4,1,Los niños,sus {abrigos|coats} en la {percha|hanger}. ,colgaron,to hang,A2
+4,2,Las {gotas|drops} de {lluvia|rain} ,{lentamente|slowly}. ,caían,to fall,A2
+4,3,Ustedes,en una {ciudad|city} muy {bonita|beautiful}. ,crecieron,to grow up,A2
+4,4,El {ladrón|thief} ,la {puerta|door} para entrar en la {casa|house}. ,forzó,to force,A2
+4,5,La profesora ,siempre a los {alumnos|students}. ,contaba,to count,A2

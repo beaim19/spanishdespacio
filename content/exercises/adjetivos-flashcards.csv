@@ -1,11 +1,121 @@
-﻿set,id,before,after,hint,gender,number,correct
-1,1,Su {vestido|dress} es,.,elegante,masculino,singular,elegante
-1,2,Su {falda|skirt} es,.,elegante,femenino,singular,elegante
-1,3,Estos libros son,.,aburrido,masculino,plural,aburridos
-1,4,Estas historias son,.,aburrido,femenino,plural,aburridas
-1,5,El niño está,.,contento,masculino,singular,contento
-1,6,La niña está,.,contento,femenino,singular,contenta
-1,7,Los profesores son,.,amable,masculino,plural,amables
-1,8,Las profesoras son,.,amable,femenino,plural,amables
-1,9,Mi tío es,.,alto,masculino,singular,alto
-1,10,Mi tía es,.,alto,femenino,singular,alta
+﻿set,id,before,after,hint,gender,number,correct,level
+1,1,El {perro|dog} es,.,pequeño,singular,masculino,pequeño,A1
+1,2,La {mesa|table} es,.,pequeño,singular,femenino,pequeña,A1
+1,3,Los {coches|cars} son,.,nuevo,plural,masculino,nuevos,A1
+1,4,Las {camisas|shirts} son,.,nuevo,plural,femenino,nuevas,A1
+1,5,Este problema es muy,.,serio,singular,masculino,serio,A1
+2,1,Esta {situación|situation} es muy,.,serio,singular,femenino,seria,A1
+2,2,Los {chicos|guys} están,.,cansado,plural,masculino,cansados,A1
+2,3,Las {chicas|girls} están,.,cansado,plural,femenino,cansadas,A1
+2,4,El {cielo|sky} está,.,despejado,singular,masculino,despejado,A1
+2,5,Las {calles|streets} están,.,despejado,plural,femenino,despejadas,A1
+3,1,La {luna|moon},es muy bonita.,lleno,singular,femenino,llena,A1
+3,2,Los tomates,están muy ricos.,fresco,plural,masculino,frescos,A1
+3,3,El {pimiento|pepper},es rojo. ,picante,singular,masculino,picante,A1
+3,4,Las {calles|streets}  ,brillan por la noche. ,mojada,plural,femenino,mojadas,A1
+3,5,Todas las {bicicletas|bikes},cuestan 20 euros. ,azul,plural,femenino,azules,A1
+4,1,Su madre tiene los {ojos|eyes},.,claro,plural,masculino,claros,A1
+4,2,Es una niña muy,.,tímido,singular,femenino,tímida,A1
+4,3,Yo vivo en una calle,y bonita. ,ancho,singular,femenino,ancha,A1
+4,4,Ella es de nacionalidad,.,español,singular,femenino,española,A1
+4,5,Me gusta el {vino|wine},.,blanco,singular,masculino,blanco,A1
+5,1,Él {escucha|to listen} una {canción|song},.,moderno,singular,femenino,moderna,A1
+5,2,Los ejercicios de francés son,.,fácil,plural,masculino,fáciles,A1
+5,3,Yo leo muchos {periódicos|newspapers},.,marroquí,plural,masculino,marroquíes,A1
+5,4,Yo le escribo una {postal|postcard},.,divertido,singular,femenino,divertida,A1
+5,5,Luisa vive en un {piso|apartment} muy,.,céntrico,singular,masculino,céntrico,A1
+6,1,La {gata|cat} de Sara es ,.,dócil,singular,femenino,dócil,A1
+6,2,Ella tiene un médico,.,nuevo,singular,masculino,nuevo,A1
+6,3,Los {pantalones|pants},son muy bonitos. ,rojo,plural,masculino,rojos,A1
+6,4,En el {cuento|tale} hay una {reina|queen},.,mal,singular,femenino,mala,A1
+6,5,Me gustan las {playas|beaches},del Norte. ,limpio,plural,femenino,limpias,A1
+1,1,Ana lleva el {pelo|hair},.,rizado,singular,masculino,rizado,A1
+1,2,¿Dónde viven los {maestros|teachers},que tenemos?,nuevos,singular,masculino,nuevo,A1
+1,3,Para comer él quiere una pizza,.,grande,singular,femenino,grande,A2
+1,4,Le duele una {muela|molar tooth},.,delantero,singular,femenino,delantera,A2
+1,5,Llevo mi {paraguas|umbrella},porque llueve. ,colorido,singular,masculino,colorido,A2
+2,1,Para {bailar|to dance} ballet me gusta la música,.,clásico,singular,femenino,clásica,A2
+2,2,{Necesito|to need} agua,para {cocinar|to cook} el {arroz|rice}. ,caliente,singular,femenino,caliente,A2
+2,3,Candela {toca|to play} el piano y {canta|to sing} con una {voz|voice} muy,.,potente,singular,femenino,potente,A2
+2,4,Era un {lago|lake} de aguas,.,transparente,plural,femenino,transparentes,A2
+2,5,El {aula|classroom},es perfecta para {conferencias|conferences}. ,magno,singular,femenino,magna,A2
+3,1,Es un {barrio|neighborhood},para vivir {tranquilos|quiet}. ,agradable,singular,masculino,agradable,A2
+3,2,{Anoche|lat night} había una {luna|moon},en el cielo. ,brillante,singular,femenino,brillante,A2
+3,3,El {ave|bird},vuela alto. ,rapaz,singular,femenino,rapaz,A2
+3,4,Mis {sobrinos|nephews} viven en una,ciudad con muchos {árboles|trees}. ,lindo,singular,femenino,linda,A2
+3,5,La {semana|week},fui al cine. ,pasado,singular,femenino,pasada,A2
+4,1,Esta {tarta|cake} es tan ,como la de chocolate. ,dulce,singular,femenino,dulce,A2
+4,2,Era un {cliente|client} ,.,ejemplar,singular,masculino,ejemplar,A2
+4,3,Me gusta {caminar|to walk} por la calle,.,peatonal,singular,femenino,peatonal,A2
+4,4,La {chica|girl} que estaba en el fiesta es la {hija|daugther},de María. ,menor,singular,femenino,menor,A2
+4,5,Su padre es una persona,y amable. ,generoso,singular,femenino,generosa,A2
+5,1,Mateo hizo unos {dibujos|drawings},en la clase de arte. ,precioso,plural,masculino,preciosos,A2
+5,2,Estos {senderos|paths} son,que los de ayer. ,mejor,plural,masculino,mejores,A2
+5,3,Este {tema|theme} es más ,que el tema de ayer. ,sencillo,singular,femenino,sencillo,A2
+5,4,Esta {bebida|beverage} es,fría que caliente. ,peor,singular,femenino,peor ,A2
+5,5,Ellos viven ahora en una {ciudad|citty} muy,.,industrial,singular,femenino,industrial,A2
+6,1,Había unas veinte {flores|flowers},en el jardín. ,amarillo,plural,femenino,amarillas,A2
+6,2,Su {jefa|boss} era una {arquitecta|architect} muy,.,exigente,singular,femenino,exigente,A2
+6,3,No me gustan nada las {comidas|foods},.,pesado,plural,femenino,pesadas,A2
+6,4,Las {hojas|leaves} de estos árboles son,en la {parte alta|upper part}. ,mayor,plural,femenino,mayores,A2
+6,5,Este {palo|stick} es menos,que este otro. ,resistente,singular,masculino,resistente,A2
+1,1,Cuando viajo me gusta comer las comidas,del país. ,tradicional,plural,femenino,tradicionales,B1
+1,2,"Tienes que poner el {lavavajillas|dishwasher}, los platos",están en el {fregadero|sink}. ,sucio,plural,masculino,sucios,B1
+1,3,El {partido|mathc} de ayer fue un ,partido.,grande,singular,masculino,gran,B1
+1,4,Manuel tuvo muy ,{actitud|attitude} durante el partido. ,malo,singular,femenino,mala,B1
+1,5,Aquellas fueron las ,{tormentas|storms} de mi vida. ,peor,plural,femenino,peores,B1
+2,1,{Aliñó|dress} la ensalada con ese vinagre,que no gustaba a nadie. ,agrio,singular,masculino,agrio,B1
+2,2,Llegó del {campamento|camp} con las {rodillas|knees},.,magullado,plural,femenino,magulladas,B1
+2,3,La clase de chino es igual de,que la de japonés. ,difícil,singular,femenino,difícil,B1
+2,4,Le dijeron que su {alimentación|diet} debe ser,. ,sano,singular,femenino,sana,B1
+2,5,El vino tenía un sabor muy,y no lo bebí. ,desagradable,singular,masculino,desagradable,B1
+3,1,Vivían en un {caserón|big house},donde hacía mucho frío. ,enorme,singular,masculino,enorme,B1
+3,2,Creo que es un ,perro cuando duerme. ,bueno,singular,masculino,buen,B1
+3,3,Compra yogures,", por favor. ",natural,plural,masculino,naturales,B1
+3,4,En agosto se {celebran|to clebrate} las fiestas,de su pueblo. ,popular,plural,femenino,populares,B1
+3,5,Pedro y Sara son los más,del equipo. ,rápido,plural,masculino,rapidos,B1
+4,1,Tenían bastentes animales,en la {granja|farm}. ,doméstico,plural,masculino,domésticos,B1
+4,2,"Me gusta estudiar {idiomas|languages}, sobre todo inglés",.,antiguo,singular,masculino,antiguo,B1
+4,3,El agua de la {fuente|fountain} tenía un,"sabor, por lo que no bebimos. ",malo,singular,masculino,mal,B1
+4,4,Viven en una zona de clima muy,.,húmedo,singular,masculino,húmedo,B1
+4,5,La {mayoria|most} de los niños prefería la comida,.,salado,singular,femenino,salada,B1
+5,1,El sábado celebraron una boda,en el ayuntamiento. ,civil,singular,femenino,civil,B1
+5,2,Este grupo de turistas alemanes es muy,.,activo,singular,masculino,activo,B1
+5,3,Mi,{pensamiento|thought} fue salir corriendo. ,primero,singular,masculino,primer,B1
+5,4,Para,"{seguridad|safety}, hay que ponerse el cinturón.",mayor,singular,femenino,mayor,B1
+5,5,Había un {montón|pile} grande de bolsas,a la puerta del {albergue|hostel}. ,reciclado,plural,femenino,recicladas,B1
+6,1,Toda su vida ha tenido,suerte. ,bueno,singular,femenino,buena,B1
+6,2,El pequeño era el menos,del grupo.,hábil,singular,masculino,hábil,B1
+6,3,La hija de Marisa es de carácter,.,fuerte,singular,femenino,fuerte,B1
+6,4,Ganó al fin en la ,partida de {ajedrez|chess}. ,tercero,singular,femenino,tercera,B1
+6,5,Ayer visitamos el casco,de Toledo. ,histórico,singular,masculino,histórico,B1
+1,1,Después de la ,crisis nada fue igual. ,grande,singular,femenino,gran,B2
+1,2,Laura volvió tan,"de su viaje, que nos invitó a todos a cenar. ",feliz,singular,femenino,feliz,B2
+1,3,Era un aula grande y además muy,.,decorado,singular,femenino,decorada,B2
+1,4,Los primeros años vivieron en la ciudad,.,universitario,singular,femenino,universitaria,B2
+1,5,Lo más,de la película fue el final. ,interesante,singular,masculino,interesante,B2
+2,1,A la hora de la siesta siempre ponían música,.,infantil,singular,femenino,infantil,B2
+2,2,Beltrán es más,de lo que me imaginaba. ,alto,singular,masculino,alto,B2
+2,3,Con el movimiento del tren las abuelas dormían,.,tranquilo,plural,femenino,tranquilas,B2
+2,4,El campo de fútbol,está muy bien conservado. ,municipal,singular,masculino,municipal,B2
+2,5,Durante el viaje me di cuenta de que es un país muy,.,cosmopolita,singular,masculino,cosmopolita,B2
+3,1,Para su cumpleaños quería un reloj,.,digital,singular,masculino,digital,B2
+3,2,Las reuniones,le parecían muy aburridas. ,familiar,plural,femenino,familiares,B2
+3,3,Dijeron que solo querían invitar a familiares,a la boda. ,cercano,plural,masculino,cercanos,B2
+3,4,En clase tenemos que aprender la lista de animales,de la zona. ,terrestre,plural,masculino,terrestres,B2
+3,5,Tras horas de trabajo dejó el jardín,.,impecable,singular,masculino,impecable,B2
+4,1,Sus tíos viven cerca de la zona,al Oeste de la ciudad. ,ajardinado,singular,femenino,ajardinada,B2
+4,2,La empresa vende productos,de puerta a puerta. ,congelado,plural,masculino,congelados,B2
+4,3,Esa zona del país es de clima,.,suave,singular,masculino,suave,B2
+4,4,Los días,le inspiraban para hacer fotos. ,otoñal,plural,masculino,otoñales,B2
+4,5,Debido a su enfermedad solo puede comer pan,.,integral,singular,masculino,integral,B2
+5,1,Tenemos que recoger flores,para el herbario. ,silvestre,plural,femenino,silvestres,B2
+5,2,Lo,de vivir aquí son los parques cercanos. ,bueno,singular,masculino,bueno,B2
+5,3,Cone estas temperaturas,debemos salir de paseo. ,primaveral,plural,femenino,primaverales,B2
+5,4,En todas las fuentes de la ruta el agua era,.,potable,singular,femenino,potable,B2
+5,5,Mis sobrinas ya viven,en el centro de la ciudad. ,solo,plural,femenino,solas,B2
+6,1,Toda la costa es zona,y está muy protegida. ,virgen,singular,femenino,virgen,B2
+6,2,Es importante que conservemos el medio,.,ambiente,singular,masculino,ambiente,B2
+6,3,Ana y Lucas van a una escuela,.,bilingüe,singular,femenino,bilingüe,B2
+6,4,Ayer tuve que llevar a mi perro a la clínica,.,veterinario,singular,femenino,veterinaria,B2
+6,5,Sus maestros siempre dijeron que era una alumna,.,brillante,singular,femenino,brillante,B2

@@ -504,7 +504,12 @@ a.theme-block:focus-visible {
    ghost-pill treatment used elsewhere on the page, since this is the one
    switcher that changes what content loads below it (the exercise-type
    pills change *how* you practice the same content; this changes *which*
-   content) and needed to read as more clearly interactive/tab-like. */
+   content) and needed to read as more clearly interactive/tab-like.
+   The level switcher (A1/A2/B1/B2, rendered by renderLevelNav() in
+   exercise-common.js) reuses this exact styling for the same reason —
+   picking a level is just as much a "which content" choice as picking a
+   verb-type variant. .level-switcher only adds a bit of top margin so it
+   doesn't crowd the variant tabs when a topic has both. */
 .type-switcher ul {
   list-style: none;
   display: flex;
@@ -513,6 +518,9 @@ a.theme-block:focus-visible {
   margin: var(--space-2) 0 0 0;
   padding: 0;
   border-bottom: 2px solid rgba(255, 255, 255, 0.35);
+}
+.level-switcher {
+  margin-top: var(--space-1);
 }
 .type-switcher a {
   display: inline-block;
@@ -543,17 +551,6 @@ a.theme-block:focus-visible {
   font-size: 1.6rem;
   font-weight: 700;
   margin: 0 0 var(--space-1) 0;
-}
-
-/* Sits right under "Serie N" whenever a topic has more than one series —
-   same gate as the heading above it, since a single-series topic has no
-   difficulty progression to mention. */
-.exercise-difficulty-note {
-  color: var(--color-text);
-  opacity: 0.75;
-  font-style: italic;
-  font-size: 0.95rem;
-  margin: 0 0 var(--space-3) 0;
 }
 
 /* Gives the question block breathing room below the green intro band,
@@ -967,7 +964,12 @@ a.theme-block:focus-visible {
   cursor: help;
 }
 .pool-chip,
-.ordena-word {
+.ordena-word,
+.drop-slot {
+  /* .drop-slot needs this too: Empareja/Texto clone a .hint-tooltip onto a
+     filled slot (see exercise-arrastra.js / exercise-texto.js), and without
+     position:relative here the tooltip's position:absolute would anchor to
+     some other ancestor instead of the slot itself. */
   position: relative;
 }
 .hint-tooltip {
@@ -996,7 +998,10 @@ a.theme-block:focus-visible {
 .pool-chip.hint-visible .hint-tooltip,
 .ordena-word:hover .hint-tooltip,
 .ordena-word:focus .hint-tooltip,
-.ordena-word.hint-visible .hint-tooltip {
+.ordena-word.hint-visible .hint-tooltip,
+.drop-slot:hover .hint-tooltip,
+.drop-slot:focus .hint-tooltip,
+.drop-slot.hint-visible .hint-tooltip {
   opacity: 1;
 }
 

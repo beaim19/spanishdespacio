@@ -1,16 +1,121 @@
-﻿set,id,before,after,word,translation
-1,1,El {perro|dog} ,{pasea|to walk} por le {parque|park}.,marrón,brown
-1,2,La {manzana|apple},está muy {rica|tasty}. ,verde,green
-1,3,Los hoteles,tienen muchas {ventanas|windows}.,altos,tall
-1,4,Las niñas ,{comen|to eat} la {merienda|afternoon snack}.,extranjeras,foreign
-1,5,La profesora,{sabe|to know} muchos {idiomas|languages}. ,nueva,new
-2,1,Ayer hicimos los exámenes,.,difíciles,difficult
-2,2,Paseamos por el pueblo,.,tranquilo,quiet
-2,3,Sus {amigos|friends} ,son muy {divertidos|funny}. ,locales,local
-2,4,La {comida|food} de la {cantina|cafeteria},es {deliciosa|delicious}.,nueva,new
-2,5,No puedo {subir|to bring up} la {cesta|basket},.,pesada,heavy
-3,1,El {olivo|olive tree} ,tiene muchas {aceitunas|olives}. ,viejo,old
-3,2,El {bosque|forest},es perfecto para {pasear|to walk},frondoso,leafy
-3,3,Las {sillas|chairs} ,son para el {jardín|garden}. ,nuevas,new
-3,4,El chocolate,es muy {dulce|sweet}. ,blanco,white
-3,5,La {tarta|cake} ,es para mi {cumpleaños|brithday}.,decorada,decorated
+﻿set,id,before,after,word,translation,level
+1,1,El {chico|boy},.,alto ,tall,A1
+1,2,Las {mujeres|women} ,.,francesas,French,A1
+1,3,La {solución|solution},.,fácil,easy,A1
+1,4,Los {niños|children} ,.,rubios,blond,A1
+1,5,La {tarde|afternoon},.,oscura,dark,A1
+2,1,La {taza|cup},.,roja,red,A1
+2,2,El {árbol|tree},.,joven,young,A1
+2,3,Los {zapatos|shoes},.,nuevos,new,A1
+2,4,Las {ventanas|windows},.,limpias,clean,A1
+2,5,El {guante|glove},.,viejo,old,A1
+3,1,Los {pisos|apartments},tienen muchas {ventanas|windows}.,exteriores,exterior apartment,A1
+3,2,Las {niñas|girls} ,{comen|to eat} la {merienda|afternoon snack}.,alegres,happy,A1
+3,3,La {profesora|teacher},{sabe|to know} muchos {idiomas|languages}. ,argentina,Argentinian,A1
+3,4,Sus {amigos|friends} ,son muy {divertidos|funny}. ,extranjeros,foreginers,A1
+3,5,Las {sillas|chairs} ,son para el {jardín|garden}. ,nuevas,new,A1
+4,1,Los {exámenes|exams},son muy {duros|hard}. ,difíciles,difficult,A1
+4,2,Ella es una {actriz|actress} muy,.,guapa,beautiful,A1
+4,3,Los {árboles|trees} del {bosque|forest} son,.,altos,high,A1
+4,4,Me {gusta|like} el {portero|goalei},del {equipo|team}. ,fuerte,strong,A1
+4,5,El {cuaderno|notebook},está en la {mesa|table}. ,azul,blue,A1
+5,1,Una casa,es {mejor|better}. ,amplia,large,A1
+5,2,Las {noches|nights},son {buenas|good}. ,tranquilas,quiet,A1
+5,3,La {vecina|neighbor} ,es muy {simpática|friendly}. ,rusa,Russian,A1
+5,4,La {moto|motorbike},va muy bien. ,roja,red,A1
+5,5,Las {paredes|wall} ,me gustan. ,altas,high,A1
+6,1,Él {vive|live} en {países|country},.,distintos,different,A1
+6,2,La mesa tiene {tenedores|forks},.,dorados,golden,A1
+6,3,La radio de mi abuelo es ,.,antigua,old,A1
+6,4,Yo quiero un peine,.,nuevo,new,A1
+6,5,Todas son soluciones,.,fáciles,easy,A1
+1,1,El {pasillo|hallway} ,está {oscuro|dark}.,largo,long,A2
+1,2,La {cocina|stove},de mi casa es nueva.,eléctrica,electric,A2
+1,3,Guarda tus {monedas|coins},en el {monedero|wallet}. ,pesadas,heavy,A2
+1,4,Las {toallas|towels},están usadas. ,mojadas,wet,A2
+1,5,Su {mochila|backpack},,grande,big,A2
+2,1,El {perro|dog} ,{pasea|to walk} por el {parque|park}.,marrón,brown,A2
+2,2,La {manzana|apple},está muy {rica|tasty}. ,verde,green,A2
+2,3,Ayer hicimos los exámenes,.,difíciles,difficult,A2
+2,4,Paseamos por el pueblo,.,tranquilo,quiet,A2
+2,5,La {comida|food} de la {cantina|cafeteria},es {deliciosa|delicious}.,nueva,new,A2
+3,1,No puedo {subir|to bring up} la {cesta|basket},.,pesada,heavy,A2
+3,2,El {olivo|olive tree} ,tiene muchas {aceitunas|olives}. ,viejo,old,A2
+3,3,El {bosque|forest},es perfecto para {pasear|to walk},frondoso,leafy,A2
+3,4,El chocolate,es muy {dulce|sweet}. ,blanco,white,A2
+3,5,La {tarta|cake} ,es para mi {cumpleaños|brithday}.,decorada,decorated,A2
+4,1,Las {estrellas|stars},son mis favoritas.,brillantes,shiny,A2
+4,2,El {problema|problem} ,está ya {resuelto|solved}.,principal,main,A2
+4,3,Tenía problemas con la {mano|hand},.,izquierda,left,A2
+4,4,La {gobernadora|governor} es una persona,.,agradable,nice,A2
+4,5,Para su {cumpleaños|birthday} quiere {pasteles|cakes},.,dulces,sweet,A2
+5,1,Los {jabalíes|wild boars},me dan miedo. ,negros,black,A2
+5,2,Física es mi {asignatura|subject},.,pendiente,pending,A2
+5,3,Estas {serpientes|snake} son tan,como las otras. ,feas,ugly,A2
+5,4,Los {pantalones|pants},me gustan. ,largos,long,A2
+5,5,Estas {gafas|glasses} son ,que estas otras. ,peores,worst,A2
+6,1,Los {hijos|children},están {de viaje|on a trip}. ,mayores,older,A2
+6,2,El {artista|artist} ,está en la ciudad. ,famoso,famous,A2
+6,3,La {princesa|princess} {nada|swim} en el agua,.,caliente,hot,A2
+6,4,La maestra,era buena con los {alumnos|students}. ,exigente,demanding,A2
+6,5,La {hija|daugther},estudia Medicina. ,menor,younger,A2
+1,1,Dijeron que haría,{tiempo|weather} {mañana|tomorrow}. ,mal,bad,B1
+1,2,Fue el ,récord que {conseguía|to get}. ,primer,first,B1
+1,3,Mi {primo|cousin} vive en el {piso|apartment},.,tercero,third,B1
+1,4,Ayer hizo un {tiempo|weather} muy,.,malo,bad,B1
+1,5,Me contó un {chiste|joke},{anoche|last night}. ,buenísimo,very good,B1
+2,1,Luis es el {alumno|student} más,de la clase.,avanzado,advanced,B1
+2,2,Ella era una {persona|person} de ,{corazón|heart}. ,gran,big,B1
+2,3,Este vestido necesita zapatos,.,marrones,brown,B1
+2,4,Siempre tiene,{intenciones|intentions}. ,buenas,good,B1
+2,5,Los {alumnos|students} ,salen un {día antes|previous day}. ,mayores,older,B1
+3,1,¿Tienes,silla extra para dejarme?,alguna,any,B1
+3,2,Hoy es el ,día de mi {vida|life}. ,mejor,best,B1
+3,3,Por favor {préstame|to lend} un libro,.,cualquiera,any,B1
+3,4,Había {al menos|at least},personas en el {concierto|concert}. ,cien,a hundred,B1
+3,5,Es un ,{colegio|school} y a Carla le gusta. ,buen,good,B1
+4,1,Era una persona {bastante|quite},.,desagradable,disgusting,B1
+4,2,La {pastilla del jabón|bar soap},era de color rosa. ,oloroso,smelly,B1
+4,3,Me vale con ,{lapicero|pencil}. ,cualquier,any,B1
+4,4,La ,atleta ganó la {carrera|race}. ,mejor,best,B1
+4,5,Compra un {pan|bread},.,cualquiera,any,B1
+5,1,La {libreta|notebook},es la mía. ,verde,green,B1
+5,2,Gabriel era el menos,del {programa|program}. ,motivado,motivated,B1
+5,3,El director de la {fábrica|factory} siempre tiene una {palabra|word},.,amable,nice,B1
+5,4,La {rana|frog},es {venenosa|poisonous}. ,macho,male,B1
+5,5,Por favor trae el {limón|lemon},que está en la {cesta|basket}. ,amarillo,yellow,B1
+6,1,Dijeron que no había,problema.,ningún,any,B1
+6,2,Ayer compramos un {helado|ice cream},.,riquísimo,tasty,B1
+6,3,Me {aseguraron|to guarantee} que no tenían problema,.,ninguno,any,B1
+6,4,Sirven la {leche fresca|fresh milk} en un vaso,.,largo,long,B1
+6,5,Creo que,balón puede {servir|help}. ,algún,some,B1
+1,1,En el teatro había un {público|audience} de ,pasión y dedicación. ,gran,big,B2
+1,2,Tenemos un ,problema con la {máquina|machine}. ,grave,serious,B2
+1,3,Manuel resultó ser un hombre,.,hipócrita,hypocritical,B2
+1,4,Tenemos que llevar esa manta,.,amarillenta,yellowish,B2
+1,5,"Aquel tipo era alto,",.,alto,tall,B2
+2,1,Acudió mucha gente a la función,de teatro. ,matinal,morning,B2
+2,2,Las mariposas volaban sobre el florero,en el jardín. ,perdido,lost,B2
+2,3,Su padre era una persona de pasión y dedicación,.,grandes,big,B2
+2,4,Su padre es escritor de novela,.,negra,noir,B2
+2,5,Era una casa con muchas ventanas y con una puerta,.,grande,big,B2
+3,1,Los cálculos del análisis genético son muy,.,buenos,good,B2
+3,2,Desde que nació ha recibido mucho cariño,.,maternal,maternal,B2
+3,3,He decidido comprar un,vino y champán. ,buen,good,B2
+3,4,Por la noche soplaba un viento,.,helador,freezing,B2
+3,5,El virus en ocasiones es,.,bueno,good,B2
+4,1,Cuando acelera el coche siente vibraciones,.,fuertes,strong,B2
+4,2,La inspección ,nos pilló desprevenidos. ,pasada,past,B2
+4,3,El estilo ,de la ciudad es vanguardista. ,arquitectónico,architectural,B2
+4,4,Se lesionó el pie en un bache,.,profundo,deep,B2
+4,5,Debido a la compra,va a pagar a plazos. ,precipitada,hasty,B2
+5,1,En el tramo,de la carretera se puede se puede acelerar. ,recto,straight,B2
+5,2,Nos dijo que tenía bronquitis,y no podía venir. ,aguda,severe,B2
+5,3,El editor hizo una crítica,de mi libro. ,sincera,sincere,B2
+5,4,Cada día debe tomar una dosis,de vitaminas. ,mínima,minimum,B2
+5,5,Siempre ha tenido un pelo,y brillante. ,sano,healthy,B2
+6,1,Tenía que mandar toda información por carta,.,certificada,certified,B2
+6,2,La fruta estaba en muy ,condiciones después de todo el día al sol. ,malas,bad,B2
+6,3,Recibió algunos masajes,durante el viaje. ,relajantes,relaxing,B2
+6,4,Por suerte no era una enfermedad demasiado,.,grave,serious,B2
+6,5,Antes de las carreras siempre hacía una comida,.,ligera,light,B2

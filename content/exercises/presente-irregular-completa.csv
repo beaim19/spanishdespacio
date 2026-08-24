@@ -1,21 +1,21 @@
-﻿set,id,before,after,infinitive,correct,translation
-1,1,Yo,mucho antes de {decidir|deciding}.,pensar,pienso,to think
-1,2,Ella,la {puerta|door} con llave.,cerrar,cierra,to close
-1,3,Nosotros,tarde los {viernes|Fridays}.,volver,volvemos
-1,4,Ellos,{ayuda|help} cuando la necesitan.,pedir,piden
-1,5,Tú,las instrucciones {al pie de la letra|word by word}.,seguir,sigues
-2,1,Yo,al {gimnasio|gym} todos los días.,ir,voy
-2,2,Usted,siempre la {verdad|truth}.,decir,dice
-2,3,Nosotros,buenos {amigos|friends}.,ser,somos
-2,4,Vosotros,la televisión por la {noche|night}.,ver,veis
-2,5,Ellos,una {casa|house} nueva.,construir,construyen
-3,1,Ahora yo,los {huevos|eggs} para la {dinner|cena}. ,freir,frío
-3,2,Allá lejor puedes ver como,en las {montañas|mountains}. ,nevar,nieva
-3,3,Todos vosotros,muy mal después del {partido|game}.,oler,oléis
-3,4,¿Ustedes,venir al {cine|movie theater} con nosotros?,querer,quieren
-3,5,Estos árboles,durante la {primavera|spring}. ,florecer,florecen
-4,1,La película,a las ocho. ,empezar,empieza
-4,2,Nosotros,el lugar de {destino|destination}. ,desconocer,desconocemos
-4,3,Vosotros ,todas las {preguntas|questions}.,acertar,acertáis
-4,4,Los libros en esta librería,poco {dinero|money}. ,costar,cuestan
-4,5,Yo no,las {llaves|keys} de mi casa. ,encontrar,encuentro
+﻿set,id,before,after,infinitive,correct,translation,level
+1,1,Yo,mucho antes de {decidir|deciding}.,pensar,pienso,to think,A2
+1,2,Ella,la {puerta|door} con llave.,cerrar,cierra,to close,A2
+1,3,Nosotros,tarde los {viernes|Fridays}.,volver,volvemos,to come back,A2
+1,4,Ellos,{ayuda|help} cuando la necesitan.,pedir,piden,to ask for,A2
+1,5,Tú,las instrucciones {al pie de la letra|word by word}.,seguir,sigues,to follow,A2
+2,1,Yo,al {gimnasio|gym} todos los días.,ir,voy,to go,A2
+2,2,Usted,siempre la {verdad|truth}.,decir,dice,to say,A2
+2,3,Nosotros,buenos {amigos|friends}.,ser,somos,to be,A2
+2,4,Vosotros,la televisión por la {noche|night}.,ver,veis,to watch,A2
+2,5,Ellos,una {casa|house} nueva.,construir,construyen,to build,A2
+3,1,Ahora yo,los {huevos|eggs} para la {dinner|cena}. ,freir,frío,to fry,A2
+3,2,Allá lejor puedes ver como,en las {montañas|mountains}. ,nevar,nieva,to snow,A2
+3,3,Todos vosotros,muy mal después del {partido|game}.,oler,oléis,to smell,A2
+3,4,¿Ustedes,venir al {cine|movie theater} con nosotros?,querer,quieren,to want,A2
+3,5,Estos árboles,durante la {primavera|spring}. ,florecer,florecen,to flower,A2
+4,1,La película,a las ocho. ,empezar,empieza,to start,A2
+4,2,Nosotros,el lugar de {destino|destination}. ,desconocer,desconocemos,to not know,A2
+4,3,Vosotros ,todas las {preguntas|questions}.,acertar,acertáis,to guess,A2
+4,4,Los libros en esta librería,poco {dinero|money}. ,costar,cuestan,to cost,A2
+4,5,Yo no,las {llaves|keys} de mi casa. ,encontrar,encuentro,to find,A2

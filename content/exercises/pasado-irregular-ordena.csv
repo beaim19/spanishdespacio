@@ -1,21 +1,21 @@
-﻿set,id,correct,also_correct
-1,1,Nosotros fuimos a la {fiesta|party} el sábado.,El sábado nostros fuimos a la fiesta.
-1,2,Ella dijo que no podía {venir|to come}.,
-1,3,El {payaso|clown} {entretenía|to entertain} a los niños.,
-1,4,Esta mañana {nevaba|to snow} mucho. ,Nevaba mucho esta mañana. 
-1,5,Los niños {repetían|to repeat} la {frase|sentence}.,
-2,1,La {enfermera|nurse} {oyó|to hear} una {llamada|call}. ,
-2,2,El {cocinero|cook} sirvió la {cena|dinner} {anoche|last night}. ,Anoche el cocinero sirvió la cena.
-2,3,Sus padres {nacieron|to be born} en Colombia. ,
-2,4,Los {piratas|pirates} {enterraron|to bury} su {tesoro|treasure}. ,
-2,5,Ustedes {decían|to say} siempre la {verdad|truth}. ,
-3,1,Yo no {pensaba|to think about} {venir|to come} a la {fiesta|party}. ,
-3,2,Aquella vez la {película|movie} {empezó|to start} a las diez. ,La película empezó a las diez aquella vez. 
-3,3,Las {flores|flowers} del {jardín|garden} {florecieron|to flourish} la {semana|week} pasada. ,La semana pasada florecieron las flores del jardín. |La semana pasada las flores del jardín florecieron. 
-3,4,La {cantante|singer} {escribió|write} una {carta|letter} a sus admiradores. ,
-3,5,El {carpintero|carpenter} {serró|to saw} cinco {maderas|pieces of wood} en un día. ,En un día el carpintero serró cinco maderas.
-4,1,Vosotros {regasteis|to water} muy bien los {árboles|trees} del {parque|park}. ,
-4,2,Ustedes {resolvieron|to solve} el enigma muy {rápido|fast}. ,
-4,3,Nosotros {encontramos|to find} a su {perro|dog} en el {parque|park}. ,En el parque nosotros encontramos a su perro. |En el parque encontramos nosotros a su perro. 
-4,4,La policía {sugirió|to suggest} {salir|to get out} de allí. ,
-4,5,La {nadadora|swimmer} {temblaba|shiver} de frío. ,
+﻿set,id,correct,also_correct,level
+1,1,Nosotros fuimos a la {fiesta|party} el sábado.,El sábado nostros fuimos a la fiesta.,A2
+1,2,Ella dijo que no podía {venir|to come}.,,A2
+1,3,El {payaso|clown} {entretenía|to entertain} a los niños.,,A2
+1,4,Esta mañana {nevaba|to snow} mucho. ,Nevaba mucho esta mañana. ,A2
+1,5,Los niños {repetían|to repeat} la {frase|sentence}.,,A2
+2,1,La {enfermera|nurse} {oyó|to hear} una {llamada|call}. ,,A2
+2,2,El {cocinero|cook} sirvió la {cena|dinner} {anoche|last night}. ,Anoche el cocinero sirvió la cena.,A2
+2,3,Sus padres {nacieron|to be born} en Colombia. ,,A2
+2,4,Los {piratas|pirates} {enterraron|to bury} su {tesoro|treasure}. ,,A2
+2,5,Ustedes {decían|to say} siempre la {verdad|truth}. ,,A2
+3,1,Yo no {pensaba|to think about} {venir|to come} a la {fiesta|party}. ,,A2
+3,2,Aquella vez la {película|movie} {empezó|to start} a las diez. ,La película empezó a las diez aquella vez. ,A2
+3,3,Las {flores|flowers} del {jardín|garden} {florecieron|to flourish} la {semana|week} pasada. ,La semana pasada florecieron las flores del jardín. |La semana pasada las flores del jardín florecieron. ,A2
+3,4,La {cantante|singer} {escribió|write} una {carta|letter} a sus admiradores. ,,A2
+3,5,El {carpintero|carpenter} {serró|to saw} cinco {maderas|pieces of wood} en un día. ,En un día el carpintero serró cinco maderas.,A2
+4,1,Vosotros {regasteis|to water} muy bien los {árboles|trees} del {parque|park}. ,,A2
+4,2,Ustedes {resolvieron|to solve} el enigma muy {rápido|fast}. ,,A2
+4,3,Nosotros {encontramos|to find} a su {perro|dog} en el {parque|park}. ,En el parque nosotros encontramos a su perro. |En el parque encontramos nosotros a su perro. ,A2
+4,4,La policía {sugirió|to suggest} {salir|to get out} de allí. ,,A2
+4,5,La {nadadora|swimmer} {temblaba|shiver} de frío. ,,A2

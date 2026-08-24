@@ -9,33 +9,25 @@
  *
  * CSV shape is one row per SET, not one row per blank — the whole passage
  * lives in a single `text` column, with blanks marked inline using
- * [correct|decoy1|decoy2|...]. The first word inside the brackets is the
- * right answer; any further words, separated by "|", are parsed but
- * currently unused (see below) — a tidy passage description either way, so
- * they're kept in the CSV rather than stripped. This is much closer to
- * writing normal prose than the site's other CSVs (which need one row per
- * sentence/blank): open a doc, write the passage, then wrap whichever
- * words should be blanked in brackets.
- *
- * Fácil's word bank only ever shows the CORRECT words (one chip per
- * blank), not the decoys — a set of small multiple-choice boxes sitting
- * right above each blank was the first design considered, but with a
- * ~200-word passage carrying a dozen-plus blanks, that many 44px-tall
- * button clusters wedged into flowing prose read as cluttered rather than
- * readable, and broke the "one continuous passage" feel that's the point
- * of this exercise type. A single word bank above the whole passage (the
- * same pattern Empareja already uses) reads far more like a normal cloze
- * exercise, so `decoy1`/`decoy2`/etc. are parsed here but not placed in
- * the pool — kept in the CSV/parser in case a future per-blank multiple
- * choice variant wants them.
+ * [correct] or [correct|translation]. The first item inside the brackets
+ * is the right answer; an optional second item, after a single "|", is an
+ * English translation for that word — shown as a hover/long-press tooltip
+ * on the word bank chip (Fácil) and in the "correcto: ..." reveal after
+ * checking (both modes). This used to allow a whole list of decoy words
+ * (`[correct|decoy1|decoy2|...]`) for a possible future per-blank
+ * multiple-choice variant, but since the word bank only ever shows correct
+ * words and no such variant was built, that second slot was repurposed for
+ * the translation instead — only one optional word now, not a list. This
+ * is much closer to writing normal prose than the site's other CSVs (which
+ * need one row per sentence/blank): open a doc, write the passage, then
+ * wrap whichever words should be blanked in brackets.
  *
  *   set,id,text
- *   1,1,"Ayer fuimos a [la|el|los|una] playa."
+ *   1,1,"Ayer fuimos a [la] playa. Vimos un [perro|dog] enorme."
  *
- * The SAME CSV serves both difficulties (Difícil simply doesn't render the
- * decoys), so one file per category is all a topic needs — see
- * exercises/texto.html, which points both the Fácil and Difícil type
- * entries at the same srcTemplate.
+ * The SAME CSV serves both difficulties, so one file per category is all a
+ * topic needs — see exercises/texto.html, which points both the Fácil and
+ * Difícil type entries at the same srcTemplate.
  *
  * Host page needs, before this script:
  *   1. PapaParse (loaded via CDN)
@@ -64,8 +56,8 @@
     return copy;
   }
 
-  // Splits "...text... [correct|decoy1|decoy2] ...more text..." into an
-  // ordered list of plain-text and blank segments.
+  // Splits "...text... [correct] ...more text... [correct|translation]..."
+  // into an ordered list of plain-text and blank segments.
   function parseText(text) {
     const segments = [];
     const regex = /\[([^\]]+)\]/g;
@@ -76,7 +68,7 @@
         segments.push({ type: 'text', value: text.slice(lastIndex, match.index) });
       }
       const parts = match[1].split('|').map((s) => s.trim()).filter(Boolean);
-      segments.push({ type: 'blank', correct: parts[0] || '', decoys: parts.slice(1) });
+      segments.push({ type: 'blank', correct: parts[0] || '', translation: parts[1] || '' });
       lastIndex = regex.lastIndex;
       match = regex.exec(text);
     }
@@ -86,16 +78,32 @@
     return segments;
   }
 
+  // Appends a translation tooltip (same markup as exercise-common.js's
+  // buildHintSpan, duplicated here since a <button> can't nest another
+  // focusable element the way a plain hint-word span does) to a chip/slot
+  // button, and returns it so callers can also stash it for later cloning.
+  function appendTooltip(el, translation) {
+    if (!translation) return null;
+    const tooltip = document.createElement('span');
+    tooltip.className = 'hint-tooltip';
+    tooltip.setAttribute('role', 'tooltip');
+    tooltip.textContent = translation;
+    el.appendChild(tooltip);
+    return tooltip;
+  }
+
   async function loadExercise(container, mode) {
     try {
-      const { rows, requestedSet, allSets } = await window.ExerciseCommon.loadCsvSet(container.dataset.src);
+      const {
+        rows, requestedSet, allSets, availableLevels, requestedLevel,
+      } = await window.ExerciseCommon.loadCsvSet(container.dataset.src);
 
       if (rows.length === 0 || !(rows[0].text || '').trim()) {
         container.innerHTML = `<p>No existe la serie ${requestedSet}.</p>`;
         return;
       }
 
-      renderExercise(container, rows[0], requestedSet, allSets, mode);
+      renderExercise(container, rows[0], requestedSet, allSets, mode, availableLevels, requestedLevel);
     } catch (err) {
       console.error('No se pudo cargar el ejercicio', err);
       container.innerHTML = '<p>No se pudo cargar el ejercicio. Inténtalo de nuevo más tarde.</p>';
@@ -128,9 +136,10 @@
     return toolbar;
   }
 
-  function renderExercise(container, row, setNumber, allSets, mode) {
+  function renderExercise(container, row, setNumber, allSets, mode, availableLevels, requestedLevel) {
     container.innerHTML = '';
 
+    window.ExerciseCommon.renderLevelNav(availableLevels, requestedLevel);
     const label = window.ExerciseCommon.renderSeriesNav(setNumber, allSets);
     if (label) container.appendChild(label);
 
@@ -157,10 +166,11 @@
     segments.forEach((segment) => {
       if (segment.type === 'text') {
         // {word|translation} is a separate syntax from this file's own
-        // [correct|decoy] blanks — curly vs. square braces — so a passage
-        // can freely mix both: [...] still marks a blank to fill, {...}
-        // marks a word in the surrounding (already-given) text as
-        // hoverable/long-press-able for its translation.
+        // [correct] / [correct|translation] blanks — curly vs. square
+        // braces — so a passage can freely mix both: [...] still marks a
+        // blank to fill, {...} marks a word in the surrounding
+        // (already-given) text as hoverable/long-press-able for its
+        // translation.
         passage.appendChild(window.ExerciseCommon.renderTextWithHints(segment.value));
         return;
       }
@@ -172,11 +182,13 @@
         slot.textContent = '______';
         slot.dataset.filled = 'false';
         passage.appendChild(slot);
-        blanks.push({ el: slot, correct: segment.correct, kind: 'slot' });
+        blanks.push({
+          el: slot, correct: segment.correct, translation: segment.translation, kind: 'slot',
+        });
 
         // Only the correct word goes in the pool — see the file header for
         // why decoys aren't shown here.
-        poolWords.push(segment.correct);
+        poolWords.push({ word: segment.correct, translation: segment.translation });
       } else {
         const input = document.createElement('input');
         input.type = 'text';
@@ -193,7 +205,9 @@
         });
         if (!lastFocusedInput) lastFocusedInput = input;
         passage.appendChild(input);
-        blanks.push({ el: input, correct: segment.correct, kind: 'input' });
+        blanks.push({
+          el: input, correct: segment.correct, translation: segment.translation, kind: 'input',
+        });
       }
     });
 
@@ -206,12 +220,14 @@
       pool.setAttribute('role', 'group');
       pool.setAttribute('aria-label', 'Banco de palabras');
 
-      shuffle(poolWords).forEach((word, chipIndex) => {
+      shuffle(poolWords).forEach((entry, chipIndex) => {
         const chip = document.createElement('button');
         chip.type = 'button';
         chip.className = 'pool-chip';
-        chip.textContent = word;
         chip.dataset.chipId = String(chipIndex);
+        chip.dataset.word = entry.word;
+        chip.appendChild(document.createTextNode(entry.word));
+        appendTooltip(chip, entry.translation);
         pool.appendChild(chip);
       });
 
@@ -245,16 +261,26 @@
           slot.textContent = '______';
           slot.dataset.filled = 'false';
           delete slot.dataset.chipId;
+          delete slot.dataset.word;
           slot.classList.remove('drop-slot-filled');
           return;
         }
 
         if (!selectedChip) return;
 
-        slot.textContent = selectedChip.textContent;
+        // dataset.word (not textContent) is the actual word — once a chip
+        // carries a .hint-tooltip child, chip.textContent would pull in the
+        // translation too, since textContent concatenates every descendant
+        // text node (same reasoning as Empareja/Ordena).
+        slot.textContent = '';
+        slot.appendChild(document.createTextNode(selectedChip.dataset.word));
+        const tooltip = selectedChip.querySelector('.hint-tooltip');
+        if (tooltip) slot.appendChild(tooltip.cloneNode(true));
+        slot.dataset.word = selectedChip.dataset.word;
         slot.dataset.filled = 'true';
         slot.dataset.chipId = selectedChip.dataset.chipId;
         slot.classList.add('drop-slot-filled');
+        window.ExerciseCommon.attachHintLongPress(slot);
 
         selectedChip.classList.remove('pool-chip-selected');
         selectedChip.disabled = true;
@@ -294,10 +320,16 @@
     checkBtn.addEventListener('click', () => {
       let correctCount = 0;
 
-      blanks.forEach(({ el, correct, kind }) => {
+      blanks.forEach(({
+        el, correct, translation, kind,
+      }) => {
+        const correctLabel = translation ? `${correct} - ${translation}` : correct;
+
         if (kind === 'slot') {
           const filled = el.dataset.filled === 'true';
-          const placed = filled ? el.textContent.trim() : '';
+          // dataset.word, not textContent — see the note above where it's
+          // set (textContent would pull in a cloned tooltip's text too).
+          const placed = filled ? (el.dataset.word || '').trim() : '';
           el.disabled = true;
           if (filled && placed === correct) {
             el.classList.add('drop-slot-correct');
@@ -306,7 +338,7 @@
             el.classList.add('drop-slot-incorrect');
             const feedback = document.createElement('span');
             feedback.className = 'exercise-feedback';
-            feedback.textContent = ` (correcto: ${correct})`;
+            feedback.textContent = ` (correcto: ${correctLabel})`;
             el.after(feedback);
           }
         } else {
@@ -320,7 +352,7 @@
             el.classList.add('input-incorrect');
             const feedback = document.createElement('span');
             feedback.className = 'exercise-feedback';
-            feedback.textContent = ` (correcto: ${correct})`;
+            feedback.textContent = ` (correcto: ${correctLabel})`;
             el.after(feedback);
           }
         }
@@ -336,7 +368,7 @@
     });
 
     retryBtn.addEventListener('click', () => {
-      renderExercise(container, row, setNumber, allSets, mode);
+      renderExercise(container, row, setNumber, allSets, mode, availableLevels, requestedLevel);
     });
 
     controls.appendChild(checkBtn);

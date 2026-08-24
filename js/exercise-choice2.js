@@ -39,23 +39,26 @@
 
   async function loadExercise(container) {
     try {
-      const { rows, requestedSet, allSets } = await window.ExerciseCommon.loadCsvSet(container.dataset.src);
+      const {
+        rows, requestedSet, allSets, availableLevels, requestedLevel,
+      } = await window.ExerciseCommon.loadCsvSet(container.dataset.src);
 
       if (rows.length === 0) {
         container.innerHTML = `<p>No existe la serie ${requestedSet}.</p>`;
         return;
       }
 
-      renderExercise(container, rows, requestedSet, allSets);
+      renderExercise(container, rows, requestedSet, allSets, availableLevels, requestedLevel);
     } catch (err) {
       console.error('No se pudo cargar el ejercicio', err);
       container.innerHTML = '<p>No se pudo cargar el ejercicio. Inténtalo de nuevo más tarde.</p>';
     }
   }
 
-  function renderExercise(container, rows, setNumber, allSets) {
+  function renderExercise(container, rows, setNumber, allSets, availableLevels, requestedLevel) {
     container.innerHTML = '';
 
+    window.ExerciseCommon.renderLevelNav(availableLevels, requestedLevel);
     const label = window.ExerciseCommon.renderSeriesNav(setNumber, allSets);
     if (label) container.appendChild(label);
 

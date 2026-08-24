@@ -1,21 +1,21 @@
-﻿set,id,before,after,infinitive,tense,correct,translation
-1,1,Yo,al {parque|park} ayer.,ir,pretérito perfecto simple,fui,to go
-1,2,Ellos,la {verdad|truth}.,decir,pretérito perfecto simple,dijeron,to say
-1,3,Vosotros,con la {ventana|window} {abierta|open}.,dormir,pretérito perfecto simple,dormisteis
-1,4,Tú ,con la {cabeza|head}.,asentir,pretérito imperfecto,asentías
-1,5,Nosotros,{ganar|to win}.,merecer,pretérito imperfecto,merecíamos
-2,1,Ella,todos los {días|days} a {gimnasia|gym class}. ,ir,pretérito imperfecto,iba
-2,2,Con la lluvia,la {montaña|mountain} {rápidamente|quickly}.,descender,pretérito perfecto simple,descendimos
-2,3,El taxista,muy {rápido|fast} por la {autovía|highway}. ,conducir,pretérito perfecto simple,condujo
-2,4,El caballo,al {trote|trotting}. ,andar,pretérito imperfecto,andaba
-2,5,Ustedes ,cada {detalle|detail}.,recordar,pretérito imperfecto,recordaban
-3,1,El bombero ,{pasar|to happen} a las personas. ,impedir,pretérito perfecto simple,impidió
-3,2,Los matorrales,{entre|between} los {árboles|trees}.,florecer,pretérito imperfecto,florecían
-3,3,Tú ,muy bien tu {dinero|money}. ,invertir,pretérito perfecto simple,invertiste
-3,4,Pedro y yo,las {camisetas|t-shirts} para los {niños|kids}. ,teñir,pretérito perfecto simple,teñimos
-3,5,El tren ,cada {día|day} a las cuatro. ,salir,pretérito imperfecto,salía
-4,1,En las montañas ,mucho cada {invierno|winter}. ,nevar,pretérito imperfecto,nevaba
-4,2,Vosotros,el {texto|text} perfectamente. ,entender,pretérito perfecto simple,entendisteis
-4,3,Yo,para poder {cruzar|to cross} la {calle|street}.,detener,pretérito perfecto simple,detuve
-4,4,Ustedes ,por la {izquierda|left} en Sudáfrica. ,conducir,pretérito imperfecto,conducían
-4,5,Yo ,todas mis {asignaturas|classes}. ,aprobar,pretérito perfecto simple,aprobé
+﻿set,id,before,after,infinitive,tense,correct,translation,level
+1,1,Yo,al {parque|park} ayer.,ir,pretérito perfecto simple,fui,to go,A2
+1,2,Ellos,la {verdad|truth}.,decir,pretérito perfecto simple,dijeron,to say,A2
+1,3,Vosotros,con la {ventana|window} {abierta|open}.,dormir,pretérito perfecto simple,dormisteis,to sleep,A2
+1,4,Tú ,con la {cabeza|head}.,asentir,pretérito imperfecto,asentías,to nod,A2
+1,5,Nosotros,{ganar|to win}.,merecer,pretérito imperfecto,merecíamos,to deserve,A2
+2,1,Ella,todos los {días|days} a {gimnasia|gym class}. ,ir,pretérito imperfecto,iba,to go,A2
+2,2,Con la lluvia,la {montaña|mountain} {rápidamente|quickly}.,descender,pretérito perfecto simple,descendimos,to go down,A2
+2,3,El taxista,muy {rápido|fast} por la {autovía|highway}. ,conducir,pretérito perfecto simple,condujo,to drive,A2
+2,4,El caballo,al {trote|trotting}. ,andar,pretérito imperfecto,andaba,to walk,A2
+2,5,Ustedes ,cada {detalle|detail}.,recordar,pretérito imperfecto,recordaban,to remember,A2
+3,1,El bombero ,{pasar|to happen} a las personas. ,impedir,pretérito perfecto simple,impidió,to prevent,A2
+3,2,Los matorrales,{entre|between} los {árboles|trees}.,florecer,pretérito imperfecto,florecían,to flower,A2
+3,3,Tú ,muy bien tu {dinero|money}. ,invertir,pretérito perfecto simple,invertiste,to invest,A2
+3,4,Pedro y yo,las {camisetas|t-shirts} para los {niños|kids}. ,teñir,pretérito perfecto simple,teñimos,to dye,A2
+3,5,El tren ,cada {día|day} a las cuatro. ,salir,pretérito imperfecto,salía,to get out,A2
+4,1,En las montañas ,mucho cada {invierno|winter}. ,nevar,pretérito imperfecto,nevaba,to sknow,A2
+4,2,Vosotros,el {texto|text} perfectamente. ,entender,pretérito perfecto simple,entendisteis,to understand,A2
+4,3,Yo,para poder {cruzar|to cross} la {calle|street}.,detener,pretérito perfecto simple,detuve,to stop,A2
+4,4,Ustedes ,por la {izquierda|left} en Sudáfrica. ,conducir,pretérito imperfecto,conducían,to drive,A2
+4,5,Yo ,todas mis {asignaturas|classes}. ,aprobar,pretérito perfecto simple,aprobé,to pass,A2

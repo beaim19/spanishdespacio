@@ -1,11 +1,91 @@
-﻿set,id,before,after,option_a,option_b,correct
-1,1,El {coche|car} es muy,.,rápido,rápida,rápido
-1,2,La {chica|girl} es muy,.,alto,alta,alta
-1,3,Los {libros|books} son muy,.,interesante,interesantes,interesantes
-1,4,Las {flores|flowers} son muy,.,bonitos,bonitas,bonitas
-1,5,Mi {hermano|brother} es muy,.,trabajador,trabajadora,trabajador
-2,1,Mi {hermana|sister} es muy,.,trabajador,trabajadora,trabajadora
-2,2,El {examen|test} fue muy,.,difícil,difíciles,difícil
-2,3,Las {preguntas|questions} fueron muy,.,fácil,fáciles,fáciles
-2,4,Este {ejercicio|exercise} es,.,complicado,complicada,complicado
-2,5,Esta {lección|lesson} es,.,complicado,complicada,complicada
+﻿set,id,before,after,option_a,option_b,correct,level
+1,1,El {coche|car} es muy,.,rápido,rápida,rápido,A1
+1,2,La {chica|girl} es muy,.,alto,alta,alta,A1
+1,3,Son todas {empresas|companies},.,locales,locals,locales,A1
+1,4,Las {flores|flowers} son muy,.,bonitos,bonitas,bonitas,A1
+1,5,Mi {hermano|brother} es muy,.,trabajador,trabajadora,trabajador,A1
+2,1,Mi {hermana|sister} es muy,.,trabajador,trabajadora,trabajadora,A1
+2,2,El {examen|test} fue muy,.,difícil,difíciles,difícil,A1
+2,3,Ellas son ,.,españolas,españoles,españolas,A1
+2,4,Las niñas,{juegan|to play} en el {jardín|garden}. ,felizes,felices,felices,A1
+2,5,Esta {lección|lesson} es,.,complicado,complicada,complicada,A1
+3,1,Me gustan las {mesas|tables},.,azules,azulas,azules,A1
+3,2,El director ,es {joven|young}. ,nueva,nuevo,nuevo,A1
+3,3,Voy a un bar,.,irlandés,irlandese,irlandés,A1
+3,4,Ellos {usan|to use} un {coche|car},.,familiaro,familiar,familiar,A1
+3,5,Tengo un trabajo,.,sencillo,sencilla,sencillo,A1
+4,1,Las {maletas|suitcases},son bonitas. ,pequeña,pequeñas,pequeñas,A1
+4,2,La {estación|station} ,está {abierta|open}. ,principala,principal,principal,A1
+4,3,Las {capitales|capitals},tienen mucha {historia|history}. ,europea,europeas,europeas,A1
+4,4,El museo,es {barato|cheap}. ,moderno,moderna,moderno,A1
+4,5,La foto ,es interesante. ,viejo,vieja,vieja,A1
+5,1,Estos {caballos|horses} son muy ,.,dócils,dóciles,dóciles,A1
+5,2,El {desayuno|breakfast} ,es bueno. ,temprana,temprano,temprano,A1
+5,3,Me gusta el café,.,sola,solo,solo,A1
+5,4,La {fruta|fruit},es {mejor|better}. ,maduro,madura,madura,A1
+5,5,El profesor,{habla|to speak} muy bien. ,nativos,nativo,nativo,A1
+6,1,Este {ejercicio|exercise} es,.,complicado,complicada,complicado,A1
+6,2,La {chica|girl} {tiene|to have} el {pelo|hair},.,rubia,rubio,rubio,A1
+6,3,Su novia es,.,francés,francesa,francesa,A1
+6,4,Vivo en un {piso|apartment},.,céntrica,céntrico,céntrico,A1
+6,5,Las {preguntas|questions} fueron muy,.,fácil,fáciles,fáciles,A1
+1,1,Las {maletas|suitcases},están {en la puerta|by the door}.,grandes,grande,grandes,A2
+1,2,La música ,me {gusta|to like} mucho. ,alegres,alegra,alegre,A2
+1,3,La {actriz|actress},es Julieta. ,joven,jovena,joven,A2
+1,4,No puedo {abrir|open} la {puerta|door},.,marrona,marrón,marrón,A2
+1,5,Los {libros|books} son muy,.,interesante,interesantes,interesantes,A2
+2,1,Su casa,está en Brasil. ,habitual,habituala,habitual,A2
+2,2,El agua ,es agradable. ,fresco,fresca,fresca,A2
+2,3,La merienda ,es muy buena. ,dulza,dulce,dulce,A2
+2,4,El {insecto|insect},corre rápido. ,fea,feo,feo,A2
+2,5,El {hombre|man},{corre|to run} muy {rápido|fast}. ,deportista,deportisto,deportista,A2
+3,1,Es una chica muy,.,agradable,agradabla,agradable,A2
+3,2,El enfermero es,.,joven,joveno,joven,A2
+3,3,La maestra es,.,jovena,joven ,joven,A2
+3,4,La hija,es {responsible|liable}. ,mayora,mayor,mayor,A2
+3,5,El aula ,es la mía. ,pequeña,pequeño,pequeña ,A2
+4,1,Esta flor es muy,.,bonita,bonito,bonita ,A2
+4,2,Sus gafas son,que las mías. ,peoras,peores,peores,A2
+4,3,Su perro es tan,como el mío. ,dócil ,docilo,dócil ,A2
+4,4,Los niños ,{cuidan|to take care} de los pequeños. ,mayores,mayors,mayores,A2
+4,5,Estos chicos son muy,.,habladoras,habladores,habladores,A2
+1,1,Los {guantes|gloves},oscuro son pequeños. ,marrón,marrones,marrón,B1
+1,2,Todos piensan que él es un,rey. ,grande ,gran ,gran ,B1
+1,3,Los trabajadores son muy,.,tenaces,tenazes,tenaces,B1
+1,4,En el Sur el clima es,.,mediterráneo,mediterránea,mediterráneo,B1
+1,5,Este aula,es enorme. ,magno,magna,magna,B1
+2,1,Es la decisión,.,acertada,acertado,acertada,B1
+2,2,Creo que es un ,chico. ,bueno,buen,buen,B1
+2,3,Su madre dice que es un chico,.,bueno,buen,bueno,B1
+2,4,El {manzano|apple tree} tiene manzanas,.,verdes,verdas,verdes,B1
+2,5,Con este ,tiempo no salgo. ,malo,mal,mal,B1
+3,1,"De todas las {toallas|towels}, las",son mías. ,gran,grandes,grandes,B1
+3,2,¡Qué abuelo más,tienes!,simpática,simpático,simpático,B1
+3,3,Esa era la,solución. ,mejor,mejora,mejor,B1
+3,4,,persona puede venir a la fiesta. ,cualquiera,cualquier,cualquier,B1
+3,5,El tiempo,es desagradable. ,malo,mal,malo,B1
+4,1,Estos {pasteles|cakes} son,.,bunísimas,buenísimos,buenísimos,B1
+4,2,"De todas las {toallas|towels}, la",es la mía. ,gran,grande,grande ,B1
+4,3,Hay una mesa,.,tuyo,tuya,tuya,B1
+4,4,Ayer fue mi,día de clase. ,primero,primer,primer,B1
+4,5,El {piso|apartment} ,es muy {luminosos|bright}. ,primero,primer,primero,B1
+1,1,La {ventana|window} era de,{anchura|width} y {altura|height}. ,amplia,amplias,amplia,B2
+1,2,Me gusta la {ventana|window} con anchura y altura,.,amplia,amplias,amplias,B2
+1,3,Mañana viene alguien,nuevo. ,nueva,nuevo ,nuevo,B2
+1,4,El atleta llegó a la meta,.,sudorosa,sudoroso,sudoroso,B2
+1,5,Los virus,son peligrosos. ,contagioso,contagiosos,contagiosos,B2
+2,1,Al amanecer el cielo ,era precioso. ,amarillento,amarillenta,amarillento,B2
+2,2,Tanto el coche como la casa son,.,carísimos,carísimas,carísimos,B2
+2,3,El rostro era de,nariz y orejas. ,grandes,gran,gran,B2
+2,4,La crisis,fue intensa. ,pasadas,pasada,pasada,B2
+2,5,El lobo tenía unas orejas y nariz,.,grande,grandes,grandes,B2
+3,1,Todos dicen que es un barrio,.,cosmopolito,cosmopolita,cosmopolita,B2
+3,2,La alumna es más,de lo que me dijiste. ,inteligente,inteligenta,inteligente,B2
+3,3,Cuando nos llamó estaba,.,desesperados,desesperado,desesperado,B2
+3,4,La joven es,en todo el país. ,archiconocido,archiconocida,archiconocida,B2
+3,5,Busco una comida que sea,.,rico,rica,rica,B2
+4,1,Estoy,en que vengas. ,interesante,interesada,interesada,B2
+4,2,La bicicleta de ,ruedas y manillar es un sueño. ,rojos,rojas,rojas,B2
+4,3,Las,escaleras no llevan a ningún sitio. ,largos,largas,largas,B2
+4,4,Al fin llegaron a la meta corredores y corredoras,.,cansadas,cansados,cansados,B2
+4,5,Al final compré la bici con manillar y ruedas,.,rojos,rojas,rojos,B2

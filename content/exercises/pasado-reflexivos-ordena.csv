@@ -1,21 +1,21 @@
-﻿set,id,correct,also_correct
-1,1,Yo me {desperté|wake up} {tarde|late} ayer.,Ayer yo me desperté tarde.
-1,2,Ellos se {broncearon|to tun} mucho en la {playa|beach}.,
-1,3,Vosotros os {reisteis|to laugh} mucho con esa {película|movie}.,
-1,4,Los {atletas|athletes} se fueron {temprano|early} a casa. ,
-1,5,El agua se {heló|to freeze} {rápidamente|quickly}.,
-2,1,Las {bailarinas|dancers} se {entretienen|to be hold up} con las {zapatillas|shoes}. ,
-2,2,El niño se {esforzó|to strive} para {ganar|to win}. ,
-2,3,El {perro|dog} se {perdió|to get lost} en el {parque|park}. ,
-2,4,El {juguete|toy} se {rompió|break} muy {rápido|fast}. ,
-2,5,Ustedes se {movían|to move} con {agilidad|agility}. ,
-3,1,Su {abuela|grandma} se {mantenía|to keep in shape} muy bien. ,
-3,2,A la hora de la {siesta|nap} los {muchachos|guys} se dormían {rápido|fast}.,Los muchachos se dormían rápido a la hora de la siesta.
-3,3,El {jugador|player} se {rindió|to surrender} a los pocos minutos. ,A los pocos minutos el jugador se rindió.
-3,4,En {carnaval|carnival} mi {hijo|son} se {disfrazó|to dress up} de {pirata|pirate}. ,Mi hijo se disfrazó de pirata en carnaval.
-3,5,La {moneda|coin} se {cayó|to fall} por el {desagüe|drain}.,
-4,1,El {banco|bench} se {rompió|to beak} {a causa|because of} del {peso|weight}. ,A causa del peso el banco se rompió. 
-4,2,Ustedes se {arrepintieron|regret} de ir a la {fiesta|party}. ,
-4,3,Me {acordé|to remember} de su {cumpleaños|birthday} un día {tarde|late}.,
-4,4,Os {calentasteis|warm up} las {manos|hands} en la {chimenea|chimney}. ,En la chimenea os calentasteis las manos. 
-4,5,Los {hermanos|brothers} se {parecían|to look like} mucho a su {padre|father}. ,
+﻿set,id,correct,also_correct,level
+1,1,Yo me {desperté|wake up} {tarde|late} ayer.,Ayer yo me desperté tarde.,A2
+1,2,Ellos se {broncearon|to tun} mucho en la {playa|beach}.,,A2
+1,3,Vosotros os {reisteis|to laugh} mucho con esa {película|movie}.,,A2
+1,4,Los {atletas|athletes} se fueron {temprano|early} a casa. ,,A2
+1,5,El agua se {heló|to freeze} {rápidamente|quickly}.,,A2
+2,1,Las {bailarinas|dancers} se {entretienen|to be hold up} con las {zapatillas|shoes}. ,,A2
+2,2,El niño se {esforzó|to strive} para {ganar|to win}. ,,A2
+2,3,El {perro|dog} se {perdió|to get lost} en el {parque|park}. ,,A2
+2,4,El {juguete|toy} se {rompió|break} muy {rápido|fast}. ,,A2
+2,5,Ustedes se {movían|to move} con {agilidad|agility}. ,,A2
+3,1,Su {abuela|grandma} se {mantenía|to keep in shape} muy bien. ,,A2
+3,2,A la hora de la {siesta|nap} los {muchachos|guys} se dormían {rápido|fast}.,Los muchachos se dormían rápido a la hora de la siesta.,A2
+3,3,El {jugador|player} se {rindió|to surrender} a los pocos minutos. ,A los pocos minutos el jugador se rindió.,A2
+3,4,En {carnaval|carnival} mi {hijo|son} se {disfrazó|to dress up} de {pirata|pirate}. ,Mi hijo se disfrazó de pirata en carnaval.,A2
+3,5,La {moneda|coin} se {cayó|to fall} por el {desagüe|drain}.,,A2
+4,1,El {banco|bench} se {rompió|to beak} {a causa|because of} del {peso|weight}. ,A causa del peso el banco se rompió. ,A2
+4,2,Ustedes se {arrepintieron|regret} de ir a la {fiesta|party}. ,,A2
+4,3,Me {acordé|to remember} de su {cumpleaños|birthday} un día {tarde|late}.,,A2
+4,4,Os {calentasteis|warm up} las {manos|hands} en la {chimenea|chimney}. ,En la chimenea os calentasteis las manos. ,A2
+4,5,Los {hermanos|brothers} se {parecían|to look like} mucho a su {padre|father}. ,,A2

@@ -1,16 +1,16 @@
-﻿set,id,before,after,word,hint,translation
-1,1,Tengo,años.,veinte,20,twenty
-1,2,Hay,días en una {semana|week}.,siete,7,seven
-1,3,En mi {clase|class} somos,{estudiantes|students}.,treinta,30,thirty
-1,4,Mi {casa|house} tiene,{habitaciones|rooms}.,cuatro,4,four
-1,5,El {año|year} tiene,{meses|months}.,doce,12,twelve
-2,1,Compré,{manzanas|apples}.,seis,6,six
-2,2,Necesito,euros para el {billete|ticket}.,cincuenta,50,fifty
-2,3,Hoy {cumplo|to have a birthday},{años|years}.,treinta y dos,32,thirty two
-2,4,Este {edificio|building} tiene,{pisos|floors}.,quince,15,fifteen
-2,5,En la {fiesta|party} había,{invitados|guests}.,cien,100,one hundred
-3,1,La {entrada|ticket} costaba,euros. ,cinco,5,five
-3,2,,{golondrinas|swallow} hacían el {nido|nest}. ,tres,3,three
-3,3,Necesito,kilos de {harina|flour}. ,veinticinco,25,twenty five
-3,4,Había,niños en el {campamento|summer camp}. ,cuarenta y tres,43,forty three
-3,5,Todo está en la {caseta|stall},.,Sesenta y cuatro,64,sixty four
+﻿set,id,before,after,word,hint,translation,level
+1,1,Tengo,años.,veinte,20,twenty,A1
+1,2,Hay,días en una {semana|week}.,siete,7,seven,A1
+1,3,En mi {clase|class} somos,{estudiantes|students}.,treinta,30,thirty,A1
+1,4,Mi {casa|house} tiene,{habitaciones|rooms}.,cuatro,4,four,A1
+1,5,El {año|year} tiene,{meses|months}.,doce,12,twelve,A1
+2,1,Compré,{manzanas|apples}.,seis,6,six,A1
+2,2,Necesito,euros para el {billete|ticket}.,cincuenta,50,fifty,A1
+2,3,Hoy {cumplo|to have a birthday},{años|years}.,treinta y dos,32,thirty two,A1
+2,4,Este {edificio|building} tiene,{pisos|floors}.,quince,15,fifteen,A1
+2,5,En la {fiesta|party} había,{invitados|guests}.,cien,100,one hundred,A1
+3,1,La {entrada|ticket} costaba,euros. ,cinco,5,five,A1
+3,2,,{golondrinas|swallow} hacían el {nido|nest}. ,tres,3,three,A1
+3,3,Necesito,kilos de {harina|flour}. ,veinticinco,25,twenty five,A1
+3,4,Había,niños en el {campamento|summer camp}. ,cuarenta y tres,43,forty three,A1
+3,5,Todo está en la {caseta|stall},.,Sesenta y cuatro,64,sixty four,A1

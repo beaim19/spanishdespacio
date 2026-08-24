@@ -71,11 +71,14 @@ values in the file. A set doesn't have to be exactly 10 rows either —
 nothing in any engine assumes a fixed count, it's just whatever rows share
 that `set` value (e.g. some of Adjetivos' sets currently have 5).
 
-Whenever there's more than one series, a fixed note appears right under
-the "Serie N" heading: "La dificultad de los ejercicios aumenta en cada
-serie." — same gate as the heading itself (`renderSeriesNav` in
-`exercise-common.js` now returns both as one fragment), so a single-series
-topic never shows it.
+An earlier version of `renderSeriesNav` also showed a fixed note under the
+"Serie N" heading ("La dificultad de los ejercicios aumenta en cada
+serie."), on the assumption that difficulty just ramps up with the series
+number. That's been dropped now that content is tagged with an explicit
+CEFR `level` (A1/A2/B1/B2, see below) instead — difficulty is a property
+of the level, not the series number, so the blanket note no longer said
+anything reliably true. `renderSeriesNav` now just returns the "Serie N"
+heading on its own.
 
 **To add a brand-new topic of this same type:** new CSV
 (`content/exercises/<topic>.csv`), copy `exercises/ser-estar.html` changing
@@ -132,16 +135,22 @@ directly instead of a single `data-src`:
      data-src-template="/content/exercises/presente-{type}.csv"></div>
 ```
 
-Two slots elsewhere on the page are where the two switchers render:
+Three slots elsewhere on the page are where the switchers render:
 `#variant-switcher-slot` (Regular/Irregular/Reflexivos tabs — put this one in
-the intro band, next to the title) and `#series-switcher-slot` (Serie 1/2/...
-— put this one in the white area, above `#exercise-app`). The URL ends up
-looking like `presente.html?type=irregular&set=2`; switching variant always
+the intro band, next to the title), `#level-switcher-slot` (A1/A2/B1/B2 tabs
+— also in the intro band, right after `#variant-switcher-slot` so it stacks
+underneath when a topic has both; see "CEFR levels" further down), and
+`#series-switcher-slot` (Serie 1/2/... — put this one in the white area,
+above `#exercise-app`). The URL ends up looking like
+`presente.html?type=irregular&level=A2&set=2`; switching variant always
 lands on that variant's set 1, since set numbers don't mean anything across
-variants. To add a fourth variant later: new CSV, add its slug to
-`data-variants`, done — no JS changes needed. A topic that doesn't need
-variants at all (ser/estar, por/para, adjetivos, números) just keeps the
-plain `data-src` attribute and never renders a variant tab.
+variants (same reasoning applies to level — see "CEFR levels"). To add a
+fourth variant later: new CSV, add its slug to `data-variants`, done — no JS
+changes needed. A topic that doesn't need variants at all (ser/estar,
+por/para, adjetivos, números) just keeps the plain `data-src` attribute and
+never renders a variant tab; every topic page still needs the
+`#level-switcher-slot` div, though — it silently renders nothing until that
+topic's CSV actually has more than one level.
 
 Presente itself has since grown past this simple case — it now also offers
 several exercise *types* per variant — see the combined pattern below.
@@ -483,33 +492,35 @@ marked inline with square brackets:
 
 ```
 set,id,text
-1,1,"Ayer fuimos a [la|el|los|una] playa. Hacía [un|una|unos] calor increíble."
+1,1,"Ayer fuimos a [la] playa. Hacía [un] calor increíble. Vimos un [perro|dog] enorme."
 ```
 
-Inside the brackets, the first word (before any `|`) is the correct
-answer; any further `|`-separated words are decoys, parsed but not
-currently used (see below). This means authoring a passage is just: write
-the paragraph normally in a doc, then wrap whichever words should be
-blanked in `[correct|decoy1|decoy2]` — no need to split the text into
-separate `before`/`after` fragments across multiple rows, no need to keep
-a running word bank in sync by hand, and no risk of the reconstructed
-passage drifting from what you actually wrote. The one thing to watch:
-since the whole passage is one CSV field containing commas, wrap it in
-double quotes (as in the example above) — plain Excel entry handles this
-automatically as long as you don't manually strip the surrounding quotes.
+Inside the brackets, the first item is the correct answer; an optional
+second item, after a single `|`, is an English translation for that word
+(see "Word-level translation hints" below). This means authoring a passage
+is just: write the paragraph normally in a doc, then wrap whichever words
+should be blanked in `[correct]` (or `[correct|translation]` to add a
+hover hint) — no need to split the text into separate `before`/`after`
+fragments across multiple rows, no need to keep a running word bank in
+sync by hand, and no risk of the reconstructed passage drifting from what
+you actually wrote. The one thing to watch: since the whole passage is one
+CSV field containing commas, wrap it in double quotes (as in the example
+above) — plain Excel entry handles this automatically as long as you don't
+manually strip the surrounding quotes.
 
-Fácil's word bank shows only the correct words (one chip per blank, same
-`.word-pool`/`.drop-slot` pattern as Empareja), not the decoys, and — like
-Empareja — sits above the passage, not below it. Small
-multiple-choice boxes sitting right above each individual blank were the
-first design tried, but a ~200-word passage carries a dozen-plus blanks,
-and that many 44px-tall button clusters wedged into flowing prose read as
-cluttered rather than readable — it broke the "one continuous passage"
-feel that's the actual point of a cloze exercise. A single word bank above
-the whole passage reads far more like a normal fill-in-the-blank exercise,
-so the decoy words stay parsed in `parseText()` (kept in the CSV/engine in
-case a future per-blank multiple-choice variant wants them) but aren't
-placed in the pool today.
+Earlier drafts of this format allowed a whole list of decoy words
+(`[correct|decoy1|decoy2|...]`) for a possible future per-blank
+multiple-choice variant. That variant was never built — Fácil's word bank
+only ever shows the correct words (one chip per blank, same
+`.word-pool`/`.drop-slot` pattern as Empareja, sitting above the passage
+rather than below it, same as Empareja) — so the format was simplified
+down to a single optional word, and that freed-up second slot became the
+translation column instead. Small multiple-choice boxes sitting right
+above each individual blank were also considered and rejected early on: a
+~200-word passage carries a dozen-plus blanks, and that many 44px-tall
+button clusters wedged into flowing prose read as cluttered rather than
+readable — it broke the "one continuous passage" feel that's the actual
+point of a cloze exercise.
 
 `js/exercise-texto.js` implements this: `parseText()` splits `text` on the
 `[...]` regex into alternating plain-text and blank segments, then renders
@@ -519,15 +530,21 @@ slots (Fácil, reusing the Empareja click-to-place pattern and its
 `.drop-slot`/`.pool-chip` styling) or `<input>` boxes (Difícil, reusing the
 Completa/typed accent-toolbar and grow-on-input behavior) standing in for
 each blank. Both engines share the same parsing, grading, and retry logic;
-they only differ in how a blank is presented and read back.
+they only differ in how a blank is presented and read back. When a blank
+has a translation, Fácil shows it as a hover/long-press tooltip on the
+word-bank chip (and on the placed slot, once filled — tracked via
+`dataset.word`/cloned `.hint-tooltip`, same reasoning as Empareja); both
+Fácil and Difícil show it in the "(correcto: perro - dog)" reveal after
+checking.
 
 Three categories are live now: `texto-articulos.csv` (definite/indefinite
-articles), `texto-adjetivos.csv` (gender/number agreement, decoys are the
-same adjective in the wrong gender/number), and `texto-verbos.csv`
-(present-tense subject-verb agreement, decoys are the same verb conjugated
-for a different subject). Each currently has one worked passage (set 1) as
-a starting point — add more the same way as any other topic, a new `set`
-number with its own `text` row.
+articles — translations generally aren't useful here, since "un"/"una" all
+mean "a"), `texto-adjetivos.csv` (gender/number agreement), and
+`texto-verbos.csv` (present-tense subject-verb agreement). Each currently
+has one worked passage (set 1) as a starting point, with a couple of
+example `[correct|translation]` blanks seeded in adjetivos/verbos — add
+more the same way as any other topic, a new `set` number with its own
+`text` row.
 
 ## Word-level translation hints
 
@@ -541,8 +558,11 @@ translating the whole sentence:
 ```
 
 `{word|translation}` — curly braces, not square brackets, specifically so
-this never collides with Texto's own `[correct|decoy]` blank syntax; a
-Texto passage can freely use both in the same `text` field. The word
+this never collides with Texto's own `[correct]` blank syntax; a Texto
+passage can freely use both in the same `text` field: braces for a
+translatable word in the surrounding text, brackets for a blank to fill
+in (which has its own, separate way to carry a translation — see below).
+The word
 renders with a dotted underline; hovering it on desktop (or long-pressing
 it on a touchscreen, ~500ms) shows the translation in a small tooltip.
 Entirely optional — plain text with no braces renders exactly as it always
@@ -614,6 +634,16 @@ ride along unaffected) and with `also_correct`'s alternate word orders
 (which don't need the brackets repeated — a translation only has to be
 defined once, on `correct`).
 
+**Texto** is the other exception, and the odd one out — the only engine
+where the translatable word IS the blank itself, not a chip or a
+surrounding word. It reuses its own existing `[...]` blank syntax rather
+than `{...}` braces (braces are reserved there for the *surrounding* text,
+via the same mechanism as every other engine): `[correct]` for a plain
+blank, `[correct|translation]` to add one. See "Splitting a topic into
+exercise types" above for the full Texto CSV format and how the
+translation surfaces in both Fácil (word-bank chip tooltip) and Difícil
+(the post-check reveal).
+
 One implementation detail worth knowing if you're ever debugging a chip:
 once a chip or slot carries a `.hint-tooltip` child, its `.textContent`
 includes the translation text too (`textContent` concatenates every
@@ -627,6 +657,58 @@ site-wide (Ser y estar, Por y para, Adjetivos, Números, Presente, Pasado,
 Texto) so the syntax is visible in context wherever you go to fill in the
 rest — the translations chosen are just quick examples, not vetted for
 being the ideal word to gloss in each sentence.
+
+## CEFR levels (A1/A2/B1/B2)
+
+Content can be tagged with an optional `level` column (`A1`, `A2`, `B1`, or
+`B2`, following the Instituto Cervantes' Plan Curricular / the standard
+CEFR scale). **The site now filters by level.** Each topic page that has
+one gets an A1/A2/B1/B2 tab strip (`renderLevelNav()` in
+`exercise-common.js`) in the green intro band — same visual treatment as
+the verb-type variant tabs, and stacking right below them when a topic has
+both (Presente, Pasado, Texto). Picking a level narrows down which `set`s
+exist for the rest of that visit, exactly the way picking a verb-type
+variant already narrows down which CSV loads.
+
+A CSV with no `level` column at all, or where every row shares the same
+single level, shows no switcher — same "don't render a switcher for one
+option" rule every other nav on the site already follows, so partially-
+or not-yet-leveled topics don't break, they just don't offer the filter
+yet. `?level=` isn't given a default the first time a leveled topic loads
+either: `loadCsvSet()` just picks the first level found in the CSV (`A1`
+before `A2` before `B1` before `B2`, since that sort order falls out of
+plain alphabetical sorting) — so a first-time visitor always lands on the
+easiest content available rather than a mix of everything.
+
+**Set numbers restart at 1 within each level.** A topic's rows are one
+long block per level (all `A1` rows, then all `A2` rows, then `B1`, then
+`B2`), and within each level block `set` starts over at 1, 2, 3... This
+matters because the series pager (`buildSeriesPager` in
+`exercise-common.js`) shows the literal `set` value as its label ("Serie
+1", "Serie 2"...), and `loadCsvSet()` now computes `allSets` from
+whichever level is currently selected — so restarting numbering per level
+is what keeps the pager showing a clean "Serie 1, 2, 3" for that level,
+instead of whatever gaps a single continuous count across all four levels
+would leave. Switching level always resets `set` back to page 1 for
+exactly this reason (an old set number could point at nothing, or worse,
+silently land on an unrelated set that happens to share the same number in
+the new level).
+
+Ser y estar is the first topic with full level coverage: three series
+each for A1, A2, B1, and B2, across all five exercise types (`ser-estar.csv`,
+`ser-estar-completa.csv`, `ser-estar-flashcards.csv`, `ser-estar-arrastra.csv`,
+`ser-estar-ordena.csv`). Grammar scope per level roughly follows the
+progression already established in the existing A1/A2 content plus
+standard Cervantes/CEFR sequencing for ser/estar: A1 stays to identity,
+nationality, profession, and location, plus a few very concrete
+resulting-state adjectives (roto, retrasado); A2 adds temporary
+physical/emotional states (contento, cansado) and the present progressive
+(estar + gerundio); B1 introduces adjectives whose meaning shifts between
+ser and estar (aburrido, rico) and mixes in more tenses (futuro,
+condicional, compound past tenses); B2 leans into that meaning-shift
+nuance further (listo, capaz) plus passive voice (ser + participle) versus
+resultant-state (estar + participle), and compound/hypothetical tenses
+(pluscuamperfecto, condicional compuesto).
 
 ### Writing accented characters (á, é, í, ó, ú, ñ, ¿, ¡) correctly
 

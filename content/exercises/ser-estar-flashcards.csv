@@ -1,11 +1,61 @@
-﻿set,id,before,after,tense,subject,correct
-1,1,"Cuando era pequeña, mi hermana",muy {tímida|shy}.,pretérito imperfecto,ella,era
-1,2,"El año que viene, nosotros",más {experimentados|experienced}.,futuro,nosotros,seremos
-1,3,"Ayer, cuando llegamos, ellos ya",en el hotel.,pretérito pluscuamperfecto,ellos,habían estado
-1,4,"Ahora mismo, yo",muy cansado.,presente,yo,estoy
-1,5,"De niño, tú",muy travieso.,pretérito imperfecto,tú,eras
-1,6,"Mañana, la reunión",a las diez.,futuro,ella,será
-1,7,"Antes de la boda, los novios ya",juntos diez años.,pretérito pluscuamperfecto,ellos,habían estado
-1,8,"Hoy, vosotros",muy simpáticos.,presente,vosotros,sois
-1,9,"En esa época, nosotros",estudiantes.,pretérito imperfecto,nosotros,éramos
-1,10,"El próximo mes, ustedes",en Madrid.,futuro,ustedes,estarán
+﻿set,id,before,after,tense,subject,correct,level
+1,1,Yo,{estudiante|student}.,presente,yo,soy,A1
+1,2,Tú,de México.,presente,tú,eres,A1
+1,3,Ella,en la {oficina|office}.,presente,ella,está,A1
+1,4,Nosotros,{amigos|friends}.,presente,nosotros,somos,A1
+1,5,Vosotros,muy {simpáticos|friendly}.,presente,vosotros,sois,A1
+2,1,Ellos,en el {parque|park}.,presente,ellos,están,A1
+2,2,Mi padre,{médico|doctor}.,presente,él,es,A1
+2,3,Yo,de {Perú|Peru}.,presente,yo,soy,A1
+2,4,Ustedes,{profesoras|teachers}.,presente,ustedes,son,A1
+2,5,Tú,en casa.,presente,tú,estás,A1
+3,1,Nosotras,{hermanas|sisters}.,presente,nosotras,somos,A1
+3,2,Vosotros,en la {playa|beach}.,presente,vosotros,estáis,A1
+3,3,Mi abuela,muy {mayor|old}.,presente,ella,es,A1
+3,4,Yo,en el {gimnasio|gym}.,presente,yo,estoy,A1
+3,5,Ella,{enfermera|nurse}.,presente,ella,es,A1
+1,1,Ahora mismo yo,muy {contento|happy}.,presente,yo,estoy,A2
+1,2,De niño tú,muy {travieso|mischievous}.,pretérito imperfecto,tú,eras,A2
+1,3,Ella,{durmiendo|sleeping} en el sofá.,presente,ella,está,A2
+1,4,Nosotros,{estudiantes|students} en esa época.,pretérito imperfecto,nosotros,éramos,A2
+1,5,Hoy la sopa,muy {salada|salty}.,presente,ella,está,A2
+2,1,Esta mañana yo,en el médico.,pretérito perfecto compuesto,yo,he estado,A2
+2,2,Vosotros,{cansados|tired} después del partido.,presente,vosotros,estáis,A2
+2,3,Mi profesora,muy {paciente|patient}.,presente,ella,es,A2
+2,4,Tú,{trabajando|working} toda la tarde.,presente,tú,estás,A2
+2,5,"Cuando lo conocí, él",ya {jubilado|retired}.,pretérito imperfecto,él,estaba,A2
+3,1,Yo,libre esta tarde.,presente,yo,estoy,A2
+3,2,Este año yo,en dos países distintos.,pretérito perfecto compuesto,yo,he estado,A2
+3,3,Ayer vosotros,muy buenos en la cena.,pretérito perfecto simple,vosotros,fuisteis,A2
+3,4,La casa anteayer,muy {sucia|dirty}.,pretérito imperfecto,ella,estaba,A2
+3,5,Nosotros,{listos|ready} para salir.,presente,nosotros,estamos,A2
+1,1,El año que viene nosotros,más {experimentados|experienced}.,futuro,nosotros,seremos,B1
+1,2,Mañana la reunión,a las diez.,futuro,ella,será,B1
+1,3,Si estás en casa ahora,voy a verte.,presente,tú,estás,B1
+1,4,Yo,muy contenta si vienes.,condicional simple,yo,estaría,B1
+1,5,Las clases,en el aula grande.,futuro,ellas,serán,B1
+2,1,En la actuación del año pasado yo,Romeo.,pretérito perfecto simple,yo,fui,B1
+2,2,Después de vuestros estudios vosotros,grandes médicos.,futuro,vosotros,seréis,B1
+2,3,Según tú la iglesia,abierta ayer.,pretérito imperfecto,ella,estaba,B1
+2,4,El próximo mes ustedes,en Madrid.,futuro,ustedes,estarán,B1
+2,5,Las flores que compré ayer,muy caras.,pretérito perfecto simple,ellas,fueron,B1
+3,1,Mi hermano,muy {aburrido|boring} cuando no tiene nada que hacer.,presente,él,está,B1
+3,2,Este libro,bastante aburrido.,presente,él,es,B1
+3,3,El pescado,muy rico hoy.,presente,él,está,B1
+3,4,Mi tío,"rico, tiene tres casas.",presente,él,es,B1
+3,5,Cuando llegamos la tienda ya,cerrada.,pretérito imperfecto,ella,estaba,B1
+1,1,Cuando era pequeña mi hermana,muy {tímida|shy}.,pretérito imperfecto,ella,era,B2
+1,2,Ellos,{jugando|playing} y por eso no oyeron el teléfono.,condicional simple,ellos,estarían,B2
+1,3,Antes de la boda nosotros ya,juntos diez años.,pretérito pluscuamperfecto,nosotros,habíamos estado,B2
+1,4,Cuando llegues ya,preparados para que nos recojas.,futuro,nosotros,estaremos,B2
+1,5,En esas circunstancias yo no,tan {segura|sure}.,condicional compuesto,yo,habría estado,B2
+2,1,El puente,construido por los romanos.,pretérito perfecto simple,él,fue,B2
+2,2,Cuando llegamos la cena ya,preparada.,pretérito imperfecto,ella,estaba,B2
+2,3,Mi tío,"muy {listo|clever}, siempre tiene una solución.",presente,él,es,B2
+2,4,Si todo sale bien mañana,{listos|ready} para viajar.,futuro,nosotros,estaremos,B2
+2,5,De joven mi abuelo,{capaz|capable} de correr una maratón.,pretérito imperfecto,él,era,B2
+3,1,Al llegar él,recibido con honores.,futuro,él,será,B2
+3,2,Mientras yo,en el supermercado se ha ido la luz.,pretérito imperfecto,yo,estaba,B2
+3,3,Ayer cuando llegamos ellos ya,en el hotel.,pretérito pluscuamperfecto,ellos,habían estado,B2
+3,4,Ustedes,acusados por robo.,presente,ustedes,están,B2
+3,5,Las camisas que tanto me gustan,de oferta.,presente,ellas,están,B2

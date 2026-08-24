@@ -1,21 +1,21 @@
-﻿set,id,before,after,word,translation
-1,1,Yo,a las siete todos los días.,me levanto,to get up
-1,2,Ella,{antes|before} de {desayunar|to have breakfast}.,se ducha,to shower
-1,3,Nosotros,en estas {sillas|chairs}.,nos sentamos,to sit
-1,4,Los niños,los {dientes|teeth} {cada|every} {noche|night}.,se cepillan,to brush
-1,5,El bebé,mucho {cuando|when} {come|to eat}.,se mancha,to stain
-2,1,Tú,todo el tiempo en el {espejo|mirror}.,te miras,to look
-2,2,Ella,las {gafas|glasses} para ver la televisión.,se quita,to take off
-2,3,Vosotros,en estos {sillones|couches}.,os relajáis,to relax
-2,4,Cuando tiene {dolor de cabeza|headache} él,en la {cama|bed}.,se tumba,to lie down
-2,5,Tú,el {pelo|hair} con la {toalla|towel}.,te secas,to dry
-3,1,A mí,ir al {cine|movie theater} {hoy|today}.,me apetece,to crave
-3,2,Ustedes,porque {empiezan|to start} las {vacaciones|vacation}.,se alegran,to be glad
-3,3,El maestro,de los {alumnos|students} durante el {verano|summer}. ,se despide,to say goodbye
-3,4,Vosotros,de la {lluvia|rain} en la {tienda de campañna|camping tent}.,os refugiáis,to shelter
-3,5,Tú,mucho del {ruido|noise} de la {calle|street}. ,te quejas,to complain
-4,1,Los chicos de la {pandilla|gang},en el parque {por la noche|at night}. ,se cuelan,to sneak in
-4,2,Mis padres ,por las {noticias|neas} en el {mundo|world}. ,se interesan,to interest
-4,3,Marcos ,para el máster que {estudiará|to study} este año. ,se matricula,to enroll
-4,4,María y yo ,{de camino|on the way} al {trabajo|work} cada {mañana|morning}. ,nos cruzamos,to cross
-4,5,Su {hijo|son},en la universidad este año. ,se gradúa,to graduate
+﻿set,id,before,after,word,translation,level
+1,1,Yo,a las siete todos los días.,me levanto,to get up,A1
+1,2,Ella,{antes|before} de {desayunar|to have breakfast}.,se ducha,to shower,A1
+1,3,Ella,las {gafas|glasses} para ver la televisión.,se quita,to take off,A1
+1,4,Los niños,los {dientes|teeth} {cada|every} {noche|night}.,se cepillan,to brush,A1
+1,5,El bebé,mucho {cuando|when} {come|to eat}.,se mancha,to stain,A1
+1,1,Tú,todo el tiempo en el {espejo|mirror}.,te miras,to look,A2
+1,2,Nosotros,en estas {sillas|chairs}.,nos sentamos,to sit,A2
+1,3,Vosotros,en estos {sillones|couches}.,os relajáis,to relax,A2
+1,4,Cuando tiene {dolor de cabeza|headache} él,en la {cama|bed}.,se tumba,to lie down,A2
+1,5,Tú,el {pelo|hair} con la {toalla|towel}.,te secas,to dry,A2
+2,1,A mí,ir al {cine|movie theater} {hoy|today}.,me apetece,to crave,A2
+2,2,Ustedes,porque {empiezan|to start} las {vacaciones|vacation}.,se alegran,to be glad,A2
+2,3,El maestro,de los {alumnos|students} durante el {verano|summer}. ,se despide,to say goodbye,A2
+2,4,Vosotros,de la {lluvia|rain} en la {tienda de campañna|camping tent}.,os refugiáis,to shelter,A2
+2,5,Tú,mucho del {ruido|noise} de la {calle|street}. ,te quejas,to complain,A2
+3,1,Los chicos de la {pandilla|gang},en el parque {por la noche|at night}. ,se cuelan,to sneak in,A2
+3,2,Mis padres ,por las {noticias|neas} en el {mundo|world}. ,se interesan,to interest,A2
+3,3,Marcos ,para el máster que {estudiará|to study} este año. ,se matricula,to enroll,A2
+3,4,María y yo ,{de camino|on the way} al {trabajo|work} cada {mañana|morning}. ,nos cruzamos,to cross,A2
+3,5,Su {hijo|son},en la universidad este año. ,se gradúa,to graduate,A2

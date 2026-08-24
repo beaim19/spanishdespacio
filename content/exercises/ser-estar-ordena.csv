@@ -1,51 +1,91 @@
-﻿set,id,correct,also_correct
-1,1,Yo soy de {Inglaterra|England}.,
-1,2,Tú estás en el {parque|park}. ,
-1,3,Nosotros somos {hermanos|siblings}.,
-1,4,Ella es {escritora|writer}. ,
-1,5,Vosotros estáis de {vacaciones|vacation}.,
-2,1,Ustedes son {bienvenidos|welcomed}.,
-2,2,Tú eres muy {amable|nice}. ,
-2,3,Yo estoy {contento|happy}.,
-2,4,Ellos son {maestros|teachers}. ,
-2,5,Él está en Argentina. ,
-3,1,Nosotros estamos {de viaje|on a trip}. ,
-3,2,Ustedes están en el cine. ,
-3,3,Él es muy simpático. ,
-3,4,Yo soy el director.,
-3,5,Tú estás {cantando|singing}. ,
-4,1,Vosotras sois las {jefas|bosses}. ,Las jefas sois vosotras.
-4,2,Yo estoy en casa. ,
-4,3,Nosotros somos sus {padres|parents}. ,
-4,4,Ellos están en el mercado. ,
-4,5,Tú eres la {encargada|manager}. ,La encargada eres tú. 
-5,1,Yo estoy {esperando|waiting} el autobús.,
-5,2,Ellos están {comiendo|eating} {helado|ice cream} ahora. ,Ahora ellos están comiendo helado. 
-5,3,Vosotras sois siempre las favoritas. ,Vosotras sois las favoritas siempre. 
-5,4,Él es el chico más {alto|tall}. ,
-5,5,Ella está {visitando|visiting} a sus padres hoy. ,Hoy ella está visitando a sus padres. |Ella está hoy visitando a sus padres. 
-6,1,Yo soy el {alcalde|mayor} del pueblo. ,El alcalde del pueblo soy yo. 
-6,2,Ustedes están aquí como en su casa. ,
-6,3,Vosotros estáis en el museo de la ciudad.,
-6,4,Tú eres el mejor {jugador|player} del {equipo|team}. ,El mejor jugador del equipo eres tú. 
-6,5,Ellos son del norte de Chile. ,
-7,1,Ella está muy {cansada|tired} hoy.,Hoy ella está muy cansada.|ella está hoy muy cansada.
-7,2,Nosotros somos profesores de español.,
-7,3,El libro es muy interesante.,
-7,4,Ellos están en la {playa|beach} {ahora mismo|right now}.,Ahora mismo ellos están en la playa.|ellos están ahora mismo en la playa
-7,5,Mi {hermano|brother} es muy simpático.,
-8,1,Los niños están {jugando|playing} en el parque.,Los niños en el parque están jugando.
-8,2,La casa de mis vecinos está {encantada|haunted}.,
-8,3,{Dentro de poco|shortly} ustedes estarán {volando|flying} hacia México.,Ustedes estarán volando hacia México dentro de poco.|Ustedes estarán dentro de poco volando hacia México.
-8,4,Las {explicaciones|explanations} fueron muy {claras|clear} desde el {principio|beginning}.,Desde el principio las explicaciones fueron muy claras.|Las explicaciones fueron desde el principio muy claras. 
-8,5,El árbol está {caído|fallen} {en medio|in the middle} del camino. ,
-9,1,Las {mariposas|butterflies} eran de muchos colores distintos. ,
-9,2,Los {árboles frutales|fruit tree} estaban cargados de frutas. ,
-9,3,El mapa de mi madre era muy {antiguo|old}. ,
-9,4,Las {olas|waves} en el {mar|sea} eran muy pequeñas. ,
-9,5,No sé por qué el {maestro|teacher} estaba {enfadado|angry}. ,El maestro estaba enfadado no sé por qué.
-10,1,{Mientras|while| yo cocino ustedes pueden estar en la {terraza|terrace}.,Ustedes pueden estar en la terraza mientras yo cocino.
-10,2,En dos días estaré en Chile con mi familia. ,Estaré en Chile con mi familia en dos días. 
-10,3,Mañana el día será muy {caluroso|warm}. ,El día será muy caluroso mañana.
-10,4,La {cesta|basket} de la compra está muy llena. ,
-10,5,Todas las personas en la {cola|line} eran de Pamplona. ,
+﻿set,id,correct,also_correct,level
+1,1,Yo soy de {Inglaterra|England}.,,A1
+1,2,Tú estás en el {parque|park}. ,,A1
+1,3,Nosotros somos {hermanos|siblings}.,,A1
+1,4,Ella es {escritora|writer}. ,,A1
+1,5,Vosotros estáis de {vacaciones|vacation}.,,A1
+2,1,Ellos son {maestros|teachers}. ,,A1
+2,2,Él está en Argentina. ,,A1
+2,3,Ustedes están en el cine. ,,A1
+2,4,Él es muy {simpático|friendly}. ,,A1
+2,5,Yo soy el director.,El director soy yo. ,A1
+3,1,Vosotras sois las {jefas|bosses}. ,Las jefas sois vosotras.,A1
+3,2,Yo estoy en {casa|home}. ,,A1
+3,3,Nosotros somos sus {padres|parents}. ,,A1
+3,4,Ellos están en el {mercado|market}. ,,A1
+3,5,Ellos son de una {ciudad|city} de Chile. ,,A1
+4,1,Nosotros somos {profesores|teachers} de español.,,A1
+4,2,El {libro|book} es muy interesante.,,A1
+4,3,Mi {hermano|brother} es muy simpático.,,A1
+4,4,Soy argentino pero vivo en Colombia.,Vivo en Colombia pero soy argentino. ,A1
+4,5,Esta {flor|flower} es muy bonita. ,,A1
+1,1,Ustedes son {bienvenidos|welcomed}.,,A2
+1,2,Tú eres muy {amable|nice}. ,,A2
+1,3,Yo estoy {contento|happy}.,,A2
+1,4,Nosotros estamos {de viaje|on a trip}. ,,A2
+1,5,Tú estás {cantando|singing}. ,,A2
+2,1,Tú eres la {encargada|manager}. ,La encargada eres tú. ,A2
+2,2,Yo estoy {esperando|waiting} el autobús.,,A2
+2,3,Ellos están {comiendo|eating} {helado|ice cream} ahora. ,Ahora ellos están comiendo helado. ,A2
+2,4,Vosotras sois siempre las favoritas. ,Vosotras sois las favoritas siempre. ,A2
+2,5,Él es el chico más {alto|tall}. ,El chico más alto es él. ,A2
+3,1,Ella está {visitando|visiting} a sus padres hoy. ,Hoy ella está visitando a sus padres. |Ella está hoy visitando a sus padres. ,A2
+3,2,Yo soy el {alcalde|mayor} del pueblo. ,El alcalde del pueblo soy yo. ,A2
+3,3,Vosotros estáis en el museo de la {ciudad|city}.,,A2
+3,4,Ella está muy {cansada|tired} hoy.,Hoy ella está muy cansada.|ella está hoy muy cansada.,A2
+3,5,Ellos están en la {playa|beach} {ahora mismo|right now}.,Ahora mismo ellos están en la playa.|ellos están ahora mismo en la playa,A2
+4,1,Los niños están {jugando|playing} en el parque.,Los niños en el parque están jugando.,A2
+4,2,La casa de mis vecinos está {encantada|haunted}.,,A2
+4,3,El árbol está {caído|fallen} {en medio|in the middle} del camino. ,,A2
+4,4,Las {mariposas|butterflies} eran de muchos colores distintos. ,,A2
+4,5,El mapa de mi madre era muy {antiguo|old}. ,,A2
+5,1,Las {olas|waves} en el {mar|sea} eran muy pequeñas. ,En el mar las olas eran muy pequeñas. ,A2
+5,2,La {cesta|basket} de la compra está muy llena. ,,A2
+5,3,Todas las personas en la {cola|line} eran de Pamplona. ,,A2
+5,4,Cuando está {contento|happy} {sonríe|to smile}.,Cuando sonríe está contento|está contento cuando sonríe,A2
+5,5,Luis es tan alto como María. ,,A2
+6,1,Esta {camiseta|t-shirt} es de {algodón|cotton}. ,,A2
+6,2,¿De qué color es tu {mochila|backpack}?,¿Tu mochila de qué color es?,A2
+6,3,Su padre está sentado {delante|in front of} del televisor. ,Delante del televisor está sentado su padre. ,A2
+6,4,En este momento estoy {ocupado|busy}. ,Estoy ocupado en este momento. ,A2
+6,5,Todavía no estoy {listo|ready}. ,No estoy listo todavía. ,A2
+1,1,Ustedes están aquí {como|like} en su casa. ,,B1
+1,2,Tú eres el mejor {jugador|player} del {equipo|team}. ,El mejor jugador del equipo eres tú. ,B1
+1,3,{Dentro de poco|shortly} ustedes estarán {volando|flying} hacia México.,Ustedes estarán volando hacia México dentro de poco.|Ustedes estarán dentro de poco volando hacia México.,B1
+1,4,Las {explicaciones|explanations} fueron muy {claras|clear} desde el {principio|beginning}.,Desde el principio las explicaciones fueron muy claras.|Las explicaciones fueron desde el principio muy claras. ,B1
+1,5,Los {árboles frutales|fruit tree} estaban cargados de frutas. ,,B1
+2,1,No sé por qué el {maestro|teacher} estaba {enfadado|angry}. ,El maestro estaba enfadado no sé por qué.,B1
+2,2,En dos días estaré en Chile con mi familia. ,Estaré en Chile con mi familia en dos días. ,B1
+2,3,Mañana el día será muy {caluroso|warm}. ,El día será muy caluroso mañana.,B1
+2,4,El arroz está muy {salado|salty} pero {rico|tasty}. ,El arroz está muy rico pero salado. ,B1
+2,5,Es {valiente|brave} salir a la {pizarra|blackboard}. ,Salir a la pizarra es valiente. ,B1
+3,1,Mi hermano está {aburrido|bored} hoy.,Hoy mi hermano está aburrido.,B1
+3,2,Este libro es bastante {aburrido|boring}.,,B1
+3,3,El pescado está muy {rico|tasty}.,,B1
+3,4,Mi tío es muy {rico|rich}.,,B1
+3,5,La tienda ya estaba {cerrada|closed}.,,B1
+4,1,Estoy {preparado|ready} para jugar el {partido|game}. ,,B1
+4,2,El {banco|bench} completo está ocupado. ,Está ocupado el banco completo. ,B1
+4,3,El yogur es bueno para el {estómago|stomach}. ,Para el estómago es bueno el yogur. ,B1
+4,4,Su amigo es un {genio|genius} del {ajedrez|chess}. ,,B1
+4,5,Estoy seguro de que todo saldrá bien. ,,B1
+1,1,{Mientras|while} yo cocino ustedes pueden estar en la {terraza|terrace}.,Ustedes pueden estar en la terraza mientras yo cocino.,B2
+1,2,Porque se rompió la pierna está ahora de baja. ,Está ahora de baja porque se rompió la pierna.,B2
+1,3,Están listos para salir de fiesta. ,,B2
+1,4,Estaba muy sorprendido después de conocer la noticia. ,Después de conocer la noticia estaba muy sorprendido,B2
+1,5,Estos dulces son bajos en calorías por lo que son buenos para tu dieta. ,,B2
+2,1,El coche nuevo estaba en muy buenas condiciones. ,,B2
+2,2,El diagnóstico del médico fue muy positivo. ,,B2
+2,3,Estaba un poco deprimido al volver de vacaciones,Al volver de vacaciones estaba un poco deprimido. ,B2
+2,4,En la playa me gusta mucho estar en el agua. ,Me gusta mucho estar en el agua en la playa. ,B2
+2,5,Todos los productos en esta sección están de oferta. ,,B2
+3,1,El puente fue construido por los romanos.,,B2
+3,2,La cena ya estaba {preparada|prepared} cuando llegamos.,Cuando llegamos la cena ya estaba preparada. ,B2
+3,3,Mi tío es muy {listo|clever} y tiene muchos negocios.,Mi tío tiene muchos negocios y es muy listo. ,B2
+3,4,Mañana estaremos {listos|ready} para viajar.,,B2
+3,5,Mi abuelo era {capaz|capable} de correr una maratón.,,B2
+4,1,Estoy {convencido|convinced} de que mañana va a llover. ,Mañana estoy convencido de que va a llover. ,B2
+4,2,Los {pañuelos|scarfs} de colores están de moda. ,Están de moda los pañuelos de colores. ,B2
+4,3,{Tristemente|sadly} creo que mi reloj está adelantado. ,Creo que tristemente mi reloj está adelantado.|Creo que mi reloj está adelantado tristemente. ,B2
+4,4,La bolsa está fabricada con una {mezcla|mix} de {corcho|cork} y {algodón|cotton}. ,La bolsa esá fabricada con una mezcla de algodón y corcho. ,B2
+4,5,La nueva película no está mal. ,No está mal la nueva película. |La película nueva no está mal.|No está mal la película nueva. ,B2

@@ -1,21 +1,21 @@
-﻿set,id,correct,also_correct
-1,1,Me gusta mucho visitar nuevos {países|countries}.,
-1,2,Los {pájaros|birds} beben agua en la {fuente|fountain}.,
-1,3,Ustedes {caminan|walk} demasiado {rápido|fast} para mí. ,
-1,4,Los {niños|kids} escuchan con atención al {maestro|teacher}.,
-1,5,Todas las mañanas estudio {un poco|a little} de español. ,Estudio un poco de español todas las mañanas.
-2,1,Su {padre|father} trabaja en el garaje {detrás|behind} de su casa. ,
-2,2,Dicen que {mañana|tomorrow} canta Luis. ,Mañana dicen que canta Luis.
-2,3,La {tienda|store} de la {esquina|corner} abre todos los días.,
-2,4,Ellos intentan {marcar|score} gol con mucho {esfuerzo|effort}. ,Con mucho esfuerzo ellos intentan marcar gol. 
-2,5,Ellos leen muchos {libros|books} cada {mes|month}. ,Cada mes ellos leen muchos libros. 
-3,1,Vosotros cambiáis los {platos|plates} de la {mesa|table}. ,
-3,2,Sus {hijos|sons} necesitan ir a casa antes del {partido|game}. ,Antes del partido sus hijos necesitan ir a casa. 
-3,3,Yo tomo el {autobús|bus} para ir al trabajo. ,Para ir al trabajo yo tomo el autobús.
-3,4,Vosotros vivís muy {cerca|near} de mis padres. ,
-3,5,Ella escribe una {carta|letter} a sus {abuelos|grandparents} cada {semana|week}. ,Cada semana ella escribe una carta a sus abuelos. 
-4,1,Usteder beben el {agua|water} muy {fría|cold}. ,
-4,2,El {dueño|owner} del {local|premises} busca un apartamento. ,El dueño del apartamento busca un local. 
-4,3,Las {enfermeras|nurses} comen todos los días en la {cantina|canteen}. ,Las enfermeras comen en la cantina todos los días.
-4,4,El director llama {a menudo|often} a los padres de los {alumnos|students}. ,El director llama a los padres de los alumnos a menudo. 
-4,5,Tú llevas a tus hijos a una {piscina|swimming pool} muy buena. ,
+﻿set,id,correct,also_correct,level
+1,1,Me gusta mucho visitar nuevos {países|countries}.,,A1
+1,2,Los {pájaros|birds} beben agua en la {fuente|fountain}.,,A1
+1,3,Ustedes {caminan|walk} demasiado {rápido|fast} para mí. ,,A1
+1,4,Los {niños|kids} escuchan con atención al {maestro|teacher}.,,A1
+1,5,La {tienda|store} de la {esquina|corner} abre todos los días.,,A1
+2,1,Ellos leen muchos {libros|books} cada {mes|month}. ,Cada mes ellos leen muchos libros. ,A1
+2,2,Yo tomo el {autobús|bus} para ir al trabajo. ,Para ir al trabajo yo tomo el autobús.,A1
+2,3,Vosotros vivís muy {cerca|near} de mis padres. ,,A1
+2,4,Usteder beben el {agua|water} muy {fría|cold}. ,,A1
+2,5,Todas las mañanas estudio {un poco|a little} de español. ,Estudio un poco de español todas las mañanas.,A1
+3,1,Su {padre|father} trabaja en el garaje {detrás|behind} de su casa. ,,A2
+3,2,Dicen que {mañana|tomorrow} canta Luis. ,Mañana dicen que canta Luis.,A2
+3,3,Ellos intentan {marcar|score} gol con mucho {esfuerzo|effort}. ,Con mucho esfuerzo ellos intentan marcar gol. ,A2
+3,4,Vosotros cambiáis los {platos|plates} de la {mesa|table}. ,,A2
+3,5,Sus {hijos|sons} necesitan ir a casa antes del {partido|game}. ,Antes del partido sus hijos necesitan ir a casa. ,A2
+4,1,Ella escribe una {carta|letter} a sus {abuelos|grandparents} cada {semana|week}. ,Cada semana ella escribe una carta a sus abuelos. ,A2
+4,2,El {dueño|owner} del {local|premises} busca un apartamento. ,El dueño del apartamento busca un local. ,A2
+4,3,Las {enfermeras|nurses} comen todos los días en la {cantina|canteen}. ,Las enfermeras comen en la cantina todos los días.,A2
+4,4,El director llama {a menudo|often} a los padres de los {alumnos|students}. ,El director llama a los padres de los alumnos a menudo. ,A2
+4,5,Tú llevas a tus hijos a una {piscina|swimming pool} muy buena. ,,A2

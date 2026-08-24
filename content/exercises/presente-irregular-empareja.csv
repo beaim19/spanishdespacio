@@ -1,21 +1,21 @@
-﻿set,id,before,after,word,translation
-1,1,Yo,de {casa|home} a las siete de la {mañana|morning}.,salgo,to leave
-1,2,Ella,mucho a sus {padres|parents}.,quiere,to love
-1,3,Ellos,su {coche|car} para ir a {trabajar|to work}.,conducen,to drive
-1,4,Ustedes,en esta {habitación|room}.,duermen,to sleep
-1,5,En esta {cocina|kitchen},muy bien.,huele,to smell
-2,1,Yo,{cocinar|to cook} muy bien.,sé,to know
-2,2,¿Tú,venir {mañana|tomorrow} a casa?,puedes,can
-2,3,Todos nosotros,en el {autobús|bus}.,cabemos,to fit
-2,4,En el {parque|park},muchos kilómetros.,andamos,to walk
-2,5,Él,que {traer|to bring} la {tarta|cake}.,tiene,to have
-3,1,El hotel ,{dinero|money} durante el {invierno|winter}.,pierde ,to lose
-3,2,Yo no ,{quién|who} está en la {lista|list}. ,elijo,to choose
-3,3,Ellos,{jugar|to play} en el campo al {aire libre|outdoors}.,prefieren,to prefer
-3,4,Nosotros,los {coches|cars} al pasar {cerca|near} de la {ventana|window}. ,sentimos,to feel
-3,5,El doctor,a todos los {pacientes|patients} antes de las diez. ,visita,to visit
-4,1,Los alumnos,al fútbol aunque {llueva|llover}. ,juegan,to play
-4,2,Vosotros ,en la {habitación|room} del {fondo|in the back}. ,dormís,to sleep
-4,3,Cada día yo,café para todos. ,hago,to do
-4,4,Vosotros ,siempre en el {mejor|best} momento.,venís,to come
-4,5,La {abogada|lawyer},a todas las personas en el {juzgado|court}. ,conoce,to know
+﻿set,id,before,after,word,translation,level
+1,1,Yo,de {casa|home} a las siete de la {mañana|morning}.,salgo,to leave,A2
+1,2,Ella,mucho a sus {padres|parents}.,quiere,to love,A2
+1,3,Ellos,su {coche|car} para ir a {trabajar|to work}.,conducen,to drive,A2
+1,4,Ustedes,en esta {habitación|room}.,duermen,to sleep,A2
+1,5,En esta {cocina|kitchen},muy bien.,huele,to smell,A2
+2,1,Yo,{cocinar|to cook} muy bien.,sé,to know,A2
+2,2,¿Tú,venir {mañana|tomorrow} a casa?,puedes,can,A2
+2,3,Todos nosotros,en el {autobús|bus}.,cabemos,to fit,A2
+2,4,En el {parque|park},muchos kilómetros.,andamos,to walk,A2
+2,5,Él,que {traer|to bring} la {tarta|cake}.,tiene,to have,A2
+3,1,El hotel ,{dinero|money} durante el {invierno|winter}.,pierde ,to lose,A2
+3,2,Yo no ,{quién|who} está en la {lista|list}. ,elijo,to choose,A2
+3,3,Ellos,{jugar|to play} en el campo al {aire libre|outdoors}.,prefieren,to prefer,A2
+3,4,Nosotros,los {coches|cars} al pasar {cerca|near} de la {ventana|window}. ,sentimos,to feel,A2
+3,5,El doctor,a todos los {pacientes|patients} antes de las diez. ,visita,to visit,A2
+4,1,Los alumnos,al fútbol aunque {llueva|llover}. ,juegan,to play,A2
+4,2,Vosotros ,en la {habitación|room} del {fondo|in the back}. ,dormís,to sleep,A2
+4,3,Cada día yo,café para todos. ,hago,to do,A2
+4,4,Vosotros ,siempre en el {mejor|best} momento.,venís,to come,A2
+4,5,La {abogada|lawyer},a todas las personas en el {juzgado|court}. ,conoce,to know,A2

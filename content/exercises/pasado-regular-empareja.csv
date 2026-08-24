@@ -1,21 +1,21 @@
-﻿set,id,before,after,word,translation
-1,1,Yo,la {ventana|window} {anoche|last night}.,cerré,to close
-1,2,Tú,mucho la {semana|week} {pasada|last}.,estudiaste,to study
-1,3,Ayer vosotros,mucho {agua|water}. ,bebisteis,to drink
-1,4,Cuando era niña ella,con una {voz|voice} muy {bonita|beautiful}.,cantaba,to sing
-1,5,Su padre,la {compañía|company} en los años {noventa|nineties}.,fundó,to found
-2,1,En mi {colegio de primaria|elementary school} mi maestra,siempre {tarde|late}. ,llegaba,to arrive
-2,2,De {joven|young} mi {abuelo|grandfather},en un {pueblo|village} en la {montaña|mountain}. ,vivía,to live
-2,3,En la {cena|dinner} del {viernes|Friday} vosotros,muy buena {comida|food}. ,ordenasteis,to order
-2,4,Ustedes,las {paredes|walls} del hotel de colores muy {vivos|vivid}. ,pintaron,to paint
-2,5,El niño ,al {gato|cat} del {fuego|fire}. ,salvó,to save
-3,1,En mi {clase|class} de ballet yo siempre,{zapatillas|shoes} negras. ,usaba,to use
-3,2,Durante el {verano|summer} mi {hermana|sister},{tostadas|toasts} con {aceite|oil}.,desayunaba,to have breakfast
-3,3,El otro día el policía los ,a ellos por ir demasiado {rápido|fast}. ,multó,to fine
-3,4,{Anoche|last night} por fin yo,muy bien en la {cama|bed} {nueva|new}. ,descansé,to rest
-3,5,Para {carnaval|carnival} él,no {disfrazarse|to dress up}. ,decidió,to decide
-4,1,Los {carpinteros|carpenters},muchos clavos en la {estantería|bookshelf}.,clavaron,to nail
-4,2,Todos los yogures,al día {siguiente|next} de {comprarlos|to buy}. ,caducaban,to expire
-4,3,Los {libros|books} estaban muy {limpios|clean} y,,brillaban,to shine
-4,4,Sus padres,los {juguetes|tiys} dentro del {mueble|piece of furniture}. ,colocaron,to place
-4,5,En el {campamento|camp} ,{patatas fritas|fries} todos los días. ,comíamos,to eat
+﻿set,id,before,after,word,translation,level
+1,1,Yo,la {ventana|window} {anoche|last night}.,cerré,to close,A2
+1,2,Tú,mucho la {semana|week} {pasada|last}.,estudiaste,to study,A2
+1,3,Ayer vosotros,mucho {agua|water}. ,bebisteis,to drink,A2
+1,4,Cuando era niña ella,con una {voz|voice} muy {bonita|beautiful}.,cantaba,to sing,A2
+1,5,Su padre,la {compañía|company} en los años {noventa|nineties}.,fundó,to found,A2
+2,1,En mi {colegio de primaria|elementary school} mi maestra,siempre {tarde|late}. ,llegaba,to arrive,A2
+2,2,De {joven|young} mi {abuelo|grandfather},en un {pueblo|village} en la {montaña|mountain}. ,vivía,to live,A2
+2,3,En la {cena|dinner} del {viernes|Friday} vosotros,muy buena {comida|food}. ,ordenasteis,to order,A2
+2,4,Ustedes,las {paredes|walls} del hotel de colores muy {vivos|vivid}. ,pintaron,to paint,A2
+2,5,El niño ,al {gato|cat} del {fuego|fire}. ,salvó,to save,A2
+3,1,En mi {clase|class} de ballet yo siempre,{zapatillas|shoes} negras. ,usaba,to use,A2
+3,2,Durante el {verano|summer} mi {hermana|sister},{tostadas|toasts} con {aceite|oil}.,desayunaba,to have breakfast,A2
+3,3,El otro día el policía los ,a ellos por ir demasiado {rápido|fast}. ,multó,to fine,A2
+3,4,{Anoche|last night} por fin yo,muy bien en la {cama|bed} {nueva|new}. ,descansé,to rest,A2
+3,5,Para {carnaval|carnival} él,no {disfrazarse|to dress up}. ,decidió,to decide,A2
+4,1,Los {carpinteros|carpenters},muchos clavos en la {estantería|bookshelf}.,clavaron,to nail,A2
+4,2,Todos los yogures,al día {siguiente|next} de {comprarlos|to buy}. ,caducaban,to expire,A2
+4,3,Los {libros|books} estaban muy {limpios|clean} y,,brillaban,to shine,A2
+4,4,Sus padres,los {juguetes|tiys} dentro del {mueble|piece of furniture}. ,colocaron,to place,A2
+4,5,En el {campamento|camp} ,{patatas fritas|fries} todos los días. ,comíamos,to eat,A2

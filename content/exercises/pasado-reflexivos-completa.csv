@@ -1,21 +1,21 @@
-﻿set,id,before,after,infinitive,tense,correct,translation
-1,1,Nosotros,muy temprano durante las {vacaciones|vacation}.,levantarse,pretérito imperfecto,nos levantábamos,to get up
-1,2,Tú ,en la {fiesta|party}.,colarse,pretérito perfecto simple,te colaste,to sneak in
-1,3,Vosotros,con el {fantasma|ghost}.,asustarse,pretérito imperfecto,os asustabais
-1,4,Ellos,{ayer|yesterday} para la {excursión|excursion}. ,prepararse,pretérito perfecto simple,se prepararon
-1,5,Vosotros,con el {rosal|rosebush}. ,pincharse,pretérito perfecto simple,os pinchasteis
-2,1,Ella,en clase.,distraerse,pretérito imperfecto,se distraía
-2,2,Tú ,en el {sillón|couch}.,sentarse,pretérito perfecto simple,te sentaste
-2,3,Nostras,todas las {mantas|blankets} al {dormitorio|bedroom}. ,llevarse,pretérito perfecto simple,nos llevamos
-2,4,Ustedes,de la lista de {invitados|guests}. ,encargarse,pretérito imperfecto,se encargaban
-2,5,Yo,ayer del {cambio|change} de {planes|plans}.,enterarse,pretérito perfecto simple,me enteré
-3,1,Yo ,de su {promesa|promise}. ,fiarse,pretérito perfecto simple,me fie
-3,2,Vosotros,muy bien para el {partido|game}. ,prepararse,pretérito perfecto simple,os preparasteis
-3,3,Ellos no,nunca en los {partidos|games}. ,cansarse,pretérito imperfecto,se cansaban
-3,4,Nosotros,mucho esta {tarde|afternoon}.,divertirse,pretérito perfecto compuesto,nos hemos divertido
-3,5,Tú ,{ayer|yesterday} por la {noche|night}. ,ducharse,pretérito perfecto simple,te duchaste
-4,1,Tú ,muy {a menudo|often}. ,equivocarse,pretérito imperfecto,te equivocabas
-4,2,Yo en invierno,{pronto|early} a la {cama|bed}.,irse,pretérito imperfecto,me iba
-4,3,Ella no,a la {decisión|decision}.,oponerse,pretérito perfecto simple,se opuso
-4,4,Vosotros,muchas veces a la {piscina|swimming pool}. ,tirarse,pretérito perfecto simple,os tirasteis
-4,5,Nosotros,siempre de {comprar|to buy} {arroz|rice}.,olvidarse,pretérito imperfecto,nos olvidábamos
+﻿set,id,before,after,infinitive,tense,correct,translation,level
+1,1,Nosotros,muy temprano durante las {vacaciones|vacation}.,levantarse,pretérito imperfecto,nos levantábamos,to get up,A2
+1,2,Tú ,en la {fiesta|party}.,colarse,pretérito perfecto simple,te colaste,to sneak in,A2
+1,3,Vosotros,con el {fantasma|ghost}.,asustarse,pretérito imperfecto,os asustabais,to get scared of,A2
+1,4,Ellos,{ayer|yesterday} para la {excursión|excursion}. ,prepararse,pretérito perfecto simple,se prepararon,to prepare,A2
+1,5,Vosotros,con el {rosal|rosebush}. ,pincharse,pretérito perfecto simple,os pinchasteis,to puncture,A2
+2,1,Ella,en clase.,distraerse,pretérito imperfecto,se distraía,to get distracted,A2
+2,2,Tú ,en el {sillón|couch}.,sentarse,pretérito perfecto simple,te sentaste,to sit,A2
+2,3,Nostras,todas las {mantas|blankets} al {dormitorio|bedroom}. ,llevarse,pretérito perfecto simple,nos llevamos,to take,A2
+2,4,Ustedes,de la lista de {invitados|guests}. ,encargarse,pretérito imperfecto,se encargaban,to be in charge of,A2
+2,5,Yo,ayer del {cambio|change} de {planes|plans}.,enterarse,pretérito perfecto simple,me enteré,to find out,A2
+3,1,Yo ,de su {promesa|promise}. ,fiarse,pretérito perfecto simple,me fie,to trust,A2
+3,2,Vosotros,muy bien para el {partido|game}. ,prepararse,pretérito perfecto simple,os preparasteis,to get ready,A2
+3,3,Ellos no,nunca en los {partidos|games}. ,cansarse,pretérito imperfecto,se cansaban,to get tired,A2
+3,4,Nosotros,mucho esta {tarde|afternoon}.,divertirse,pretérito perfecto compuesto,nos hemos divertido,to have fun,A2
+3,5,Tú ,{ayer|yesterday} por la {noche|night}. ,ducharse,pretérito perfecto simple,te duchaste,to shower,A2
+4,1,Tú ,muy {a menudo|often}. ,equivocarse,pretérito imperfecto,te equivocabas,to be wrong,A2
+4,2,Yo en invierno,{pronto|early} a la {cama|bed}.,irse,pretérito imperfecto,me iba,to leave,A2
+4,3,Ella no,a la {decisión|decision}.,oponerse,pretérito perfecto simple,se opuso,to opose,A2
+4,4,Vosotros,muchas veces a la {piscina|swimming pool}. ,tirarse,pretérito perfecto simple,os tirasteis,to jump into,A2
+4,5,Nosotros,siempre de {comprar|to buy} {arroz|rice}.,olvidarse,pretérito imperfecto,nos olvidábamos,to forget,A2

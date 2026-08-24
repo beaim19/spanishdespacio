@@ -1,21 +1,21 @@
-﻿set,id,before,after,infinitive,correct,translation
-1,1,Yo,un {libro|book} cada semana.,leer,leo,to read
-1,2,Tú,{cartas|letters} a tus amigos.,escribir,escribes,to write
-1,3,Nosotros,juntos los domingos.,comer,comemos
-1,4,Ella,su habitación todos los sábados.,limpiar,limpia
-1,5,Vosotros,muy bien.,bailar,bailáis
-1,6,Ellos,la tienda a las nueve.,abrir,abren
-1,7,Usted,música clásica.,escuchar,escucha
-1,8,Yo,el pelo a mi hijo.,cortar,corto
-1,9,Nosotras,la cena todos los días.,preparar,preparamos
-1,10,Tú,muchos mensajes.,recibir,recibes
-2,1,Las chicas,a los caballos por la mañana.,cepillar,cepillan
-2,2,Su tío Paco,la cena los domingos para toda la familia. ,cocinar,cocina
-2,3,Ustedes,en una casa muy bonita.,vivir,viven
-2,4,La maestra ,la lección con mucho detalle. ,explicar,explica
-2,5,Todos los días yo,los zapatos a la puerta. ,dejar,dejo
-2,6,En la clase de primero los alumnos,podcasts sobre naturaleza. ,grabar,graban
-2,7,Vosotros,los árboles del jardín. ,trepar,trepáis
-2,8,El guarda ,la puerta atentamente.,vigilar,vigila
-2,9,Todos nosotros,ganar el campeonato.,desear,deseamos
-2,10,Los niños,mucho a su profesora de ballet. ,admirar,admiran
+﻿set,id,before,after,infinitive,correct,translation,level
+1,1,Yo,un {libro|book} cada semana.,leer,leo,to read,A1
+1,2,Tú,{cartas|letters} a tus amigos.,escribir,escribes,to write,A1
+1,3,Nosotros,juntos los domingos.,comer,comemos,to eat,A1
+1,4,Ella,su habitación todos los sábados.,limpiar,limpia,to clean,A1
+1,5,Vosotros,muy bien.,bailar,bailáis,to dance,A1
+2,1,Ellos,la tienda a las nueve.,abrir,abren,to open,A1
+2,2,Usted,música clásica.,escuchar,escucha,to listen,A1
+2,3,Yo,el pelo a mi hijo.,cortar,corto,to cut,A1
+2,4,Nosotras,la cena todos los días.,preparar,preparamos,to prepare,A1
+2,5,Tú,muchos mensajes.,recibir,recibes,to receive,A1
+1,1,Las chicas,a los caballos por la mañana.,cepillar,cepillan,to brush,A2
+1,2,Su tío Paco,la cena los domingos para toda la familia. ,cocinar,cocina,to cook,A2
+1,3,Ustedes,en una casa muy bonita.,vivir,viven,to live,A2
+1,4,La maestra ,la lección con mucho detalle. ,explicar,explica,to explain,A2
+1,5,Todos los días yo,los zapatos a la puerta. ,dejar,dejo,to leave,A2
+2,1,En la clase de primero los alumnos,podcasts sobre naturaleza. ,grabar,graban,to record,A2
+2,2,Vosotros,los árboles del jardín. ,trepar,trepáis,to climb,A2
+2,3,El guarda ,la puerta atentamente.,vigilar,vigila,to watch,A2
+2,4,Todos nosotros,ganar el campeonato.,desear,deseamos,to wish,A2
+2,5,Los niños,mucho a su profesora de ballet. ,admirar,admiran,to admire,A2
