@@ -1,21 +1,91 @@
 ﻿set,id,before,after,infinitive,correct,translation,level
 1,1,Yo,un {libro|book} cada semana.,leer,leo,to read,A1
 1,2,Tú,{cartas|letters} a tus amigos.,escribir,escribes,to write,A1
-1,3,Nosotros,juntos los domingos.,comer,comemos,to eat,A1
-1,4,Ella,su habitación todos los sábados.,limpiar,limpia,to clean,A1
+1,3,Nosotros,juntos los {domingos|sundays}.,comer,comemos,to eat,A1
+1,4,Ella,su {habitación|room} todos los {sábados|saturdays}.,limpiar,limpia,to clean,A1
 1,5,Vosotros,muy bien.,bailar,bailáis,to dance,A1
-2,1,Ellos,la tienda a las nueve.,abrir,abren,to open,A1
+2,1,Ellos,la {tienda|store} a las nueve.,abrir,abren,to open,A1
 2,2,Usted,música clásica.,escuchar,escucha,to listen,A1
-2,3,Yo,el pelo a mi hijo.,cortar,corto,to cut,A1
-2,4,Nosotras,la cena todos los días.,preparar,preparamos,to prepare,A1
+2,3,Yo,el {pelo|hair} a mi hijo.,cortar,corto,to cut,A1
+2,4,Nosotras,la {cena|dinner} todos los días.,preparar,preparamos,to prepare,A1
 2,5,Tú,muchos mensajes.,recibir,recibes,to receive,A1
-1,1,Las chicas,a los caballos por la mañana.,cepillar,cepillan,to brush,A2
-1,2,Su tío Paco,la cena los domingos para toda la familia. ,cocinar,cocina,to cook,A2
+3,1,Mi hermana,en un hospital como {voluntaria|volunteer}. ,ayudar,ayuda,to help,A1
+3,2,La otra chica,{quién|who} viene a la {cena|dinner}. ,decidir,decide,to decide,A1
+3,3,Este amigo mío,mucho {dinero|money} en el {regalo|gift}. ,gastar,gasta,to spend,A1
+3,4,Aquellos chicos de allí,a los {perros callejeros|street dogs}. ,rescatar,rescatan,to rescue,A1
+3,5,Esos animales,un refugio. ,buscar,buscan,to look for,A1
+4,1,Ahí,tú con tu familia. ,vivir,vives,to live,A1
+4,2,Nosotros no ,"a los {vecinos|neighbors}, tenemos bastante {cuidado|care}. ",molestar,molestamos,to disturbe,A1
+4,3,Ellos tampoco,"bien, cuidado. ",nadar,nadan,to swim,A1
+4,4,Ustedes cada invierno,en la {montaña|mountain}. ,esquiar,esquian,to ski,A1
+4,5,"El libro que leéis es corto, lo ",{rápido|fast}. ,acabar,acabáis,to finish,A1
+5,1,La profesora que tengo,en el parque {por la mañana|in the morning}. ,correr,corre,to run,A1
+5,2,¿Por qué,tú el {trabajo|job}?,dejar,dejas,to leave,A1
+5,3,Porque nosotros,"música clásica, estamos {tranquilos|calm}. ",escuchar,escuchamos,to listen,A1
+5,4,¿Cuántas personas,al {equipo|team}?,entrenar,entrenan,to train,A1
+5,5,Mis fotos,mis {lugares|places} favoritos. ,enseñar,enseñan,to show,A1
+6,1,Él,poco la bicicleta. ,usar,usa,to use,A1
+6,2,Entonces nosotros ,en {ascensor|lift}. ,subir,subimos,to go up,A1
+6,3,Vosotros también,mucho deporte. ,practicar,practicáis,to practice,A1
+6,4,El libro de español,muy bien las {lecciones|lessons}. ,resumir,resume,to summarize,A1
+6,5,"Tu {aprendes|to learn} mucho, pero lo",en poco tiempo. ,olvidar,olvidas,to forget,A1
+1,1,Las chicas,a los {caballos|horses} por la mañana.,cepillar,cepillan,to brush,A2
+1,2,Su tío Paco,la {cena|dinner} los domingos para toda la familia. ,cocinar,cocina,to cook,A2
 1,3,Ustedes,en una casa muy bonita.,vivir,viven,to live,A2
-1,4,La maestra ,la lección con mucho detalle. ,explicar,explica,to explain,A2
-1,5,Todos los días yo,los zapatos a la puerta. ,dejar,dejo,to leave,A2
+1,4,La maestra ,la {lección|lesson} con mucho {detalle|detail}. ,explicar,explica,to explain,A2
+1,5,Todos los días yo,los {zapatos|shoes} a la puerta. ,dejar,dejo,to leave,A2
 2,1,En la clase de primero los alumnos,podcasts sobre naturaleza. ,grabar,graban,to record,A2
-2,2,Vosotros,los árboles del jardín. ,trepar,trepáis,to climb,A2
-2,3,El guarda ,la puerta atentamente.,vigilar,vigila,to watch,A2
-2,4,Todos nosotros,ganar el campeonato.,desear,deseamos,to wish,A2
-2,5,Los niños,mucho a su profesora de ballet. ,admirar,admiran,to admire,A2
+2,2,Vosotros,los árboles del {jardín|garden}. ,trepar,trepáis,to climb,A2
+2,3,El guarda ,la puerta {atentamente|mindfully}.,vigilar,vigila,to watch,A2
+2,4,Todos nosotros,ganar el {campeonato|championship}.,desear,deseamos,to wish,A2
+2,5,Los niños,mucho a su {profesora|teacher} de ballet. ,admirar,admiran,to admire,A2
+3,1,Abel siempre ,los mismos {pantalones|pants}. ,llevar,lleva,to wear,A2
+3,2,Me gusta que vosotros,en bicicleta los {fines de semana|weekends}. ,montar,montáis,to ride,A2
+3,3,El autobús de la línea tres ,tanto como el de la línea cinco. ,parar,para,to stop,A2
+3,4,Ahora Ana y yo,la {lección|lesson} para ti. ,resumir,resumimos,to summarize,A2
+3,5,Yo nunca,sola en el tren. ,viajar,viajo,to travel,A2
+4,1,Mi teléfono solo,cuando me {llamas|to call}. ,vibrar,vibra,to vibrate,A2
+4,2,La obra de teatro ha acabado y por eso los trabajadores,los {asientos|seats}. ,retirar,retiran,to put away,A2
+4,3,Siempre que tiene tiempo,un {capítulo|chapter} de su novela. ,escribir,escribe,to write,A2
+4,4,¿Por qué ,tantos estas {bolsas|bags}?,pesar,pesan,to weigh,A2
+4,5,Hoy los niños y yo,los {árboles frutales|fruit trees} del abuelo. ,podar,podamos,to prune,A2
+5,1,No voy porque no (yo),{arrancar|to start} el coche. ,lograr,logro,to manage,A2
+5,2,Manuel nunca,a su clase de {matemáticas|math}. ,faltar,falta,to miss,A2
+5,3,Si vosotros,"todos los {globos|balloons}, sí habrá fiesta. ",inflar,infláis,to inflate,A2
+5,4,La policía,que la {carrera|race} son 20 kilómetros. ,estimar,estima,to estimate,A2
+5,5,Todos ellos,si llegarán {a tiempo|on time} a la {reunión|meeting}. ,dudar,dudan,to doubt,A2
+6,1,Cuando Pilar ,"{manzanas|apples} en el {horno|oven}, huele muy bien. ",asar,asa,to bake,A2
+6,2,Yo no ,que hoy vaya a haber {tormenta|storm}. ,creer,creo,to think,A2
+6,3,La madre siempre,a su hijo {antes|before} de ir a dormir. ,besar,besa,to kiss,A2
+6,4,Los invitados,a Amelia por su {cumpleaños|birthday}. ,felicitar,felicitan,to wish happy birthday,A2
+6,5,Vosotros,problemas siempre hasta el {final|end}. ,buscar,buscáis,to look for,A2
+1,1,"Vale, nosotros podemos buscaros y vosotros ",que todo salga bien. ,asegurar,aseguráis,to make sure of,B1
+1,2,Si,"pronto, podéis venir con nosotros. ",cenar,cenáis,to eat dinner,B1
+1,3,"Te {apetece|to have desite to do something} venir, yo compro la comida y tú",las distintas opciones. ,explorar,exploras,to explore,B1
+1,4,"No me gusta, lo veo muy {oscuro|dark}, mejor si tú lo",por mí. ,pintar,pintas,to paint,B1
+1,5,"Hace atletismo desde que era niño, ",todas las tardes. ,entrenar,entrena ,to train,B1
+2,1,"Es una {pena|pitty} que no vengan, porque ",siempre muy bien {ambiente|atmosphere}. ,crear,crean,to create,B1
+2,2,"Los yogures están {caducados|expired}, aunque ellos los",sin problema. ,comer,comen,to eat,B1
+2,3,"Probablemente nosotros no vayamos, nosotros dos",que debemos quedarnos en casa. ,considerar,consideramos,to think,B1
+2,4,El chico a quien saludaste,por sus {conocimientos|knowledge} de matemáticas. ,destacar,destaca,to stand out,B1
+2,5,Su marido está muy {resfriado|to have a cold} y ,no salir de casa. ,procurar,procura,to try,B1
+3,1,"Ninguno de ellos está {preparados|ready}, siempre",lo que tienen que hacer. ,procrastinar,procrastinan,to procrastinate,B1
+3,2,"Si ustedes toman notas en clase, ",su forma de aprender. ,mejorar,mejoran,to improve,B1
+3,3,"En {resumen|summary}, Mario y yo ",todos los nudos de la cuerda. ,desatar,desatamos,to untie,B1
+3,4,Este grupo de alumnos,muy bien la doble r. ,pronunciar,pronuncia,to pronounce,B1
+3,5,Es increíble cómo ,Laura en el escenario. ,cantar,canta,to sing,B1
+4,1,Podéis pedir dos aguas pero no es {bebida|drink} suficiente.  Ellos,más botellas por el camino.,coger,cogen,to take,B1
+4,2,"En mi trabajo preparo {reuniones|meetings}, pero sobre todo",documentos. ,escanear,escaneo,to scan,B1
+4,3,"Estoy sentado muchas horas, por eso cuando puedo",para caminar en la montaña.,escapar,escapo,to escape,B1
+4,4,El carril bici ,el uso de la bicicleta en la ciudad. ,fomentar,fomenta,to encourage,B1
+4,5,"Debido a su mal carácter, Luis",mucho. ,gruñir,gruñe,to grunt,B1
+5,1,Los guías del museo,las visitas muy bien. ,planificar,planifican,to plan,B1
+5,2,"Es su cumpleaños, {sin embargo|however} no",de trabajar ni un segundo. ,parar,para,to stop,B1
+5,3,Lo sabemos y además,lo mismo que vosotros. ,pensar,pensamos,to think,B1
+5,4,El mío y el tuyo ,a los mosquitos muy bien. ,repeler,repelen,to repel,B1
+5,5,Ahora {envolvemos|to wrap} tu regalo y te lo ,.,llevar,llevamos,to bring,B1
+6,1,Mis colegas y yo ,nosotros mismos los programas en el ordenador. ,instalar,instalamos,to install,B1
+6,2,Ahora Mónica y yo,"en las afueras, así estamos más cerca del campo. ",vivir,vivimos,to live,B1
+6,3,La {agrupación|group} de sindicatos ,la información para ayudarnos. ,usar,usa,to use,B1
+6,4,Le,"muchas cosas, es que me cae bien. ",regalar,regalo,to give a present,B1
+6,5,Las bailarinas del Ballet Nacional ,en cada actuación. ,sorprender,sorprenden,to astonish,B1

@@ -1,21 +1,61 @@
 ﻿set,id,before,after,word,translation,level
 1,1,Yo,a las siete todos los días.,me levanto,to get up,A1
 1,2,Ella,{antes|before} de {desayunar|to have breakfast}.,se ducha,to shower,A1
-1,3,Ella,las {gafas|glasses} para ver la televisión.,se quita,to take off,A1
-1,4,Los niños,los {dientes|teeth} {cada|every} {noche|night}.,se cepillan,to brush,A1
-1,5,El bebé,mucho {cuando|when} {come|to eat}.,se mancha,to stain,A1
+1,3,Yo ,en el lago en verano. ,me baño,to swim,A1
+1,4,El gato,en el suelo. ,se estira,to stretch,A1
+1,5,Él ,la barba cada mañana. ,se afeita,to shave,A1
+2,1,Ellos ,el 15 de abril. ,se casan,to get married,A1
+2,2,Para carnaval yo,de bruja. ,me disfrazo,to dress up,A1
+2,3,Las niñas ,crema en la playa. ,se echan,to put on,A1
+2,4,Los niños,los {dientes|teeth} {cada|every} {noche|night}.,se cepillan,to brush,A1
+2,5,Mañana,en la Universidad. ,me gradúo,to graduate,A1
+3,1,El camarero,las manos. ,se lava,to wash,A1
+3,2,Los jefes,en la oficina. ,os reunís,to meet,A1
+3,3,Vosotros ,a una casa nueva. ,os mudáis,to move,A1
+3,4,El restaurante ,"""El Chiringuito"". ",se llama,to be called,A1
+3,5,Tú y Berta,el pelo cada mañana. ,os peináis,to comb,A1
+4,1,Tú,en la piscina. ,te relajas,to relax,A1
+4,2,Su abuela,mucho para estar sana. ,se cuida,to take care,A1
+4,3,La ropa,en la terraza. ,se seca,to dry,A1
+4,4,Tú ,el jabón a la ducha. ,te llevas,to take,A1
+4,5,El perro también ,para descansar. ,se tumba,to lie down,A1
 1,1,Tú,todo el tiempo en el {espejo|mirror}.,te miras,to look,A2
 1,2,Nosotros,en estas {sillas|chairs}.,nos sentamos,to sit,A2
-1,3,Vosotros,en estos {sillones|couches}.,os relajáis,to relax,A2
-1,4,Cuando tiene {dolor de cabeza|headache} él,en la {cama|bed}.,se tumba,to lie down,A2
+1,3,Tú,mucho del {ruido|noise} de la {calle|street}. ,te quejas,to complain,A2
+1,4,María y yo ,{de camino|on the way} al {trabajo|work} cada {mañana|morning}. ,nos cruzamos,to cross,A2
 1,5,Tú,el {pelo|hair} con la {toalla|towel}.,te secas,to dry,A2
-2,1,A mí,ir al {cine|movie theater} {hoy|today}.,me apetece,to crave,A2
+2,1,Marcos ,para el máster que {estudiará|to study} este año. ,se matricula,to enroll,A2
 2,2,Ustedes,porque {empiezan|to start} las {vacaciones|vacation}.,se alegran,to be glad,A2
 2,3,El maestro,de los {alumnos|students} durante el {verano|summer}. ,se despide,to say goodbye,A2
-2,4,Vosotros,de la {lluvia|rain} en la {tienda de campañna|camping tent}.,os refugiáis,to shelter,A2
-2,5,Tú,mucho del {ruido|noise} de la {calle|street}. ,te quejas,to complain,A2
-3,1,Los chicos de la {pandilla|gang},en el parque {por la noche|at night}. ,se cuelan,to sneak in,A2
+2,4,Vosotros,las zapatillas para correr. ,os cambiáis,to change,A2
+2,5,Los chicos de la {pandilla|gang},en el parque {por la noche|at night}. ,se cuelan,to sneak in,A2
+3,1,"Bueno, yo no ",fácilmente.,me canso,to get tired,A2
 3,2,Mis padres ,por las {noticias|neas} en el {mundo|world}. ,se interesan,to interest,A2
-3,3,Marcos ,para el máster que {estudiará|to study} este año. ,se matricula,to enroll,A2
-3,4,María y yo ,{de camino|on the way} al {trabajo|work} cada {mañana|morning}. ,nos cruzamos,to cross,A2
-3,5,Su {hijo|son},en la universidad este año. ,se gradúa,to graduate,A2
+3,3,Los chicos,en la clase de historia. ,se aburren,to get bored,A2
+3,4,A mí,ir al {cine|movie theater} {hoy|today}.,me apetece,to crave,A2
+3,5,"Sí, yo también",con las tormentas. ,me asusto,to get scared,A2
+4,1,El bebé,mucho {cuando|when} {come|to eat}.,se mancha,to stain,A2
+4,2,Los perros,delante de la chimenea.,se tumban,to lie down,A2
+4,3,Ella,las {gafas|glasses} para ver la televisión.,se quita,to take off,A2
+4,4,Sus padres,bastante de su éxito. ,se alegran,to be glad,A2
+4,5,Cuando tiene {dolor de cabeza|headache} él,en la {cama|bed}.,se tumba,to lie down,A2
+1,1,Su {hijo|son},en la universidad este año. ,se gradúa,to graduate,B1
+1,2,Vosotros,en estos {sillones|couches}.,os relajáis,to relax,B1
+1,3,El coche,siempre cuando estamos de vacaciones. ,se rompe,to break,B1
+1,4,Siempre,de traer juegos de mesa de vuestra casa. ,os acordáis,to remember,B1
+1,5,Este florero,con el aire de la ventana. ,se cae,to fall,B1
+2,1,Los primos de Manuel,muy bien. ,se caen,to get along,B1
+2,2,Este número,siempre cuando estoy en casa. ,me llama,to call,B1
+2,3,Los niños,de sitio a mitad de curso. ,se cambian,to change,B1
+2,4,,muy bien en las verbenas del pueblo. ,me lo paso,to have a good time,B1
+2,5,Nunca cocinan porque,un dedo con facilidad. ,se cortan,to cut,B1
+3,1,Al venir ,del tren cuando veáis la estación de Ferrol. ,os bajáis,to get off,B1
+3,2,Cuando estés en la página web,el programa de la lista. ,te descargas,to download,B1
+3,3,Vosotros,de la {lluvia|rain} en la {tienda de campaña|camping tent}.,os refugiáis,to shelter,B1
+3,4,Esta noche,en casa con tus hermanos. ,te quedas,to stay,B1
+3,5,Antes de la reunión,a todos los asistentes. ,te presentas,to introduce,B1
+4,1,,enfermo al empezar el campamento. ,se puso,to become,B1
+4,2,La niña,mucho a su padre. ,se parece,to look alike,B1
+4,3,,mal que nunca me regales nada. ,me parece,to seem ok,B1
+4,4,Tiene un gran sentido del humor y ,mucho. ,se ríe,to laugh,B1
+4,5,Pronto,de vacaciones a la playa. ,me voy,to go,B1

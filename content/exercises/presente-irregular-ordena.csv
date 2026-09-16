@@ -2,20 +2,60 @@
 1,1,El bosque tiene muchos {árboles|trees} distintos.,,A2
 1,2,Creo que vosotros dormís en esta {habitación|room}.,,A2
 1,3,Tenemos {comida|food} {suficiente|enough} para la {cena|dinner}. ,,A2
-1,4,El supermercado cierra a las ocho de la {tarde|evening}. ,,A2
+1,4,El supermercado cierra a las ocho de la {tarde|evening}. ,A las ocho de la tarde cierra el supermercado. ,A2
 1,5,Los coches en la {plaza|square} parecen {extranjeros|foreigner}.,,A2
 2,1,{Ahora mismo|right now} llueve en las montañas.,,A2
 2,2,Los estudiantes juegan al baloncesto {durante|during} el {descanso|break}. ,Durante el descanso los estudiantes juegan al baloncesto.,A2
 2,3,Tú dices muchas {tonterías|nonsense}. ,,A2
-2,4,Yo traigo el {desayuno|breakfast} todos los días. ,Todos los días yo traigo el desayuno.,A2
-2,5,Ustedes conducen de {manera|way} diferente a nosotros. ,,A2
+2,4,Yo traigo el {desayuno|breakfast} todos los días. ,Todos los días yo traigo el desayuno.|Todos los días traigo yo el desayuno. ,A2
+2,5,"Si quieres, sí voy a la fiesta. ","Sí voy a la fiesta, si quieres. ",A2
 3,1,La niña juega con la {pelota|ball} en el jardín.,La niña juega en el jardín con la pelota. ,A2
 3,2,Siempre cuento una {historia|story} a los {niños|kids} por la {noche|night}. ,Por la noche siempre cuento una historia a los niños. ,A2
-3,3,El {perro|dog} siente que su {dueño|owner} está {lejos|far}. ,,A2
+3,3,Aquí nunca nieva en invierno. ,Nunca nieva en invierno aquí. |En invierno nunca nieva aquí. |Aquí en invierno nunca nieva. ,A2
 3,4,Tú das {demasiados|too} {dulces|sweets} a tus {sobrinos|nephews}. ,,A2
 3,5,Ellos suelen {merendar|afternoon snack} {después|after} del {entrenamiento|training}. ,Después del entrenamiento ellos suelen merendar. ,A2
 4,1,La {película|movie} no comienza hasta las cinco. ,Hasta las cinco no comienza la película. |Hasta la cinco la película no comienza.,A2
 4,2,Yo duermo cada {noche|night} en una{ciudad|city} diferente. ,Cada noche yo duermo en una ciudad diferente. | Yo duermo en una ciudad diferente cada noche.,A2
 4,3,Yo no conozco bien al {vecino|neighbor} de la {izquierda|left}. ,,A2
 4,4,{Mañana|tomorrow} tú almuerzas con el director de la {planta|factory}. ,Tú almuerzas con el director de la planta mañana. | Tú almuerzas mañana con el director de la planta.,A2
-4,5,Tú siempre pides el {informe|report} al {final|end} del día. ,Al final del día tú siempre pides el informe. | Al final del día tú pides siempre el informe. ,A2
+4,5,"Yo no lo sé, quizás tú sí lo sabes. ","Quizás tú sí lo sabes, yo no lo sé. ",A2
+5,1,Voy contigo después de comer. ,Después de comer voy contigo. ,A2
+5,2,Mi hermano suele ir todos los días al mercado. ,Mi hermano suele ir al mercado todos los días. |Todos los días mi hermano suele ir al mercado. ,A2
+5,3,Podéis venir desde hace media hora. ,Desde hace media hora podéis venir. ,A2
+5,4,Los camareros sirven un postre de yogur y cereales. ,Los camareros sirven un postre de cereales y yogur. ,A2
+5,5,Los niños sueltan las cometas en el aire. ,,A2
+6,1,Ya tengo hambre otra vez. ,Otra vez ya tengo hambre. ,A2
+6,2,La habitación de arriba sigue como siempre. ,,A2
+6,3,Las moscas distraen a los alumnos. ,,A2
+6,4,Cierro las ventanas antes de ir a la cama. ,Antes de ir a la cama cierro las ventanas. ,A2
+6,5,Este fruto viene de muy lejos. ,,A2
+1,1,Pido en la tienda el libro de reclamaciones. ,En la tienda pido el libro de reclamaciones. ,B1
+1,2,Ustedes conducen de {manera|way} diferente a nosotros. ,,B1
+1,3,La mayoría de los jugadores prefiere entrenar por la mañana. ,,B1
+1,4,El {perro|dog} siente que su {dueño|owner} está {lejos|far}. ,,B1
+1,5,"Piden helados de todos los sabores, sobre todo pistacho. ",,B1
+2,1,Tú siempre pides el {informe|report} al {final|end} del día. ,Al final del día tú siempre pides el informe. | Al final del día tú pides siempre el informe. ,B1
+2,2,Salgo voluntario a la pizarra porque conozco la repuesta. ,Porque conozco la respuesta salgo voluntario a la pizarra. ,B1
+2,3,Es verdad que la miel atrae a las abejas. ,,B1
+2,4,Antes de ir a trabajar desayuno y hago la cama. ,Antes de ir a trabajar hago la cama y desayuno. |Hago la cama y desayuno antes de ir a trabajar. |Desayuno y hago la cama antes de ir a trabajar. ,B1
+2,5,Supongo que mantenéis la misma dirección del año pasado. ,,B1
+3,1,Eres muy amable cuando atiendes a los clientes. ,Cuando atiendes a los clientes eres muy amable. ,B1
+3,2,No tiene ni idea de ir de camping. ,De ir de camping no tiene ni idea. ,B1
+3,3,Cierran la emisora de radio después de muchos años. ,Después de muchos años cierran la emisora de radio. ,B1
+3,4,Últimamente duerme muchas horas seguidas. ,Duerme muchas horas seguidas últimamente. ,B1
+3,5,Dice que no quiere más manzanas. ,,B1
+4,1,Conducimos kilómetros y kilómetros durante horas. ,Durante horas conducimos kilómetros y kilómetros. ,B1
+4,2,Quiero ir de vacaciones antes del verano. ,Antes del verano quiero ir de vacaciones. ,B1
+4,3,Viene a ver a sus padres siempre que puede. ,Siempre que puede viene a ver a sus padres. ,B1
+4,4,Pongo el lavavajillas solo cuando está lleno. ,Solo cuando está lleno pongo el lavavajillas. ,B1
+4,5,Ponemos dinero en la cuenta de Lucas cuando necesita comprar algo. ,Cuando necesita comprar algo ponemos dinero en la cuenta de Lucas. ,B1
+5,1,En el tren ofrecen ayuda a las personas mayores. ,,B1
+5,2,Solo oyes lo que te interesa. ,Solo te interesa lo que oyes. ,B1
+5,3,Normalmente compruebo el cambio al pagar la compra. ,Al pagar la compra normalmente compruebo el cambio. ,B1
+5,4,Debido a su enfermedad hace régimen estricto. ,Hace régimen estricto debido a su enfermedad. ,B1
+5,5,Tiene una quemadura grave en el tobillo derecho. ,En el tobillo derecho tiene una quemadura grave.,B1
+6,1,Acuesta a los niños después de jugar con la pelota. ,Después de jugar con la pelota acuesta a los niños. ,B1
+6,2,Humedezco las plantas de interior con un pulverizador.  ,Humedezco las plantas de interior con un pulverizador ,B1
+6,3,En el pueblo imponen normas estrictas de reciclaje. ,,B1
+6,4,Este paisaje parece un desierto africano. ,,B1
+6,5,Los troncos ruedan ladera abajo sin control. ,,B1

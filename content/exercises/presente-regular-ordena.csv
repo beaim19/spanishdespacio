@@ -1,21 +1,91 @@
 ﻿set,id,correct,also_correct,level
-1,1,Me gusta mucho visitar nuevos {países|countries}.,,A1
-1,2,Los {pájaros|birds} beben agua en la {fuente|fountain}.,,A1
-1,3,Ustedes {caminan|walk} demasiado {rápido|fast} para mí. ,,A1
-1,4,Los {niños|kids} escuchan con atención al {maestro|teacher}.,,A1
-1,5,La {tienda|store} de la {esquina|corner} abre todos los días.,,A1
-2,1,Ellos leen muchos {libros|books} cada {mes|month}. ,Cada mes ellos leen muchos libros. ,A1
-2,2,Yo tomo el {autobús|bus} para ir al trabajo. ,Para ir al trabajo yo tomo el autobús.,A1
-2,3,Vosotros vivís muy {cerca|near} de mis padres. ,,A1
-2,4,Usteder beben el {agua|water} muy {fría|cold}. ,,A1
-2,5,Todas las mañanas estudio {un poco|a little} de español. ,Estudio un poco de español todas las mañanas.,A1
+1,1,Tú {lees|to read} muchos {libros|books}. ,,A1
+1,2,Nosotros {buscamos|to look for} un hotel. ,,A1
+1,3,Yo {limpio|to clean} las {ventanas|windows}. ,,A1
+1,4,Ella {ayuda|to help} a su familia. ,,A1
+1,5,Ellos {viven|to live} en esa casa. ,En esa casa viven ellos. ,A1
+2,1,La {película|movie} {acaba|to finish} a las cinco. ,A las cinco acaba la película. ,A1
+2,2,Vosotros {gastáis|to spend} mucho {dinero|money}. ,,A1
+2,3,La niña {corre|to run} en el parque. ,,A1
+2,4,Yo {escribo|to write} {cartas|letters} a mi {abuela|grandma}. ,,A1
+2,5,Ustedes {preparan|to prepare} la {tarta|cake}. ,,A1
+3,1,Ellos {escuchan|to listen} la música muy {alta|loud}. ,,A1
+3,2,Ellos {dejan|to leave} los libros {sobre|on} la {mesa|table}. ,Sobre la mesa dejan ellos los libros. |Sobre la mesa ellos dejan los libros. ,A1
+3,3,Ella {corta|to cut} {papel|paper} para la clase. ,Para la clase ella corta papel. ,A1
+3,4,Tú {decides|to decide} el color de los zapatos. ,,A1
+3,5,Yo {recibo|to get} muchos mensajes en el teléfono. ,En el teléfono yo recibo muchos mensajes. ,A1
+4,1,Los perros que veo {ladran|to bark} mucho.,,A1
+4,2,¿Quién {llama|to knock} a la puerta?,,A1
+4,3,Mis padres {viajan|to travel} muy cerca. ,,A1
+4,4,{Saco|take out} la {basura|garbage} porque {pesa|to weigh} mucho. ,Porque pesa mucho saco la basura. ,A1
+4,5,Ella {llena|to fill up} el vaso y bebe agua. ,,A1
+5,1,Hoy y mañana {escogéis|to choose} las clases. ,,A1
+5,2,La {manta|blanket} {cubre|to cover} todo el coche. ,,A1
+5,3,¿Por qué {evitáis|to avoid} a la maestra?,,A1
+5,4,Yo no lo {dudo|to hesitate} ni tú lo {dudas|to hesitate}. ,No lo dudas tú ni lo dudo yo.|Tú no lo dudas ni lo dudo yo.|No lo dudas tú ni yo lo dudo. |Tú no lo dudas ni yo lo dudo.  ,A1
+5,5,La luna también {brilla|to shine} en el {cielo|sky}. ,En el cielo también brilla la luna. |La luna brilla en el cielo también. ,A1
+6,1,{Bajas|to go down} tú o bajo yo. ,Tú bajas o yo bajo. |Bajas tú o yo bajo.|Tú bajas o bajo yo.|Bajo yo o bajas tú. |yo bajo o tú bajas.|yo bajo o bajas tú.|Bajo yo o tú bajas. ,A1
+6,2,Valentina {cuida|to take care} a su abuela por las tardes. ,Por las tardes Valentina cuida a su abuela. ,A1
+6,3,Ellos tampoco {barren|to sweep} la calle. ,Tampoco ellos barren la calle. ,A1
+6,4,Tú {dudas|to hesitate} si {dejar|to leave} el {trabajo|job}. ,,A1
+6,5,La clínica {cita|to make an appointment} bastante pronto. ,,A1
+1,1,Me gusta mucho visitar nuevos {países|countries}.,,A2
+1,2,Los {pájaros|birds} beben agua en la {fuente|fountain}.,,A2
+1,3,Ustedes {caminan|walk} demasiado {rápido|fast} para mí. ,,A2
+1,4,Los {niños|kids} escuchan con atención al {maestro|teacher}.,,A2
+1,5,La {tienda|store} de la {esquina|corner} abre todos los días.,,A2
+2,1,Ellos leen muchos {libros|books} cada {mes|month}. ,Cada mes ellos leen muchos libros. ,A2
+2,2,Yo tomo el {autobús|bus} para ir al trabajo. ,Para ir al trabajo yo tomo el autobús.,A2
+2,3,Vosotros vivís muy {cerca|near} de mis padres. ,,A2
+2,4,Ustedes beben el {agua|water} muy {fría|cold}. ,,A2
+2,5,Todas las mañanas estudio {un poco|a little} de español e inglés. ,Estudio un poco de español e inglés todas las mañanas.,A2
 3,1,Su {padre|father} trabaja en el garaje {detrás|behind} de su casa. ,,A2
-3,2,Dicen que {mañana|tomorrow} canta Luis. ,Mañana dicen que canta Luis.,A2
-3,3,Ellos intentan {marcar|score} gol con mucho {esfuerzo|effort}. ,Con mucho esfuerzo ellos intentan marcar gol. ,A2
+3,2,"Tengo {miedo|to be scared}, espero pasar el examen. ","Espero pasar el examen, tengo miedo.",A2
+3,3,Cuando utilizo el {ordenador|computer} soy más {rápida|fast}. ,Soy más rápida cuando utilizo el ordenador.,A2
 3,4,Vosotros cambiáis los {platos|plates} de la {mesa|table}. ,,A2
-3,5,Sus {hijos|sons} necesitan ir a casa antes del {partido|game}. ,Antes del partido sus hijos necesitan ir a casa. ,A2
+3,5,Abro el {paraguas|umbrella} ahora porque está {lloviendo|to rain}.,Porque está lloviendo abro el paraguas.,A2
 4,1,Ella escribe una {carta|letter} a sus {abuelos|grandparents} cada {semana|week}. ,Cada semana ella escribe una carta a sus abuelos. ,A2
-4,2,El {dueño|owner} del {local|premises} busca un apartamento. ,El dueño del apartamento busca un local. ,A2
+4,2,Después de la {película|movie} te {llamo|to call} a casa. ,te llamo a casa después de la película.,A2
 4,3,Las {enfermeras|nurses} comen todos los días en la {cantina|canteen}. ,Las enfermeras comen en la cantina todos los días.,A2
 4,4,El director llama {a menudo|often} a los padres de los {alumnos|students}. ,El director llama a los padres de los alumnos a menudo. ,A2
 4,5,Tú llevas a tus hijos a una {piscina|swimming pool} muy buena. ,,A2
+5,1,Mi {máquina|machine} {fotocopia|fotocopy} tan bien como la tuya. ,,A2
+5,2,Me {interesa|to be interested} la {gente|people} y los viajes,,A2
+5,3,Yo nunca {envío|to send} cartas por correo. ,,A2
+5,4,La maestra {dicta|to dictate} las {palabras|words} a los alumnos. ,,A2
+5,5,Los maestros le {conceden|to grant} la {beca|scholarship} a ella. ,A ella le conceden la beca los maestros. ,A2
+6,1,"Bueno, vale, pero yo {adorno|to decorate} el árbol. ",,A2
+6,2,Mucha gente {aplaude|to clap} al final de la obra. ,Al final de la obra mucha gente aplaude. ,A2
+6,3,"Gracias, pero antes tú debes cerrar la puerta. ",,A2
+6,4,Le voy a escribir una carta de siete u ocho páginas. ,,A2
+6,5,Robaron el telefono a muchas personas. ,,A2
+1,1,Debemos usar el contenedor de papel para reciclar. ,Para reciclar debemos usar el contenedor de papel. ,B1
+1,2,Dicen que {mañana|tomorrow} canta Luis. ,Mañana dicen que canta Luis.|Dicen que mañana canta Luis. ,B1
+1,3,Ellos intentan {marcar|score} gol con mucho {esfuerzo|effort}. ,Con mucho esfuerzo ellos intentan marcar gol. | Con mucho esfuerzo intentan ellos marcar gol. ,B1
+1,4,Plantamos este árbol en su honor. ,En su honor plantamos este árbol. | Plantamos en su honor este árbol.,B1
+1,5,Sus {hijos|sons} necesitan ir a casa antes del {partido|game}. ,Antes del partido sus hijos necesitan ir a casa. | Antes del partido necesitan sus hijos ir a casa. ,B1
+2,1,Su vecina mima mucho a sus animales de compañía. ,Su vecina mima a sus animales de compañía mucho. ,B1
+2,2,El {dueño|owner} del {local|premises} busca un apartamento. ,El dueño del apartamento busca un local. ,B1
+2,3,En las noticias avisan de una ola de calor. ,Avisan de una ola de calor en las noticias. ,B1
+2,4,Viven en un barrio residencial a las afueras. ,Viven a las afueras en un barrio residencial. ,B1
+2,5,Las artistas fotografían los paisajes montañosos. ,,B1
+3,1,Elsa lee su horóscopo en el periódico local. ,,B1
+3,2,Quedamos para ver una película en versión original. ,,B1
+3,3,Su padre ama las novelas policiacas. ,,B1
+3,4,Cada semana visitamos las galerías de arte de la ciudad. ,Visitamos las galerías de arte de la ciudad cada semana. ,B1
+3,5,La orquesta municipal toca durante el pregón religioso. ,Durante el pregón religioso toca la orquesta municipal. ,B1
+4,1,El ladrón siempre escapa por una ventana. ,El ladrón escapa siempre por una ventana. | Por una ventana escapa siempre el ladrón. ,B1
+4,2,El embajador explica las normas a todos. ,,B1
+4,3,Luisa aprende todos los elementos químicos de la tabla. ,,B1
+4,4,Necesito crear una contraseña para mi cuenta. ,Para mi cuenta necesito crear una contraseña. ,B1
+4,5,En clase de matemática estudiáis cómo sumar y restar. ,,B1
+5,1,En su doctorado investiga sobre ecología vegetal. ,,B1
+5,2,Trabajan en un laboratorio genético a tiempo completo. ,Trabajan a tiempo completo en un laboratorio genético. ,B1
+5,3,Los pescadores toman la plaza en protesta. ,En protesta toman los pescadores la plaza. | En protesta los pescadores toman la plaza. ,B1
+5,4,Pagamos todo en metálico porque es más fácil. ,Porque es más fácil pagamos todo en metálico. ,B1
+5,5,Los tranvías de Lisboa operan durante muchas horas. ,,B1
+6,1,Llevamos sacos de dormir para usar en la pensión. ,,B1
+6,2,Estudiamos el mapa de carreteras antes de salir. ,Antes de salir estudiamos el mapa de carreteras. ,B1
+6,3,El secador de pelo del hotel no funciona. ,No funciona el secador de pelo del hotel. ,B1
+6,4,El dentista le manda un antibiótico para la infección. ,Para la infección el dentista le manda un antibiótico. ,B1
+6,5,En el centro de salud informan de todos los detalles. ,,B1

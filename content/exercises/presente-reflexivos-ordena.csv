@@ -1,21 +1,46 @@
-﻿set,id,correct,also_correct
-1,1,Yo me acuesto muy {temprano|early}.,
-1,2,Nosotros nos lavamos las {manos|hands} antes de comer. ,Antes de comer nosotros nos lavamos las manos.
-1,3,Ustedes se {peinan|to comb} con un {estilo|style} muy moderno. ,
-1,4,Los {gatos|cats} se {estiran|to stretch} {antes|before} y {después|after} de {dormir|sleep}. ,Los gatos se estiran después y antes de dormir. 
-1,5,Su {sobrina|niece} se cae {a menudo|often} del {columpio|swing}. ,
-2,1,Todos nosotros nos {callamos|to stop talking} durante el {juego|game}. ,Durante el juego todos nosotros nos callamos. 
-2,2,Me {mojo|to make wet} el {pelo|hair} por la {mañana|morning}. ,Por la mañana me mojo el pelo. 
-2,3,El {autobús|bus} se {mueve|to move} muy {despacio|slow}. ,
-2,4,Su {prima|cousin} se {casa|to get married} este {viernes|Friday}. ,Este viernes su prima se casa. |Este viernes se casa su prima. 
-2,5,Vosotros os {divertís|to have fun} en la {fiesta|party}. ,
-3,1,Las {nadadoras|swimmers} se {conforman|to conform} con una {piscina|swimming pool} mediana. ,
-3,2,Vosotros os {excusáis|to excuse} por no {venir|to come} a clase. ,
-3,3,Él se {enamora|to fall in love} muy {fácilmente|easily}. ,
-3,4,Hoy nos {bañamos|to swim} en el {lago|lake}. ,Nos bañamos en el lago hoy. 
-3,5,Ustedes se {divierten|to have fun} en todas las {fiestas|parties} de cumpleaños. ,
-4,1,Nostros nos {retiramos|to leave} ya a la {cama|bed}. ,
-4,2,Te {ríes|to laugh} de una manera muy {graciosa|funny}. ,
-4,3,Los {barcos|boats} se deplazan {suavemente|smoothly} por el agua. ,
-4,4,Me {mantengo|to keep in shape} en forma porque voy al {gimnasio|gym}. ,Porque voy al gimnasio me mantengo en forma. 
-4,5,Lucía se {distrae|to get distracted} con una {mosca|fly}. ,
+﻿set,id,correct,also_correct,level
+1,1,Mi perro se llama Lucas. ,,A1
+1,2,Hoy nos {bañamos|to swim} en el {lago|lake}. ,Nos bañamos en el lago hoy. ,
+1,3,La falda se seca al sol. ,,
+1,4,Nosotros nos cepillamos el pelo. ,,
+1,5,Vosotros os graduáis mañana. ,Mañana os grauáis vosotros. |Mañana vosotros os graduáis.,
+2,1,Mario se levanta muy temprano. ,,
+2,2,Ustedes se disfrazan para carnaval. ,,
+2,3,Ella también se echa la siesta. ,Ella se echa la siesta también. ,
+2,4,Las gatas se cuidan solas. ,,
+2,5,Os relajáis en la playa. ,En la playa os relajáis. ,
+3,1,Yo tampoco me tumbo en la piscina. ,En la piscina yo tampoco me tumbo. |En la piscina tampoco me tumbo yo. ,
+3,2,Su madre se casa de otra vez. ,,
+3,3,Me reuno con mi equipo hoy. ,Hoy me reuno con mi equipo. ,
+3,4,Ellos se sientan poco allí. ,Ellos se sientan allí poco. ,
+3,5,El mes que viene se mudan a Sevilla. ,Se mudan a Sevilla el mes que vien. ,
+4,1,Ustedes se duchan en este baño. ,En este baño se duchan ustedes. ,
+4,2,"Sí, tú y yo nos lavamos las manos.","Tú y yo nos lavamos las manos, sí. ",
+4,3,Yo me acuesto muy {temprano|early}.,,
+4,4,Su hermano se afeita poco la barba. ,,
+4,5,Los deportistas se estiran ahora. ,Ahora se estiran los deportistas.,
+1,1,Nosotros nos lavamos las {manos|hands} antes de comer. ,Antes de comer nosotros nos lavamos las manos.,A2
+1,2,Nos alegramos más por sus padres. ,Por sus padres nos alegramos más. ,A2
+1,3,Me interesa la gente y las ciudades. ,,A2
+1,4,Su {sobrina|niece} se cae {a menudo|often} del {columpio|swing}. ,,A2
+1,5,Todos nosotros nos {callamos|to stop talking} durante el {juego|game}. ,Durante el juego todos nosotros nos callamos. ,A2
+2,1,Me {mojo|to make wet} el {pelo|hair} por la {mañana|morning}. ,Por la mañana me mojo el pelo. ,A2
+2,2,El {autobús|bus} se {mueve|to move} muy {despacio|slow}. ,,A2
+2,3,Su {prima|cousin} se {casa|to get married} este {viernes|Friday}. ,Este viernes su prima se casa. |Este viernes se casa su prima. ,A2
+2,4,Vosotros os {divertís|to have fun} en la {fiesta|party}. ,,A2
+2,5,Por tu culpa me asusto. ,Me asusto por tu culpa. ,A2
+3,1,Los {gatos|cats} se {estiran|to stretch} {antes|before} y {después|after} de {dormir|sleep}. ,Los gatos se estiran después y antes de dormir. ,A2
+3,2,Él se {enamora|to fall in love} muy {fácilmente|easily}. ,,A2
+3,3,Si te callas puedo escuchar la música. ,Puedo escuchar la música si te callas. ,A2
+3,4,Ustedes se {divierten|to have fun} en todas las {fiestas|parties} de cumpleaños. ,,A2
+3,5,Nostros nos {retiramos|to leave} ya a la {cama|bed}. ,,A2
+4,1,Los niños se cansan rápido con el calor. ,Con el calor los niños se cansan rápido. ,A2
+4,2,Los {barcos|boats} se deplazan {suavemente|smoothly} por el agua. ,,A2
+4,3,Me {mantengo|to keep in shape} en forma porque voy al {gimnasio|gym}. ,Porque voy al gimnasio me mantengo en forma. ,A2
+4,4,Lucía se {distrae|to get distracted} con una {mosca|fly}. ,,A2
+4,5,Su novio se dedica a dar clase. ,,A2
+5,1,Ustedes se {peinan|to comb} con un {estilo|style} muy moderno. ,,A2
+5,2,Las {nadadoras|swimmers} se {conforman|to conform} con una {piscina|swimming pool} mediana. ,,A2
+5,3,Vosotros os {excusáis|to excuse} por no {venir|to come} a clase. ,,A2
+5,4,Te {ríes|to laugh} de una manera muy {graciosa|funny}. ,,A2
+5,5,El equipo se entrena antes del partido. ,Antes del partido el equipo se entrena.,A2
