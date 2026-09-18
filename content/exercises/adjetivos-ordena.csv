@@ -2,7 +2,7 @@
 1,1,La niña rubia come fruta. ,,A1
 1,2,La niña come fruta fresca. ,,A1
 1,3,Un café cortado para mí. ,,A1
-1,4,Me gusta segundo plato. ,,A1
+1,4,Me gusta el segundo plato. ,,A1
 1,5,Es una biblioteca grande. ,,A1
 2,1,Los {balones|balls} rojos son nuevos. ,Los balones nuevos son rojos.,A1
 2,2,Él es un actor famoso. ,,A1
@@ -26,32 +26,32 @@
 2,5,Sus ideas originales {sorprendieron|surprised} a todos.,,A2
 3,1,Mi {tarta|cake} de cumpleaños es muy dulce. ,,A2
 3,2,Estos zapatos son menos {baratos|cheap}. ,,A2
-3,3,Esa es la mejor {cafetería|café} de la ciudad. ,La mejor cafetería de la ciudad es esa,A2
+3,3,Esa es la mejor {cafetería|café} de la ciudad. ,La mejor cafetería de la ciudad es esa. | esa cafetería es la mejor de la ciudad. ,A2
 3,4,Ana es tan alta como Lucas. ,,A2
 3,5,El {alcalde|mayor} es una persona agradable. ,,A2
 1,1,Aquel era un mal {ejemplo|example} para los alumnos. ,Para los alumnos aquel era un mal ejemplo,B1
 1,2,Mario se divierte mucho en las fiestas populares del verano. ,,B1
 1,3,El director dio un buen discurso. ,,B1
 1,4,La cabra macho era muy agresiva. ,,B1
-1,5,La segunda es la mejor foto de todas. ,De todas las fotos la segunda es la mejor| La segunda de todas es la mejor foto|De todas las segunda foto es la mejor,B1
+1,5,La segunda es la mejor foto de todas. ,La segunda foto es la mejor de todas. | La segunda de todas es la mejor foto|De todas las segunda foto es la mejor,B1
 2,1,La bicicleta estaba en bastante mal estado. ,,B1
-2,2,Los galgos son los perros más rapidos. ,Los perros más rápidos son los galgos. ,B1
+2,2,Los galgos son los perros más rápidos. ,Los perros más rápidos son los galgos. ,B1
 2,3,Los yogures naturales son mis favoritos. ,,B1
 2,4,Las cintas rosas son menos anchas que las amarillas. ,Las cintas amarillas son menos anchas que las rosas.,B1
 2,5,Ningún corredor llegó a meta en menos de veinte minutos. ,,B1
 3,1,Cualquier libro es suficiente para mi proyecto. ,Para mi proyecto cualquier libro es suficiente,B1
-3,2,El primer piso del edificio estaba cerrado. ,Estaba cerrado el primer piso del edificio. ,B1
-3,3,Llegó a la reunión con buenas intenciones. ,Llegó a la reunión con intenciones buenas,B1
-3,4,No teníamos ninguna posibilidad de ganar. ,,B1
+3,2,El primer piso del edificio estaba cerrado. ,Estaba cerrado el primer piso del edificio. | El piso del primer edificio estaba cerrado. |Estaba cerrado el piso del primer edificio. ,B1
+3,3,Llegó a la reunión con buenas intenciones. ,Llegó a la reunión con intenciones buenas. | Llegó con buenas intenciones a la reunión. ,B1
+3,4,No teníamos ninguna posibilidad de ganar. ,No teníamos posibilidad ninguna de ganar. ,B1
 3,5,Los manteles marrones están en el cajón superior. ,En el cajón superior están los manteles marrones. ,B1
-1,1,"Me gusta más la corbata pequeña, pero compraré la grande. ","Me gusta más la corbata grande, pero compraré la pequeña|La corbata grande me gusta más pero compraré la pequeña|La corbata pequeña me gusta más pero compraré la grande",B2
+1,1,"Me gusta más la corbata pequeña, pero compraré la grande. ","Me gusta la corbata más pequeña, pero compraré la grande. ",B2
 1,2,En este restaurante barato se come de menú. ,Se come de menú en este restaurante barato. ,B2
 1,3,Los niños iban a un colegio laico en el centro de la ciudad. ,,B2
 1,4,Era una casa de larga puerta y ventanas. ,,B2
 1,5,Trabaja mucho pero solo recibe el salario mínimo,Solo recibe el salario mínimo pero trabaja mucho,B2
 2,1,En la escuela le tratan con cariño maternal. ,,B2
-2,2,Cuando comenzó a trabajar solo tenía estudios primarios. ,Solo tenía estudios primarios cuando comenzó a trabajar,B2
-2,3,Al final del curso escolar su nota media era alta. ,Su nota media era alta al final del curso escolar. ,B2
+2,2,Cuando comenzó a trabajar solo tenía estudios primarios. ,Solo tenía estudios primarios cuando comenzó a trabajar. | Comenzó a trabajar cuando solo tenía estudios primarios. ,B2
+2,3,Al final del curso escolar su nota media era alta. ,Su nota media era alta al final del curso escolar. | Su nota media al final del curso escolar era alta. ,B2
 2,4,Dame el rotulador fluorescente para analizar el texto,Para analizar el texto dame el rotulador fluorescente,B2
 2,5,Le hicieron un contrato indefinido desde el principio. ,Desde el principio le hicieron un contrato indefinido. ,B2
 3,1,Por su aniversario fueron a un parque temático. ,Fueron a un parque temático por su aniversario. ,B2

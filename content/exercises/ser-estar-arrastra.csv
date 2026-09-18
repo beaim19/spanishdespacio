@@ -3,7 +3,7 @@
 1,2,Mi {hermano|brother},médico.,es,is,A1
 1,3,El café,muy {frío|cold}.,está,is,A1
 1,4,Nosotras,{profesoras|teachers}.,somos,are,A1
-1,5,Ellas,{enferma|sick} hoy.,están,are,A1
+1,5,Ellas,{enfermas|sick} hoy.,están,are,A1
 2,1,Ellas,muy {simpáticas|friendly}. ,son,are,A1
 2,2,Nosotros ,{camareros|waiters}.,somos,are,A1
 2,3,Mi {compañero|colleague},en {paro|unemployed}. ,está,is,A1
@@ -14,7 +14,7 @@
 3,3,Vosotros,en la {playa|beach}.,estáis,are,A1
 3,4,Yo ,muy {tímida|shy}.,soy,am,A1
 3,5,Tú ,en clase de español. ,estás,are,A1
-4,1,¿De quién es,este {gato|cat}?,es,is,A1
+4,1,¿De quién,este {gato|cat}?,es,is,A1
 4,2,Yo {también|too},argentino. ,soy,am,A1
 4,3,Tú y yo,en {clase|class}. ,estamos,are,A1
 4,4,Yo {vivo|to live} en un {pueblo|town} que,{cerca|near} de un {río|river}. ,está,is,A1
@@ -68,7 +68,7 @@
 3,5,"Cuando llegamos, la tienda ya",cerrada.,estaba,was,B1
 3,6,¿Quién,la chica de ayer?,era,was,B1
 4,1,El texto,escrito con {tinta|ink} azul. ,está,is,B1
-4,2,No,sentados con nadie más. ,estáis,are,B1
+4,2,Carmen y tú no,sentados con nadie más. ,estáis,are,B1
 4,3,Los niños que {cuido|take care},muy {ruidosos|noisy}. ,son,are,B1
 4,4,¿Qué ,lo que más te {gustó|to like}?,es,is,B1
 4,5,Supongo que,"parte del grupo, por lo que os doy la bienvenida. ",sois,are,B1
@@ -82,7 +82,7 @@
 1,1,Su padre,a régimen por orden del doctor. ,está,is,B2
 1,2,Después del accidente,muy deprimido y necesito medicinas. ,estoy,am,B2
 1,3,Mi sobrino ,siempre el centro de la fiesta. ,es,is,B2
-1,4,Las camisas que tanto me gustas,de oferta. ,están,are,B2
+1,4,Las camisas que tanto me gustan,de oferta. ,están,are,B2
 1,5,"Los quiero mucho, ",como de la familia. ,son,are,B2
 1,6,Desde hace años,coleccionista de monedas antiguas. ,soy,am,B2
 2,1,Me gusta esa playa pero el agua,muy fría. ,está,is,B2
@@ -99,7 +99,7 @@
 3,6,"Cuando era niña, mi madre",en el hospital toda una semana. ,estuvo,was,B2
 4,1,Sus muchos años de experiencia no,suficientes para la plaza. ,eran,were,B2
 4,2,La mitad de la tarta,para llevar a casa para repartirla. ,es,is,B2
-4,3,Estoy seguro de que las llaves,ayer sobre la mesa. ,estaban,were,B1
+4,3,Estoy seguro de que las llaves,ayer sobre la mesa. ,estaban,were,B2
 4,4,"Vosotros, que sabéis informática, ",preparados para el problema. ,estáis,are,B2
 4,5,No hay duda de que tú y tu equipo,los mejores candidatos. ,sois,are,B2
 4,6,Me ha dicho que Daniel,totalmente de acuerdo con nosotros. ,está,is,B2

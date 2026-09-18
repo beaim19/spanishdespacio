@@ -29,8 +29,8 @@
 6,3,Los {pantalones|pants},son muy bonitos. ,rojo,rojos,red,A1
 6,4,En el {cuento|tale} hay una {reina|queen},.,mal,mala,bad,A1
 6,5,Me gustan las {playas|beaches},del Norte. ,limpio,limpias,clean,A1
-1,1,Ana lleva el {pelo|hair},.,rizado,rizado,curly,A1
-1,2,¿Dónde viven los {maestros|teachers},que tenemos?,nuevos,nuevo,new,A1
+1,1,Ana lleva el {pelo|hair},.,rizado,rizado,curly,A2
+1,2,¿Dónde viven los {maestros|teachers},que tenemos?,nuevo,nuevos,new,A2
 1,3,Para comer él quiere una pizza,.,grande,grande,big,A2
 1,4,Le duele una {muela|molar tooth},.,delantero,delantera,front,A2
 1,5,Llevo mi {paraguas|umbrella},porque llueve. ,colorido,colorido,colorful,A2
@@ -73,12 +73,12 @@
 3,2,Creo que es un ,perro cuando duerme. ,bueno,buen,good,B1
 3,3,Compra yogures,", por favor. ",natural,naturales,plain,B1
 3,4,En agosto se {celebran|to clebrate} las fiestas,de su pueblo. ,popular,populares,popular,B1
-3,5,Pedro y Sara son los más,del equipo. ,rápido,rapidos,fast,B1
+3,5,Pedro y Sara son los más,del equipo. ,rápido,rápidos,fast,B1
 4,1,Tenían bastentes animales,en la {granja|farm}. ,doméstico,domésticos,domestic,B1
 4,2,"Me gusta estudiar {idiomas|languages}, sobre todo inglés",.,antiguo,antiguo,old,B1
 4,3,El agua de la {fuente|fountain} tenía un,"sabor, por lo que no bebimos. ",malo,mal,bad,B1
 4,4,Viven en una zona de clima muy,.,húmedo,húmedo,humid,B1
-4,5,La {mayoria|most} de los niños prefería la comida,.,salado,salada,salty,B1
+4,5,La {mayoría|most} de los niños prefería la comida,.,salado,salada,salty,B1
 5,1,El sábado celebraron una boda,en el ayuntamiento. ,civil,civil,non-religious wedding,B1
 5,2,Este grupo de turistas alemanes es muy,.,activo,activo,active,B1
 5,3,Mi,{pensamiento|thought} fue salir corriendo. ,primero,primer,first,B1
@@ -96,7 +96,7 @@
 1,5,Lo más,de la película fue el final. ,interesante,interesante,interesting,B2
 2,1,A la hora de la siesta siempre ponían música,.,infantil,infantil,children's,B2
 2,2,Beltrán es más,de lo que me imaginaba. ,alto,alto,tall,B2
-2,3,Con el movimiento del tren las abuelas dormían,.,tranquilo,tranquilos,calm,B2
+2,3,Con el movimiento del tren las abuelas dormían,.,tranquilo,tranquilas,calm,B2
 2,4,El campo de fútbol,está muy bien conservado. ,municipal,municipal,local,B2
 2,5,Durante el viaje me di cuenta de que es un país muy,.,cosmopolita,cosmopolita,cosmopolitan,B2
 3,1,Para su cumpleaños quería un reloj,.,digital,digital,digital,B2
@@ -111,7 +111,7 @@
 4,5,Debido a su enfermedad solo puede comer pan,.,integral,integral,wholegrain,B2
 5,1,Tenemos que recoger flores,para el herbario. ,silvestre,silvestres,wild,B2
 5,2,Lo,de vivir aquí son los parques cercanos. ,bueno,bueno,good,B2
-5,3,Cone estas temperaturas,debemos salir de paseo. ,primaveral,primaverales,spring-like,B2
+5,3,Con estas temperaturas,debemos salir de paseo. ,primaveral,primaverales,spring-like,B2
 5,4,En todas las fuentes de la ruta el agua era,.,potable,potable,drinkable,B2
 5,5,Mis sobrinas ya viven,en el centro de la ciudad. ,solo,solas,by themselves,B2
 6,1,Toda la costa es zona,y está muy protegida. ,virgen,virgen,untouched,B2

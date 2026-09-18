@@ -29,8 +29,38 @@
 6,3,Los {pantalones|pants},son muy bonitos. ,rojo,plural,masculino,rojos,A1
 6,4,En el {cuento|tale} hay una {reina|queen},.,mal,singular,femenino,mala,A1
 6,5,Me gustan las {playas|beaches},del Norte. ,limpio,plural,femenino,limpias,A1
-1,1,Ana lleva el {pelo|hair},.,rizado,singular,masculino,rizado,A1
-1,2,¿Dónde viven los {maestros|teachers},que tenemos?,nuevos,singular,masculino,nuevo,A1
+7,1,El {chico|boy},.,alto ,singular,masculino,alto,A1
+7,2,Las {mujeres|women} ,.,francés,plural,femenino,francesas,A1
+7,3,La {solución|solution},.,fácil,singular,femenino,fácil,A1
+7,4,Los {niños|children} ,.,rubio,plural,masculino,rubios,A1
+7,5,La {tarde|afternoon},.,oscuro,singular,femenino,oscura,A1
+8,1,La {taza|cup},.,rojo,singular,femenino,roja,A1
+8,2,El {árbol|tree},.,joven,singular,masculino,joven,A1
+8,3,Los {zapatos|shoes},.,nuevo,plural,masculino,nuevos,A1
+8,4,Las {ventanas|windows},.,limpio,plural,femenino,limpias,A1
+8,5,El {guante|glove},.,viejo,singular,masculino,viejo,A1
+9,1,Los {pisos|apartments},tienen muchas {ventanas|windows}.,exterior,plural,masculino,exteriores,A1
+9,2,Las {niñas|girls} ,{comen|to eat} la {merienda|afternoon snack}.,alegre,plural,femenino,alegres,A1
+9,3,La {profesora|teacher},{sabe|to know} muchos {idiomas|languages}. ,argentino,singular,femenino,argentina,A1
+9,4,Sus {amigos|friends} ,son muy {divertidos|funny}. ,extranjero,plural,masculino,extranjeros,A1
+9,5,Las {sillas|chairs} ,son para el {jardín|garden}. ,nuevo,plural,femenino,nuevas,A1
+10,1,Los {exámenes|exams},son muy {duros|hard}. ,difícil,plural,masculino,difíciles,A1
+10,2,Ella es una {actriz|actress} muy,.,guapo,singular,femenino,guapa,A1
+10,3,Los {árboles|trees} del {bosque|forest} son,.,alto,plural,masculino,altos,A1
+10,4,Me {gusta|like} el {portero|goalei},del {equipo|team}. ,fuerte,singular,masculino,fuerte,A1
+10,5,El {cuaderno|notebook},está en la {mesa|table}. ,azul,singular,masculino,azul,A1
+11,1,Una casa,es {mejor|better}. ,amplio,singular,femenino,amplia,A1
+11,2,Las {noches|nights},son {buenas|good}. ,tranquilo,plural,femenino,tranquilas,A1
+11,3,La {vecina|neighbor} ,es muy {simpática|friendly}. ,ruso,singular,femenino,rusa,A1
+11,4,La {moto|motorbike},va muy bien. ,rojo,singular,femenino,roja,A1
+11,5,Las {paredes|wall} ,me gustan. ,alto,plural,femenino,altas,A1
+12,1,Él {vive|live} en {países|country},.,distinto,plural,masculino,distintos,A1
+12,2,La mesa tiene {tenedores|forks},.,dorado,plural,femenino,dorados,A1
+12,3,La radio de mi abuelo es ,.,antiguo,singular,femenino,antigua,A1
+12,4,Yo quiero un peine,.,nuevo,singular,masculino,nuevo,A1
+12,5,Todas son soluciones,.,fácil,plural,femenino,fáciles,A1
+1,1,Ana lleva el {pelo|hair},.,rizado,singular,masculino,rizado,A2
+1,2,¿Dónde viven los {maestros|teachers},que tenemos?,nuevo,singular,masculino,nuevo,A2
 1,3,Para comer él quiere una pizza,.,grande,singular,femenino,grande,A2
 1,4,Le duele una {muela|molar tooth},.,delantero,singular,femenino,delantera,A2
 1,5,Llevo mi {paraguas|umbrella},porque llueve. ,colorido,singular,masculino,colorido,A2
@@ -59,6 +89,36 @@
 6,3,No me gustan nada las {comidas|foods},.,pesado,plural,femenino,pesadas,A2
 6,4,Las {hojas|leaves} de estos árboles son,en la {parte alta|upper part}. ,mayor,plural,femenino,mayores,A2
 6,5,Este {palo|stick} es menos,que este otro. ,resistente,singular,masculino,resistente,A2
+7,1,El {pasillo|hallway} ,está {oscuro|dark}.,largo,singular,masculino,largo,A2
+7,2,La {cocina|stove},de mi casa es nueva.,eléctrico,singular,femenino,eléctrica,A2
+7,3,Guarda tus {monedas|coins},en el {monedero|wallet}. ,pesado,plural,femenino,pesadas,A2
+7,4,Las {toallas|towels},están usadas. ,mojado,plural,femenino,mojadas,A2
+7,5,Su {mochila|backpack},,grande,singular,femenino,grande,A2
+8,1,El {perro|dog} ,{pasea|to walk} por el {parque|park}.,marrón,singular,masculino,marrón,A2
+8,2,La {manzana|apple},está muy {rica|tasty}. ,verde,singular,femenino,verde,A2
+8,3,Ayer hicimos los exámenes,.,difícil,plural,masculino,difíciles,A2
+8,4,Paseamos por el pueblo,.,tranquilo,singular,masculino,tranquilo,A2
+8,5,La {comida|food} de la {cantina|cafeteria},es {deliciosa|delicious}.,nuevo,singular,femenino,nueva,A2
+9,1,No puedo {subir|to bring up} la {cesta|basket},.,pesado,singular,femenino,pesada,A2
+9,2,El {olivo|olive tree} ,tiene muchas {aceitunas|olives}. ,viejo,singular,masculino,viejo,A2
+9,3,El {bosque|forest},es perfecto para {pasear|to walk},frondoso,singular,masculino,frondoso,A2
+9,4,El chocolate,es muy {dulce|sweet}. ,blanco,singular,masculino,blanco,A2
+9,5,La {tarta|cake} ,es para mi {cumpleaños|brithday}.,decorado,singular,femenino,decorada,A2
+10,1,Las {estrellas|stars},son mis favoritas.,brillante,plural,femenino,brillantes,A2
+10,2,El {problema|problem} ,está ya {resuelto|solved}.,principal,singular,masculino,principal,A2
+10,3,Tenía problemas con la {mano|hand},.,izquierdo,singular,femenino,izquierda,A2
+10,4,La {gobernadora|governor} es una persona,.,agradable,singular,femenino,agradable,A2
+10,5,Para su {cumpleaños|birthday} quiere {pasteles|cakes},.,dulce,plural,masculino,dulces,A2
+11,1,Los {jabalíes|wild boars},me dan miedo. ,negro,plural,masculino,negros,A2
+11,2,Física es mi {asignatura|subject},.,pendiente,singular,femenino,pendiente,A2
+11,3,Estas {serpientes|snake} son tan,como las otras. ,feo,plural,femenino,feas,A2
+11,4,Los {pantalones|pants},me gustan. ,largo,plural,masculino,largos,A2
+11,5,Estas {gafas|glasses} son ,que estas otras. ,peor,plural,femenino,peores,A2
+12,1,Los {hijos|children},están {de viaje|on a trip}. ,mayor,plural,masculino,mayores,A2
+12,2,El {artista|artist} ,está en la ciudad. ,famoso,singular,masculino,famoso,A2
+12,3,La {princesa|princess} {nada|swim} en el agua,.,caliente,singular,femenino,caliente,A2
+12,4,La maestra,era buena con los {alumnos|students}. ,exigente,singular,femenino,exigente,A2
+12,5,La {hija|daugther},estudia Medicina. ,menor,singular,femenino,menor,A2
 1,1,Cuando viajo me gusta comer las comidas,del país. ,tradicional,plural,femenino,tradicionales,B1
 1,2,"Tienes que poner el {lavavajillas|dishwasher}, los platos",están en el {fregadero|sink}. ,sucio,plural,masculino,sucios,B1
 1,3,El {partido|mathc} de ayer fue un ,partido.,grande,singular,masculino,gran,B1
@@ -89,6 +149,36 @@
 6,3,La hija de Marisa es de carácter,.,fuerte,singular,femenino,fuerte,B1
 6,4,Ganó al fin en la ,partida de {ajedrez|chess}. ,tercero,singular,femenino,tercera,B1
 6,5,Ayer visitamos el casco,de Toledo. ,histórico,singular,masculino,histórico,B1
+7,1,Dijeron que haría,{tiempo|weather} {mañana|tomorrow}. ,malo,singular,masculino,mal,B1
+7,2,Fue el ,récord que {conseguía|to get}. ,primer,singular,masculino,primer,B1
+7,3,Mi {primo|cousin} vive en el {piso|apartment},.,tercero,singular,masculino,tercero,B1
+7,4,Ayer hizo un {tiempo|weather} muy,.,malo,singular,masculino,malo,B1
+7,5,Me contó un {chiste|joke},{anoche|last night}. ,buenísimo,singular,masculino,buenísimo,B1
+8,1,Luis es el {alumno|student} más,de la clase.,avanzado,singular,masculino,avanzado,B1
+8,2,Ella era una {persona|person} de ,{corazón|heart}. ,grande,singular,femenino,gran,B1
+8,3,Este vestido necesita zapatos,.,marrón,plural,masculino,marrones,B1
+8,4,Siempre tiene,{intenciones|intentions}. ,bueno,plural,femenino,buenas,B1
+8,5,Los {alumnos|students} ,salen un {día antes|previous day}. ,mayor,plural,masculino,mayores,B1
+9,1,¿Tienes,silla extra para dejarme?,alguno,singular,femenino,alguna,B1
+9,2,Hoy es el ,día de mi {vida|life}. ,mejor,singular,masculino,mejor,B1
+9,3,Por favor {préstame|to lend} un libro,.,cualquier,singular,masculino,cualquiera,B1
+9,4,Había {al menos|at least},personas en el {concierto|concert}. ,cien,singular,femenino,cien,B1
+9,5,Es un ,{colegio|school} y a Carla le gusta. ,bueno,singular,masculino,buen,B1
+10,1,Era una persona {bastante|quite},.,desagradable,singular,femenino,desagradable,B1
+10,2,La {pastilla del jabón|bar soap},era de color rosa. ,oloroso,singular,femenino,oloroso,B1
+10,3,Me vale con ,{lapicero|pencil}. ,cualquier,singular,masculino,cualquier,B1
+10,4,La ,atleta ganó la {carrera|race}. ,mejor,singular,femenino,mejor,B1
+10,5,Compra un {pan|bread},.,cualquier,singular,masculino,cualquiera,B1
+11,1,La {libreta|notebook},es la mía. ,verde,singular,femenino,verde,B1
+11,2,Gabriel era el menos,del {programa|program}. ,motivado,singular,masculino,motivado,B1
+11,3,El director de la {fábrica|factory} siempre tiene una {palabra|word},.,amable,singular,masculino,amable,B1
+11,4,La {rana|frog},es {venenosa|poisonous}. ,macho,singular,femenino,macho,B1
+11,5,Por favor trae el {limón|lemon},que está en la {cesta|basket}. ,amarillo,singular,masculino,amarillo,B1
+12,1,Dijeron que no había,problema.,ninguno,singular,masculino,ningún,B1
+12,2,Ayer compramos un {helado|ice cream},.,riquísimo,singular,masculino,riquísimo,B1
+12,3,Me {aseguraron|to guarantee} que no tenían problema,.,ninguno,singular,masculino,ninguno,B1
+12,4,Sirven la {leche fresca|fresh milk} en un vaso,.,largo,singular,masculino,largo,B1
+12,5,Creo que,balón puede {servir|help}. ,alguno,singular,masculino,algún,B1
 1,1,Después de la ,crisis nada fue igual. ,grande,singular,femenino,gran,B2
 1,2,Laura volvió tan,"de su viaje, que nos invitó a todos a cenar. ",feliz,singular,femenino,feliz,B2
 1,3,Era un aula grande y además muy,.,decorado,singular,femenino,decorada,B2
@@ -119,3 +209,33 @@
 6,3,Ana y Lucas van a una escuela,.,bilingüe,singular,femenino,bilingüe,B2
 6,4,Ayer tuve que llevar a mi perro a la clínica,.,veterinario,singular,femenino,veterinaria,B2
 6,5,Sus maestros siempre dijeron que era una alumna,.,brillante,singular,femenino,brillante,B2
+7,1,En el teatro había un {público|audience} de ,pasión y dedicación. ,grande,singular,femenino,gran,B2
+7,2,Tenemos un ,problema con la {máquina|machine}. ,grave,singular,masculino,grave,B2
+7,3,Manuel resultó ser un hombre,.,hipócrita,singular,masculino,hipócrita,B2
+7,4,Tenemos que llevar esa manta,.,amarillento,singular,femenino,amarillenta,B2
+7,5,"Aquel tipo era alto,",.,alto,singular,masculino,alto,B2
+8,1,Acudió mucha gente a la función,de teatro. ,matinal,singular,femenino,matinal,B2
+8,2,Las mariposas volaban sobre el florero,en el jardín. ,perdido,singular,masculino,perdido,B2
+8,3,Su padre era una persona de pasión y dedicación,.,grande,plural,femenino,grandes,B2
+8,4,Su padre es escritor de novela,.,negro,singular,femenino,negra,B2
+8,5,Era una casa con muchas ventanas y con una puerta,.,grande,singular,femenino,grande,B2
+9,1,Los cálculos del análisis genético son muy,.,bueno,plural,masculino,buenos,B2
+9,2,Desde que nació ha recibido mucho cariño,.,maternal,singular,masculino,maternal,B2
+9,3,He decidido comprar un,vino y champán. ,bueno,singular,masculino,buen,B2
+9,4,Por la noche soplaba un viento,.,helador,singular,masculino,helador,B2
+9,5,El virus en ocasiones es,.,bueno,singular,masculino,bueno,B2
+10,1,Cuando acelera el coche siente vibraciones,.,fuerte,plural,femenino,fuertes,B2
+10,2,La inspección ,nos pilló desprevenidos. ,pasado,singular,femenino,pasada,B2
+10,3,El estilo ,de la ciudad es vanguardista. ,arquitectónico,singular,masculino,arquitectónico,B2
+10,4,Se lesionó el pie en un bache,.,profundo,singular,masculino,profundo,B2
+10,5,Debido a la compra,va a pagar a plazos. ,precipitado,singular,femenino,precipitada,B2
+11,1,En el tramo,de la carretera se puede se puede acelerar. ,recto,singular,masculino,recto,B2
+11,2,Nos dijo que tenía bronquitis,y no podía venir. ,agudo,singular,femenino,aguda,B2
+11,3,El editor hizo una crítica,de mi libro. ,sincero,singular,femenino,sincera,B2
+11,4,Cada día debe tomar una dosis,de vitaminas. ,mínimo,singular,femenino,mínima,B2
+11,5,Siempre ha tenido un pelo,y brillante. ,sano,singular,masculino,sano,B2
+12,1,Tenía que mandar toda información por carta,.,certificado,singular,femenino,certificada,B2
+12,2,La fruta estaba en muy ,condiciones después de todo el día al sol. ,malo,plural,femenino,malas,B2
+12,3,Recibió algunos masajes,durante el viaje. ,relajante,plural,masculino,relajantes,B2
+12,4,Por suerte no era una enfermedad demasiado,.,grave,singular,femenino,grave,B2
+12,5,Antes de las carreras siempre hacía una comida,.,ligero,singular,femenino,ligera,B2

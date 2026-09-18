@@ -1,28 +1,28 @@
 ﻿set,id,correct,also_correct,level
 1,1,Mi perro se llama Lucas. ,,A1
-1,2,Hoy nos {bañamos|to swim} en el {lago|lake}. ,Nos bañamos en el lago hoy. ,
-1,3,La falda se seca al sol. ,,
-1,4,Nosotros nos cepillamos el pelo. ,,
-1,5,Vosotros os graduáis mañana. ,Mañana os grauáis vosotros. |Mañana vosotros os graduáis.,
-2,1,Mario se levanta muy temprano. ,,
-2,2,Ustedes se disfrazan para carnaval. ,,
-2,3,Ella también se echa la siesta. ,Ella se echa la siesta también. ,
-2,4,Las gatas se cuidan solas. ,,
-2,5,Os relajáis en la playa. ,En la playa os relajáis. ,
-3,1,Yo tampoco me tumbo en la piscina. ,En la piscina yo tampoco me tumbo. |En la piscina tampoco me tumbo yo. ,
-3,2,Su madre se casa de otra vez. ,,
-3,3,Me reuno con mi equipo hoy. ,Hoy me reuno con mi equipo. ,
-3,4,Ellos se sientan poco allí. ,Ellos se sientan allí poco. ,
-3,5,El mes que viene se mudan a Sevilla. ,Se mudan a Sevilla el mes que vien. ,
-4,1,Ustedes se duchan en este baño. ,En este baño se duchan ustedes. ,
-4,2,"Sí, tú y yo nos lavamos las manos.","Tú y yo nos lavamos las manos, sí. ",
-4,3,Yo me acuesto muy {temprano|early}.,,
-4,4,Su hermano se afeita poco la barba. ,,
-4,5,Los deportistas se estiran ahora. ,Ahora se estiran los deportistas.,
-1,1,Nosotros nos lavamos las {manos|hands} antes de comer. ,Antes de comer nosotros nos lavamos las manos.,A2
+1,2,Hoy nos {bañamos|to swim} en el {lago|lake}. ,Nos bañamos en el lago hoy. ,A1
+1,3,La falda se seca al sol. ,,A1
+1,4,Nosotros nos cepillamos el pelo. ,,A1
+1,5,Vosotros os graduáis mañana. ,Mañana os grauáis vosotros. |Mañana vosotros os graduáis.,A1
+2,1,Mario se levanta muy temprano. ,,A1
+2,2,Ustedes se disfrazan para carnaval. ,,A1
+2,3,Ella también se echa la siesta. ,Ella se echa la siesta también. ,A1
+2,4,Las gatas se cuidan solas. ,,A1
+2,5,Os relajáis en la playa. ,En la playa os relajáis. ,A1
+3,1,Yo tampoco me tumbo en la piscina. ,En la piscina yo tampoco me tumbo. |En la piscina tampoco me tumbo yo. ,A1
+3,2,Su madre se casa de otra vez. ,,A1
+3,3,Me reuno con mi equipo hoy. ,Hoy me reuno con mi equipo. ,A1
+3,4,Ellos se sientan poco allí. ,Ellos se sientan allí poco. ,A1
+3,5,El mes que viene se mudan a Sevilla. ,Se mudan a Sevilla el mes que vien. ,A1
+4,1,Ustedes se duchan en este baño. ,En este baño se duchan ustedes. ,A1
+4,2,"Sí, tú y yo nos lavamos las manos.","Tú y yo nos lavamos las manos, sí. ",A1
+4,3,Yo me acuesto muy {temprano|early}.,,A1
+4,4,Su hermano se afeita poco la barba. ,,A1
+4,5,Los deportistas se estiran ahora. ,Ahora se estiran los deportistas.,A1
+1,1,Nosotros nos lavamos las {manos|hands} antes de comer. ,Antes de comer nosotros nos lavamos las manos.,A1
 1,2,Nos alegramos más por sus padres. ,Por sus padres nos alegramos más. ,A2
 1,3,Me interesa la gente y las ciudades. ,,A2
-1,4,Su {sobrina|niece} se cae {a menudo|often} del {columpio|swing}. ,,A2
+1,4,Su {sobrina|niece} se cae {a menudo|often} del {columpio|swing}. ,Su sobrina se cae del columpio a menudo. ,A2
 1,5,Todos nosotros nos {callamos|to stop talking} durante el {juego|game}. ,Durante el juego todos nosotros nos callamos. ,A2
 2,1,Me {mojo|to make wet} el {pelo|hair} por la {mañana|morning}. ,Por la mañana me mojo el pelo. ,A2
 2,2,El {autobús|bus} se {mueve|to move} muy {despacio|slow}. ,,A2
