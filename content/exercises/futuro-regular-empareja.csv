@@ -1,0 +1,91 @@
+﻿set,id,before,after,word,translation,level
+1,1,Ninguno de mis alumnos,con el tutor antes del examen. ,hablará,to speak,B1
+1,2,El año que viene toda la familia,en las afueras. ,vivirá,to live,B1
+1,3,Hace atletismo y probablemente,la maratón el año que viene. ,correrá,to run,B1
+1,4,Por trabajo él ,a París el próximo lunes. ,viajará,to travel,B1
+1,5,"Si se cansa en la maratón, ",durante algún tramo. ,caminará,to walk,B1
+2,1,"Necesito el dinero, por lo que la semana que viene",todos los días. ,trabajaré,to work,B1
+2,2,"Ya lo he decidido, ",el apartamento que vimos ayer. ,compraré,to buy,B1
+2,3,"En resumen, en cuanto tenga un día libre te",.,visitaré,to visit,B1
+2,4,"Es importante que los sepas, te",por teléfono en cuando lo sepa. ,llamaré,to call,B1
+2,5,"No quiero hacerlo y mi voz es terrible, pero por ti",en tu fiesta. ,cantaré,to sing,B1
+3,1,"Cuando estéis todos acostados, Mónica y yo",todas las luces. ,apagaremos,to turn off,B1
+3,2,Este curso escolar,en la cantina del colegio. ,comeremos,to eat,B1
+3,3,Para preparar el ramo,las flores del rosal en el jardín. ,cortaremos,to cut,B1
+3,4,"En cuanto acabe el telediario, ","de canal, no te preocupes. ",cambiaremos,to change,B1
+3,5,Al final del viaje,todos los gastos y calculamos el total. ,sumaremos,to add up,B1
+4,1,Los trabajadores ,todas las toallas a primera hora. ,lavarán,to wash,B1
+4,2,En el otoño los jardineros ,las ramas más bajas. ,podarán,to prune,B1
+4,3,Debemos aumentar el riego porque en verano las plantas,más agua. ,necesitarán,to need,B1
+4,4,Varios de mis grupos favoritos,esta noche en el concierto. ,tocarán,to play,B1
+4,5,Durante el campamento los niños,cada tarde por el bosque. ,pasearán,to walk,B1
+5,1,"Sois los monitores, por lo que",la cena cada noche. ,prepararéis,to prepare,B1
+5,2,En la excursión nocturan ,las estrellas con un telescopio. ,miraréis,to look at,B1
+5,3,Para entender la película en versión original,primero el guión. ,leeréis,to read,B1
+5,4,"En las elecciones, vosotros",en la casa de la cultura. ,votaréis,to vote,B1
+5,5,Tú y tu hermana,por teléfono con vuestros padres todos los diás. ,hablaréis,to speak,B1
+6,1,"No te muevas nada, y ",en el agua salada. ,flotarás,to float,B1
+6,2,"Eres un gran deportista, estoy segura de que ",montañas muy altas. ,escalarás,to climb,B1
+6,3,El domador,al león en pocos meses. ,domará,to tame,B1
+6,4,"Para esta noche, la cocinera",{manzanas|apples} para el postre. ,asará,to bake,B1
+6,5,"Si es necesario, Luis",las {escaleras|stairs} de dos en dos. ,bajará,to go down,B1
+7,1,Estoy segura de que pronto,todos los precios de la tienda.,subirás,to go up,B1
+7,2,"Si te esfuerzas, ",el trabajo antes de lo que esperas. ,terminarás,to finish,B1
+7,3,"En el examen, ",los dos textos y analizarás las diferencias. ,comparás,to compare,B1
+7,4,Con esa maestra en la clase de arte,mucho la tinta china. ,utilizarás,to use,B1
+7,5,"No te preocupes, yo compraré la comida, y tú",las bebidas. ,pagarás,to pay,B1
+8,1,"Mientras estés en el colegio, ",a tu abuela por las tardes. ,visitarás,to visit,B1
+8,2,Estoy completamente seguro de que pronto,el estrés del examen. ,olvidarás,to forget,B1
+8,3,Seguro que para el partido,unas zapatillas nuevas. ,necesitarás,to need,B1
+8,4,"Te conozco bien, probablemente",tu bocadillo con tus amigos. ,compartirás,to share,B1
+8,5,"Aunque te lo repitan, no ",nunca la batidora. ,apagarás,to turn off,B1
+9,1,Para el trabajo final de mi clase de arte,un paisaje. ,dibujaré,to draw,B1
+9,2,"No vuelvas tarde, te",aquí a las cinco en punto. ,esperaré,to wait,B1
+9,3,Esta semana ,a trabajar un poco más tarde. ,entraré,to come in,B1
+9,4,"No, gracias, ",yo todos los exámenes. ,evaluaré,to assess,B1
+9,5,"No te enfades, ",el premio con todos vosotros. ,compartiré,to share,B1
+1,1,Está muy {contento|happy} e,a todos a una fiesta. ,invita,to invite,
+1,2,Cuando,"la {cena|dinner}, {escucho|listen} música. ",cocino,to cook,
+1,3,Desde hace tiempo no,la {flauta|flute}.,toco,to play,
+1,4,Esta {lavadora|washing machine} mia,muy mal la {ropa|clothes}. ,lava,to wash,
+1,5,{Mañana|tomorrow},bien la {ruta|route} para el domingo. ,miro,to look,
+2,1,Antonio y Pablo ,{tantas|as many} patatas como pueden. ,pelan,to peel,
+2,2,,que los niños quieren {helado|ice-cream} de chocolate. ,sospecho,to suspect,
+2,3,Primero {como|to eat} y luego ,una hora. ,paseo,to walk,
+2,4,Os ,hacer la ensalada. ,toca,to be someone's turn,
+2,5,Los {jugadores|players},todo seguido de la {mañana|morning} a la noche. ,entrenan,to train,
+3,1,Todos los días,una {palabra|word} nueva. ,memorizo,to memorize ,
+3,2,Ahora vosotros,por este {callejón|alley} hasta el final. ,camináis,to walk,
+3,3,Siempre ,leche con {galletas|cookies} {antes|before} de ir a dormir. ,tomo,to take,
+3,4,Hace frío y por eso ,las {mantas|bankets}. ,saco,to take out,
+3,5,Vosotros,la {comida|food} a las siete u ocho. ,recogéis,to pick up,
+4,1,El doctor,a todos los {pacientes|patients} antes de las diez. ,visita,to visit,
+4,2,"Vale, ",media hora y después vamos al cine. ,paseamos,to walk,
+4,3,Si,", te digo una cosa. ",acudes,to attend,
+4,4,{Nunca|never},con nadie de este tema. ,habla,to talk,
+4,5,"Cuando nos conocimos, ",{inmediatamente|inmediately}. ,conectamos,to connect,
+5,1,"Es una {pena|pitty}, ",todos los dias al fútbol pero no {mejoro|to improve}. ,entreno,to train,
+5,2,"No {aprobó|to pass} el examen, probablemente porque",mucho a clase. ,falta,to miss,
+5,3,Es tan {claro|clear} que,muy bien el piano. ,toca,to play,
+5,4,Durante las clases siempre,notas en mi {cuaderno|notebook}. ,tomo,to take,
+5,5,El profesor al que {saludaste|to greet},a menudo a Asia. ,viaja,to travel,
+6,1,"Mientras están sentados,",todos los vídeos. ,grabamos,to record,
+6,2,O ,"los dos, o ninguno, somos un equipo. ",cantamos,to sing,
+6,3,Si,"la carta, será porque quiere noticias. ",envía,to send,
+6,4,Este grupo de cocineros,{estofados|stews} muy ricos. ,guisa,to cook,
+6,5,"Es su cumpleaños, lo",al empezar la reunión. ,felicitamos,to wish happy birthday,
+7,1,,con el departamento de recursos humanos cada semana. ,hablo,to speak,
+7,2,No,dónde hay mayor cantidad de gente. ,calculo,to estimate,
+7,3,De la fiesta,sobre todo bebidas. ,sobran,to be left over,
+7,4,Todos los chicos,estar sentados muchas horas. ,soportan,to bear,
+7,5,"Estoy muy cansado, así que ",la comida. ,encargo,to order,
+8,1,El jefe tiene mal carácter y,de todos. ,desconfía,to distrust,
+8,2,El guía,{bastante|quite} barato por la ruta. ,cobra,to charge,
+8,3,"Hay muy poca gente, sin embargo",con el espectáculo. ,continuamos,to carry on,
+8,4,No {presta atención|to pay attention} y además,todo el tiempo en su teléfono. ,chatea,to chat,
+8,5,Nosotros ,tanto lo tuyo como lo suyo. ,aceptamos,to accept,
+9,1,Luis,un montón de gente al partido. ,lleva,to bring,
+9,2,Si,", será porque se ha hecho daño. ",llora,to cry,
+9,3,Viven en las afueras pero,en la ciudad. ,trabajan,to work,
+9,4,Está de médico en Ciudad Real y allí,para cirujano. ,estudia,to study,
+9,5,"No es que no les guste el mercado, es que",tomates en su finca. ,cultivan,to grow,

@@ -29,6 +29,23 @@
  * topic needs — see exercises/texto.html, which points both the Fácil and
  * Difícil type entries at the same srcTemplate.
  *
+ * An optional `word_list` column — a comma-separated list of the
+ * dictionary/citation form for the words the passage needs (infinitives
+ * for a verb passage, masculine singular for an adjective passage) — is
+ * shown above the passage in Difícil mode only. Fácil already gives the
+ * exact conjugated words to place, so a reference list there would be
+ * redundant; Difícil has no word bank at all otherwise, and a blank sheet
+ * of "type the right form" is a lot to hold in your head at once. Each
+ * word is its own clickable chip the student can cross off as they use it
+ * — purely a self-tracking aid with no effect on grading, so the list
+ * doesn't need to map 1:1 to blanks or be in any particular order:
+ *
+ *   set,id,text,word_list
+ *   1,1,"...","trabajar, vivir, ser, estar"
+ *
+ * (the word_list field itself needs quoting since it contains commas —
+ * same as any other CSV field with commas in it).
+ *
  * Host page needs, before this script:
  *   1. PapaParse (loaded via CDN)
  *   2. js/exercise-common.js
@@ -46,6 +63,17 @@
 (function () {
   const ACCENT_CHARS = ['á', 'é', 'í', 'ó', 'ú', 'ñ', '¿', '¡'];
   const MIN_INPUT_CH = 9;
+
+  // Grows a Difícil-mode input as the student types so the whole word
+  // stays visible instead of scrolling inside a fixed-width box — never
+  // shrinks below MIN_INPUT_CH, so short answers still line up. Also
+  // called directly from the accent toolbar (see buildAccentToolbar)
+  // since setRangeText() there changes input.value without firing a
+  // native "input" event, so the listener below wouldn't otherwise run.
+  function growInput(input) {
+    const width = Math.max(MIN_INPUT_CH, input.value.length + 2);
+    input.style.width = `${width}ch`;
+  }
 
   function shuffle(arr) {
     const copy = [...arr];
@@ -110,6 +138,31 @@
     }
   }
 
+  // Difícil-only reference list — see the file header for what this is
+  // for. Each chip toggles a "scratched" (struck-through) look on click;
+  // that's all it does, there's no connection to any specific blank or to
+  // grading, it's just a place for the student to keep track of which
+  // base-form words they've already used while writing.
+  function buildWordList(words) {
+    const box = document.createElement('div');
+    box.className = 'word-pool texto-reference-list';
+    box.setAttribute('role', 'group');
+    box.setAttribute('aria-label', 'Palabras de referencia');
+
+    words.forEach((word) => {
+      const chip = document.createElement('button');
+      chip.type = 'button';
+      chip.className = 'pool-chip reference-chip';
+      chip.textContent = word;
+      chip.addEventListener('click', () => {
+        chip.classList.toggle('reference-chip-scratched');
+      });
+      box.appendChild(chip);
+    });
+
+    return box;
+  }
+
   function buildAccentToolbar(getInput) {
     const toolbar = document.createElement('div');
     toolbar.className = 'accent-toolbar';
@@ -128,6 +181,7 @@
         const start = input.selectionStart ?? input.value.length;
         const end = input.selectionEnd ?? input.value.length;
         input.setRangeText(ch, start, end, 'end');
+        growInput(input);
         input.focus();
       });
       toolbar.appendChild(btn);
@@ -138,6 +192,7 @@
 
   function renderExercise(container, row, setNumber, allSets, mode, availableLevels, requestedLevel) {
     container.innerHTML = '';
+    container.classList.remove('solution-hidden');
 
     window.ExerciseCommon.renderLevelNav(availableLevels, requestedLevel);
     const label = window.ExerciseCommon.renderSeriesNav(setNumber, allSets);
@@ -157,6 +212,14 @@
     let lastFocusedInput = null;
 
     if (mode === 'dificil') {
+      const wordList = (row.word_list || '').split(',').map((w) => w.trim()).filter(Boolean);
+      if (wordList.length > 0) {
+        const listLabel = document.createElement('p');
+        listLabel.className = 'exercise-instructions';
+        listLabel.textContent = 'Palabras que necesitarás (en infinitivo, o en masculino singular si son adjetivos). Haz clic para tacharlas mientras las usas:';
+        container.appendChild(listLabel);
+        container.appendChild(buildWordList(wordList));
+      }
       container.appendChild(buildAccentToolbar(() => lastFocusedInput));
     }
 
@@ -199,10 +262,7 @@
         input.style.width = `${MIN_INPUT_CH}ch`;
         input.setAttribute('aria-label', `Espacio ${blanks.length + 1}`);
         input.addEventListener('focus', () => { lastFocusedInput = input; });
-        input.addEventListener('input', () => {
-          const width = Math.max(MIN_INPUT_CH, input.value.length + 2);
-          input.style.width = `${width}ch`;
-        });
+        input.addEventListener('input', () => growInput(input));
         if (!lastFocusedInput) lastFocusedInput = input;
         passage.appendChild(input);
         blanks.push({
@@ -307,6 +367,12 @@
     checkBtn.className = 'btn btn-primary';
     checkBtn.textContent = 'Comprobar';
 
+    const solutionBtn = document.createElement('button');
+    solutionBtn.type = 'button';
+    solutionBtn.className = 'btn btn-secondary';
+    solutionBtn.textContent = 'Mostrar solución';
+    solutionBtn.hidden = true;
+
     const retryBtn = document.createElement('button');
     retryBtn.type = 'button';
     retryBtn.className = 'btn btn-secondary';
@@ -364,7 +430,18 @@
 
       result.textContent = `${correctCount} de ${blanks.length} correctas.`;
       checkBtn.hidden = true;
+      // Comprobar only colors right/wrong (immediate, above) — the actual
+      // "(correcto: ...)" text stays hidden (via the .solution-hidden CSS
+      // rule) until Mostrar solución is clicked, so a student who got
+      // something wrong can still retry without having seen the answer.
+      container.classList.add('solution-hidden');
+      solutionBtn.hidden = false;
       retryBtn.hidden = false;
+    });
+
+    solutionBtn.addEventListener('click', () => {
+      container.classList.remove('solution-hidden');
+      solutionBtn.hidden = true;
     });
 
     retryBtn.addEventListener('click', () => {
@@ -372,6 +449,7 @@
     });
 
     controls.appendChild(checkBtn);
+    controls.appendChild(solutionBtn);
     controls.appendChild(retryBtn);
     container.appendChild(controls);
     container.appendChild(result);

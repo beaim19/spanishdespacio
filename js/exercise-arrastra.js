@@ -70,6 +70,7 @@
 
   function renderExercise(container, rows, setNumber, allSets, availableLevels, requestedLevel) {
     container.innerHTML = '';
+    container.classList.remove('solution-hidden');
 
     window.ExerciseCommon.renderLevelNav(availableLevels, requestedLevel);
     const label = window.ExerciseCommon.renderSeriesNav(setNumber, allSets);
@@ -221,6 +222,12 @@
     checkBtn.className = 'btn btn-primary';
     checkBtn.textContent = 'Comprobar';
 
+    const solutionBtn = document.createElement('button');
+    solutionBtn.type = 'button';
+    solutionBtn.className = 'btn btn-secondary';
+    solutionBtn.textContent = 'Mostrar solución';
+    solutionBtn.hidden = true;
+
     const retryBtn = document.createElement('button');
     retryBtn.type = 'button';
     retryBtn.className = 'btn btn-secondary';
@@ -235,19 +242,33 @@
       const score = checkAnswers(list);
       result.textContent = `${score.correct} de ${score.total} correctas.`;
       checkBtn.hidden = true;
+      // Comprobar only colors right/wrong (immediate) — the "Respuesta
+      // correcta: ..." reveal stays hidden (.solution-hidden, in
+      // styles.css) until Mostrar solución is clicked, so a wrong answer
+      // can still be retried without having seen the answer first.
+      container.classList.add('solution-hidden');
+      solutionBtn.hidden = false;
       retryBtn.hidden = false;
       list.querySelectorAll('.drop-slot').forEach((s) => { s.disabled = true; });
       pool.querySelectorAll('.pool-chip').forEach((c) => { c.disabled = true; });
+    });
+
+    solutionBtn.addEventListener('click', () => {
+      container.classList.remove('solution-hidden');
+      solutionBtn.hidden = true;
     });
 
     retryBtn.addEventListener('click', () => {
       resetExercise(list, pool);
       result.textContent = '';
       checkBtn.hidden = false;
+      solutionBtn.hidden = true;
       retryBtn.hidden = true;
+      container.classList.remove('solution-hidden');
     });
 
     controls.appendChild(checkBtn);
+    controls.appendChild(solutionBtn);
     controls.appendChild(retryBtn);
     container.appendChild(controls);
     container.appendChild(result);

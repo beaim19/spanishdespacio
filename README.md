@@ -168,11 +168,11 @@ whichever entries you list in its page's router array. Current lineup:
 - **Por y para** — Dos opciones and Flashcards only.
 - **Números** — Empareja, Completa, and Flashcards only (no two-way choice
   or word-order drill makes sense for numbers).
-- **Presente** and **Pasado** — Empareja, Completa, Flashcards, and Ordena,
-  *combined* with Regular/Irregular/Reflexivos variants — see the dedicated
-  section below, since that combination needed the router to do a bit more.
-  Pasado is currently a scaffold (real content still to come) — see "Known
-  loose ends" below.
+- **Presente**, **Pasado**, and **Futuro** — Empareja, Completa, Flashcards,
+  and Ordena, *combined* with Regular/Irregular/Reflexivos variants — see
+  the dedicated section below, since that combination needed the router to
+  do a bit more. Pasado and Futuro are currently scaffolds (real content
+  still to come for most of their files) — see "Known loose ends" below.
 
 Every topic's exercise types increasingly use their **own dedicated CSV per
 type** rather than reusing one file across several types, even when the
@@ -346,13 +346,43 @@ The word bank chips also no longer show the capital letter on the first
 word or the trailing period on the last — both are just artifacts of
 *position* in the original sentence, and seeing them in the shuffled bank
 would tell the student where a word belongs before they've worked it out.
-`stripPositionalHints()` lowercases the first token and strips trailing
-`.,!?¿¡` from the last token *before* shuffling, display-only — grading
-still runs through `normalizeForCompare()` on whatever the student
-assembled, which already ignores case and punctuation, so this has no
-effect on what counts as correct. The "Orden correcto: ..." reveal itself
-still shows the real sentence with proper capitalization and punctuation,
-since that's meant to model the actual correct answer, not the bank.
+`stripPositionalHints()` lowercases the first word and strips a trailing
+"." from the last word *before* shuffling, display-only — grading still
+runs through `normalizeForCompare()` on whatever the student assembled,
+which already ignores case and punctuation, so this has no effect on what
+counts as correct. The "Orden correcto: ..." reveal itself still shows the
+real sentence with proper capitalization and punctuation, since that's
+meant to model the actual correct answer, not the bank.
+
+A leading `¿`/`¡` or trailing `?`/`!` gets split off into its own chip
+instead of staying glued to the word next to it — no CSV syntax needed,
+`tokenizeWithHints()` just does this automatically based on the
+characters already in `correct`:
+
+```
+set,id,correct,also_correct
+1,1,¿Dónde vas?,
+```
+
+becomes four separate chips (`¿`, `dónde`, `vas`, `?`) rather than two
+(`¿Dónde`, `vas?`) — Spanish's doubled question/exclamation marks are
+worth their own spot in the word bank, not silently baked into whichever
+word happens to sit next to them. (Grading still ignores punctuation
+entirely either way, same as before — this only changes how the bank
+*looks*, not what counts as correct.)
+
+`{word}` — braces with no `|translation` — keeps a word's authored
+capitalization even in the sentence's first-word slot, for a sentence that
+starts with a proper noun:
+
+```
+1,2,{María} fue al mercado.,
+```
+
+Without the braces, the first word's capital always gets lowercased before
+shuffling (see above) — this is the opt-out for the rare case where that
+capital isn't just a positional artifact but a name that should stay
+capitalized wherever it ends up.
 
 Empareja, Completa's typed input, and Ordena all present themselves as
 "drag/write the thing into place," but the actual interaction (where it
@@ -365,6 +395,47 @@ code). If the felt experience of physically dragging turns out to matter,
 that could be added later as a progressive enhancement on top of the same
 click/tap logic, but it isn't needed for the exercises to work correctly
 today.
+
+## Comprobar / Mostrar solución / Intentar de nuevo
+
+Every graded engine (Dos opciones, Empareja, Completa, Ordena, Texto — not
+Flashcards, which is self-paced and has no "Comprobar" step at all) uses a
+three-button flow instead of the old two-button one, so a student who gets
+something wrong can retry *before* seeing the right answer, not only after:
+
+1. **Comprobar** grades the attempt immediately — right/wrong coloring
+   (green/red) appears right away, same as before.
+2. **Mostrar solución** appears in Comprobar's place. Until it's clicked,
+   the actual correct-answer text stays hidden — what was already green/red
+   is visible, but the specific right answer for a wrong item is not.
+3. **Intentar de nuevo** is available the whole time (it's not gated behind
+   Mostrar solución), so the student can reset and try again from just the
+   right/wrong coloring alone, without ever having seen the solution.
+
+Implementation is one shared CSS mechanism, not five different ones: a
+`.solution-hidden` class toggled on `#exercise-app`. Clicking Comprobar
+adds the class (and reveals the Mostrar solución button); clicking Mostrar
+solución removes it (and hides itself); clicking Intentar de nuevo (or, for
+Texto, the full re-render that `renderExercise` does on retry) removes the
+class again and resets both buttons. The CSS itself, in `css/styles.css`
+right after `.exercise-feedback`, just hides whatever each engine already
+uses to show the correct answer while the class is present:
+
+```css
+.solution-hidden .exercise-feedback,
+.solution-hidden .drop-slot-reveal {
+  display: none;
+}
+.solution-hidden .option-btn.option-reveal-correct {
+  border-color: var(--color-brand);
+  border-width: 2px;
+  font-weight: 600;
+}
+```
+
+Nothing about *grading* changes — the green/red coloring, the score count,
+and disabling inputs after Comprobar all work exactly as before. Only the
+textual/highlighted "here's what was correct" reveal is deferred.
 
 ## Combining verb-type variants with exercise types (Presente)
 
@@ -447,8 +518,8 @@ The link text for indicativo tenses includes "(Modo Indicativo)" right in
 the label (e.g. "Presente (Modo Indicativo)", "Pasado (Modo Indicativo)")
 since Subjuntivo and Imperativo will eventually live in this same dropdown
 — the mood needs to be visible in the menu itself, not just inside each
-topic's intro paragraph. Current lineup: Presente and Pasado (built,
-Modo Indicativo), Futuro and Condicional (Próximamente, Modo Indicativo),
+topic's intro paragraph. Current lineup: Presente, Pasado, and Futuro
+(built, Modo Indicativo), Condicional (Próximamente, Modo Indicativo),
 Subjuntivo and Imperativo (Próximamente, no mood suffix — their own
 structure, likely quite different from the indicativo tenses, is still to
 be figured out). "Pasado perfecto" was removed from the list — not a
@@ -545,6 +616,27 @@ has one worked passage (set 1) as a starting point, with a couple of
 example `[correct|translation]` blanks seeded in adjetivos/verbos — add
 more the same way as any other topic, a new `set` number with its own
 `text` row.
+
+**Difícil's optional `word_list` column** gives the student a reference
+list to work from while typing, since guessing a blank from context alone
+(with no word bank to lean on, unlike Fácil) can be genuinely hard for a
+~200-word passage with a dozen blanks:
+
+```
+set,id,text,word_list
+1,1,"Ayer [fui] al mercado y [compré] fruta.","ir, comprar"
+```
+
+A comma-separated list of dictionary-form words — infinitives for a
+`verbos` passage, masculine singular for an `adjetivos` passage (skip it
+for `articulos`, where the whole point is picking among a small closed
+set the student already knows). It renders only in Difícil (`buildWordList()`
+in `js/exercise-texto.js`), as a row of chips above the accent toolbar,
+purely as a self-tracking aid: clicking a chip toggles a strikethrough
+(`.reference-chip-scratched`) so the student can mark off words they've
+already used while writing, with zero effect on grading or the blanks
+themselves. Optional and independent of everything else — a passage with
+no `word_list` renders exactly as before.
 
 ## Word-level translation hints
 
@@ -746,6 +838,27 @@ been filling in Presente's sets. The three `-completa.csv` files (also
 reused by Flashcards) already show the `tense` column in use with a mix of
 past-indicative tenses; the six `-empareja.csv`/`-ordena.csv` files still
 need a real tense filled in per row before you extend them.
+
+**Futuro is also mostly a scaffold**, but `futuro-regular-empareja.csv` is
+real content — 9 full B1 series (45 rows) written and provided by hand,
+not filler. The other eight CSVs
+(`futuro-regular-{completa,ordena}.csv`, `futuro-irregular-{empareja,completa,ordena}.csv`,
+`futuro-reflexivos-{empareja,completa,ordena}.csv`) each have 2 example
+series (10 rows) at level B1 to show the format, same as Pasado's scaffold.
+`exercises/futuro.html` and the Verbos-menu link are both live.
+
+**Content anomaly flagged, not fixed:** `futuro-regular-empareja.csv`'s
+second half (rows 47–91, its last 9 "series") contains present-tense
+sentences instead of future-tense ones, and every one of those rows has an
+empty `level` value rather than `B1`. Since `loadCsvSet()` only ever
+narrows to a level that actually appears in the CSV (empty values are
+filtered out of `availableLevels` entirely), those 45 rows are currently
+unreachable on the live site — B1 is the only level anyone will ever see
+for this file, and it only pulls from the first 45 rows. Left as-is per the
+usual rule about not silently altering content you've written — worth a
+look next time you're in that file, since it reads like present-tense
+content that was meant to go into `presente-regular-empareja.csv` and got
+pasted into the wrong file instead.
 
 `content/exercises/texto-ejemplo.csv` is superseded by the bracket-syntax
 schema described above (`texto-articulos.csv`/`texto-adjetivos.csv`/`texto-verbos.csv`)

@@ -34,6 +34,23 @@
  * `also_correct` doesn't need brackets repeated in it — a translation only
  * has to be defined once, on `correct`.
  *
+ * A ¿/¡ at the start of a word or a ?/! at the end is automatically split
+ * off into its own chip instead of staying glued to the adjacent word —
+ * Spanish's doubled question/exclamation marks are worth their own spot in
+ * the word bank rather than silently riding along on whichever word
+ * happens to sit next to them. No CSV syntax needed for this, it just
+ * happens based on the characters already in `correct`. (A plain trailing
+ * "." still gets stripped entirely, same as before — see
+ * stripPositionalHints() below.)
+ *
+ * `{word}` with no `|translation` (just braces around a word on its own)
+ * keeps that word's capitalization even in the sentence's first-word slot
+ * — this is how to write a sentence starting with a proper noun, e.g.
+ * "{María} fue al mercado." Without the braces, the first word always has
+ * its capital letter lowercased before shuffling (see
+ * stripPositionalHints()), since normally that capital is just a
+ * positional giveaway, not something to preserve.
+ *
  * Host page needs, before this script:
  *   1. PapaParse (loaded via CDN)
  *   2. js/exercise-common.js
@@ -52,35 +69,110 @@
     return copy;
   }
 
-  // Splits a sentence into { display, translation } tokens — brace-aware,
-  // so a {word|translation} unit stays one token even when the English
-  // translation itself contains spaces (e.g. "{cansado|tired out}"),
-  // rather than getting torn apart by a plain whitespace split.
+  // Splits a sentence into { display, translation, fromBrace, isPunct }
+  // tokens — brace-aware, so a {word|translation} unit stays one token
+  // even when the English translation itself contains spaces (e.g.
+  // "{cansado|tired out}"), rather than getting torn apart by a plain
+  // whitespace split. A braced token is never split further (its trailing
+  // punctuation, if any, stays folded into the same chip) — deliberately
+  // simple, since a word that also needs a translation hint AND happens to
+  // be the very last word of a question is rare enough not to be worth the
+  // extra complexity.
+  //
+  // Outside of braces, a leading ¿/¡ or trailing ?/! gets peeled off into
+  // its own token — see the file header for why. `fromBrace` lets
+  // stripPositionalHints() below know a word's capitalization was
+  // deliberately authored (not just a byproduct of being first), and
+  // `isPunct` lets it skip over punctuation-only tokens when it looks for
+  // the sentence's actual first/last WORD.
   function tokenizeWithHints(sentence) {
     const str = (sentence || '').trim();
     if (!str) return [];
     const rawTokens = str.match(/\{[^}]*\}[.,!?¿¡]*|\S+/g) || [];
-    return rawTokens.map((token) => {
-      const match = token.match(/^\{([^}|]*)(?:\|([^}]*))?\}([.,!?¿¡]*)$/);
-      if (!match) return { display: token, translation: '' };
-      const [, word, translation, trailing] = match;
-      return { display: `${word}${trailing || ''}`, translation: (translation || '').trim() };
+    const tokens = [];
+
+    rawTokens.forEach((token) => {
+      let rest = token;
+
+      // Leading ¿/¡ peeled off FIRST, before checking for a brace group —
+      // an author writing "¿{María} viene?" (no space between the mark
+      // and the brace) still needs the brace group found afterward, not
+      // missed because the combined "¿{María}" blob didn't look like a
+      // brace token on its own.
+      const leading = rest.match(/^[¿¡]+/);
+      if (leading) {
+        tokens.push({ display: leading[0], translation: '', isPunct: true });
+        rest = rest.slice(leading[0].length);
+      }
+
+      const braceMatch = rest.match(/^\{([^}|]*)(?:\|([^}]*))?\}([.,!?¿¡]*)$/);
+      if (braceMatch) {
+        const [, word, translation, trailing] = braceMatch;
+        tokens.push({
+          display: `${word}${trailing || ''}`,
+          translation: (translation || '').trim(),
+          fromBrace: true,
+        });
+        return;
+      }
+
+      const trailing = rest.match(/[?!]+$/);
+      let trailingPunct = '';
+      if (trailing) {
+        trailingPunct = trailing[0];
+        rest = rest.slice(0, rest.length - trailingPunct.length);
+      }
+      if (rest) tokens.push({ display: rest, translation: '' });
+      if (trailingPunct) tokens.push({ display: trailingPunct, translation: '', isPunct: true });
     });
+
+    return tokens;
   }
 
-  // The capital letter on the first word and the period (or ! / ?) on the
-  // last are hints about where a word belongs, not part of what's actually
-  // being tested — leaving them in the shuffled word bank would give away
-  // the start/end of the sentence before the student has worked anything
-  // out. Only the display text changes here; grading still runs through
-  // normalizeForCompare(), which already ignores case and punctuation, so
-  // this has no effect on what counts as correct.
+  // The capital letter on the sentence's first real word, and the period
+  // (or a lingering ! / ?) on its last, are hints about where a word
+  // belongs, not part of what's actually being tested — leaving them in
+  // the shuffled word bank would give away the start/end of the sentence
+  // before the student has worked anything out. Only the display text
+  // changes here; grading still runs through normalizeForCompare(), which
+  // already ignores case and punctuation, so this has no effect on what
+  // counts as correct.
+  //
+  // "First/last real word" skips over any punctuation-only tokens (¿, ¡,
+  // ?, ! now arrive as their own tokens — see tokenizeWithHints above) —
+  // and the first word is left untouched entirely when it came from
+  // {braces}, since that's the CSV author deliberately saying "keep this
+  // capitalized" (e.g. a sentence starting with a person's name).
   function stripPositionalHints(tokens) {
     if (tokens.length === 0) return tokens;
     const result = tokens.map((t) => ({ ...t }));
-    result[0].display = result[0].display.charAt(0).toLowerCase() + result[0].display.slice(1);
-    const lastIndex = result.length - 1;
-    result[lastIndex].display = result[lastIndex].display.replace(/[.,!?¿¡]+$/, '');
+
+    const firstWordIndex = result.findIndex((t) => !t.isPunct);
+    if (firstWordIndex !== -1 && !result[firstWordIndex].fromBrace) {
+      const t = result[firstWordIndex];
+      t.display = t.display.charAt(0).toLowerCase() + t.display.slice(1);
+    }
+
+    for (let i = result.length - 1; i >= 0; i -= 1) {
+      if (!result[i].isPunct) {
+        // Normally this only ever strips a lone "." — a ?/! at the very
+        // end has already been split into its own token by
+        // tokenizeWithHints. The one place that isn't true is a {braced}
+        // word (translation hints aren't split further — see
+        // tokenizeWithHints), so a "?" or "!" trailing a braced last word
+        // gets put back as its own chip here instead of just vanishing.
+        const trailingMatch = result[i].display.match(/[.,!?¿¡]+$/);
+        if (trailingMatch) {
+          result[i].display = result[i].display.slice(0, -trailingMatch[0].length);
+          const questionOrExclaim = trailingMatch[0].replace(/[.,]/g, '');
+          if (questionOrExclaim) {
+            result.push({ display: questionOrExclaim, translation: '', isPunct: true });
+          }
+        }
+        break;
+      }
+    }
+
     return result;
   }
 
@@ -116,6 +208,7 @@
 
   function renderExercise(container, rows, setNumber, allSets, availableLevels, requestedLevel) {
     container.innerHTML = '';
+    container.classList.remove('solution-hidden');
 
     window.ExerciseCommon.renderLevelNav(availableLevels, requestedLevel);
     const label = window.ExerciseCommon.renderSeriesNav(setNumber, allSets);
@@ -230,6 +323,12 @@
     checkBtn.className = 'btn btn-primary';
     checkBtn.textContent = 'Comprobar';
 
+    const solutionBtn = document.createElement('button');
+    solutionBtn.type = 'button';
+    solutionBtn.className = 'btn btn-secondary';
+    solutionBtn.textContent = 'Mostrar solución';
+    solutionBtn.hidden = true;
+
     const retryBtn = document.createElement('button');
     retryBtn.type = 'button';
     retryBtn.className = 'btn btn-secondary';
@@ -244,18 +343,32 @@
       const score = checkAnswers(list);
       result.textContent = `${score.correct} de ${score.total} correctas.`;
       checkBtn.hidden = true;
+      // Comprobar only colors right/wrong (immediate) — the "Orden
+      // correcto: ..." reveal stays hidden (.solution-hidden, in
+      // styles.css) until Mostrar solución is clicked, so a wrong answer
+      // can still be retried without having seen the answer first.
+      container.classList.add('solution-hidden');
+      solutionBtn.hidden = false;
       retryBtn.hidden = false;
       list.querySelectorAll('.pool-chip, .ordena-word').forEach((el) => { el.disabled = true; });
+    });
+
+    solutionBtn.addEventListener('click', () => {
+      container.classList.remove('solution-hidden');
+      solutionBtn.hidden = true;
     });
 
     retryBtn.addEventListener('click', () => {
       resetExercise(list);
       result.textContent = '';
       checkBtn.hidden = false;
+      solutionBtn.hidden = true;
       retryBtn.hidden = true;
+      container.classList.remove('solution-hidden');
     });
 
     controls.appendChild(checkBtn);
+    controls.appendChild(solutionBtn);
     controls.appendChild(retryBtn);
     container.appendChild(controls);
     container.appendChild(result);

@@ -1,16 +1,133 @@
 ﻿set,id,before,after,word,hint,translation,level
-1,1,Tengo,años.,veinte,20,twenty,A1
-1,2,Hay,días en una {semana|week}.,siete,7,seven,A1
-1,3,En mi {clase|class} somos,{estudiantes|students}.,treinta,30,thirty,A1
-1,4,Mi {casa|house} tiene,{habitaciones|rooms}.,cuatro,4,four,A1
-1,5,El {año|year} tiene,{meses|months}.,doce,12,twelve,A1
-2,1,Compré,{manzanas|apples}.,seis,6,six,A1
-2,2,Necesito,euros para el {billete|ticket}.,cincuenta,50,fifty,A1
-2,3,Hoy {cumplo|to have a birthday},{años|years}.,treinta y dos,32,thirty two,A1
-2,4,Este {edificio|building} tiene,{pisos|floors}.,quince,15,fifteen,A1
-2,5,En la {fiesta|party} había,{invitados|guests}.,cien,100,one hundred,A1
-3,1,La {entrada|ticket} costaba,euros. ,cinco,5,five,A1
-3,2,,{golondrinas|swallow} hacían el {nido|nest}. ,tres,3,three,A1
-3,3,Necesito,kilos de {harina|flour}. ,veinticinco,25,twenty five,A1
-3,4,Había,niños en el {campamento|summer camp}. ,cuarenta y tres,43,forty three,A1
-3,5,Todo está en la {caseta|stall},.,sesenta y cuatro,64,sixty four,A1
+1,1,Está en el curso,.,tercero,3º,,A1
+1,2,Tengo,{años|years}.,veinte,20,,A1
+1,3,Hay,{días|days} en una {semana|week}.,siete,7,,A1
+1,4,En mi {clase|classroom} somos,estudiantes.,treinta,30,,A1
+1,5,Mi {casa|house} tiene,habitaciones.,cuatro,4,,A1
+1,6,El año tiene,meses.,doce,12,,A1
+2,1,Compré,{manzanas|apples}.,seis,6,,A1
+2,2,Vivo en el piso,.,primero,1º,,A1
+2,3,Necesito,euros para el {billete|ticket}.,cincuenta,50,,A1
+2,4,Hoy {cumplo|have a birthday},años.,treinta y dos,32,,A1
+2,5,Este {edificio|building} tiene,pisos.,quince,15,,A1
+2,6,Le gusta la canción,.,novena,9º,,A1
+3,1,En la {fiesta|party} había,{invitados|guests}.,cien,100,,A1
+3,2,La {entrada|ticket} costaba,euros. ,cinco,5,,A1
+3,3,,{golondrinas|swallow} hacían el {nido|nest}. ,tres,3,,A1
+3,4,Necesito,kilos de {harina|flour}. ,veinticinco,25,,A1
+3,5,Mi hijo es el ,de la fila. ,cuarto,4º,,A1
+3,6,Había,niños en el {campamento|summer camp}. ,cuarenta y tres,43,,A1
+4,1,Todo está en la {caseta|stall},.,Sesenta y cuatro,64,,A1
+4,2,Solo tengo,globos para la fiesta. ,treinta y uno,31,,A1
+4,3,Da clases a niños de ,años. ,ocho,8,,A1
+4,4,Es el,maestro al que {pregunto|to ask}. ,segundo,2º,,A1
+4,5,La abuela cumple,años hoy. ,noventa,90,,A1
+4,6,El restaurante se llama,por el {código postal|zip code}. ,treinta y cuatro,34,,A1
+5,1,Necesitamos,sillas más. ,nueve,9,,A1
+5,2,Las dos pizzas cuesan,euros. ,catorce,14,,A1
+5,3,El cine es el ,arte. ,séptimo,7º,,A1
+5,4,Es la fiesta de su ,cumpleaños. ,dieciocho,18,,A1
+5,5,El triciclo tiene,ruedas. ,tres,3,,A1
+5,6,Su pueblo está a,kilómetros. ,treinta,30,,A1
+6,1,Es su,trofeo. ,quinto,5º,,A1
+6,2,Ellos viven en el número,.,cincuenta y dos,52,,A1
+6,3,El número,es un equipo de baloncesto. ,setenta y seis,76,,A1
+6,4,Es mi ,caramelo. ,octavo,8º,,A1
+6,5,La mayoría de edad en EEUU es,años. ,veintiuno,21,,A1
+6,6,La reunión es el ,de diciembre. ,diecisiete,17,,A1
+7,1,El año tiene,semanas.,cincuenta y dos,52,,A1
+7,2,Un euro es más de ,pesetas. ,cien,100,,A1
+7,3,Me gusta el número,.,veintidós,22,,A1
+7,4,Tengo ,lápices de colores. ,veinticinco,25,,A1
+7,5,Es la ,persona que viene. ,sexta,6ª,,A1
+7,6,Lleva el número,en la camiseta. ,diez,10,,A1
+1,1,,,dieciséis,16,,A2
+1,2,,,diecinueve,19,,A2
+1,3,,,ochenta y dos,82,,A2
+1,4,,,cincuenta y uno,51,,A2
+1,5,,,veintitrés,23,,A2
+1,6,,,dos,2,,A2
+1,7,,,setenta y cuatro,74,,A2
+1,8,,,noventa y siete,97,,A2
+1,9,,,cuarenta y cuatro,44,,A2
+1,10,,,cien,100,,A2
+2,1,,,catorce mil,14000,,A2
+2,2,,,quinientos,500,,A2
+2,3,,,cuarto,4º,,A2
+2,4,,,sexto,6º,,A2
+2,5,,,treinta mil,300000,,A2
+2,6,,,ciento uno,101,,A2
+2,7,,,trescientos,300,,A2
+2,8,,,mil,1000,,A2
+2,9,,,trescientos seis,306,,A2
+2,10,,,tres mil,3000,,A2
+3,1,,,cuatrocientos,400,,A2
+3,2,,,dos mil,2000,,A2
+3,3,,,cuarenta y cuatro mil,44000,,A2
+3,4,,,séptimo,7º,,A2
+3,5,,,cuarenta y tres mil cuarenta y cinco ,43045,,A2
+3,6,,,cuarenta y nueve mil trescientos ochenta y nueve,49389,,A2
+3,7,,,trescientos noventa y cuatro mil ochocientos cincuenta y siete,394857,,A2
+3,8,,,seiscientos,600,,A2
+3,9,,,treinta y cuatro mil novecientos cincuenta y ocho,34958,,A2
+3,10,,,mil trescientos cuatro,1304,,A2
+4,1,,,doscientos cuatro,204,,A2
+4,2,,,diez mil,10000,,A2
+4,3,,,primero,1º,,A2
+4,4,,,ocho mil,8000,,A2
+4,5,,,doce mil,12000,,A2
+4,6,,,novecientos nueve,909,,A2
+4,7,,,cinco mil,5000,,A2
+4,8,,,dieciocho mil,18000,,A2
+4,9,,,nueve mil,9000,,A2
+4,10,,,un millón,1000000,,A2
+5,1,,,ochocientos,800,,A2
+5,2,,,quince mil,15000,,A2
+5,3,,,tres mil cinco,3005,,A2
+5,4,,,trece mil,13000,,A2
+5,5,,,cuatro mil,4000,,A2
+5,6,,,seiscientos mil,600000,,A2
+5,7,,,dieciséis mil,16000,,A2
+5,8,,,sesenta mil,60000,,A2
+5,9,,,setecientos ocho,708,,A2
+5,10,,,veinticinco mil,25000,,A2
+6,1,,,quinto,5º,,A2
+6,2,,,veintidós mil seiscientos nueve,22609,,A2
+6,3,,,seis mil,6000,,A2
+6,4,,,noveno,9º,,A2
+6,5,,,once mil,11000,,A2
+6,6,,,veinte mil,20000,,A2
+6,7,,,diecinueve mil,19000,,A2
+6,8,,,novecientos,900,,A2
+6,9,,,ochocientos tres,803,,A2
+6,10,,,tercero,3º,,A2
+7,1,,,setecientos,700,,A2
+7,2,,,treinta mil ocho,30008,,A2
+7,3,,,octavo,8º,,A2
+7,4,,,treinta mil,30000,,A2
+7,5,,,cien mil,100000,,A2
+7,6,,,noventa mil cuatrocientos ochenta y cuatro,90484,,A2
+7,7,,,seiscientos cinco,605,,A2
+7,8,,,cuarenta mil,40000,,A2
+7,9,,,siete mil,7000,,A2
+7,10,,,treina y ocho mil cuatrocientos noventa y cinco,38495,,A2
+8,1,,,doscientos,200,,A2
+8,2,,,quinientos siete,507,,A2
+8,3,,,segundo,2º,,A2
+8,4,,,décimo,10º,,A2
+8,5,,,diecinueve millones ochocientos treinta y nueve mil cuatrocientos ochenta y cinco,19839485,,A2
+8,6,,,cuatrocientos dos,402,,A2
+8,7,,,treinta y dos mil,32000,,A2
+8,8,,,mil doscientos seis,1206,,A2
+8,9,,,diecisiete mil,17000,,A2
+8,10,,,ciento cinco,105,,A2
+1,1,,,undécimo,11º,,B1
+1,2,,,duodécimo,12º,,B1
+1,3,,,décimo tercero,13º,,B1
+1,4,,,décimo cuarto,14º,,B1
+1,5,,,décimo quinto,15º,,B1
+1,6,,,décimo sexto,16º,,B1
+1,7,,,décimo séptimo,17º,,B1
+1,8,,,décimo octavo,18º,,B1
+1,9,,,décimo noveno,19º,,B1
+1,10,,,vigésimo,20º,,B1

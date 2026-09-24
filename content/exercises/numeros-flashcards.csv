@@ -1,11 +1,191 @@
 ﻿set,id,term_a,term_b,level
-1,1,20,veinte,A1
-1,2,7,siete,A1
-1,3,30,treinta,A1
-1,4,4,cuatro,A1
-1,5,12,doce,A1
-2,1,6,seis,A1
-2,2,50,cincuenta,A1
-2,3,32,treinta y dos,A1
-2,4,15,quince,A1
-2,5,100,cien,A1
+1,1,31,treinta y uno,A1
+1,2,8,ocho,A1
+1,3,90,noventa,A1
+1,4,34,treinta y cuatro,A1
+1,5,9,nueve,A1
+1,6,2º,segundo,A1
+1,7,14,catorce,A1
+1,8,18,dieciocho,A1
+1,9,96,noventa y seis,A1
+1,10,3,tres,A1
+2,1,91,noventa y uno,A1
+2,2,30,treinta,A1
+2,3,86,ochenta y seis,A1
+2,4,79,setenta y nueve,A1
+2,5,62,sesenta y dos,A1
+2,6,4º,cuarto,A1
+2,7,52,cincuenta y dos,A1
+2,8,76,setenta y seis,A1
+2,9,75,setenta y cinco,A1
+2,10,45,cuarenta y cinco,A1
+3,1,11,once,A1
+3,2,21,veintiuno,A1
+3,3,17,diecisiete,A1
+3,4,7º,séptimo,A1
+3,5,58,cincuenta y ocho,A1
+3,6,46,cuarenta y seis,A1
+3,7,67,sesenta y siete,A1
+3,8,88,ochenta y ocho,A1
+3,9,43,cuarenta y tres,A1
+3,10,48,cuarenta y ocho,A1
+4,1,38,treinta y ocho,A1
+4,2,70,setenta,A1
+4,3,43,cuarenta y dos,A1
+4,4,3º,tercero,A1
+4,5,57,cincuenta y siete,A1
+4,6,1,uno,A1
+4,7,53,cincuenta y tres,A1
+4,8,60,sesenta,A1
+4,9,100,cien,A1
+4,10,47,cuarenta y siete,A1
+5,1,72,setenta y dos,A1
+5,2,71,setenta y uno,A1
+5,3,63,sesenta y tres,A1
+5,4,83,ochenta y tres,A1
+5,5,98,noventa y ocho,A1
+5,6,87,ochenta y siete,A1
+5,7,22,veintidós,A1
+5,8,61,sesenta y uno,A1
+5,9,84,ochenta y cuatro,A1
+5,10,7,siete,A1
+6,1,59,cincuenta y nueve,A1
+6,2,49,cuarenta y nueve,A1
+6,3,6º,sexto,A1
+6,4,99,noventa y nueve,A1
+6,5,33,treinta y tres,A1
+6,6,66,sesenta y seis,A1
+6,7,54,cincuenta y cuatro,A1
+6,8,80,ochenta,A1
+6,9,25,veinticinco,A1
+6,10,32,treinta y dos,A1
+7,1,8º,octavo,A1
+7,2,27,veintisiete,A1
+7,3,95,noventa y cinco,A1
+7,4,26,veintiséis,A1
+7,5,85,ochenta y cinco,A1
+7,6,89,ochenta y nueve,A1
+7,7,40,cuarenta,A1
+7,8,92,noventa y dos,A1
+7,9,78,setenta y ocho,A1
+7,10,5º,quinto,A1
+8,1,4,cuatro,A1
+8,2,65,sesenta y cinco,A1
+8,3,5,cinco,A1
+8,4,24,veinticuatro,A1
+8,5,81,ochenta y uno,A1
+8,6,68,sesenta y ocho,A1
+8,7,94,noventa y cuatro,A1
+8,8,36,treinta y seis,A1
+8,9,37,treinta y siete,A1
+8,10,1º,primero,A1
+9,1,50,cincuenta,A1
+9,2,29,veintinueve,A1
+9,3,73,setenta y tres,A1
+9,4,77,setenta y siete,A1
+9,5,39,treinta y nueve,A1
+9,6,28,veintiocho,A1
+9,7,35,treinta y cinco,A1
+9,8,10,diez,A1
+9,9,9º,noveno,A1
+9,10,12,doce,A1
+10,1,64,sesenta y cuatro,A1
+10,2,13,trece,A1
+10,3,6,seis,A1
+10,4,93,noventa y tres,A1
+10,5,15,quince,A1
+10,6,41,cuarenta y uno,A1
+10,7,56,cincuenta y seis,A1
+10,8,69,sesenta y nueve,A1
+10,9,20,veinte,A1
+10,10,55,cincuenta y cinco,A1
+1,1,16,dieciséis,A2
+1,2,19,diecinueve,A2
+1,3,82,ochenta y dos,A2
+1,4,51,cincuenta y uno,A2
+1,5,23,veintitrés,A2
+1,6,2,dos,A2
+1,7,74,setenta y cuatro,A2
+1,8,97,noventa y siete,A2
+1,9,44,cuarenta y cuatro,A2
+1,10,100,cien,A2
+2,1,14000,catorce mil,A2
+2,2,500,quinientos,A2
+2,3,4º,cuarto,A2
+2,4,6º,sexto,A2
+2,5,300000,treinta mil,A2
+2,6,101,ciento uno,A2
+2,7,300,trescientos,A2
+2,8,1000,mil,A2
+2,9,306,trescientos seis,A2
+2,10,3000,tres mil,A2
+3,1,400,cuatrocientos,A2
+3,2,2000,dos mil,A2
+3,3,44000,cuarenta y cuatro mil,A2
+3,4,7º,séptimo,A2
+3,5,43045,cuarenta y tres mil cuarenta y cinco ,A2
+3,6,49389,cuarenta y nueve mil trescientos ochenta y nueve,A2
+3,7,394857,trescientos noventa y cuatro mil ochocientos cincuenta y siete,A2
+3,8,600,seiscientos,A2
+3,9,34958,treinta y cuatro mil novecientos cincuenta y ocho,A2
+3,10,1304,mil trescientos cuatro,A2
+4,1,204,doscientos cuatro,A2
+4,2,10000,diez mil,A2
+4,3,1º,primero,A2
+4,4,8000,ocho mil,A2
+4,5,12000,doce mil,A2
+4,6,909,novecientos nueve,A2
+4,7,5000,cinco mil,A2
+4,8,18000,dieciocho mil,A2
+4,9,9000,nueve mil,A2
+4,10,1000000,un millón,A2
+5,1,800,ochocientos,A2
+5,2,15000,quince mil,A2
+5,3,3005,tres mil cinco,A2
+5,4,13000,trece mil,A2
+5,5,4000,cuatro mil,A2
+5,6,600000,seiscientos mil,A2
+5,7,16000,dieciséis mil,A2
+5,8,60000,sesenta mil,A2
+5,9,708,setecientos ocho,A2
+5,10,25000,veinticinco mil,A2
+6,1,5º,quinto,A2
+6,2,22609,veintidós mil seiscientos nueve,A2
+6,3,6000,seis mil,A2
+6,4,9º,noveno,A2
+6,5,11000,once mil,A2
+6,6,20000,veinte mil,A2
+6,7,19000,diecinueve mil,A2
+6,8,900,novecientos,A2
+6,9,803,ochocientos tres,A2
+6,10,3º,tercero,A2
+7,1,700,setecientos,A2
+7,2,30008,treinta mil ocho,A2
+7,3,8º,octavo,A2
+7,4,30000,treinta mil,A2
+7,5,100000,cien mil,A2
+7,6,90484,noventa mil cuatrocientos ochenta y cuatro,A2
+7,7,605,seiscientos cinco,A2
+7,8,40000,cuarenta mil,A2
+7,9,7000,siete mil,A2
+7,10,38495,treina y ocho mil cuatrocientos noventa y cinco,A2
+8,1,200,doscientos,A2
+8,2,507,quinientos siete,A2
+8,3,2º,segundo,A2
+8,4,10º,décimo,A2
+8,5,19839485,diecinueve millones ochocientos treinta y nueve mil cuatrocientos ochenta y cinco,A2
+8,6,402,cuatrocientos dos,A2
+8,7,32000,treinta y dos mil,A2
+8,8,1206,mil doscientos seis,A2
+8,9,17000,diecisiete mil,A2
+8,10,105,ciento cinco,A2
+1,1,11º,undécimo,B1
+1,2,12º,duodécimo,B1
+1,3,13º,décimo tercero,B1
+1,4,14º,décimo cuarto,B1
+1,5,15º,décimo quinto,B1
+1,6,16º,décimo sexto,B1
+1,7,17º,décimo séptimo,B1
+1,8,18º,décimo octavo,B1
+1,9,19º,décimo noveno,B1
+1,10,20º,vigésimo,B1

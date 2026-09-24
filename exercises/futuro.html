@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Futuro — Spanish Despacio</title>
+  <meta name="description" content="Ejercicio interactivo: escribe el verbo en futuro para completar cada frase.">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+  <div id="site-header-placeholder"></div>
+
+  <main id="main-content">
+    <section class="intro-band">
+      <div class="container">
+        <a class="back-link-top" href="/exercises.html" aria-label="Volver a Ejercicios">&larr;</a>
+        <h1>Futuro</h1>
+        <p>Elige el tipo de verbo y el tipo de ejercicio para practicar el futuro. Todas las formas verbales de este ejercicio son en modo indicativo. Cuando termines, pulsa "Comprobar".</p>
+        <div id="variant-switcher-slot"></div>
+        <div id="level-switcher-slot"></div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div id="exercise-type-slot"></div>
+      <div id="series-switcher-slot"></div>
+      <div id="exercise-app">
+        <p>Cargando ejercicio…</p>
+      </div>
+      <a class="back-link-bottom" href="/exercises.html">&larr; Ejercicios</a>
+    </div>
+  </main>
+
+  <div id="site-footer-placeholder"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <script src="/js/exercise-common.js"></script>
+  <script src="/js/exercise-arrastra.js"></script>
+  <script src="/js/exercise-typed.js"></script>
+  <script src="/js/exercise-flashcards.js"></script>
+  <script src="/js/exercise-ordena.js"></script>
+  <script src="/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      ExerciseCommon.initExerciseTypePage([
+        { id: 'empareja', label: 'Empareja', engine: 'arrastra', srcTemplate: '/content/exercises/futuro-{type}-empareja.csv' },
+        { id: 'completa', label: 'Completa', engine: 'typed', srcTemplate: '/content/exercises/futuro-{type}-completa.csv' },
+        { id: 'flashcards', label: 'Flashcards', engine: 'flashcards', srcTemplate: '/content/exercises/futuro-{type}-completa.csv' },
+        { id: 'ordena', label: 'Ordena', engine: 'ordena', srcTemplate: '/content/exercises/futuro-{type}-ordena.csv' },
+      ], { variants: ['regular', 'irregular', 'reflexivos'] });
+    });
+  </script>
+</body>
+</html>

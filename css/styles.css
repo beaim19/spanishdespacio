@@ -912,9 +912,13 @@ a.theme-block:focus-visible {
   box-shadow: 0 0 0 3px var(--color-hover-tint);
 }
 .exercise-input.input-correct {
+  /* Filled solid green, matching .option-btn.option-correct and
+     .drop-slot-correct elsewhere on the site, rather than just a tinted
+     background — a correct answer should read as unmistakably "done,
+     right" at a glance, the same way it does in every other exercise type. */
   border-color: var(--color-brand-dark);
-  background-color: var(--color-hover-tint);
-  color: var(--color-brand-dark);
+  background-color: var(--color-brand-dark);
+  color: var(--color-text-inverse);
   font-weight: 700;
 }
 .exercise-input.input-incorrect {
@@ -933,6 +937,25 @@ a.theme-block:focus-visible {
   font-size: 0.95rem;
 }
 
+/* Solution reveal — every check/solution/retry engine (Dos opciones,
+   Empareja, Completa, Ordena, Texto) adds .solution-hidden to its
+   #exercise-app container right when "Comprobar" is clicked, and removes
+   it when "Mostrar solución" is clicked. Comprobar's green/red coloring
+   (.option-correct/.option-incorrect, .drop-slot-correct/-incorrect,
+   .input-correct/-incorrect, .ordena-assembly-correct/-incorrect) is
+   untouched by this — only the *reveal* of what the correct answer
+   actually was stays hidden in between, so a student who got something
+   wrong can still retry without having been shown the answer first. */
+.solution-hidden .exercise-feedback,
+.solution-hidden .drop-slot-reveal {
+  display: none;
+}
+.solution-hidden .option-btn.option-reveal-correct {
+  border-color: var(--color-brand);
+  border-width: 2px;
+  font-weight: 600;
+}
+
 /* --- Exercises: Texto (cloze passage) ---
    The passage reads as one continuous paragraph (not a numbered list like
    the other exercise types), so blanks need enough line-height to keep
@@ -946,6 +969,15 @@ a.theme-block:focus-visible {
 }
 .texto-input {
   margin: 0 var(--space-1);
+}
+
+/* Difícil-mode reference word list — reuses .word-pool/.pool-chip's box
+   look (same "bank of chips" pattern as everywhere else), but these chips
+   don't select/place anything, they just toggle a struck-through "already
+   used" look on click. */
+.reference-chip-scratched {
+  text-decoration: line-through;
+  opacity: 0.55;
 }
 
 /* --- Word-level translation hints ---
