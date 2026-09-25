@@ -636,7 +636,20 @@ purely as a self-tracking aid: clicking a chip toggles a strikethrough
 (`.reference-chip-scratched`) so the student can mark off words they've
 already used while writing, with zero effect on grading or the blanks
 themselves. Optional and independent of everything else — a passage with
-no `word_list` renders exactly as before.
+no `word_list` renders exactly as before. `texto-adjetivos.csv` and
+`texto-verbos.csv` both now have this column filled in for their existing
+set 1 passage; `texto-articulos.csv` intentionally doesn't, per the
+skip-it-for-articulos reasoning above.
+
+**Fácil's word bank is always lowercase**, even for a blank that happens to
+land on the first word of a sentence in the passage — a capitalized chip
+would be a free clue about *where* that word goes before the student has
+worked it out, same reasoning as Ordena's word bank stripping the
+first-word capital. This only affects the chip's displayed text and
+`dataset.word`; grading compares the placed word and the CSV's `correct`
+value case-insensitively (same as Difícil's typed-answer check), so a
+blank authored as `[Ella]` still grades correctly once lowercased in the
+UI.
 
 ## Word-level translation hints
 

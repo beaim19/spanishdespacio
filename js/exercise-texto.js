@@ -285,8 +285,14 @@
         chip.type = 'button';
         chip.className = 'pool-chip';
         chip.dataset.chipId = String(chipIndex);
-        chip.dataset.word = entry.word;
-        chip.appendChild(document.createTextNode(entry.word));
+        // Always lowercase in the bank, even for a blank that happens to be
+        // the first word of a sentence in the passage — a capital letter
+        // there would be a free clue about *where* the word goes before the
+        // student has worked it out (same reasoning as Ordena's word bank).
+        // Grading compares case-insensitively (see checkBtn below), so this
+        // is display-only and doesn't change what counts as correct.
+        chip.dataset.word = entry.word.toLowerCase();
+        chip.appendChild(document.createTextNode(entry.word.toLowerCase()));
         appendTooltip(chip, entry.translation);
         pool.appendChild(chip);
       });
@@ -397,7 +403,11 @@
           // set (textContent would pull in a cloned tooltip's text too).
           const placed = filled ? (el.dataset.word || '').trim() : '';
           el.disabled = true;
-          if (filled && placed === correct) {
+          // Case-insensitive, same as Difícil's typed-answer comparison
+          // below — the pool chip is always shown lowercase now (see where
+          // it's built above), so an exact-case match would never succeed
+          // for a blank whose authored answer starts with a capital letter.
+          if (filled && placed.toLowerCase() === correct.toLowerCase()) {
             el.classList.add('drop-slot-correct');
             correctCount += 1;
           } else {
