@@ -1,0 +1,13 @@
+﻿set,id,question,option_a,option_b,option_c,option_d,correct,level
+1,1,¿Cuál es la capital de España?,Barcelona,Madrid,Sevilla,Valencia,Madrid,A1
+1,2,¿Cuántos días tiene una semana?,Cinco,Seis,Siete,Ocho,Siete,A1
+1,3,¿De qué color es el {cielo|sky} cuando hace sol?,Verde,Azul,Rojo,Negro,Azul,A1
+1,1,¿En qué continente está Argentina?,Europa,África,América del Sur,Asia,América del Sur,A2
+1,2,¿Cuál de estos NO es un {mes|month} del año?,Marzo,Vierno,Julio,Octubre,Vierno,A2
+1,3,¿Qué instrumento se usa para ver la hora?,Termómetro,Reloj,Balanza,Brújula,Reloj,A2
+1,1,¿Quién escribió "Don Quijote de la Mancha"?,Gabriel García Márquez,Miguel de Cervantes,Pablo Neruda,Federico García Lorca,Miguel de Cervantes,B1
+1,2,¿Cuál es el río más largo de Sudamérica?,El Amazonas,El Orinoco,El Paraná,El Magdalena,El Amazonas,B1
+1,3,¿Qué significa la expresión "estar en las nubes"?,Estar distraído,Estar enfadado,Estar cansado,Estar contento,Estar distraído,B1
+1,1,¿En qué año llegó Cristóbal Colón a América?,1392,1492,1592,1692,1492,B2
+1,2,¿Cuál de estos autores NO pertenece al Boom Latinoamericano?,Julio Cortázar,Gabriel García Márquez,Mario Vargas Llosa,Antonio Machado,Antonio Machado,B2
+1,3,¿Qué significa la expresión "no tener pelos en la lengua"?,Hablar con franqueza,Estar callado,Hablar en voz baja,No saber qué decir,Hablar con franqueza,B2

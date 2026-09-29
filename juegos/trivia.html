@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trivia — Spanish Despacio</title>
+  <meta name="description" content="Juego de preguntas de trivia con cuatro respuestas posibles.">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+  <div id="site-header-placeholder"></div>
+
+  <main id="main-content">
+    <section class="intro-band">
+      <div class="container">
+        <a class="back-link-top" href="/exercises.html" aria-label="Volver a Ejercicios">&larr;</a>
+        <h1>Trivia</h1>
+        <p>Responde cada pregunta eligiendo una de las cuatro opciones. Se colorea al instante.</p>
+        <div id="level-switcher-slot"></div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div id="series-switcher-slot"></div>
+      <div id="exercise-app" data-src="/content/exercises/trivia.csv">
+        <p>Cargando juego…</p>
+      </div>
+      <a class="back-link-bottom" href="/exercises.html">&larr; Ejercicios</a>
+    </div>
+  </main>
+
+  <div id="site-footer-placeholder"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <script src="/js/exercise-common.js"></script>
+  <script src="/js/game-trivia.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

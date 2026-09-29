@@ -11,17 +11,20 @@ index.html               Home page
 podcasts.html             Podcasts, organized by theme (anchor-nav index)
 exercises.html            Exercises index — Ser y estar / Por y para / Adjetivos /
                           Números / Texto as top-level topics, plus "Verbos"
-                          as a dropdown grouping every verb tense (see below)
+                          and "Juegos" as dropdowns grouping several
+                          sub-pages each (see below)
 exercises/*.html          One page per topic (ser-estar.html, por-para.html,
                           adjetivos.html, numeros.html, texto.html,
                           presente.html, ...)
+juegos/*.html             One page per game (trivia.html, genero.html) —
+                          parallel to exercises/, not a type of exercise
 dele.html                 DELE A2 Shiny app (iframe)
 about.html                About / contact
 privacy.html              Privacy & cookies policy
 css/styles.css            All site styles (colors match the DELE app)
 js/main.js                Shared header/footer injection, mobile nav
 js/theme-menu.js          Accessible dropdown for theme-index rows that group
-                          several sub-topics (used by "Verbos")
+                          several sub-topics (used by "Verbos" and "Juegos")
 js/exercise-common.js     Shared CSV loading, series pager, verb-type and
                           exercise-type switchers
 js/exercise-choice2.js    "Pick between two options" exercise engine (Dos opciones)
@@ -33,7 +36,11 @@ js/exercise-flashcards.js Self-paced reveal exercise engine (Flashcards) — tim
 js/exercise-ordena.js     Sentence word-reordering exercise engine (Ordena)
 js/exercise-texto.js      Cloze-passage exercise engines (Texto: Fácil word
                           bank + Difícil typed input, sharing one CSV/parser)
-content/exercises/        Exercise content as CSV — see below
+js/game-trivia.js         Trivia game — four-option multiple choice, instant
+                          feedback, one question at a time
+js/game-genero.js         "Masculino o femenino" game — one noun, two fixed
+                          buttons, instant feedback
+content/exercises/        Exercise (and game) content as CSV — see below
 partials/header.html      Shared nav, injected by main.js
 partials/footer.html      Shared footer, injected by main.js
 ```
@@ -533,7 +540,98 @@ focus to the toggle, and clicking outside closes it too. To add a topic
 under Verbos later: add another `<li>` (a link if it's built, a
 `.theme-menu-empty-item` if not) — no JS changes needed. A second grouped
 category later would just reuse the same `.theme-menu-wrapper` markup with
-a different id.
+a different id. "Juegos" (below) is exactly that second category, reusing
+the same wrapper markup with `id="juegos-menu"`.
+
+## Juegos (Trivia / Masculino o femenino)
+
+A different flavor of practice from the graded exercises above: instant
+feedback per answer instead of a batch "Comprobar" step, and framed as a
+game (score, "jugar de nuevo") rather than a drill. Lives under its own
+`/juegos/` folder (`juegos/trivia.html`, `juegos/genero.html`), parallel to
+`/exercises/`, and its own top-level dropdown on `exercises.html` (mirrors
+the Verbos dropdown, right below it) rather than being folded into the
+exercise-type router — a game isn't really a "type" of some grammar topic,
+it's its own kind of page.
+
+Both games render one question/word at a time, same visual shape as
+Flashcards' card — rather than a scrollable list of every question in the
+set, since seeing them one at a time with an immediate colored answer is
+what makes it feel like a game rather than a worksheet. Clicking an option
+immediately disables the other buttons, colors the clicked one green
+(correct) or red (incorrect, plus highlighting whichever option WAS
+actually correct), then a "Siguiente" button appears to advance. There's
+no "Mostrar solución" deferral here like the graded exercises have — that
+pattern exists so a student can retry *before* seeing the answer, but
+there's no retry-this-question concept in a one-shot trivia/guessing game,
+so showing the right answer immediately on a miss is just normal game
+feedback, not a hint being withheld.
+
+The two engines diverge on what happens across rounds, though. **Trivia**
+still works like Flashcards: a shuffled deck of the current set's rows,
+each shown once, ending in a summary ("Acertaste X de Y preguntas.") with
+a "Jugar de nuevo" button that reshuffles and restarts from card 1.
+**Masculino o femenino** has no deck or end screen at all — each round
+picks a fresh random row from the WHOLE current set/level *with
+replacement* (`Math.floor(Math.random() * rows.length)`, not a
+shrinking/shuffled array), so the same word can come up again soon after,
+and play just continues indefinitely. This was a deliberate change from
+the deck pattern: the CSV is authored as one long list per level rather
+than several small sets, so a true one-pass-through deck would take a
+student through the entire level's vocabulary before repeating anything,
+which isn't really how you'd want to drill gender recognition. A running
+"Aciertos: X de Y" score sits above the word the whole time (updated the
+instant you click, not deferred to the next round), with its own
+"Reiniciar puntuación" button next to it, since there's no natural
+deck-end moment to show a final score at.
+
+**Trivia** (`js/game-trivia.js`) — four-option multiple choice:
+
+```
+set,id,question,option_a,option_b,option_c,option_d,correct,level
+1,1,¿Cuál es la capital de España?,Barcelona,Madrid,Sevilla,Valencia,Madrid,A1
+```
+
+`question` can use `{word|translation}` hints same as any other sentence
+field. `correct` must exactly match one option's text. A row can leave
+`option_d` (or even `option_c`) blank to ask a 3- or 2-option question —
+empty options are just skipped when the buttons are built, no special
+syntax needed. The four options render as a stacked column
+(`.option-group-grid` in `css/styles.css`) rather than the two-option
+engine's inline-flex row, since trivia answers run longer than "es"/"está"
+and wrapping four short pills side by side gets cramped.
+
+**Masculino o femenino** (`js/game-genero.js`) — a noun, two fixed
+buttons:
+
+```
+set,id,word,translation,correct,level
+1,1,problema,problem,masculino,A1
+```
+
+`word` must be the bare noun with **no article** — `problema`, not `el
+problema` — since the article would hand the answer to the student before
+they'd clicked anything. `correct` is exactly `masculino` or `femenino`.
+`translation`, if present, shows as a hover/long-press tooltip on the word
+itself — built internally by wrapping `word`/`translation` into the site's
+usual `{word|translation}` syntax and handing it to `renderTextWithHints()`
+(same trick used elsewhere any time a single word, not a sentence, needs a
+translatable hint), so the CSV author just fills in two plain columns.
+
+Both are seeded with a handful of example rows across all four levels
+(A1/A2/B1/B2, one small set per level) to show the format and exercise the
+level switcher — add more the same way as any other leveled topic, either
+more rows in an existing level's `set` or a new `set` number continuing
+that level's numbering.
+
+Both reuse `.option-btn`/`.option-correct`/`.option-reveal-correct` from
+the Dos opciones engine's CSS for the shared parts, but add one new class,
+`.option-btn.game-incorrect` (solid red fill, `--color-tab-dark`). Every
+other exercise on the site deliberately keeps a wrong answer muted (a
+strikethrough, not a harsh color — see `.option-incorrect`) since those
+are graded practice, not games; these two are actual games, and literal
+red-on-a-miss is what was asked for, so it gets a class of its own rather
+than repurposing the muted one.
 
 ## Texto (cloze passage)
 
@@ -639,7 +737,10 @@ themselves. Optional and independent of everything else — a passage with
 no `word_list` renders exactly as before. `texto-adjetivos.csv` and
 `texto-verbos.csv` both now have this column filled in for their existing
 set 1 passage; `texto-articulos.csv` intentionally doesn't, per the
-skip-it-for-articulos reasoning above.
+skip-it-for-articulos reasoning above. The chips render in shuffled order,
+not the order they're written in `word_list` — that order tends to follow
+the sequence of blanks in the passage (easiest way to author it), so
+showing it as-is would quietly tell the student what's coming next.
 
 **Fácil's word bank is always lowercase**, even for a blank that happens to
 land on the first word of a sentence in the passage — a capitalized chip
@@ -844,13 +945,25 @@ similarly unused now — Ser y estar's "Parejas" exercise type was removed
 referenced from any page anymore; delete them yourself whenever convenient.
 
 **Pasado is a scaffold, not real content yet.** `exercises/pasado.html` and
-its nine CSVs (`pasado-{regular,irregular,reflexivos}-{completa,empareja,ordena}.csv`)
+its twelve CSVs (`pasado-{regular,irregular,reflexivos}-{completa,empareja,ordena,flashcards}.csv`)
 exist and are wired up exactly like Presente, but each CSV only has 2–3
 example rows to show the format — replace/extend them the same way you've
-been filling in Presente's sets. The three `-completa.csv` files (also
-reused by Flashcards) already show the `tense` column in use with a mix of
-past-indicative tenses; the six `-empareja.csv`/`-ordena.csv` files still
-need a real tense filled in per row before you extend them.
+been filling in Presente's sets. The three `-completa.csv` files already
+show the `tense` column in use with a mix of past-indicative tenses; the
+six `-empareja.csv`/`-ordena.csv` files still need a real tense filled in
+per row before you extend them.
+
+Flashcards has its own dedicated `pasado-{type}-flashcards.csv` files now
+(same `set,id,before,after,infinitive,tense,correct,translation,level`
+shape as Completa's, since the front-of-card hint format is identical) —
+it no longer points at the Completa CSVs. This is meant for a genuinely
+different set of sentences than the other three types cover, e.g. a mix
+pulled from across tenses/subjects rather than whatever set of drills
+Completa happens to have, since self-testing recall works better against
+material that doesn't just repeat what was already practiced. (Ser y estar
+already followed this same "own dedicated Flashcards file" pattern —
+Pasado now matches it; Presente is still the one exception, deliberately
+reusing its conjugation CSV directly — see "Flashcards" above.)
 
 **Futuro is also mostly a scaffold**, but `futuro-regular-empareja.csv` is
 real content — 9 full B1 series (45 rows) written and provided by hand,

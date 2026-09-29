@@ -149,7 +149,12 @@
     box.setAttribute('role', 'group');
     box.setAttribute('aria-label', 'Palabras de referencia');
 
-    words.forEach((word) => {
+    // Shuffled, not in the order they appear in the CSV — the CSV lists
+    // them in the order they're needed in the passage (easiest to author
+    // that way), so showing them in that same order would silently give
+    // away the sequence of the blanks. Same reasoning as Fácil's word bank
+    // below, and same shuffle() helper.
+    shuffle(words).forEach((word) => {
       const chip = document.createElement('button');
       chip.type = 'button';
       chip.className = 'pool-chip reference-chip';

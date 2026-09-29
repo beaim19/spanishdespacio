@@ -625,6 +625,39 @@ a.theme-block:focus-visible {
 }
 .option-btn:disabled { cursor: default; }
 
+/* --- Games: Trivia + Masculino/femenino ---
+   Both reuse .option-btn/.option-correct/.option-reveal-correct from the
+   two-option engine above — only "incorrect" needed a new look here.
+   Elsewhere on the site, a wrong answer is deliberately muted (a
+   strikethrough, not a harsh color — see .option-incorrect above) since
+   those are graded practice exercises; these two ARE games, and the user
+   asked for literal red on a miss, so this is a dedicated class rather
+   than reusing .option-incorrect. */
+.option-btn.game-incorrect {
+  background-color: var(--color-tab-dark);
+  border-color: var(--color-tab-dark);
+  color: var(--color-text-inverse);
+}
+/* Trivia's four answer buttons stack in a single column instead of
+   .option-group's inline-flex row — four short two-option-style pills
+   side by side would wrap awkwardly once the answer text is more than a
+   word or two, unlike Dos opciones' options which are always short. */
+.option-group-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: var(--space-2) 0;
+}
+.option-group-grid .option-btn {
+  width: 100%;
+  text-align: left;
+}
+.genero-word {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-brand-dark);
+}
+
 /* --- Exercises: Arrastra + Parejas (click-to-place word pool + slots) ---
    Both engines share this pool/slot styling: a bank of word chips the
    student selects from, and dashed-border slots they place the selection
@@ -802,6 +835,25 @@ a.theme-block:focus-visible {
 .flashcard-summary .exercise-result {
   font-size: 1.2rem;
   margin-bottom: var(--space-3);
+}
+/* Masculino o femenino's running score + reset button, side by side above
+   the word — this game has no fixed-length deck/summary like Flashcards
+   or Trivia (see js/game-genero.js), so the score has to live somewhere
+   persistent instead of a one-time end screen. */
+.flashcard-progress-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  margin: 0 0 var(--space-3) 0;
+}
+.flashcard-progress-row .flashcard-progress {
+  margin: 0;
+}
+.btn-small {
+  padding: var(--space-1) var(--space-2);
+  font-size: 0.85rem;
+  min-height: 36px;
 }
 
 /* --- Exercises: Ordena (sentence reordering) ---

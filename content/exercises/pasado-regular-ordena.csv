@@ -1,6 +1,6 @@
 ﻿set,id,correct,also_correct,level
-1,1,Ayer yo {cerré|close} la {puerta|door} con {llave|key}.,,A2
-1,2,Tú estudiaste mucho para el {examen|exam}.,,A2
+1,1,Ayer yo {cerré|close} la {puerta|door} con {llave|key}.,Yo cerré la puerta con llave ayer. ,A2
+1,2,Tú estudiaste mucho para el {examen|exam}.,Para el examen tú estudiaste mucho. ,A2
 1,3,La {semana|week} {pasada|past} yo {copié|to copy} las {recetas|recipes}.,Yo copié las recetas la semana pasada. ,A2
 1,4,Durante las {vacaciones|vacation} la {niña|girl} {coloreaba|to color} su {libro|book}.,La niña coloreaba su libro durante las vacaciones.,A2
 1,5,El {payaso|clown} {imitaba|to imitate} muy bien a los turistas. ,,A2
@@ -19,3 +19,23 @@
 4,3,De joven mi padre {pescaba|to fish} en el {pantano|swamp}. ,Mi padre pescaba en el pantano de joven. ,A2
 4,4,Los niños {sumaban|to add up} en la clase de {matemáticas|math}. ,En la clase de matemátcias los niños sumaban.,A2
 4,5,Yo {suspendí|to fail} mi {primer|first} {examen|test} en la universidad. ,En la universidad yo suspendí mi primer examen. ,A2
+5,1,¿Cuánto {duraba|to last} la película ayer?,¿Ayer cuánto duraba la película?,A2
+5,2,"Ya has escuchado el mensaje, ¿verdad?",,A2
+5,3,"Sí, yo también {llamé|to call} a tus primos. ",,A2
+5,4,Para ir a la fiesta necesitábamos un {disfraz|costume}. ,Necesitábamos un disfraz para ir a la fiesta. ,A2
+5,5,Durante los años de universidad odiaba levantarse pronto. ,Odiaba levantarse pronto durante los años de universidad. ,A2
+6,1,¿Qué tipo de clase te gustaba más en la escuela?,En la escuela ¿qué tipo de clase te gustaba más?,A2
+6,2,"Lo siento, pero no {quité|to take off} la {pintura|paint} de la puerta. ",,A2
+6,3,El enfermero me invitó a tomar algo en la cafetería. ,,A2
+6,4,"No, gracias, no he descansado todavía. ",,A2
+6,5,Después de la carrera comimos el plato del día.  ,,A2
+7,1,Sus tíos votaban cerca de aquí. ,Cerca de aquí votaban sus tíos. ,A2
+7,2,¿Has cogido mi bolso del armario?,,A2
+7,3,No hemos llenado las jarras todavía. ,Todavía no hemos llenado las jarras. ,A2
+7,4,¿Cuándo llegaste de tus vacaciones en Grecia?,,A2
+7,5,"Ayer cené con mi prima María, y también con Juan. ",Cené con mi prima María ayer y también con Juan. ,A2
+8,1,Primero nadó en la piscina pública y después en el lago. ,Primero nadó en el lago y después en la piscina pública. ,A2
+8,2,¿Cuánto leyó tu hijo ayer?,¿Ayer cuánto leyó tu hijo?,A2
+8,3,En la ensalada faltaba el tomate. ,El tomate faltaba en la ensalada.,A2
+8,4,En Alicante yo vivía en un apartamento en la plaza principal. ,,A2
+8,5,"Escuché todos los discos de música: pop, rock, jazz. ","Escuché todos los discos de música: rock, jazz, pop. | Escuché todos los discos de música: jazz, pop, rock. | Escuché todos los discos de música: rock, pop, jazz. |Escuché todos los discos de música: pop, jazz, rock. | Escuché todos los discos de música: jazz, rock, pop. ",A2
