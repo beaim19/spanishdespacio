@@ -2,12 +2,61 @@
 1,1,¿Cuál es la capital de España?,Barcelona,Madrid,Sevilla,Valencia,Madrid,A1
 1,2,¿Cuántos días tiene una semana?,Cinco,Seis,Siete,Ocho,Siete,A1
 1,3,¿De qué color es el {cielo|sky} cuando hace sol?,Verde,Azul,Rojo,Negro,Azul,A1
-1,1,¿En qué continente está Argentina?,Europa,África,América del Sur,Asia,América del Sur,A2
-1,2,¿Cuál de estos NO es un {mes|month} del año?,Marzo,Vierno,Julio,Octubre,Vierno,A2
-1,3,¿Qué instrumento se usa para ver la hora?,Termómetro,Reloj,Balanza,Brújula,Reloj,A2
-1,1,¿Quién escribió "Don Quijote de la Mancha"?,Gabriel García Márquez,Miguel de Cervantes,Pablo Neruda,Federico García Lorca,Miguel de Cervantes,B1
+1,4,¿Cómo se llama el {estrecho|strait} de agua entre España y Marruecos?,Algeciras,Tánger,Gibraltar,Tarifa,Gibraltar,A1
+1,5,¿Qué comida típica de España usa {azafrán|saffran} como ingrediente?,Tortilla,Paella,Gazpacho,Patatas bravas,Paella,A1
+2,1,¿Cuáles son los colores de la {bandera|flag} de México?,Rojo y amarillo,"Azul, blanco y verde",Azul y blanco,"Verde, blanco y rojo","Verde, blanco y rojo",A1
+2,2,¿De qué país es capital Buenos Aires?,Argentina,México,Chile,Ecuador,Argentina,A1
+2,3,¿Cuál de estas lenguas no es lengua cooficial en España?,Gallego,Valenciano,Catalán,Asturiano,Asturiano,A1
+2,4,¿Quién es Leo Messi?,Un cantante,Un actor,Un futbolista,Un político,Un futbolista,A1
+2,5,¿Quién NO es parte de la familia política?,Yerno,Suegro,Vecino,Cuñado,Vecino,A1
+3,1,¿Cuándo se come la merienda?,Por la mañana,Al mediodía,Por la tarde,Por la noche,Por la tarde,A1
+3,2,¿En qué ciudad se encuentra la Sagrada Familia?,La Paz,Barcelona,Lisboa,Cartagena,Barcelona,A1
+3,3,¿Qué nombre es muy usado para los nombres compuestos de mujer?,Ana,Pilar,Rosa,María,María,A1
+3,4,¿Qué {alimento|food} se encuentra {casi|almost} siempre durante una comida en España?,Tomate,Patata,Pan,Arroz,Pan,A1
+3,5,¿Qué película de Pedro Almodóvar tiene un Óscar?,Dolor y gloria,Mujeres al borde de un ataque de nervios,Volver,Todo sobre mi madre,Todo sobre mi madre,A1
+4,1,¿Cuál de los siguientes no es un cubierto?,Tenedor,Cuchara,Cuchillo,Plato,Plato,A1
+4,2,¿En qué ciudad de España se {celebran|celebrate} las Fallas?,Alicante,Barcelona,Granada,Valencia,Valencia,A1
+4,3,¿Dónde se pueden coger libros {prestados|borrowed}?,Librerías,Bibliotecas,Quioscos,Ayuntamientos,Bibliotecas,A1
+4,4,¿Cuál es uno de los {cuadros|paintings} más famosos de Picasso?,Las Meninas,El Guernica,El Beso,La Maja desnuda,El Guernica,A1
+4,5,¿Qué deporte no se realiza en el agua?,Remo,Submarinismo,Natación,Montañismo,Montañismo,A1
+5,1,¿Cómo se llaman los {mercados al aire libre|street markets} que se celebran en días concretos en las ciudades?,Mercado callejero,Mercadillo,Supermercado,Tiendas,Mercadillo,A1
+5,2,"Para visitar un gran acueducto, ¿a qué ciudad de España debes ir?",Salamanca,Segovia,Cádiz,Sevilla,Segovia,A1
+5,3,¿Qué ocurre en las rebajas?,Las tiendas cierran antes,Las tiendas venden más barato,Las tiendas tienen productos nuevos de temporada,Las tiendas envían la compra a casa,Las tiendas venden más barato,A1
+5,4,¿Cómo se llama el sistema de {trenes|trains} de España?,AVE,Iberia,RENFE,AENA,RENFE,A1
+5,5,"¿Qué libro comienza como: ""En un lugar de la Mancha…""?",El Quijote,La Regenta,Romeo y Julieta,Historia de la Mancha,El Quijote,A1
+6,1,¿En qué fiesta la gente se {disfraza|to wear a costume} y hay desfiles por la calle?,Semana Santa,Carnaval,San Fermín,San Juan,Carnaval,A1
+6,2,¿Dónde estás si paseas por el Malecón?,Cuba,España,Venezuela,Colombia,Cuba,A1
+6,3,¿Qué tipo de {establecimiento|store} vende tabaco y {sellos|stamps}?,Tienda,Cafetería,Bar,Estanco,Estanco,A1
+6,4,¿Cuál es uno de los principales {periódicos|newspapers} de Argentina?,El País,El Mundo,Clarín,El Nacional,Clarín,A1
+6,5,¿Cómo se llama el rey de España?,Juan Carlos I,Luis XIV,Felipe VI,Carlos III,Felipe VI,A1
+1,1,¿En qué año comenzó la guerra civil española?,1936,1940,1945,1930,1936,A2
+1,2,¿Qué río pasa por Sevilla?,Ebro,Duero,Tajo,Guadalquivir,Guadalquivir,A2
+1,3,¿Dónde trabaja el alcalde?,Ayuntamiento,Ministerio,Parlamento,Senado,Ayuntamiento,A2
+1,4,¿De qué ciudad de España es típica la horchata?,Valencia,Granada,Sevilla,Zaragoza,Valencia,A2
+2,5,¿Cómo se llama la carrera que se corre el 31 de diciembre?,San Sabino,San Silvestre,San Silvio,San Sebastián,San Silvestre,
+2,1,¿Qué felino ha estado en peligro crítico de extinción en España?,Jaguar,Lince ibérico,Pantera,Puma,Lince ibérico,
+2,2,¿Qué fiesta se celebra en verano?,Las Fallas,La Noche de San Juan,La vendimia,La semana blanca,La Noche de San Juan,
+2,3,¿A dónde vas si necesitas jabón?,A una droguería,A una panadería,A una juguetería,A una peluquería,A una droguería,
+2,4,¿Cómo se llama al grupo de estudiantes universitarios que cantan vistiendo trajes antiguos tradicionales?,Flamenco,Tuna,Banda,Cuarteto,Tuna,
+2,5,¿En qué país se encuantra el lago Titicaca?,Nicaragua,Guatemala,Venezuela,Bolivia,Bolivia,
+3,1,¿Qué es la sobremesa?,Algo que se pone sobre la mesa para servir la comida,Un mantel típico de Galicia,El tiempo después de comer que se pasa sentado a la mesa conversando,Un pastel hecho con azafrán que se toma de postre,El tiempo después de comer que se pasa sentado a la mesa conversando,
+3,2,¿Cuál de estas ciudades no es UNESCO?,Toledo,Potosí,La Paz,Puebla,La Paz,
+3,3,¿Qué bebida popular de Asturias se prepara con manzanas?,Sidra,Cerveza de manzana,Mosto,Anís de manzana,Sidra,
+3,4,¿Qué volcán de la lista se encuentra en España?,Teide,Popocatépetl,Nevado del Ruíz,Aneto,Teide,
+3,5,"¿Qué actor argentino es protagonista en ""Nueve Reinas"" y ""El secreto de sus ojos""?",Leonardo Sbaraglia,Héctor Alterio,Guillermo Francella,Ricardo Darín,Ricardo Darín,
+4,1,¿Qué género musical procede de Andalucía?,Merengue,Flamenco,Jota,Copla,Flamenco,
+4,2,¿Quién fue Premio Nobel de Medicina?,Rigoberta Menchú,Vargas Llosa,Severo Ochoa,Pablo Neruda,Severo Ochoa,
+4,3,¿Qué hay 17 en España?,Provincias,Comunidades Autónomas,Ciudades Autónomas,Comarcas,Comunidades Autónomas,
+4,4,¿En qué país fue Emiliano Zapata un revolucionario?,Perú,Colombia,México,España,México,
+4,5,¿Qué fiesta típica de Sevilla se celebra en primavera?,San Fermín,La Feria de Abril,Las Fallas,La Tomatina,La Feria de Abril,
+5,1,¿Quién no ha ganado un Premio Novel de Literatura?,José Echegaray,Camilo José Cela,Gabriela Mistral,César Milstein,César Milstein,
+5,2,¿Dónde está el desierto de Atacama?,Chile,Argentina,Bolivia,Perú,Chile,
+5,3,¿Qué arquitecto español ha diseñado la Ciudad de las Artes y las Ciencias de Valencia?,Ricardo Bofill,Rafael Moneo,Alberto Campo Baeza,Santiago Calatrava,Santiago Calatrava,
+5,4,¿Qué ciclista español ha ganado cinco Tours de Francia?,Pedro Delgado,Federico Bahamontes,Miguel Induráin,Alberto Contador,Miguel Induráin,
+5,5,¿Qué ocurre con los pimientos de Padrón?,Son muy populares en las islas Canarias,Unos pican y otros no,Es un ingrediente clave en la paella,Son de muchos colores,Unos pican y otros no,
+1,1,"¿Quién escribió ""Don Quijote de la Mancha""?",Gabriel García Márquez,Miguel de Cervantes,Pablo Neruda,Federico García Lorca,Miguel de Cervantes,B1
 1,2,¿Cuál es el río más largo de Sudamérica?,El Amazonas,El Orinoco,El Paraná,El Magdalena,El Amazonas,B1
-1,3,¿Qué significa la expresión "estar en las nubes"?,Estar distraído,Estar enfadado,Estar cansado,Estar contento,Estar distraído,B1
+1,3,"¿Qué significa la expresión ""estar en las nubes""?",Estar distraído,Estar enfadado,Estar cansado,Estar contento,Estar distraído,B1
 1,1,¿En qué año llegó Cristóbal Colón a América?,1392,1492,1592,1692,1492,B2
 1,2,¿Cuál de estos autores NO pertenece al Boom Latinoamericano?,Julio Cortázar,Gabriel García Márquez,Mario Vargas Llosa,Antonio Machado,Antonio Machado,B2
-1,3,¿Qué significa la expresión "no tener pelos en la lengua"?,Hablar con franqueza,Estar callado,Hablar en voz baja,No saber qué decir,Hablar con franqueza,B2
+1,3,"¿Qué significa la expresión ""no tener pelos en la lengua""?",Hablar con franqueza,Estar callado,Hablar en voz baja,No saber qué decir,Hablar con franqueza,B2
