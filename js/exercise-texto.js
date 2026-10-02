@@ -63,16 +63,43 @@
 (function () {
   const ACCENT_CHARS = ['á', 'é', 'í', 'ó', 'ú', 'ñ', '¿', '¡'];
   const MIN_INPUT_CH = 9;
+  // Padding + border (see .exercise-input/.texto-input in css/styles.css)
+  // plus a little room for the text caret.
+  const WIDTH_BUFFER_PX = 28;
+
+  // Used to measure text width in the input's actual font — see growInput
+  // below for why this replaced a plain "N characters = N ch" estimate.
+  let measureCanvas = null;
+  function measureTextWidth(text, font) {
+    if (!measureCanvas) measureCanvas = document.createElement('canvas');
+    const ctx = measureCanvas.getContext('2d');
+    ctx.font = font;
+    return ctx.measureText(text).width;
+  }
 
   // Grows a Difícil-mode input as the student types so the whole word
   // stays visible instead of scrolling inside a fixed-width box — never
-  // shrinks below MIN_INPUT_CH, so short answers still line up. Also
-  // called directly from the accent toolbar (see buildAccentToolbar)
-  // since setRangeText() there changes input.value without firing a
-  // native "input" event, so the listener below wouldn't otherwise run.
+  // shrinks below the starting (empty-box) width, so short answers still
+  // line up. Also called directly from the accent toolbar (see
+  // buildAccentToolbar) since setRangeText() there changes input.value
+  // without firing a native "input" event, so the listener below wouldn't
+  // otherwise run.
+  //
+  // Measures the ACTUAL rendered pixel width of the current value in the
+  // input's own font, rather than assuming "N characters = N ch" — the CSS
+  // "ch" unit is the width of the font's "0" glyph, which in a
+  // proportional font like this site's is narrower than most letters, and
+  // noticeably narrower than capitals or accented letters (á, é, í, ó, ú,
+  // ñ) specifically — exactly the characters this file's accent toolbar
+  // exists to insert. That mismatch clipped the last letter on longer or
+  // heavily-accented answers even though the box visibly "grew" by the
+  // expected ch count.
   function growInput(input) {
-    const width = Math.max(MIN_INPUT_CH, input.value.length + 2);
-    input.style.width = `${width}ch`;
+    const font = window.getComputedStyle(input).font
+      || `${window.getComputedStyle(input).fontSize} ${window.getComputedStyle(input).fontFamily}`;
+    const minWidth = measureTextWidth('0'.repeat(MIN_INPUT_CH), font);
+    const textWidth = measureTextWidth(input.value || '', font);
+    input.style.width = `${Math.max(minWidth, textWidth) + WIDTH_BUFFER_PX}px`;
   }
 
   function shuffle(arr) {
@@ -264,12 +291,12 @@
         input.autocomplete = 'off';
         input.autocapitalize = 'off';
         input.spellcheck = false;
-        input.style.width = `${MIN_INPUT_CH}ch`;
         input.setAttribute('aria-label', `Espacio ${blanks.length + 1}`);
         input.addEventListener('focus', () => { lastFocusedInput = input; });
         input.addEventListener('input', () => growInput(input));
         if (!lastFocusedInput) lastFocusedInput = input;
         passage.appendChild(input);
+        growInput(input);
         blanks.push({
           el: input, correct: segment.correct, translation: segment.translation, kind: 'input',
         });

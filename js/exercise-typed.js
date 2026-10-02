@@ -46,13 +46,40 @@
   let lastFocusedInput = null;
   const ACCENT_CHARS = ['á', 'é', 'í', 'ó', 'ú', 'ñ', '¿', '¡'];
   const MIN_INPUT_CH = 9;
+  // Padding + border (see .exercise-input in css/styles.css) plus a little
+  // room for the text caret, so the last character typed doesn't butt
+  // right up against the input's edge.
+  const WIDTH_BUFFER_PX = 28;
+
+  // Used to measure text width in the input's actual font — see growInput
+  // below for why this replaced a plain "N characters = N ch" estimate.
+  let measureCanvas = null;
+  function measureTextWidth(text, font) {
+    if (!measureCanvas) measureCanvas = document.createElement('canvas');
+    const ctx = measureCanvas.getContext('2d');
+    ctx.font = font;
+    return ctx.measureText(text).width;
+  }
 
   // Grows the input as the student types so the whole word stays visible
   // instead of scrolling inside a fixed-width box — never shrinks below
-  // the starting width, so short answers still line up.
+  // the starting (empty-box) width, so short answers still line up.
+  //
+  // This measures the ACTUAL rendered pixel width of the current value in
+  // the input's own font, rather than assuming "N characters = N ch" — the
+  // CSS "ch" unit is defined as the width of the font's "0" glyph, which in
+  // a proportional font like this site's (Segoe UI/Arial) is narrower than
+  // most letters, and noticeably narrower than capitals or accented
+  // letters (á, é, í, ó, ú, ñ) specifically. That mismatch was small enough
+  // to go unnoticed on short plain words but added up on longer answers or
+  // ones with several accented/capital characters, clipping the last
+  // letter even though the box visibly "grew" by the expected ch count.
   function growInput(input) {
-    const width = Math.max(MIN_INPUT_CH, input.value.length + 2);
-    input.style.width = `${width}ch`;
+    const font = window.getComputedStyle(input).font
+      || `${window.getComputedStyle(input).fontSize} ${window.getComputedStyle(input).fontFamily}`;
+    const minWidth = measureTextWidth('0'.repeat(MIN_INPUT_CH), font);
+    const textWidth = measureTextWidth(input.value || '', font);
+    input.style.width = `${Math.max(minWidth, textWidth) + WIDTH_BUFFER_PX}px`;
   }
 
   async function init() {
@@ -117,11 +144,11 @@
       input.autocapitalize = 'off';
       input.spellcheck = false;
       input.setAttribute('aria-label', `Respuesta a la frase ${index + 1}`);
-      input.style.width = `${MIN_INPUT_CH}ch`;
       input.addEventListener('focus', () => { lastFocusedInput = input; });
       input.addEventListener('input', () => growInput(input));
       if (!lastFocusedInput) lastFocusedInput = input;
       sentence.appendChild(input);
+      growInput(input);
 
       sentence.appendChild(window.ExerciseCommon.renderTextWithHints(` ${row.after} `));
 
@@ -255,7 +282,7 @@
       const feedback = item.querySelector('.exercise-feedback');
       input.value = '';
       input.disabled = false;
-      input.style.width = `${MIN_INPUT_CH}ch`;
+      growInput(input);
       input.classList.remove('input-correct', 'input-incorrect');
       feedback.textContent = '';
     });

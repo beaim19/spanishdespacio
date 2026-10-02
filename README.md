@@ -116,6 +116,22 @@ This engine also adds an accent toolbar (á é í ó ú ñ ¿ ¡) above the
 questions, matching the buttons in the DELE app — clicking one inserts the
 character into whichever text box was last focused, at the cursor position.
 
+The input box that grows as the student types (`growInput()` in
+`js/exercise-typed.js`, and the identical logic in `js/exercise-texto.js`
+for Difícil's typed blanks) measures the actual rendered pixel width of
+the current text in a `<canvas>` (`ctx.measureText()`), rather than
+assuming "N characters = N ch". The CSS `ch` unit is defined as the width
+of the font's "0" glyph, which in this site's proportional font (Segoe
+UI/Arial) is narrower than most letters — and noticeably narrower than
+capitals or accented letters (á, é, í, ó, ú, ñ) specifically, i.e. exactly
+the characters the accent toolbar exists to insert. The old `N + 2` ch
+estimate under-sized the box on longer or heavily-accented answers even
+though it "grew" by the expected character count, clipping the last
+letter. Measuring in the actual font and converting straight to pixels
+(plus a fixed `WIDTH_BUFFER_PX` for padding/border/caret room) fixes this
+regardless of which characters are involved, rather than just padding the
+old estimate further.
+
 ## Splitting a topic into verb-type variants (regular/irregular/reflexivos)
 
 Some tenses need a second, independent grouping on top of "set" — e.g.
@@ -543,7 +559,7 @@ category later would just reuse the same `.theme-menu-wrapper` markup with
 a different id. "Juegos" (below) is exactly that second category, reusing
 the same wrapper markup with `id="juegos-menu"`.
 
-## Juegos (Trivia / Masculino o femenino)
+## Juegos (Trivial / Masculino o femenino)
 
 A different flavor of practice from the graded exercises above: instant
 feedback per answer instead of a batch "Comprobar" step, and framed as a
@@ -553,6 +569,15 @@ game (score, "jugar de nuevo") rather than a drill. Lives under its own
 the Verbos dropdown, right below it) rather than being folded into the
 exercise-type router — a game isn't really a "type" of some grammar topic,
 it's its own kind of page.
+
+The first game is shown to the user as **"Trivial"** (the actual Spanish
+word for this kind of game), but stays "trivia" internally — file name
+(`juegos/trivia.html`), engine file (`js/game-trivia.js`), CSV
+(`content/exercises/trivia.csv`), and the `window.ExerciseEngines.trivia`
+registration all keep the English name. Same convention already in use
+elsewhere on the site (Empareja's engine file/CSV/registration all still
+say "arrastra" internally) — only the text the student actually sees
+changed.
 
 Both games render one question/word at a time, same visual shape as
 Flashcards' card — rather than a scrollable list of every question in the
@@ -567,10 +592,18 @@ there's no retry-this-question concept in a one-shot trivia/guessing game,
 so showing the right answer immediately on a miss is just normal game
 feedback, not a hint being withheld.
 
-The two engines diverge on what happens across rounds, though. **Trivia**
+The two engines diverge on what happens across rounds, though. **Trivial**
 still works like Flashcards: a shuffled deck of the current set's rows,
 each shown once, ending in a summary ("Acertaste X de Y preguntas.") with
-a "Jugar de nuevo" button that reshuffles and restarts from card 1.
+two buttons — "Jugar de nuevo" (reshuffles and restarts the SAME series
+from card 1) and, only when the current level has another series, a
+second "Siguiente" (reusing that label for a different action than the
+per-question one above — this advances a whole *series*, not a single
+question). That one is a plain `<a href="?set=N+1">` rather than new
+in-page logic, built the same way `buildSeriesPager`'s `hrefForSet` does
+in `exercise-common.js` — clone the current URL's params, only change
+`set`, so `?level=` survives the jump. It's omitted entirely on the last
+(or only) series of a level, since there's nothing to advance to.
 **Masculino o femenino** has no deck or end screen at all — each round
 picks a fresh random row from the WHOLE current set/level *with
 replacement* (`Math.floor(Math.random() * rows.length)`, not a
@@ -585,7 +618,7 @@ instant you click, not deferred to the next round), with its own
 "Reiniciar puntuación" button next to it, since there's no natural
 deck-end moment to show a final score at.
 
-**Trivia** (`js/game-trivia.js`) — four-option multiple choice:
+**Trivial** (`js/game-trivia.js`) — four-option multiple choice:
 
 ```
 set,id,question,option_a,option_b,option_c,option_d,correct,level
@@ -752,6 +785,15 @@ value case-insensitively (same as Difícil's typed-answer check), so a
 blank authored as `[Ella]` still grades correctly once lowercased in the
 UI.
 
+**Difícil's typed blanks have an orange border** (`.texto-input` in
+`css/styles.css`, overriding the green `--color-brand` border every other
+`.exercise-input` uses), rather than looking identical to Completa's boxes
+— the two work differently (a continuous passage vs. a numbered list of
+separate sentences) even though the box itself behaves the same way, and
+students were mixing up how the two exercises worked as a result. Feedback
+states (`.input-correct`/`.input-incorrect`) are unaffected — this only
+changes the border color while the blank is still unanswered.
+
 ## Word-level translation hints
 
 Any sentence field — `before`/`after` (Dos opciones, Completa, Flashcards),
@@ -886,6 +928,23 @@ before `A2` before `B1` before `B2`, since that sort order falls out of
 plain alphabetical sorting) — so a first-time visitor always lands on the
 easiest content available rather than a mix of everything.
 
+**The `level` column's values can be anything, not just A1/A2/B1/B2** —
+nothing in the code parses or hardcodes the CEFR labels specifically
+(`loadCsvSet()` just collects whatever distinct strings show up in that
+column: `[...new Set(data.map(r => r.level.trim()))]`), and `renderLevelNav()`
+prints those exact strings as the tab labels. The one thing that has to
+stay true for any renamed set of levels: they're sorted with plain
+alphabetical `localeCompare`, not a hardcoded difficulty order, so
+whatever strings are chosen need to alphabetize in the same order as their
+intended difficulty — A1/A2/B1/B2 happens to satisfy this by coincidence
+of the letter+number scheme, but e.g. `Principiante`/`Intermedio`/`Avanzado`
+would NOT (alphabetically "Avanzado" sorts first). Picking replacement
+names that alphabetize correctly (or numbering them, like `1 - Principiante`,
+`2 - Intermedio`, `3 - Avanzado`) avoids that trap. This applies per CSV
+file independently — nothing elsewhere in the codebase assumes any
+particular topic uses the CEFR names, so renaming Trivial's `trivia.csv`
+levels wouldn't affect Ser y estar's or any other topic's.
+
 **Set numbers restart at 1 within each level.** A topic's rows are one
 long block per level (all `A1` rows, then all `A2` rows, then `B1`, then
 `B2`), and within each level block `set` starts over at 1, 2, 3... This
@@ -990,6 +1049,22 @@ pasted into the wrong file instead.
 schema described above (`texto-articulos.csv`/`texto-adjetivos.csv`/`texto-verbos.csv`)
 and is no longer referenced from any page — delete it yourself whenever
 convenient.
+
+## Buttons on narrow screens
+
+`.btn` (`css/styles.css`) switched from `display: inline-block` with just
+`text-align: center` to `display: inline-flex` with
+`align-items`/`justify-content: center`, plus explicit `appearance: none`
+— flexbox centering is more robust than `text-align` alone against mobile
+browsers' (iOS Safari especially) native `<button>` chrome bleeding
+through unless appearance is explicitly reset, which could otherwise push
+a label like "Comprobar" off-center or let it overflow the button's edge
+on a narrow screen. A `@media (max-width: 700px)` rule (same breakpoint
+the nav/header already use) also drops `.btn`'s font size and horizontal
+padding slightly, and `.exercise-controls` gained `flex-wrap: wrap`, so a
+row of two or three buttons (Comprobar / Mostrar solución / Intentar de
+nuevo, etc.) wraps onto a second line on a phone instead of forcing
+horizontal scroll or crowding text against a button's edge.
 
 ## Local preview
 

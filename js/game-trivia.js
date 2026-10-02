@@ -1,5 +1,8 @@
 /*
- * "Trivia" game: one multiple-choice question at a time, four buttons,
+ * "Trivial" game (shown to the user as "Trivial" — the Spanish word for
+ * this kind of game — but kept as "trivia" internally in file/engine/CSV
+ * names, same convention as Empareja staying "arrastra" internally):
+ * one multiple-choice question at a time, four buttons,
  * immediate feedback on click — no separate "Comprobar" step, since seeing
  * right away whether you got it is the whole point of a trivia game (as
  * opposed to the graded exercises elsewhere on the site, which defer the
@@ -27,7 +30,12 @@
  * (correct) or red (incorrect, plus highlighting whichever button WAS
  * correct) and disables the other three; a "Siguiente" button then
  * appears to advance. After the last question, a summary shows the final
- * score with a "Jugar de nuevo" button that reshuffles and restarts.
+ * score with a "Jugar de nuevo" button that reshuffles and restarts the
+ * SAME series, plus a second "Siguiente" button (reusing that label for a
+ * different action — advancing a *series*, not a question) that jumps to
+ * the next series, if the current level has one — a plain link to
+ * ?set=N+1, same navigation approach as the series pager, so it's just a
+ * normal page load rather than new in-page logic.
  *
  * Host page needs, before this script: PapaParse, js/exercise-common.js,
  * and a plain container (no type-router, this is a single-purpose page):
@@ -161,6 +169,20 @@
       window.ExerciseCommon.attachHintLongPress(card);
     }
 
+    // Next-set link for the summary screen, if there IS a next set — reuses
+    // the same "clone the URL's params, only change `set`" approach as
+    // buildSeriesPager()'s hrefForSet in exercise-common.js, so ?level= (or
+    // any future param) survives the jump too.
+    function nextSetHref() {
+      if (!allSets || allSets.length <= 1) return null;
+      const sorted = [...allSets].sort((a, b) => Number(a) - Number(b));
+      const currentIndex = sorted.indexOf(setNumber);
+      if (currentIndex === -1 || currentIndex >= sorted.length - 1) return null;
+      const params = new URLSearchParams(window.location.search);
+      params.set('set', sorted[currentIndex + 1]);
+      return `?${params.toString()}`;
+    }
+
     function renderSummary() {
       const summary = document.createElement('div');
       summary.className = 'flashcard-summary';
@@ -169,6 +191,9 @@
       result.className = 'exercise-result';
       result.textContent = `Acertaste ${correctCount} de ${deck.length} preguntas.`;
       summary.appendChild(result);
+
+      const controls = document.createElement('div');
+      controls.className = 'exercise-controls';
 
       const retryBtn = document.createElement('button');
       retryBtn.type = 'button';
@@ -180,8 +205,20 @@
         correctCount = 0;
         renderCard();
       });
-      summary.appendChild(retryBtn);
+      controls.appendChild(retryBtn);
 
+      // Only shown when the current level actually has another series —
+      // on the last (or only) one, there's nothing to advance to.
+      const nextHref = nextSetHref();
+      if (nextHref) {
+        const nextSetBtn = document.createElement('a');
+        nextSetBtn.className = 'btn btn-primary';
+        nextSetBtn.href = nextHref;
+        nextSetBtn.textContent = 'Siguiente';
+        controls.appendChild(nextSetBtn);
+      }
+
+      summary.appendChild(controls);
       card.appendChild(summary);
     }
 
