@@ -89,3 +89,23 @@
 6,3,El secador de pelo del hotel no funciona. ,No funciona el secador de pelo del hotel. ,B1
 6,4,El dentista le manda un antibiótico para la infección. ,Para la infección el dentista le manda un antibiótico. ,B1
 6,5,En el centro de salud informan de todos los detalles. ,Todos informan de los detalles en el centro de salud. |Informan de todos los detalles en el centro de salud. ,B1
+1,1,"¿Dibujas los diseños y los envías, por favor?","¿Por favor, dibujas los diseños y los envías?",B2
+1,2,¿Convences a tus padres y partes de vacaciones con nosotros?,,B2
+1,3,"Vale, quedamos a las cinco y después tomamos algo. ","Vale, quedamos a las cinco y tomamos algo después. |Vale, tomamos algo a las cinco y después quedamos. |Vale, tomamos algo a las cinco y quedamos después. ",B2
+1,4,Le vigilo mientras duerme y me mira al despertar. ,,B2
+1,5,Primero nadas por el río hasta el barco y después pescas la cena. ,,B2
+2,1,Metes la mano por esta rendija y pulsas ese botón.,,B2
+2,2,"Venga, acabamos la cena y lavamos los platos. ",,B2
+2,3,Le digo que sí y me contesta que ya no le interesa. ,,B2
+2,4,¿Terminamos los últimos y aún así ganamos?,,B2
+2,5,Coses la falda y guardas todo el traje en la caja. ,Guardas todo el traje en la caja y coses la falda. ,B2
+3,1,¿Confirmamos la hipótesis con esta fórmula?,¿Con esta fórmula confirmamos la hipótesis?,B2
+3,2,Calculas el porcentaje y acabamos las cuentas. ,,B2
+3,3,Decidimos ir de vacaciones y convocan elecciones. ,Convocan elecciones y decidimos ir de vacaciones. ,B2
+3,4,El cómico imita muy bien a muchos famosos. ,,B2
+3,5,"De acuerdo, retiramos el segundo plato y comemos el postre. ",,B2
+4,1,Montan un restaurante y se hacen famosos. ,Se hacen famosos y montan un restaurante. ,B2
+4,2,Léeis todos los documentos y cuando acabéis sacáis conclusiones. ,,B2
+4,3,Los maestros pasan lista cada mañana antes de empezar. ,Antes de empezar los maestros pasan lista cada mañana. |Cada mañana los maestros pasan lista antes de empezar. |Cada mañana antes de empezar los maestros pasan lista. |Antes de empezar cada mañana los maestros pasan lista. |Los maestros pasan lista antes de empezar cada mañana. ,B2
+4,4,Presentamos el proyecto ante la clase y lo celebramos. ,Presentamos el proyecto y lo celebramos ante la clase. ,B2
+4,5,Ocupan un cargo importante y dan muchas órdenes. ,,B2

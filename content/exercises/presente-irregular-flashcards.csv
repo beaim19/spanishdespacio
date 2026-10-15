@@ -1,0 +1,186 @@
+﻿set,id,before,after,infinitive,correct,translation,level
+1,1,Esta flor,amarilla.,ser,es,to be,A1
+1,2,La niña ,{contenta|happy}. ,estar,está,to be,A1
+1,3,Luis,a clase de español. ,ir,va,to go,A1
+1,4,Su casa,en la {ciudad|city}. ,estar,está,to be,A1
+1,5,Ellos,a la {piscina|swimming pool}. ,ir,van,to go,A1
+2,1,Tú ,al {cine|movie theater} con tus amigos. ,ir,vas,to go,A1
+2,2,Nosotros ,chilenos. ,ser,somos,to be,A1
+2,3,Los niños,en el parque. ,estar,están,to be,A1
+2,4,Vosotros ,en verano a la {playa|beach}. ,ir,vais,to go,A1
+2,5,Mario y yo,en {paro|unemployed}.,estar,estamos,to be,A1
+3,1,Mi perro,cinco años. ,tener,tiene,to have,A1
+3,2,Marta y tú,muy altas. ,ser,sois,to be,A1
+3,3,Sus abuelos,muy {enfermos|sick}. ,estar,están,to be,A1
+3,4,Ustedes ,al museo esta tarde. ,ir,van,to go,A1
+3,5,Lo,", esta tarde no puedo ir. ",sentir,siento,to be sorry,A1
+4,1,Tú siempre,leche para {cenar|dinner}. ,queres,quieres,to want,A1
+4,2,Yo,en una {canción|song} y {canto|to sing}. ,pensar,pienso,to think,A1
+4,3,Los sábados yo,con mis {amigos|friends}. ,salir,salgo,to get out,A1
+4,4,Rafa y yo,al tenis. ,jugar,jugamos,to play,A1
+4,5,{Ahora|now} yo te,cuántos años tengo. ,decir,digo,to say,A1
+5,1,{Ahora|now} te digo cuántos años,.,tener,tengo,to have,A1
+5,2,Hoy yo,los {deberes|homework} en casa de mi abuela. ,hacer,hago,to do,A1
+5,3,Los profesores,usar la {pizarra|blackboard}. ,poder,pueden,can,A1
+5,4,Yo,mis {zapatos|shoes} en el {armario|closet}. ,poner,pongo,to put,A1
+5,5,{Tengo|to have} la {lista|list} y yo,quién {viene|to come} a la {fiesta|party}. ,saber,sé,to know,A1
+6,1,No ,"el sol, es de noche. ",ver,veo,to seem,A1
+6,2,Los {bebés|babies},en el {dormitorio|bedroom}. ,dormir,duermen,to sleep,A1
+6,3,La casa,mucho dinero. ,costar,cuesta,to cost,A1
+6,4,Yo,hoy a tu casa. ,venir,vengo,to come,A1
+6,5,La {puerta|door},mal. ,cerrar,cierra,to close,A1
+7,1,Tus libros,muy interesantes. ,ser,son,to be,A1
+7,2,La falda,muy bonita. ,ser,es,to be,A1
+7,3,La postal ,en la {mesa|table}. ,estar,está,to be,A1
+7,4,Luisa,a tu casa. ,ir,va,to go,A1
+7,5,Las sillas,{sucias|dirty}. ,estar,están,to be,A1
+8,1,Sus hijos,en autobús a la escuela. ,ir,van,to go,A1
+8,2,Hoy no,"a clase, estoy cansada. ",ir,voy,to go,A1
+8,3,Mi padre,{bombero|fireman}. ,ser,es,to be,A1
+8,4,La tía María ,hoy al médico. ,ir,va,to go,A1
+8,5,Los niños,a clase de inglés. ,ir,van,to go,A1
+9,1,Benito y yo,muy {contentos|happy} por ti. ,estar,estamos,to be,A1
+9,2,Nosotros,abogados. ,ser,somos,to be,A1
+9,3,Los sábados yo,a la montaña. ,ir,voy,to go,A1
+9,4,Tú y yo,{juntas|together} al teatro. ,ir,vamos,to go,A1
+9,5,Tú,enfermo y no puedes {salir|go out} de casa. ,estar,estás,to be,A1
+10,1,Yo,con mi {hermano|brother} pequeño. ,jugar,juego,to play,A1
+10,2,Yo siempre,la {verdad|truth}. ,decir,digo,to say,A1
+10,3,"Estoy ocupada, no",hablar con vosotros. ,poder,puedo,can,A1
+10,4,Yo no ,cuándo viene a {cenar|eat dinner}. ,saber,sé,to know,A1
+10,5,,muchas {estrellas|stars} en el {cielo|sky}. ,ver,veo,to see,A1
+11,1,Su madre,con la {ventana|window} {abierta|opened}. ,dormir,duerme,to sleep,A1
+11,2,La tarta,{poco|little}. ,costar,cuesta,to cost,A1
+11,3,Ella,la puerta {por la noche|at night}. ,cerrar,cierra,to close,A1
+11,4,Ellos,pagar con tarjeta. ,querer,quieren,to want,A1
+11,5,Hoy yo,mis clases de yoga. ,estar,están,to be,A1
+12,1,Yo ya,quince años. ,tener,tengo,to have,A1
+12,2,Yo,unos {bocadillos|sandwiches} muy buenos. ,hacer,hago,to do,A1
+12,3,Tú ,con nosotros en el coche. ,venir,vienes,to come,A1
+12,4,Ahora yo,la mesa. ,poner,pongo,to put,A1
+12,5,Mañana yo,{pronto|early} de casa. ,salir,salgo,to go out,A1
+1,1,Yo,mucho antes de {decidir|deciding}.,pensar,pienso,to think,A2
+1,2,Ella,mucho a sus {padres|parents}.,querer,quiere,to love,A2
+1,3,Ella,la {puerta|door} con llave.,cerrar,cierra,to close,A2
+1,4,Ustedes,en esta {habitación|room}.,dormir,duermen,to sleep,A2
+1,5,Nosotros,tarde los {viernes|Fridays}.,volver,volvemos,to come back,A2
+2,1,Yo,de {casa|home} a las siete de la {mañana|morning}.,salir,salgo,to leave,A2
+2,2,Ellos,{ayuda|help} cuando la necesitan.,pedir,piden,to ask for,A2
+2,3,En esta {cocina|kitchen},muy bien.,oler,huele,to smell,A2
+2,4,Julián y tú ,tarta a los niños. ,dar,dais,to give,A2
+2,5,Ellos,su {coche|car} para ir a {trabajar|to work}.,conducir,conducen,to drive,A2
+3,1,Yo,al {gimnasio|gym} todos los días.,ir,voy,to go,A2
+3,2,Yo,{cocinar|to cook} muy bien.,saber,sé,to know,A2
+3,3,Usted,siempre la {verdad|truth}.,decir,dice,to say,A2
+3,4,¿Tú,venir {mañana|tomorrow} a casa?,poder,puedes,can,A2
+3,5,Nosotros,buenos {amigos|friends}.,ser,somos,to be,A2
+4,1,Cada día yo,café para todos. ,hacer,hago,to do,A2
+4,2,Vosotros,la televisión por la {noche|night}.,ver,veis,to watch,A2
+4,3,Tú siempre,la ventana temprano. ,abrir,abres,to open,A2
+4,4,Ellos,una {casa|house} nueva.,construir,construyen,to build,A2
+4,5,Vosotros ,en la {habitación|room} del {fondo|in the back}. ,dormir,dormís,to sleep,A2
+5,1,Ahora yo,los {huevos|eggs} para la {dinner|cena}. ,freir,frío,to fry,A2
+5,2,En el {parque|park} los chicos y yo,muchos kilómetros.,andar,andamos,to walk,A2
+5,3,Cada mañana yo,pan para el {desayuno|breakfast}. ,tostar,tuesto,to toast,A2
+5,4,El hotel ,{dinero|money} durante el {invierno|winter}.,perder,pierde,to lose,A2
+5,5,Todos vosotros,muy mal después del {partido|game}.,oler,oléis,to smell,A2
+6,1,Nosotros,los {coches|cars} al pasar {cerca|near} de la {ventana|window}. ,sentir,sentimos,to feel,A2
+6,2,¿Ustedes,venir al {cine|movie theater} con nosotros?,querer,quieren,to want,A2
+6,3,Él,que {traer|to bring} la {tarta|cake}.,tener,tiene,to have,A2
+6,4,Estos árboles,durante la {primavera|spring}. ,florecer,florecen,to flower,A2
+6,5,Todos nosotros,en el {autobús|bus}.,caber,cabemos,to fit,A2
+7,1,La {película|movie},a las ocho. ,empezar,empieza,to start,A2
+7,2,Ellos,{jugar|to play} en el campo al {aire libre|outdoors}.,preferir,prefieren,to prefer,A2
+7,3,Nosotros,el lugar de {destino|destination}. ,desconocer,desconocemos,to not know,A2
+7,4,Vosotros ,siempre en el {mejor|best} momento.,venir,venís,to come,A2
+7,5,Vosotros ,todas las {preguntas|questions}.,acertar,acertáis,to guess,A2
+8,1,Los alumnos,al fútbol aunque {llueva|to rain}. ,jugar,juegan,to play,A2
+8,2,Los libros en esta {librería|book store},poco {dinero|money}. ,costar,cuestan,to cost,A2
+8,3,Tú y Lucas ,la chaqueta en este armario. ,colgar,colgáis,to hang,A2
+8,4,Yo no,las {llaves|keys} de mi casa. ,encontrar,encuentro,to find,A2
+8,5,Todos los estudiantes,el problema de matemáticas. ,resolver,resuelven,to solve,A2
+9,1,Por las tardes María,de {canguro|babysitter}. ,hacer,hace,to do,A2
+9,2,Yo no ,{quién|who} está en la {lista|list}. ,elegir,elijo,to choose,A2
+9,3,Mañana le ,las {llaves|keys} a tu hermano. ,dar,doy,to give,A2
+9,4,La {abogada|lawyer},a todas las personas en el {juzgado|court}. ,conocer,conoce,to know,A2
+9,5,En vuestro {tiempo libre|free time},por {carreteras|roads} secundarias. ,conducir,conducís,to drive,A2
+10,1,Esta noche,en la montaña. ,nevar,nieva,to snow,A2
+10,2,Me gusta mucho pero no,más. ,querer,quiero,to want,A2
+10,3,Su {abrigo|coat},más que el mío. ,costar,cuesta,to cost,A2
+10,4,No recuerdo si tú ,mañana a comer. ,venir,vienes,to come,A2
+10,5,No,"tiempo, ni dinero. ",tener,tengo,to have,A2
+11,1,¿Vosotros,{hablar|to speak} inglés?,saber,sabéis,to know,A2
+11,2,Mañana vosotros,aquí a la misma hora. ,volver,volvéis,to come back,A2
+11,3,"Esta parte del país es nueva para mi, no la ",.,conocer,conozco,to know,A2
+11,4,"Tú eres muy bueno, ",mucho. ,valer,vales,to be worth,A2
+11,5,Yo ya,todo lo que {necesito|to need}. ,tener,tengo,to have,A2
+12,1,Eva y tú siempre,comer {tortilla|omelet} de patata. ,querer,queréis,to want,A2
+12,2,Quizás los niños ,en el parque. ,jugar,juegan,to play,A2
+12,3,No sé lo que tú,en las clases de alemán. ,hacer,haces,to do,A2
+12,4,El tío ,la {cuna|cradle} donde duerme el bebé. ,mecer,mece,to rock,A2
+12,5,Me gustas porque siempre,la {verdad|truth}. ,decir,dices,to say,A2
+1,1,Allá lejos puedes ver como,en las {montañas|mountains}. ,nevar,nieva,to snow,B1
+1,2,Al fin lo ,a {entender|to understand}. ,empezar,empiezo,to start,B1
+1,3,Tú,las instrucciones {al pie de la letra|word by word}.,seguir,sigues,to follow,B1
+1,4,Según tú ,"a flores, yo no lo creo. ",oler,hueles,to smell,B1
+1,5,La luz del horno,{demasiado|too much}. ,lucir,luce,to shine,B1
+2,1,Cuando te miro,sobre todo {felicidad|happiness}. ,sentir,siento,to feel,B1
+2,2,El {lavavajillas|dishwasher} no funciona por lo que Daniela y yo,cenar fuera. ,elegir,elegimos,to choose,B1
+2,3,Mientras,"el regalo, yo hago la tarta. ",envolver,envuelves,to wrap,B1
+2,4,Tiene tantas novelas históricas que no,en la estantería. ,caber,caben,to fit,B1
+2,5,Estoy {seguro|sure} de que lo que,es verdad. ,decir,digo,to say,B1
+3,1,El perro,los {huesos|bones} como si fueran un {tesoro|treasure}. ,enterrar,entierra,to bury,B1
+3,2,Los cocineros,las patatas antes de la cena. ,cocer,cuecen,to boil,B1
+3,3,"Hoy tengo tiempo, por lo que ",a los dardos con amigos. ,jugar,juego,to play,B1
+3,4,,"un avión, pero no estoy seguro, no lo veo bien. ",parecer,parece,to seem,B1
+3,5,Los alumnos ,haber {copiado|to copy} en el examen. ,negar,niegan,to deny,B1
+4,1,¿Con quién,el martes de Barcelona?,volver,vuelves,to come back,B1
+4,2,Vosotros,"que lo sabéis todo, pero estáis {equivocados|wrong}. ",suponer,suponéis,to think,B1
+4,3,Supongo que el camarero,a todas las mesas. ,servir,sirve,to serve,B1
+4,4,Dicen que los humanos,dos veces con la misma piedra. ,tropezar,tropiezan,to trip up,B1
+4,5,Si,"un poco, sabrás la solución. ",pensar,piensas,to think,B1
+5,1,Si,"usando la misma contraseña, vas a tener problemas. ",seguir,sigues,to continue,B1
+5,2,Seguramente no,", pero es una historia difícil de {creer|to believe}. ",mentir,mientes,to lie,B1
+5,3,Sus hijos ,a la clases práctica y teórica. ,venir,vienen,to come,B1
+5,4,Ahora es cuando,las sillas al {fondo|back}. ,mover,movéis,to move,B1
+5,5,"Tienes que ir a la {farmacia|pharmacy}, y allí ",un antibiótico. ,pedir,pides,to ask for,B1
+6,1,,todos en el coche menos yo. ,caber,cabéis,to fit,B1
+6,2,"Hoy está {nublado|cloudy}, así que yo no",las flores del jardín. ,regar,riego,to water,B1
+6,3,,tus {citas|dates} realmente mal. ,elegir,eliges,to choose,B1
+6,4,Las flores de estos árboles frutales,muy bien. ,oler,huelen,to smell,B1
+6,5,A lo mejor,abejas con el olor de la miel. ,atraer,atraéis,to atract,B1
+7,1,Paula y tú,de viaje a una zona de clima muy húmedo. ,ir,vais,to go,B1
+7,2,No sabía que,tan temprano en esta región. ,anochecer,anochece,to grow dark,B1
+7,3,Las chicas,el carril bici nuevo en la calle principal. ,probar,prueban,to try out,B1
+7,4,Ana es un desastre y siempre,la tienda tarde. ,cerrar,cierra,to close,B1
+7,5,"En vuestro viaje, si","por el casco histórico, {aprenderéis|to learn} mucho. ",andar,andáis,to walk,B1
+8,1,"Si te apetece, ",la montaña por la {ladera norte|north side}. ,descender,descendemos,to go down,B1
+8,2,Sus hijos cada día,más en la clase de alemán. ,entender,entienden,to understand,B1
+8,3,Todos los veranos,turismo en una ciudad europea. ,hacer,hacemos,to do,B1
+8,4,La maestra ,las luces del jardín de infancia cada mañana. ,encender,enciende,to turn on,B1
+8,5,En este hotel ,servicio de habitaciones. ,haber,hay,there is,B1
+9,1,"Para proteger a las {gallinas|chicken}, cada noche los granjeros las",.,encerrar,encierran,to enclose,B1
+9,2,Al llegar de viaje ,yo todo el {equipaje|baggage}. ,recoger,recojo,to pick up,B1
+9,3,"Es increíble lo que haces, siempre ",lo que va a decir. ,predecir,predices,to predict,B1
+9,4,,muy bien la ciudad y no necesito el mapa. ,conocer,conozco,to know,B1
+9,5,Tú seguramente ,mucho por las noches porque estás cansado. ,soñar,sueñas,to dream,B1
+10,1,¿,aquel viaje a Marruecos?,recordar,recuerdas,to remember,B1
+10,2,Sus padres,mañana  para hacerse un análisis de sangre. ,volver,vuelven,to come back,B1
+10,3,"No me gusta, ",más de un metro. ,medir,mide,to measure,B1
+10,4,"Cuando llegan tarde, siempre",perdón. ,pedir,piden,to apologize,B1
+10,5,¿Qué película,ganas de ver?,tener,tienes,to have,B1
+11,1,El texto está en italiano y yo lo,al español. ,traducir,traduzco,to translate,B1
+11,2,Le,mucha {vergüenza|embarrassment} hablar en público. ,dar,da,to give,B1
+11,3,"Estoy lista, en unos minutos ",mi {trabajo|work} delante de toda la clase. ,exponer,expongo,to present,B1
+11,4,Estoy impresionado con cómo,durante las {tormentas|storms}. ,llover,llueve,to rain,B1
+11,5,A {principios|beginning} de verano yo siempre,la ropa de invierno en el baúl. ,poner,pongo,to place,B1
+12,1,¿,"bajar el volumen de la televión, por favor? Lo tienen muy alto. ",poder,pueden,can,B1
+12,2,Cuando van al mercado,llevar su bolsa de la compra. ,soler,suelen,to use to,B1
+12,3,"No sé, es que ",el {suelo|floor} justo a esta hora. ,fregar,friegan,to mop,B1
+12,4,Yo,que sabrá quiénes somos. ,suponer,supongo,to suposse,B1
+12,5,,las flores para que la casa esté alegre. ,cuidar,cuida,to take care of,B1
+1,1,Si uno de vosotros,"el {botón|button}, el {acensor|lift} subirá. ",apretar,aprieta,to press,B2
+1,2,Si,"el suelo, usa por favor esta fregona. ",fregar,friegas,to mop,B2
+1,3,Para ir a trabajar desde mi casa cada mañana,por la carretera comarcal. ,conducir,conduzco,to drive,B2
+1,4,La ventana está rota por lo que Isabel,la {cerradura|lock} para abrirla. ,forzar,fuerza,to force,B2
+1,5,En el ejército los soldados,su país. ,defender,defienden,to defend,B2

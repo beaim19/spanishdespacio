@@ -1,24 +1,24 @@
 ﻿set,id,before,after,word,translation,level
 1,1,Yo,a las siete todos los días.,me levanto,to get up,A1
 1,2,Ella,{antes|before} de {desayunar|to have breakfast}.,se ducha,to shower,A1
-1,3,Yo ,en el lago en verano. ,me baño,to swim,A1
+1,3,Yo ,en el {lago|lake} en {verano|summer}. ,me baño,to swim,A1
 1,4,El gato,en el suelo. ,se estira,to stretch,A1
-1,5,Él ,la barba cada mañana. ,se afeita,to shave,A1
+1,5,Él ,la {barba|beard} cada mañana. ,se afeita,to shave,A1
 2,1,Ellos ,el 15 de abril. ,se casan,to get married,A1
-2,2,Para carnaval yo,de bruja. ,me disfrazo,to dress up,A1
-2,3,Las niñas ,crema en la playa. ,se echan,to put on,A1
+2,2,Para carnaval yo,de {bruja|witch}. ,me disfrazo,to dress up,A1
+2,3,Las niñas ,en la {toalla|towel} en la {playa|beach}. ,se tumban,to lie down,A1
 2,4,Los niños,los {dientes|teeth} {cada|every} {noche|night}.,se cepillan,to brush,A1
 2,5,Mañana,en la Universidad. ,me gradúo,to graduate,A1
-3,1,El camarero,las manos. ,se lava,to wash,A1
+3,1,El camarero,las {manos|hands}. ,se lava,to wash,A1
 3,2,Los jefes,en la oficina. ,os reunís,to meet,A1
 3,3,Vosotros ,a una casa nueva. ,os mudáis,to move,A1
 3,4,El restaurante ,"""El Chiringuito"". ",se llama,to be called,A1
 3,5,Tú y Berta,el pelo cada mañana. ,os peináis,to comb,A1
-4,1,Tú,en la piscina. ,te relajas,to relax,A1
-4,2,Su abuela,mucho para estar sana. ,se cuida,to take care,A1
+4,1,Tú,en la {piscina|pool}. ,te relajas,to relax,A1
+4,2,Su abuela,mucho para estar {sana|healthy}. ,se cuida,to take care,A1
 4,3,La ropa,en la terraza. ,se seca,to dry,A1
-4,4,Tú ,el jabón a la ducha. ,te llevas,to take,A1
-4,5,El perro también ,para descansar. ,se tumba,to lie down,A1
+4,4,Tú ,el {jabón|soap} a la ducha. ,te llevas,to take,A1
+4,5,El perro también ,para {descansar|to rest}. ,se tumba,to lie down,A1
 1,1,Tú,todo el tiempo en el {espejo|mirror}.,te miras,to look,A2
 1,2,Nosotros,en estas {sillas|chairs}.,nos sentamos,to sit,A2
 1,3,Tú,mucho del {ruido|noise} de la {calle|street}. ,te quejas,to complain,A2
@@ -59,3 +59,18 @@
 4,3,,mal que nunca me regales nada. ,me parece,to seem ok,B1
 4,4,Tiene un gran sentido del humor y ,mucho. ,se ríe,to laugh,B1
 4,5,Pronto,de vacaciones a la playa. ,me voy,to go,B1
+1,1,,de haber firmado el contrato. ,se arrepienten,to regret,B2
+1,2,,de los abuelos y vienes al coche. ,te despides,to say goodbye,B2
+1,3,Sus hijos,en la playa con el cubo y la pala. ,se entretienen,to amuse onseself,B2
+1,4,¿,del bacalao al pil pil que preparó tu padre cuando nos conocimos?,te acuerdas,to remember,B2
+1,5,Visitas las tiendas y ,una idea de lo que quieres. ,te haces,to get,B2
+2,1,Vamos al ayuntamiento y ,como monitores de actividades. ,nos inscribimos,to sign up,B2
+2,2,,de su familia porque piensa diferente. ,se avergüenza,to feel ashame,B2
+2,3,Este año,las camisas con mangas anchas. ,se llevan,to be in fashion,B2
+2,4,No le va bien porque,en el curso a distancia. ,se aburre,to get bored,B2
+2,5,,en la chimenea y jugamos una partida de cartas. ,nos calentamos,to warm up,B2
+3,1,Si,"a entrar en la casa, sois muy valientes. ",os atrevéis,to dare,B2
+3,2,Os acaban de presentar y parece que,de toda la vida. ,os conocéis,to know each other,B2
+3,3,Conducís todo recto y ,al llegar a la carretera comarcal. ,os desviáis,to turn,B2
+3,4,,"donde están las macetas, y trasplantáis estos árboles frutales. ",os agacháis,to bend over,B2
+3,5,Si,"por el tobogán, llegáis antes. ",os deslizáis,to slide,B2

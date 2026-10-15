@@ -1,4 +1,34 @@
 ﻿set,id,before,after,infinitive,correct,translation,level
+1,1,Tus libros,muy interesantes. ,ser,son,to be,A1
+1,2,La falda,muy bonita. ,ser,es,to be,A1
+1,3,La postal ,en la {mesa|table}. ,estar,está,to be,A1
+1,4,Luisa,a tu casa. ,ir,va,to go,A1
+1,5,Las sillas,{sucias|dirty}. ,estar,están,to be,A1
+2,1,Sus hijos,en autobús a la escuela. ,ir,van,to go,A1
+2,2,Hoy no,"a clase, estoy cansada. ",ir,voy,to go,A1
+2,3,Mi padre,{bombero|fireman}. ,ser,es,to be,A1
+2,4,La tía María ,hoy al médico. ,ir,va,to go,A1
+2,5,Los niños,a clase de inglés. ,ir,van,to go,A1
+3,1,Benito y yo,muy {contentos|happy} por ti. ,estar,estamos,to be,A1
+3,2,Nosotros,abogados. ,ser,somos,to be,A1
+3,3,Los sábados yo,a la montaña. ,ir,voy,to go,A1
+3,4,Tú y yo,{juntas|together} al teatro. ,ir,vamos,to go,A1
+3,5,Tú,enfermo y no puedes {salir|go out} de casa. ,estar,estás,to be,A1
+4,1,Yo,con mi {hermano|brother} pequeño. ,jugar,juego,to play,A1
+4,2,Yo siempre,la {verdad|truth}. ,decir,digo,to say,A1
+4,3,"Estoy ocupada, no",hablar con vosotros. ,poder,puedo,can,A1
+4,4,Yo no ,cuándo viene a {cenar|eat dinner}. ,saber,sé,to know,A1
+4,5,,muchas {estrellas|stars} en el {cielo|sky}. ,ver,veo,to see,A1
+5,1,Su madre,con la {ventana|window} {abierta|opened}. ,dormir,duerme,to sleep,A1
+5,2,La tarta,{poco|little}. ,costar,cuesta,to cost,A1
+5,3,Ella,la puerta {por la noche|at night}. ,cerrar,cierra,to close,A1
+5,4,Ellos,pagar con tarjeta. ,querer,quieren,to want,A1
+5,5,Hoy yo,mis clases de yoga. ,empezar,empiezo,to start,A1
+6,1,Yo ya,quince años. ,tener,tengo,to have,A1
+6,2,Yo,unos {bocadillos|sandwiches} muy buenos. ,hacer,hago,to do,A1
+6,3,Tú ,con nosotros en el coche. ,venir,vienes,to come,A1
+6,4,Ahora yo,la mesa. ,poner,pongo,to put,A1
+6,5,Mañana yo,{pronto|early} de casa. ,salir,salgo,to go out,A1
 1,1,Yo,mucho antes de {decidir|deciding}.,pensar,pienso,to think,A2
 1,2,Ella,la {puerta|door} con llave.,cerrar,cierra,to close,A2
 1,3,Nosotros,tarde los {viernes|Fridays}.,volver,volvemos,to come back,A2
@@ -64,3 +94,13 @@
 1,3,Para ir a trabajar desde mi casa cada mañana,por la carretera comarcal. ,conducir,conduzco,to drive,B2
 1,4,La ventana está rota por lo que Isabel,la {cerradura|lock} para abrirla. ,forzar,fuerza,to force,B2
 1,5,En el ejército los soldados,su país. ,defender,defienden,to defend,B2
+2,1,,"que no va a querer volver nunca más, no lo he tratado bien. ",intuir,intuyo,to sense,B2
+2,2,Enchufas este cable y ,el altavoz que no funciona por el nuevo. ,sustituir,sustituyes,to replace,B2
+2,3,Al añadir este líquido ,la dureza de esta roca. ,disminuir,disminuye,to decrease,B2
+2,4,El sistema,a esta minoría social de los derechos básicos. ,excluir,excluye,to exclude,B2
+2,5,Si no,"ahora, les alcanzará el perro. ",huir,huyen,to run away,B2
+3,1,Cada año los ayuntamientos,más y más urbanizaciones en todas las ciudades. ,construir,construyen,to build,B2
+3,2,Llenas este cubo de agua y ,la pintura anaranjada.,diluir,diluyes,to dilute,B2
+3,3,"Si no cumple con lo que prometió, los diputados lo",de su cargo político. ,destituir,destituyen,to dismiss,B2
+3,4,El río,"por el medio de la ciudad, incluso cuando hay sequía. ",fluir,fluye,to flow,B2
+3,5,La orquesta de música barroca,el espectáculo con una escena de teatro. ,concluir,concluye,to finish,B2

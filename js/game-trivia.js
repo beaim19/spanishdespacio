@@ -147,7 +147,7 @@
           } else {
             btn.classList.add('game-incorrect');
             buttons.forEach((b) => {
-              if (b.textContent.trim() === correct) b.classList.add('option-reveal-correct');
+              if (b.textContent.trim() === correct) b.classList.add('game-reveal-correct');
             });
           }
 

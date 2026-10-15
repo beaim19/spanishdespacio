@@ -150,7 +150,7 @@
           } else {
             btn.classList.add('game-incorrect');
             const correctBtn = correct === 'masculino' ? masculinoBtn : femeninoBtn;
-            correctBtn.classList.add('option-reveal-correct');
+            correctBtn.classList.add('game-reveal-correct');
           }
           // Update the score shown on THIS card immediately, rather than
           // waiting for the next renderCard() call on "Siguiente" — the

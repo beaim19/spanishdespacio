@@ -1,0 +1,171 @@
+﻿set,id,before,after,infinitive,correct,translation,level
+1,1,Mi {hija|daugther},a las siete de la mañana. ,levantarse,se levanta,to get up,A1
+1,2,Vosotros,ahora. ,ducharse,os ducháis,to shower,A1
+1,3,Laura ,el pelo con un {peine|comb}. ,peinarse,se peina,to comb,A1
+1,4,Yo también ,el pelo con {secador|hairdrier}. ,secarse,me seco,to dry,A1
+1,5,Los niños ,las {manos|hands} para {comer|to eat}. ,lavarse,se lavan,to wash,A1
+2,1,Los {gatos|cats},porque les {gusta|to like}. ,estirarse,se estiran,to stretch,A1
+2,2,Creo que él,por la {mañana|morning}. ,afeitarse,se afeita,to shave,A1
+2,3,En la playa vosotros,al {sol|sun}. ,tumbarse,os tumbáis,to lie down,A1
+2,4,Ustedes,el {pelo|hair}. ,cepillarse,se cepillan,to brush,A1
+2,5,La {semana próxima|next week} yo,.,graduarse,me gradúo,to graduate,A1
+3,1,Este chico también,Manuel. ,llamarse,se llama,to be called,A1
+3,2,En {verano|summer} las niñas,en la {piscina|swimming pool}. ,bañarse,se bañan,to swim,A1
+3,3,En Halloween yo,de {fantasma|ghost}. ,disfrazarse,me disfrazo,to dress up,A1
+3,4,Sus {abuelos|grandparents},bastante bien. ,cuidarse,se cuidan,to take care,A1
+3,5,Porque estoy {cansada|tired},.,tumbarse,me tumbo,to lie down,A1
+4,1,Sus tíos ,mañana. ,casarse,se casan,to get married,A1
+4,2,Los médicos,cada día. ,reunirse,se reúnen,to meet,A1
+4,3,Yo {tampoco|neither} ,cuando estoy cansado. ,relajarse,me relajo,to relax,A1
+4,4,Tú y Lara,en estas {sillas|chairs}. ,sentarse,os sentáis,to sit down,A1
+4,5,Esta {semana|week} nosotros,de casa. ,mudarse,nos mudamos,to move,A1
+5,1,Yo,a las siete todos los días.,levantarse,me levanto,to get up,A1
+5,2,Ella,{antes|before} de {desayunar|to have breakfast}.,ducharse,se ducha,to shower,A1
+5,3,Yo ,en el {lago|lake} en {verano|summer}. ,bañarse,me baño,to swim,A1
+5,4,El gato,en el suelo. ,estirarse,se estira,to stretch,A1
+5,5,Él ,la {barba|beard} cada mañana. ,afeitarse,se afeita,to shave,A1
+6,1,Ellos ,el 15 de abril. ,casarse,se casan,to get married,A1
+6,2,Para carnaval yo,de {bruja|witch}. ,disfrazarse,me disfrazo,to dress up,A1
+6,3,Las niñas ,en la {toalla|towel} en la {playa|beach}. ,tumbarse,se tumban,to lie down,A1
+6,4,Los niños,los {dientes|teeth} {cada|every} {noche|night}.,cepillarse,se cepillan,to brush,A1
+6,5,Mañana,en la Universidad. ,graduarse,me gradúo,to graduate,A1
+7,1,El camarero,las {manos|hands}. ,lavarse,se lava,to wash,A1
+7,2,Los jefes,en la oficina. ,reunirse,os reunís,to meet,A1
+7,3,Vosotros ,a una casa nueva. ,mudarse,os mudáis,to move,A1
+7,4,El restaurante ,"""El Chiringuito"". ",llamarse,se llama,to be called,A1
+7,5,Tú y Berta,el pelo cada mañana. ,peinarse,os peináis,to comb,A1
+8,1,Tú,en la {piscina|pool}. ,relajarse,te relajas,to relax,A1
+8,2,Su abuela,mucho para estar {sana|healthy}. ,cuidarse,se cuida,to take care,A1
+8,3,La ropa,en la terraza. ,secarse,se seca,to dry,A1
+8,4,Tú ,el {jabón|soap} a la ducha. ,llevarse,te llevas,to take,A1
+8,5,El perro también ,para {descansar|to rest}. ,tumbarse,se tumba,to lie down,A1
+1,1,Yo,demasiado por {todo|everything}.,preocuparse,me preocupo,to worry,A2
+1,2,Tú,todo el tiempo en el {espejo|mirror}.,mirarse,te miras,to look,A2
+1,3,Ella,{fácilmente|easily}.,enamorarse,se enamora,to fall in love,A2
+1,4,Nosotros,en estas {sillas|chairs}.,sentarse,nos sentamos,to sit,A2
+1,5,Nosotros,mucho en las {fiestas|parties}.,divertirse,nos divertimos,to have fun,A2
+2,1,Tú,mucho del {ruido|noise} de la {calle|street}. ,quejarse,te quejas,to complain,A2
+2,2,Los estudiantes,en las clases {largas|long}.,aburrirse,se aburren,tobe bored,A2
+2,3,María y yo ,{de camino|on the way} al {trabajo|work} cada {mañana|morning}. ,cruzarse,nos cruzamos,to cross,A2
+2,4,Tú,de todo.,quejarse,te quejas,to complain,A2
+2,5,Tú,el {pelo|hair} con la {toalla|towel}.,secarse,te secas,to dry,A2
+3,1,Ustedes,de nuestro {cumpleaños|birthday}.,acordarse,se acuerdan,to remember,A2
+3,2,Marcos ,para el máster que {estudiará|to study} este año. ,matricularse,se matricula,to enroll,A2
+3,3,Yo,{a veces|sometimes}.,equivocarse,me equivoco,to be wrong,A2
+3,4,Ustedes,porque {empiezan|to start} las {vacaciones|vacation}.,alegrarse,se alegran,to be glad,A2
+3,5,Ella,{antes|before} de salir.,maquillarse,se maquilla,to put make up on,A2
+4,1,El maestro,de los {alumnos|students} durante el {verano|summer}. ,despedirse,se despide,to say goodbye,A2
+4,2,Nosotros,{cada|every} mes.,reunirse,nos reunimos,to meet,A2
+4,3,Vosotros,las zapatillas para correr. ,cambiarse,os cambiáis,to change,A2
+4,4,Vosotros,sin {razón|reason}.,preocuparse,os preocupáis,to worry,A2
+4,5,Los chicos de la {pandilla|gang},en el parque {por la noche|at night}. ,colarse,se cuelan,to sneak in,A2
+5,1,Vosotros siempre,de los {chistes|jokes} más {graciosos|funny}.,acordarse,os acordáis,to remember,A2
+5,2,"Bueno, yo no ",fácilmente.,cansarse,me canso,to get tired,A2
+5,3,Mi hermana y yo,por la {salud|health} de la profesora. ,interesarse,nos interesamos,to be interested in,A2
+5,4,Mis padres ,por las {noticias|neas} en el {mundo|world}. ,interesarse,se interesan,to interest,A2
+5,5,Tú,en los {details|detalles} más {extraños|strange}. ,fijarse,te fijas,to take notice,A2
+6,1,Los chicos,en la clase de historia. ,aburrirse,se aburren,to get bored,A2
+6,2,Los jugadores,para {ganar|win} el {partido|game}.,esforzarse,se esfuerzan,to do an effort,A2
+6,3,,de ir al {cine|movie theater} {hoy|today}.,alegrarse,me alegro,to be glad,A2
+6,4,"Sí, yo ",en la {siguiente|next} {parada|stop}. ,bajarse,me bajo,to get off,A2
+6,5,"Sí, yo también",con las tormentas. ,asustarse,me asusto,to get scared,A2
+7,1,Estos niños,{siempre|always} en el {recreo|recess}. ,pelearse,se pelean,to fight,A2
+7,2,El bebé,mucho {cuando|when} {come|to eat}.,mancharse,se mancha,to stain,A2
+7,3,El gato,{después|after} de cada {siesta|nap}. ,estirarse,se estira,to stretch,A2
+7,4,Los perros,delante de la chimenea.,tumbarse,se tumban,to lie down,A2
+7,5,La niña ,la {ropa|clothes} ella sola. ,ponerse,se pone,to put on,A2
+8,1,Ella,las {gafas|glasses} para ver la televisión.,quitarse,se quita,to take off,A2
+8,2,Vosotros,{frecuentemente|often} en el {bosque|forest}. ,perderse,os perdéis,to get lost,A2
+8,3,Sus padres,bastante de su éxito. ,alegrarse,se alegran,to be glad,A2
+8,4,Ustedes nunca,de {persona|person}. ,confundirse,se confunden,to mix up,A2
+8,5,Cuando tiene {dolor de cabeza|headache} él,en la {cama|bed}.,tumbarse,se tumba,to lie down,A2
+1,1,Su {hijo|son},en la universidad este año. ,graduarse,se gradúa,to graduate,B1
+1,2,Vosotros,en estos {sillones|couches}.,relajarse,os relajáis,to relax,B1
+1,3,El coche,siempre cuando estamos de vacaciones. ,romperse,se rompe,to break,B1
+1,4,Siempre,de traer juegos de mesa de vuestra casa. ,acordarse,os acordáis,to remember,B1
+1,5,Este florero,con el aire de la ventana. ,caerse,se cae,to fall,B1
+2,1,Los primos de Manuel,muy bien. ,caerse,se caen,to get along,B1
+2,2,Este número,siempre cuando estoy en casa. ,llamarse,me llama,to call,B1
+2,3,Los niños,de sitio a mitad de curso. ,cambiarse,se cambian,to change,B1
+2,4,,muy bien en las verbenas del pueblo. ,pasarse,me lo paso,to have a good time,B1
+2,5,Nunca cocinan porque,un dedo con facilidad. ,cortarse,se cortan,to cut,B1
+3,1,Al venir ,del tren cuando veáis la estación de Ferrol. ,bajarse,os bajáis,to get off,B1
+3,2,Cuando estés en la página web,el programa de la lista. ,descargarse,te descargas,to download,B1
+3,3,Vosotros,de la {lluvia|rain} en la {tienda de campaña|camping tent}.,refugiarse,os refugiáis,to shelter,B1
+3,4,Esta noche,en casa con tus hermanos. ,quedarse,te quedas,to stay,B1
+3,5,Antes de la reunión,a todos los asistentes. ,presentarse,te presentas,to introduce,B1
+4,1,,enfermo al empezar el campamento. ,ponerse,se pone,to become,B1
+4,2,La niña,mucho a su padre. ,parecerse,se parece,to look alike,B1
+4,3,,mal que nunca me regales nada. ,parecer,me parece,to seem ok,B1
+4,4,Tiene un gran sentido del humor y ,mucho. ,reirse,se ríe,to laugh,B1
+4,5,Pronto,de vacaciones a la playa. ,irse,me voy,to go,B1
+5,1,Tengo mucho dinero y ahora,sin hacer nada. ,enriquecerse,me enriquezco,to get rich,B1
+5,2,"Hago natación, ",por estar en forma. ,esforzarse,me esfuerzo,to do an effort,B1
+5,3,Mis padres leen el periódico todos los días y ,muy bien informados. ,mantenerse,se mantienen,to keep,B1
+5,4,"Es verdad, ",mucho a mi madre. ,parecerse,me parezco,to look alike,B1
+5,5,Nadie,"al matrimonio, son una pareja feliz. ",oponerse,se opone,to object,B1
+6,1,Si se cae al suelo la taza,.,romperse,se rompe,to break,B1
+6,2,Los nietos ,del cuidado de la abuela. ,ocuparse,se ocupan,to take care,B1
+6,3,Los libros de esta autora,a varios idiomas. ,traducirse,se traducen,to be translated,B1
+6,4,Siempre,muy contento cuando gana mi equipo. ,ponerse,me pongo,to become,B1
+6,5,Todos los sábados,a casa de mis padres y comemos juntos. ,acercarse,me acerco,to come by,B1
+7,1,Cuando se despierta de la siesta,muy bien. ,encontrarse,se encuentra,to feel,B1
+7,2,"Si presionas este botón, ",a internet. ,conectarse,te conectas,to connect,B1
+7,3,Paula y Aurora se conocen desde pequeñas y ,muy bien. ,llevarse,se llevan,to get along,B1
+7,4,Si no apagas el horno,la comida. ,quemarse,se quema,to burn,B1
+7,5,Cada verano voy a la asociación y,como voluntario. ,inscribirse,me inscribo,to sign up,B1
+8,1,Sus hijos siempre,muy bien en casa de los vecinos.,portarse,se portan,to behave,B1
+8,2,Si,"el helado, manchamos el coche. ",derretirse,se derrite,to melt,B1
+8,3,Si,"sin batería, tienes un problema. ",quedarse,te quedas,to run out,B1
+8,4,,al teléfono porque tenéis que hablar con vuestro padre. ,ponerse,os ponéis,to get on,B1
+8,5,Si,"del títulos, podemos ir a ver la película. ",acordarse,te acuerdas,to remember,B1
+9,1,,"a vivir a Irlanda por un año, salgo mañana. ",irse,me voy,to go,B1
+9,2,¿Y si,un brazo porque te caes a esa velocidad?,romperse,te rompes,to break,B1
+9,3,Si cortas de esa manera,una herida seguro. ,hacerse,te haces,to do,B1
+9,4,Antes de ir a la playa Lucía y tú,la crema de sol. ,echarse,os echáis,to put on,B1
+9,5,Marta y Luis,hoy la vacuna de la gripe. ,ponerse,se ponen,to get,B1
+10,1,Mañana temprano vosotros,el pelo para la boda. ,cortarse,os cortáis,to cut,B1
+10,2,Con el fuego tan alto,las patatas. ,quemarse,se queman,to burn,B1
+10,3,En otoño ,las hojas de los árboles. ,caerse,se caen,to fall,B1
+10,4,,demasiado mal con tu padre. ,llevarse,te llevas,to get along,B1
+10,5,La tía,regular y no puede venir a tu cumpleaños. ,sentirse,se siente,to feel,B1
+1,1,Te miras en el espejo y no,.,reconocerse,te reconoces,to recognize oneself,B2
+1,2,El bebé ,loco de alegría al ver a su madre. ,volverse,se vuelve,to get,B2
+1,3,El niño,siempre que va al médico. ,asustarse,se asusta,to be afraid,B2
+1,4,La pareja no,a vivir en una casa tan pequeña.,resignarse,se resigna,to accept,B2
+1,5,El médico,al comunicar el diagnóstico. ,estresarse,se extresa,to stress,B2
+2,1,A pesar de ser culpable la banda,de nada. ,avergonzarse,se avergüenza,to be ashame,B2
+2,2,Tú,cuando haces deporte de competición. ,cansarse,te cansas,to get tired,B2
+2,3,Con todos los exámenes Mateo y yo,agobiado,sentirse,nos sentimos,to feel,B2
+2,4,Les cuentas la verdad y tus padres ,furiosos.,ponerse,se ponen,to get,B2
+2,5,"Si no los usas a menudo, los electrodomésticos",.,estropearse,se estropean,to break down,B2
+3,1,Los enchufes de esta casas,constantemente. ,averiarse,se averían,to break down,B2
+3,2,Lees esta noticia de última hora y,una idea de la situación actual. ,hacerse,te haces,to get,B2
+3,3,Las camisetas de este material,de sí muy rápido. ,darse,se dan,to stretch out,B2
+3,4,Ahora que los hijos son mayores toda la familia,de barrio,mudarse,se muda,to move,B2
+3,5,El probre hombre pierde el trabajo y ,viudo el mismo año. ,quedarse,se queda,to be widowed,B2
+4,1,"Si no encontramos soluciones, ",los recursos naturales.,agotarse,se agotan,to deplete,B2
+4,2,"Si no os echáis crema, no ",de la radiación solar.,protegerse,os protegéis,to protect,B2
+4,3,El sol,por el oeste. ,ponerse,se pone,to set,B2
+4,4,El mismo partido político,a las elecciones municipales.,presentarse,se presenta,to run,B2
+4,5,Me gusta porque en vuestro artículo vosotros,en un estudio científico. ,basarse,os basáis,to base on,B2
+5,1,Os subís al coche y,el cinturón.,ponerse,os ponéis,to put on,B2
+5,2,Esta noche todos nosotros,en el albergue. ,alojarse,nos alojamos,to stay,B2
+5,3,Los turistas no se protegen y ,la espalda con el sol. ,quemarse,se queman,to burn,B2
+5,4,En verano cada mañana desayuno y,un baño en el lago. ,darse,me doy,to take a bath,B2
+5,5,Si te pones esas zapatillas seguro que,un tobillo.,torcerse,te tuerces,to twist,B2
+6,1,,de haber firmado el contrato. ,arrepentirse,se arrepienten,to regret,B2
+6,2,,de los abuelos y vienes al coche. ,despedirse,te despides,to say goodbye,B2
+6,3,Sus hijos,en la playa con el cubo y la pala. ,entretenerse,se entretienen,to amuse onseself,B2
+6,4,¿,del bacalao al pil pil que preparó tu padre cuando nos conocimos?,acordarse,te acuerdas,to remember,B2
+6,5,Visitas las tiendas y ,una idea de lo que quieres. ,hacerse,te haces,to get,B2
+7,1,Vamos al ayuntamiento y ,como monitores de actividades. ,inscribirse,nos inscribimos,to sign up,B2
+7,2,,de su familia porque piensa diferente. ,avergonzarse,se avergüenza,to feel ashame,B2
+7,3,Si,"ahora, no puede jugar más. ",rendirse,se rinde,to surrender,B2
+7,4,No le va bien porque,en el curso a distancia. ,aburrirse,se aburre,to get bored,B2
+7,5,,en la chimenea y jugamos una partida de cartas. ,calentarse,nos calentamos,to warm up,B2
+8,1,Si,"a entrar en la casa, sois muy valientes. ",atreverse,os atrevéis,to dare,B2
+8,2,Os acaban de presentar y parece que,de toda la vida. ,conocerse,os conocéis,to know each other,B2
+8,3,Conducís todo recto y ,al llegar a la carretera comarcal. ,desviarse,os desviáis,to turn,B2
+8,4,,"donde están las macetas, y trasplantáis estos árboles frutales. ",agacharse,os agacháis,to bend over,B2
+8,5,Si,"por el tobogán, llegáis antes. ",deslizarse,os deslizáis,to slide,B2

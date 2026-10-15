@@ -16,7 +16,7 @@ exercises.html            Exercises index — Ser y estar / Por y para / Adjetiv
 exercises/*.html          One page per topic (ser-estar.html, por-para.html,
                           adjetivos.html, numeros.html, texto.html,
                           presente.html, ...)
-juegos/*.html             One page per game (trivia.html, genero.html) —
+juegos/*.html             One page per game (trivia.html, genero.html, ahorcado.html) —
                           parallel to exercises/, not a type of exercise
 dele.html                 DELE A2 Shiny app (iframe)
 about.html                About / contact
@@ -40,6 +40,8 @@ js/game-trivia.js         Trivia game — four-option multiple choice, instant
                           feedback, one question at a time
 js/game-genero.js         "Masculino o femenino" game — one noun, two fixed
                           buttons, instant feedback
+js/game-ahorcado.js       "Ahorcado" game — hangman with a flower, letter
+                          buttons + whole-word guess
 content/exercises/        Exercise (and game) content as CSV — see below
 partials/header.html      Shared nav, injected by main.js
 partials/footer.html      Shared footer, injected by main.js
@@ -111,6 +113,11 @@ set,id,before,after,infinitive,correct
 Renders as: "Yo [ ___ ] español todos los días. *(hablar)*". Matching is
 case-insensitive but accent-sensitive — "Hablo" and "hablo" both count,
 "habло" without the accent on a word that needs one does not.
+
+Typed boxes (`.exercise-input`, shared by Completa and Texto Difícil) have
+a dashed green border, like Empareja's blanks, switching to solid once
+graded — on a phone, a solid box looked too much like the solid buttons
+below the exercise.
 
 This engine also adds an accent toolbar (á é í ó ú ñ ¿ ¡) above the
 questions, matching the buttons in the DELE app — clicking one inserts the
@@ -559,7 +566,7 @@ category later would just reuse the same `.theme-menu-wrapper` markup with
 a different id. "Juegos" (below) is exactly that second category, reusing
 the same wrapper markup with `id="juegos-menu"`.
 
-## Juegos (Trivial / Masculino o femenino)
+## Juegos (Trivial / Masculino o femenino / Ahorcado)
 
 A different flavor of practice from the graded exercises above: instant
 feedback per answer instead of a batch "Comprobar" step, and framed as a
@@ -651,20 +658,57 @@ usual `{word|translation}` syntax and handing it to `renderTextWithHints()`
 (same trick used elsewhere any time a single word, not a sentence, needs a
 translatable hint), so the CSV author just fills in two plain columns.
 
-Both are seeded with a handful of example rows across all four levels
+**Ahorcado** (`js/game-ahorcado.js`) — hangman with a flower instead of a
+gallows:
+
+```
+set,id,hint,word,level
+1,1,Animal doméstico que {ladra|barks} y es el mejor amigo del hombre.,perro,A1
+```
+
+Each round shows `hint` (a short Spanish description; `{word|translation}`
+hover hints work), a row of blank letter spaces for `word`, an A–Z + Ñ
+letter keyboard, and a box to type the whole word ("Probar", or Enter).
+The flower is an inline SVG built in the engine (stem, leaves and centre
+always drawn; 8 petals that start as faint dashed outlines and fill in).
+**Every wrong letter and every wrong whole-word attempt adds one petal**;
+at 8 (`MAX_WRONG`) the flower is full, the round is lost, and the whole
+word is revealed (letters the player never guessed are shown in red). A
+letter can only be tapped once, so it can't cost two petals. Guessing
+every letter, or typing the right word, wins the round. Spaces and hyphens
+in `word` show from the start and don't need guessing.
+
+Write `word` **without accents** (`cancion`, not `canción`); Ñ is a real
+letter and stays (`montaña`). As a safety net, `normalize()` strips
+accents from the CSV word and from whatever is typed in the whole-word
+box, and ignores case, so an accent slipping in either place never makes
+a right answer count as wrong. A series (`set`) is a shuffled deck of its
+words, one after another, ending in a score with "Jugar de nuevo" and —
+only when the level has another series — "Siguiente" to the next series
+(same link-based approach as Trivial). The seed file has 3 A1 words in
+series 1; add more rows/series/levels the usual way.
+
+Both Trivial and Masculino o femenino are seeded with a handful of example rows across all four levels
 (A1/A2/B1/B2, one small set per level) to show the format and exercise the
 level switcher — add more the same way as any other leveled topic, either
 more rows in an existing level's `set` or a new `set` number continuing
 that level's numbering.
 
-Both reuse `.option-btn`/`.option-correct`/`.option-reveal-correct` from
-the Dos opciones engine's CSS for the shared parts, but add one new class,
-`.option-btn.game-incorrect` (solid red fill, `--color-tab-dark`). Every
-other exercise on the site deliberately keeps a wrong answer muted (a
-strikethrough, not a harsh color — see `.option-incorrect`) since those
-are graded practice, not games; these two are actual games, and literal
-red-on-a-miss is what was asked for, so it gets a class of its own rather
-than repurposing the muted one.
+Both reuse `.option-btn`/`.option-correct` from the Dos opciones engine's
+CSS for the shared parts, but add two classes of their own.
+`.option-btn.game-incorrect` is a solid red fill (`--color-tab-dark`):
+every other exercise on the site deliberately keeps a wrong answer muted
+(a strikethrough, not a harsh color — see `.option-incorrect`) since those
+are graded practice, not games, but these two are actual games and literal
+red-on-a-miss is what was asked for. `.option-btn.game-reveal-correct`
+marks the box that WAS right after a miss: a light green fill
+(`--color-correct-tint`, a tint of the brand green, added to `:root`), a
+4px `--color-brand-dark` border, and bold dark text. The plain
+`.option-reveal-correct` the graded exercises use is only a 1px-thicker
+border, too easy to miss in a game. The fill alone is faint against the
+white card (about 1.3:1), so the thick dark-green border (6.8:1) is what
+actually carries the cue — the fill is extra, and dark text on it is
+11.9:1.
 
 ## Texto (cloze passage)
 
@@ -785,14 +829,14 @@ value case-insensitively (same as Difícil's typed-answer check), so a
 blank authored as `[Ella]` still grades correctly once lowercased in the
 UI.
 
-**Difícil's typed blanks have an orange border** (`.texto-input` in
-`css/styles.css`, overriding the green `--color-brand` border every other
-`.exercise-input` uses), rather than looking identical to Completa's boxes
-— the two work differently (a continuous passage vs. a numbered list of
-separate sentences) even though the box itself behaves the same way, and
-students were mixing up how the two exercises worked as a result. Feedback
-states (`.input-correct`/`.input-incorrect`) are unaffected — this only
-changes the border color while the blank is still unanswered.
+**Difícil's reference word list has orange, square-cornered boxes**
+(`.reference-chip` in `css/styles.css`: `--color-selected` border,
+`border-radius: 0`), unlike every other word bank on the site (green,
+rounded). That list is a notepad to cross words off, not a bank you place
+words from, and students were mixing up how its boxes worked with the
+other exercises' word banks. The typed blanks inside the passage itself
+(`.texto-input`) stay the normal green rounded boxes. Fácil's word bank is
+unchanged.
 
 ## Word-level translation hints
 
@@ -1019,10 +1063,23 @@ it no longer points at the Completa CSVs. This is meant for a genuinely
 different set of sentences than the other three types cover, e.g. a mix
 pulled from across tenses/subjects rather than whatever set of drills
 Completa happens to have, since self-testing recall works better against
-material that doesn't just repeat what was already practiced. (Ser y estar
-already followed this same "own dedicated Flashcards file" pattern —
-Pasado now matches it; Presente is still the one exception, deliberately
-reusing its conjugation CSV directly — see "Flashcards" above.)
+material that doesn't just repeat what was already practiced.
+
+**Every verb tense now has its own Flashcards CSV per variant**
+(`{presente,pasado,futuro}-{regular,irregular,reflexivos}-flashcards.csv`),
+and each page's router points at it — Presente and Futuro no longer reuse
+the conjugation/Completa file. The Presente and Futuro ones were
+generated once by mixing that tense's Completa and Empareja rows
+(alternating one from each, chunked into series of 5, set numbers
+restarting at 1 per level, exact duplicates dropped). Empareja has no
+infinitive column, so those were filled in from the matching Completa /
+conjugation rows, or worked out from the conjugated form. In Futuro,
+Empareja rows with "habré/habrás... + participle" are tagged *futuro
+perfecto*, the rest *futuro simple*. They're plain snapshots: editing
+Completa or Empareja later does NOT update Flashcards, so edit the
+Flashcards CSV directly from now on. Pasado's are still hand-built:
+Empareja has no tense information, and past tenses are the one place
+where guessing it would be risky.
 
 **Futuro is also mostly a scaffold**, but `futuro-regular-empareja.csv` is
 real content — 9 full B1 series (45 rows) written and provided by hand,

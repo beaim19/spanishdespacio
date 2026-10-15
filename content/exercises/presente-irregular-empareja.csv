@@ -1,4 +1,34 @@
 ﻿set,id,before,after,word,translation,level
+1,1,Esta flor,amarilla.,es,to be,A1
+1,2,La niña ,{contenta|happy}. ,está,to be,A1
+1,3,Luis,a clase de español. ,va,to go,A1
+1,4,Su casa,en la {ciudad|city}. ,está,to be,A1
+1,5,Ellos,a la {piscina|swimming pool}. ,van,to go,A1
+2,1,Tú ,al {cine|movie theater} con tus amigos. ,vas,to go,A1
+2,2,Nosotros ,chilenos. ,somos,to be,A1
+2,3,Los niños,en el parque. ,están,to be,A1
+2,4,Vosotros ,en verano a la {playa|beach}. ,vais,to go,A1
+2,5,Mario y yo,en {paro|unemployed}.,estamos,to be,A1
+3,1,Mi perro,cinco años. ,tiene,to have,A1
+3,2,Marta y tú,muy altas. ,sois,to be,A1
+3,3,Hoy yo,a leer mi libro. ,empiezo,to be,A1
+3,4,Ustedes ,al museo esta tarde. ,van,to go,A1
+3,5,Lo,", esta tarde no puedo ir. ",siento,to be sorry,A1
+4,1,Tú siempre,leche para {cenar|dinner}. ,quieres,to want,A1
+4,2,Tú,en una {canción|song} y {cantas|to sing}. ,piensas,to think,A1
+4,3,Los sábados yo,con mis {amigos|friends}. ,salgo,to get out,A1
+4,4,Rafa y yo,al tenis. ,jugamos,to play,A1
+4,5,{Ahora|now} yo te,cuántos años tengo. ,digo,to say,A1
+5,1,Vosotros ,ir a España de vacaciones. ,queréis,to want,A1
+5,2,Hoy yo,los {deberes|homework} en casa de mi abuela. ,hago,to do,A1
+5,3,Los profesores,usar la {pizarra|blackboard}. ,pueden,can,A1
+5,4,Yo,mis {zapatos|shoes} en el {armario|closet}. ,pongo,to put,A1
+5,5,{Tengo|to have} la {lista|list} y yo,quién {viene|to come} a la {fiesta|party}. ,sé,to know,A1
+6,1,No ,"el sol, es de noche. ",veo,to seem,A1
+6,2,Los {bebés|babies},en el {dormitorio|bedroom}. ,duermen,to sleep,A1
+6,3,La casa,mucho dinero. ,cuesta,to cost,A1
+6,4,Yo,hoy a tu casa. ,vengo,to come,A1
+6,5,La {puerta|door},mal. ,cierra,to close,A1
 1,1,Ella,mucho a sus {padres|parents}.,quiere,to love,A2
 1,2,Ustedes,en esta {habitación|room}.,duermen,to sleep,A2
 1,3,Yo,de {casa|home} a las siete de la {mañana|morning}.,salgo,to leave,A2
@@ -59,3 +89,23 @@
 6,3,¿,"bajar el volumen de la televión, por favor? Lo tienen muy alto. ",pueden,can,B1
 6,4,"No sé, es que ",el {suelo|floor} justo a esta hora. ,friegan,to mop,B1
 6,5,,las flores para que la casa esté alegre. ,cuida,to take care of,B1
+7,1,¿,yo o quién lleva el coche?,conduzco,to drive,B1
+7,2,Siempre soy yo la que ,las ventanas con los huracanes. ,protejo,to protect,B1
+7,3,Si hay un artículo interesante lo,al español. ,traduzco,to translate,B1
+7,4,El espacio es muy pequeño y no,bien. ,quepo,to fit,B1
+7,5,El agua,se convierte en líquida cuando llueve. ,es,to be,B1
+1,1,"Mojas el sello primero, y después lo",fuerte contra el sobre. ,aprietas,to press,B2
+1,2,Le digo la verdad y ,corriendo para alejarse de mí. ,sale,to burst out,B2
+1,3,,el castillo de arena y nos vamos. ,construyo,to build,B2
+1,4,Siempre,de las personas negativas. ,huyo,to run away,B2
+1,5,Cada vez que corto una tarta la,.,destruyo,to destroy,B2
+2,1,La nuera de Mariela,cada año con 100 euros para pagar los estudios de Pablo. ,contribuye,to contribute,B2
+2,2,Ana,a Elena cuando esta no puede bailar. ,sustituye,to replace,B2
+2,3,"Estos árboles dan fruto ahora, cuando",la temperatura. ,disminuye,to decrease,B2
+2,4,Junta todos los ingrediente y ,la gelatina en el agua templada. ,diluye,to dilute,B2
+2,5,La normativa no ,que se pueda hacer un referéndum. ,excluye,to exclude,B2
+3,1,Los voluntarios,la comida donada entre las personas sin hogar. ,distribuyen,to distribute,B2
+3,2,¿,"salir, o nos quedamos aquí para siempre?",sabemos,to know,B2
+3,3,Si no ,"estudiando, van a suspender el examen parcial. ",siguen,to continue,B2
+3,4,,todos los muebles y pintamos las paredes. ,movemos,to move,B2
+3,5,Que sea la última vez que ,sin estudiar estadística. ,vienen,to come,B2

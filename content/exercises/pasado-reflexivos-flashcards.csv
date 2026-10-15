@@ -1,4 +1,41 @@
 ﻿set,id,before,after,infinitive,tense,correct,translation,level
-1,1,Ayer yo,muy temprano para coger el {autobús|bus}.,levantarse,pretérito indefinido,me levanté,to get up,A2
-1,2,De pequeños nosotros,en el {río|river} cada verano.,bañarse,pretérito imperfecto,nos bañábamos,to bathe,A2
-1,3,Ella ya,antes de salir.,peinarse,pretérito perfecto,se ha peinado,to comb one's hair,A2
+1,1,Yo,{tarde|late} {ayer|yesterday}.,depertarse,pretérito indefinido,me desperté,to wake up,A2
+1,2,Ellos,mucho en la {playa|beach}.,broncearse,pretérito indefinido,se broncearon,to tan,A2
+1,3,Ella ,muy {simpática|friendly} con el {tiempo|time}. ,volverse,pretérito indefinido,se volvió,to come back,A2
+1,4,Los estudiantes,para el master el {primer|first} día. ,inscribirse,pretérito indefinido,se inscribieron,to sign in,A2
+1,5,Vosotros ,{demasiado|too} {temprano|early}. ,irse,pretérito indefinido,os fuisteis,to leave,A2
+2,1,Ustedes nunca,de {venir|to come} a la {fiesta|party}.,arrepentirse,pretérito indefinido,se arrepintieron,to regret,A2
+2,2,Los {amigos|friends},en un {campamento|camp}.,conocerse,pretérito indefinido,se conocieron,to meet,A2
+2,3,Los dinosaurios,hace mucho {tiempo|time}. ,extinguirse,pretérito indefinido,se extinguieron,to extinguish,A2
+2,4,Los niños pequeños,{fácilmente|easily} con las fotos. ,impresionarse,pretérito imperfecto,se impresionaban,to be impressed,A2
+2,5,Tú,{ayer|yesterday} a una buena {hora|time}. ,levantarse,pretérito indefinido,te levantaste,to get up,A2
+3,1,El {cartero|postman},las {cartas|letters} con la {dirección|address} {equivocada|wrong}. ,llevarse,pretérito indefinido,se llevó,to take,A2
+3,2,El {camino|path},a los 10 km. ,bifurcarse,pretérito imperfecto,se bifurcaba,to branch,A2
+3,3,Los {perros|dogs} ,muy bien durante la {visita|visit}. ,portarse,pretérito indefinido,se portaron,to behave,A2
+3,4,La {serpiente|snake},{sobre|over} {sí misma|itself}. ,enroscarse,pretérito indefinido,se enroscó,to curl,A2
+3,5,{Después|after} del baño ella,el {pelo|hair} con el {secador|hairdryer}. ,secarse,pretérito indefinido,se secó,to dry,A2
+4,1,La {jueza|judge},de todos los {casos|cases} {a la vez|at the same time}. ,ocuparse,pretérito imperfecto,se ocupaba,to attend to,A2
+4,2,Vosotros,de {viaje|trip} en agosto. ,marcharse,pretérito indefinido,os marchasteis,to leave,A2
+4,3,Vosotros,con el {ciclo de cine|film series}. ,entusiasmarse,pretérito indefinido,os entusiasmasteis,to get excited,A2
+4,4,En el {campamento|camp} los niños,cada {mañana|morning}. ,ducharse,pretérito imperfecto,se duchaban,to shower,A2
+4,5,Yo,con {pasar|to pass} el {examen|test}. ,conformarse,pretérito imperfecto,me conformaba,to conform,A2
+5,1,Nosotros,muy temprano durante las {vacaciones|vacation}.,levantarse,pretérito imperfecto,nos levantábamos,to get up,A2
+5,2,Tú ,en la {fiesta|party}.,colarse,pretérito perfecto simple,te colaste,to sneak in,A2
+5,3,Vosotros,con el {fantasma|ghost}.,asustarse,pretérito imperfecto,os asustabais,to get scared of,A2
+5,4,Ellos,{ayer|yesterday} para la {excursión|excursion}. ,prepararse,pretérito perfecto simple,se prepararon,to prepare,A2
+5,5,Vosotros,con el {rosal|rosebush}. ,pincharse,pretérito perfecto simple,os pinchasteis,to puncture,A2
+6,1,Ella,en clase.,distraerse,pretérito imperfecto,se distraía,to get distracted,A2
+6,2,Tú ,en el {sillón|couch}.,sentarse,pretérito perfecto simple,te sentaste,to sit,A2
+6,3,Nostras,todas las {mantas|blankets} al {dormitorio|bedroom}. ,llevarse,pretérito perfecto simple,nos llevamos,to take,A2
+6,4,Ustedes,de la lista de {invitados|guests}. ,encargarse,pretérito imperfecto,se encargaban,to be in charge of,A2
+6,5,Yo,ayer del {cambio|change} de {planes|plans}.,enterarse,pretérito perfecto simple,me enteré,to find out,A2
+7,1,Yo ,de su {promesa|promise}. ,fiarse,pretérito perfecto simple,me fie,to trust,A2
+7,2,Vosotros,muy bien para el {partido|game}. ,prepararse,pretérito perfecto simple,os preparasteis,to get ready,A2
+7,3,Ellos no,nunca en los {partidos|games}. ,cansarse,pretérito imperfecto,se cansaban,to get tired,A2
+7,4,Nosotros,mucho esta {tarde|afternoon}.,divertirse,pretérito perfecto compuesto,nos hemos divertido,to have fun,A2
+7,5,Tú ,{ayer|yesterday} por la {noche|night}. ,ducharse,pretérito perfecto simple,te duchaste,to shower,A2
+8,1,Tú ,muy {a menudo|often}. ,equivocarse,pretérito imperfecto,te equivocabas,to be wrong,A2
+8,2,Yo en invierno,{pronto|early} a la {cama|bed}.,irse,pretérito imperfecto,me iba,to leave,A2
+8,3,Ella no,a la {decisión|decision}.,oponerse,pretérito perfecto simple,se opuso,to opose,A2
+8,4,Vosotros,muchas veces a la {piscina|swimming pool}. ,tirarse,pretérito perfecto simple,os tirasteis,to jump into,A2
+8,5,Nosotros,siempre de {comprar|to buy} {arroz|rice}.,olvidarse,pretérito imperfecto,nos olvidábamos,to forget,A2

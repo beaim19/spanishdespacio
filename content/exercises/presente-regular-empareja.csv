@@ -21,7 +21,7 @@
 4,5,Todas las primaveras nosotros,por el {campo|field}. ,paseamos,to walk,A1
 5,1,Cada día ustedes,unas {comidas|foods} deliciosas. ,preparan,to prepare,A1
 5,2,Los cantantes,felices al {público|audience}. ,miran,to look,A1
-5,3,Hoy voy a ,el {periódico|newspaper} por la mañana. ,leer,to read,A1
+5,3,Hoy yo,el {periódico|newspaper} en la cocina. ,leo,to read,A1
 5,4,Creo que vosotros,en esta {sala|room}. ,votáis,to vote,A1
 5,5,Carolina y tú,muy {deprisa|fast}. ,habláis,to speak,A1
 6,1,Marian ,en el agua de la {piscina|swimming pool}. ,flota,to float,A1
@@ -70,9 +70,9 @@
 2,4,Durante las clases siempre,notas en mi {cuaderno|notebook}. ,tomo,to take,B1
 2,5,El profesor al que {saludaste|to greet},a menudo a Asia. ,viaja,to travel,B1
 3,1,"Mientras están sentados,",todos los vídeos. ,grabamos,to record,B1
-3,2,O ,"los dos, o ninguno, somos un equipo. ",cantamos,to sing,B1
-3,3,Si,"la carta, será porque quiere noticias. ",envía,to send,B1
-3,4,Este grupo de cocineros,{estofados|stews} muy ricos. ,guisa,to cook,B1
+3,2,O ,"los dos, o ninguno, somos un equipo. Y tu voz es bonita. ",cantamos,to sing,B1
+3,3,¿Y si ,tú la fiesta en tu casa?,organizas,to oganize,B1
+3,4,¿A tus padres les importa si,demasiado tarde por la noche?,llegas,to arrive,B1
 3,5,"Es su cumpleaños, lo",al empezar la reunión. ,felicitamos,to wish happy birthday,B1
 4,1,,con el departamento de recursos humanos cada semana. ,hablo,to speak,B1
 4,2,No,dónde hay mayor cantidad de gente. ,calculo,to estimate,B1
@@ -89,3 +89,28 @@
 6,3,Viven en las afueras pero,en la ciudad. ,trabajan,to work,B1
 6,4,Está de médico en Ciudad Real y allí,para cirujano. ,estudia,to study,B1
 6,5,"No es que no les guste el mercado, es que",tomates en su finca. ,cultivan,to grow,B1
+7,1,Si,"la carta, será porque quiere noticias. ",envía,to send,B1
+7,2,¿Os importa si,la llamada? No sé quién es. ,ignoro,to ignore,B1
+7,3,¿Te,"en mi casa, o voy ya al teatro?",espero,to wait,B1
+7,4,Este grupo de cocineros,{estofados|stews} muy ricos. ,guisa,to cook,B1
+7,5,¿Y si ,antes de tiempo? No lo podremos comer. ,caduca,to expire,B1
+1,1,Si Pedro no lo,"mañana, tendrá un problema. ",termina,to finish,B2
+1,2,,"ir esta tarde al cine, no lo retraso ya más. ",pienso,to think,B2
+1,3,O ,"ya a su madre, o le quito el teléfono. ",llama,to call,B2
+1,4,¿,"los platos entonces, y me puedo ir?",seco,to dry,B2
+1,5,,"la oferta, y vuelve al {punto de partida|starting point}. ",rechaza,to decline,B2
+2,1,,"todo de la mesa, y tienes sitio para trabajar allí. ",retiras,to put away,B2
+2,2,¿,"todos los papeles y me traes las cenizas, por favor?",quemas,to burn,B2
+2,3,¿,"de discutir, y nos tomamos un café tranquilamente?",paramos,to stop,B2
+2,4,¿Te molesta si,esta habitación nosotros?,ocupamos,to take,B2
+2,5,Si,"como niños, os trataremos como niños. ",actuáis,to act,B2
+3,1,Si,"dónde estaban anoche, podremos ayudarlos. ",aclaran,to clarify,B2
+3,2,,"a los caballos primero, y después pueden montarlos. ",cepillan,to brush,B2
+3,3,,"si vas a ir a la ceremonia, y vas a comprar un regalo. ",confirmas,to confirm,B2
+3,4,Abres el armario y ,el vestido estampado y los zapatos de fiesta. ,buscas,to look for,B2
+3,5,¿,"esta carta por correo aéreo y me traen el recibo, por favor?",envían,to send,B2
+4,1,¿Hablan entre ustedes y me,la decision?,comunican,to inform,B2
+4,2,¿,"hoy a las dos, o prefieres que comamos más tarde?",comemos,to eat,B2
+4,3,Salen en orden y ,al autobús urbano en silencio. ,suben,to get on,B2
+4,4,"De acuerdo, ",este cuadro al óleo y lo ponemos en venta. ,pintamos,to paint,B2
+4,5,,en la puerta del colegio y recoges a los niños. ,paras,to stop,B2

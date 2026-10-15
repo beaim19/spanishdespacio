@@ -21,6 +21,7 @@
   --color-text: #222222;        /* body copy: 15.9:1 on white, 6.2:1 on --color-bg */
   --color-text-inverse: #ffffff;
   --color-hover-tint: #eef2ec;   /* very light neutral for hover states — sage itself is too dark to hold dark-green text/borders on hover */
+  --color-correct-tint: #c8e6cd;  /* light green fill for "this was the right answer" in the games — a tint of --color-brand; dark text (#222) on it is 11.9:1, and the 4px --color-brand-dark border (6.8:1 on white) carries the cue on its own, so the fill never has to meet contrast alone */
   --color-selected-neutral: #dde1e3; /* neutral gray for "picked, not yet graded" — orange/green/red are all reserved for right/wrong feedback */
 
   --font-base: 'Segoe UI', Arial, Helvetica, sans-serif;
@@ -638,6 +639,17 @@ a.theme-block:focus-visible {
   border-color: var(--color-tab-dark);
   color: var(--color-text-inverse);
 }
+/* When the player misses, the box that WAS right gets a light green fill
+   and a thick dark-green border so it's unmistakable which one to look at
+   (the plain .option-reveal-correct from the graded exercises is only a
+   1px-thicker border, too subtle for a game's instant feedback). */
+.option-btn.game-reveal-correct {
+  background-color: var(--color-correct-tint);
+  border-color: var(--color-brand-dark);
+  border-width: 4px;
+  color: var(--color-text);
+  font-weight: 700;
+}
 /* Trivia's four answer buttons stack in a single column instead of
    .option-group's inline-flex row — four short two-option-style pills
    side by side would wrap awkwardly once the answer text is more than a
@@ -651,6 +663,101 @@ a.theme-block:focus-visible {
 .option-group-grid .option-btn {
   width: 100%;
   text-align: left;
+}
+/* --- Games: Ahorcado (hangman, with a flower) ---
+   The flower is an inline SVG built in js/game-ahorcado.js: stem, leaves
+   and centre always drawn, 8 petals that start as faint dashed outlines
+   and fill in (.is-on) one per mistake. */
+.ahorcado-flower {
+  display: block;
+  width: 150px;
+  height: 180px;
+  margin: 0 auto var(--space-3);
+}
+.ahorcado-stem {
+  fill: none;
+  stroke: var(--color-brand);
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+.ahorcado-leaf { fill: var(--color-brand); }
+.ahorcado-center { fill: var(--color-selected); }
+.ahorcado-petal {
+  fill: transparent;
+  stroke: var(--color-tab-dark);
+  stroke-width: 2;
+  stroke-dasharray: 4 3;
+  stroke-opacity: 0.45;
+}
+.ahorcado-petal.is-on {
+  fill: var(--color-tab);
+  stroke-dasharray: none;
+  stroke-opacity: 1;
+}
+.ahorcado-word {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+  margin: var(--space-3) 0;
+}
+.ahorcado-letter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2.5rem;
+  border-bottom: 3px solid var(--color-brand-dark);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-brand-dark);
+}
+/* Letters revealed only because the round was lost (never guessed). */
+.ahorcado-letter.is-missed { color: var(--color-tab-dark); }
+.ahorcado-space { width: 1.5rem; }
+.ahorcado-fixed {
+  align-self: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.ahorcado-letters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-1);
+  margin: var(--space-3) 0;
+}
+.letter-btn {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 44px;
+  height: 44px;
+  background-color: var(--color-panel);
+  color: var(--color-brand-dark);
+  border: 2px solid var(--color-brand);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+.letter-btn:hover:not(:disabled) { background-color: var(--color-hover-tint); }
+.letter-btn:disabled { cursor: default; }
+.letter-btn.is-hit {
+  background-color: var(--color-brand-dark);
+  border-color: var(--color-brand-dark);
+  color: var(--color-text-inverse);
+}
+.letter-btn.is-miss {
+  background-color: var(--color-tab-dark);
+  border-color: var(--color-tab-dark);
+  color: var(--color-text-inverse);
+}
+.ahorcado-guess {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  margin: var(--space-3) 0;
 }
 .genero-word {
   font-size: 2rem;
@@ -950,7 +1057,11 @@ a.theme-block:focus-visible {
   padding: var(--space-1) var(--space-2);
   min-height: 44px;
   min-width: 9ch;
-  border: 2px solid var(--color-brand);
+  /* Dashed, matching Empareja's .drop-slot blanks — on a phone, a solid
+     green box sat too close in look to the solid buttons below the
+     exercise; dashed reads as "fill me in". Graded states below switch
+     back to solid, same as .drop-slot-correct/-incorrect. */
+  border: 2px dashed var(--color-brand);
   border-radius: var(--radius);
   margin: 0 var(--space-1);
   /* Width itself is set/grown from JS as the student types (see
@@ -969,12 +1080,14 @@ a.theme-block:focus-visible {
      .drop-slot-correct elsewhere on the site, rather than just a tinted
      background — a correct answer should read as unmistakably "done,
      right" at a glance, the same way it does in every other exercise type. */
+  border-style: solid;
   border-color: var(--color-brand-dark);
   background-color: var(--color-brand-dark);
   color: var(--color-text-inverse);
   font-weight: 700;
 }
 .exercise-input.input-incorrect {
+  border-style: solid;
   border-color: var(--color-tab-dark);
   color: var(--color-tab-dark);
   text-decoration: line-through;
@@ -1022,25 +1135,22 @@ a.theme-block:focus-visible {
 }
 .texto-input {
   margin: 0 var(--space-1);
-  /* Difícil's typed blanks look identical to Completa's otherwise (same
-     .exercise-input base, same green border) even though they work in a
-     continuous passage rather than a numbered list of sentences — an
-     orange border (the site's selected/accent color) marks this as its
-     own kind of blank at a glance, so it doesn't get confused with
-     Completa's boxes. Feedback states (.input-correct/.input-incorrect)
-     are untouched here, same green/red as everywhere else once graded —
-     this only changes the border color while still unanswered. */
-  border-color: var(--color-selected);
-}
-.texto-input:focus {
-  border-color: var(--color-selected-dark);
-  box-shadow: 0 0 0 3px var(--color-hover-tint);
 }
 
 /* Difícil-mode reference word list — reuses .word-pool/.pool-chip's box
    look (same "bank of chips" pattern as everywhere else), but these chips
    don't select/place anything, they just toggle a struck-through "already
-   used" look on click. */
+   used" look on click.
+   Orange border + square corners (the site's selected/accent orange, and
+   no border-radius) so this reference list reads as clearly different from
+   every other word bank/box on the site — it's a notepad, not something
+   you place words from. The typed blanks in the passage itself stay the
+   usual green rounded boxes. Declared after .pool-chip (same specificity)
+   so it wins the cascade. */
+.reference-chip {
+  border-color: var(--color-selected);
+  border-radius: 0;
+}
 .reference-chip-scratched {
   text-decoration: line-through;
   opacity: 0.55;

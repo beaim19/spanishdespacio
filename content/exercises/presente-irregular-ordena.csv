@@ -1,4 +1,34 @@
 ﻿set,id,correct,also_correct,level
+1,1,Soy colombiano y estoy en Bogotá. ,Estoy en Bogotá y soy colombiano. ,A1
+1,2,Voy a clase en autobús. ,,A1
+1,3,Puedes comprar leche en esta tienda. ,En esta tienda puedes comprar leche. ,A1
+1,4,En su pueblo hace mucho frío. ,Hace mucho frío en su pueblo. ,A1
+1,5,El niño tiene dos años. ,,A1
+2,1,Veo flores en el jardín. ,En el jardín veo flores. ,A1
+2,2,Vienen compañeros nuevos a clase. ,Compañeros nuevos vienen a clase. ,A1
+2,3,Sé muchas cosas porque estudio. ,Porque estudio sé muchas cosas. ,A1
+2,4,Quiero comprar cerveza para la fiesta. ,Para la fiesta quiero comprar cerveza. ,A1
+2,5,El animal juega con la pelota. ,,A1
+3,1,Prefiero ir a la montaña porque me gusta el frío. ,Porque me gusta el frío prefiero ir a la montaña. ,A1
+3,2,Vosotros sabéis la lección muy bien. ,,A1
+3,3,Hoy viene el director a la escuela. ,,A1
+3,4,Los periódicos dicen que hoy llueve. ,Hoy los periódicos dicen que llueve. |Los periódicos dicen hoy que llueve. ,A1
+3,5,"La radio cuesta veinte euros, es barata. ","La radio es barata, cuesta veinte euros. ",A1
+4,1,Él cierra la puerta de la oficina de turismo. ,,A1
+4,2,Lo siento pero no puedo ir a la fiesta. ,,A1
+4,3,Juegas muy bien al tenis. ,,A1
+4,4,Quieren ir al cine esta tarde. ,Esta tarde quieren ir al cine. ,A1
+4,5,Sé el precio pero no tengo la cartera. ,Tengo la cartera pero no sé el precio. ,A1
+5,1,Hago los deberes por la tarde antes de la merienda. ,Hago los deberes antes de la merienda por la tarde. |Por la tarde hago los deberes antes de la merienda. ,A1
+5,2,Su casa tiene un ascensor nuevo y moderno. ,Su casa tiene un ascensor moderno y nuevo. ,A1
+5,3,Sus primos vienen hoy desde Alemania. ,Hoy vienen sus primos desde Alemania. ,A1
+5,4,Yo siempre te digo la verdad. ,,A1
+5,5,"Empieza la película, no podemos hablar. ",No podemos hablar empieza la película.,A1
+6,1,Pueden llamar a este número para más información. ,Para más información pueden llamar a este número. ,A1
+6,2,Tengo tres hermanos y tres hermanas. ,Tengo tres hermanas y tres hermanos. ,A1
+6,3,Las patatas cuestan hoy más que ayer. ,,A1
+6,4,Mi amigo y yo jugamos al fútbol. ,,A1
+6,5,Sus padres prefieren dormir en un camping. ,,A1
 1,1,El bosque tiene muchos {árboles|trees} distintos.,,A2
 1,2,Creo que vosotros dormís en esta {habitación|room}.,,A2
 1,3,Tenemos {comida|food} {suficiente|enough} para la {cena|dinner}. ,Tenemos suficiente comida para la cena. ,A2
@@ -59,3 +89,18 @@
 6,3,En el pueblo imponen normas estrictas de reciclaje. ,En el pueblo imponen normas de reciclaje estrictas. ,B1
 6,4,Este paisaje parece un desierto africano. ,,B1
 6,5,Los troncos ruedan ladera abajo sin control. ,,B1
+1,1,Pides la vez en la pescadería y compras pescado azul. ,,B2
+1,2,"Si vas al cine, vuelves a no estudiar para el examen. ","Si no vas al cine, vuelves a estudiar para el examen. |Si estudias para el examen, no vas al cine. |Si no estudias para el examen, vas al cine. ",B2
+1,3,"Vale, construyo una torre con las cartas y tú la destruyes. ","Vale, construyo con las cartas una torre y tú la destruyes. |Vale, tú destruyes una torre con las cartas y la construyo. |Vale, construyo una torre con las cartas y la destruyes tú. |Vale, construyo con las cartas una torre y la destruyes tú. |vale, destruyes tú una torre con las cartas y la construyo. ",B2
+1,4,Mantenéis la calma y mostráis el camino de salida. ,Mostráis el camino de salida y mantenéis la calma. ,B2
+1,5,Pierden el juicio y confiesan el delito. ,Confiesan el delito y pierden el juicio. ,B2
+2,1,El narrador de la obra sustituye algunas palabras del texto. ,,B2
+2,2,Construye un telescopio para ver la Osa Mayor y Venus. ,Construye un telescopio para ver Venus y la Osa Mayor. ,B2
+2,3,Estos videos influyen en los votantes de las elecciones municipales. ,,B2
+2,4,Es un litoral protegido que padece muchos desastres naturales. ,,B2
+2,5,¿Cuelas el zumo y se lo llevas a esa señora?,,B2
+3,1,Le digo la verdad y él miente sin vergüenza. ,Él miente sin vergüenza y le digo la verdad. ,B2
+3,2,Si esta mesa cuesta tanto dinero no la elige nadie. ,,B2
+3,3,Si encuentras una especie protegida en la carretera debes llamar a la Guardia Civil. ,Si encuentras en la carretera una especia protegida debes llamar a la Guardia Civil. ,B2
+3,4,La ascienden a jefa de sección y las ventas crecen inmediatamente. ,La ascienden a jefa de sección y las ventas inmediatamente crecen. |La ascienden a jefa de sección y crecen las ventas inmediatamente. |La ascienden a jefa de sección y crecen inmediatamente las ventas. |Crecen las ventas y la ascienden a jefa de sección inmediatamente. |Las ventas crecen y la ascienden a jefa de sección inmediatamente. | Crecen las ventas y la ascienden inmediatamente a jefa de sección. |Las ventas crecen y la ascienden inmediatamente a jefa de sección. ,B2
+3,5,Enterramos las semillas e introducimos el tubo del riego. ,Introducimos el tubo de riego y enterramos las semillas. ,B2
