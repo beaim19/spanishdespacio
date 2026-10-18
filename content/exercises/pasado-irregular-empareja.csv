@@ -1,33 +1,81 @@
-﻿set,id,before,after,word,translation,level,,
-1,1,Nosotros,a la {fiesta|party} el {sábado|Saturday}.,fuimos,to go,A2,,
-1,2,Ella,que no podía {venir|to come}.,dijo,to say,A2,,
-1,3,Yo,toda la {atención|attention}.,agradecí,to be grateful,A2,,
-1,4,Ayer,durante todo el {día|day}. ,nevó,to snow,A2,,
-1,5,Las {flores|flowers},muy bien. ,olían,to smell,A2,,
-2,1,Ustedes,{dormir|to sleep} en el hotel. ,preferían,to prefer,A2,,
-2,2,El coche,en la {carretera|road}. ,torció,to turn,A2,,
-2,3,Los {patos|ducks},muy {alto|high}. ,volaban,to fly,A2,,
-2,4,{Ayer|yesterday} yo,los {huevos|eggs}.,herví,to boil,A2,,
-2,5,La {costurera|tailor},las {telas|fabric} con la {cinta|measuring tape}. ,medía,to measure,A2,,
-3,1,Yo no,bien las instrucciones. ,oí,to hear,A2,,
-3,2,Vosotros ,muy {contentos|happy} en la {fiesta|party}. ,parecíais,to seem,A2,,
-3,3,La niña,ir {ayer|yesterday} al parque. ,quería,to want,A2,,
-3,4,El {alcalde|mayor},muy bien durante cuatro años. ,gobernó,to govern,A2,,
-3,5,El {golfista|golf player},muchos de sus {tiros|shots}. ,erró,to miss,A2,,
-4,1,Los niños,sus {abrigos|coats} en la {percha|hanger}. ,colgaron,to hang,A2,,
-4,2,Las {gotas|drops} de {lluvia|rain} ,{lentamente|slowly}. ,caían,to fall,A2,,
-4,3,Ustedes,en una {ciudad|city} muy {bonita|beautiful}. ,crecieron,to grow up,A2,,
-4,4,El {ladrón|thief} ,la {puerta|door} para entrar en la {casa|house}. ,forzó,to force,A2,,
-4,5,La profesora ,siempre a los {alumnos|students}. ,contaba,to count,A2,,
-1,1,Para su cumpleaños,un cinturón negro. ,quería,to want,B1,,
-,2,,la carrera en el 99. ,empezamos,to start,B1,,
-,3,Yo ya,ayer las plantas del jardín. ,regué,to water,B1,,
-,4,En la comida de Navidad,bebidas gratis durante toda la tarde. ,sirvieron,to serve,B1,,
-,,Dijo que hervía agua,,,,B1,,
-,,,,,,,,
-,,,,,,,,
-,,Inicialmente,"los regalos con papel rojo, pero lo cambiamos. ",habíamos envuelto,to wrap,B2,,
-,,,,,,,,
-,,Cuando le dieron el nuevo trabajo ya,el contrato de alquiler. ,habían renovado,to renew,B2,,
-,,,,,,,,
-,,Esta es la plaza donde tu padre y yo ,,,,nos conocimos,,B2
+﻿set,id,before,after,word,translation,level
+1,1,Nosotros,a la {fiesta|party} el {sábado|Saturday}.,fuimos,to go,A2
+1,2,Ella,que no podía {venir|to come}.,dijo,to say,A2
+1,3,Yo,toda la {atención|attention}.,agradecí,to be grateful,A2
+1,4,Ayer,durante todo el {día|day}. ,nevó,to snow,A2
+1,5,Las {flores|flowers},muy bien. ,olían,to smell,A2
+2,1,Ustedes,{dormir|to sleep} en el hotel. ,preferían,to prefer,A2
+2,2,El coche,en la {carretera|road}. ,torció,to turn,A2
+2,3,Los {patos|ducks},muy {alto|high}. ,volaban,to fly,A2
+2,4,{Ayer|yesterday} yo,los {huevos|eggs}.,herví,to boil,A2
+2,5,La {costurera|tailor},las {telas|fabric} con la {cinta|measuring tape}. ,medía,to measure,A2
+3,1,Yo no,bien las instrucciones. ,oí,to hear,A2
+3,2,Vosotros ,muy {contentos|happy} en la {fiesta|party}. ,parecíais,to seem,A2
+3,3,La niña,ir {ayer|yesterday} al parque. ,quería,to want,A2
+3,4,El {alcalde|mayor},muy bien durante cuatro años. ,gobernó,to govern,A2
+3,5,El {golfista|golf player},muchos de sus {tiros|shots}. ,erró,to miss,A2
+4,1,Los niños,sus {abrigos|coats} en la {percha|hanger}. ,colgaron,to hang,A2
+4,2,Las {gotas|drops} de {lluvia|rain} ,{lentamente|slowly}. ,caían,to fall,A2
+4,3,Ustedes,en una {ciudad|city} muy {bonita|beautiful}. ,crecieron,to grow up,A2
+4,4,El {ladrón|thief} ,la {puerta|door} para entrar en la {casa|house}. ,forzó,to force,A2
+4,5,La profesora ,siempre a los {alumnos|students}. ,contaba,to count,A2
+1,1,Para su cumpleaños,un cinturón negro. ,quería,to want,B1
+1,2,Ya ,el agua y el té está listo. ,ha hervido,to boil,B1
+1,3,Estaba triste porque,con su novia. ,había roto,to break up,B1
+1,4,Ya ,los huevos a cocer. ,ha puesto,to put,B1
+1,5,Anoche,en el hotel de la carretera. ,durmió,to sleep,B1
+2,1,En la comida de Navidad,bebidas gratis durante toda la tarde. ,sirvieron,to serve,B1
+2,2,Nunca me ,un regalo tan bonito. ,habían hecho,to do,B1
+2,3,En el periódico,la obra con mucho detalle. ,habían descrito,to describe,B1
+2,4,Fue un problema porque,todos sus documento. ,perdieron,to lose,B1
+2,5,,felices y por eso eran tan fuertes. ,habían crecido,to grow up,B1
+3,1,Cuando empecé la carrera ya,unas prácticas en la empresa. ,había hecho,to do,B1
+3,2,Fui yo quien,ayer la fruta para la cena. ,trajo,to bring,B1
+3,3,Estoy segura de que ,las llaves en la mesa. ,puse,to place,B1
+3,4,Yo ya,ayer las plantas del jardín. ,regué,to water,B1
+3,5,Este año ,todos los exámenes a la primera. ,he aprobado,to pass,B1
+4,1,Todavía no ,todo el material. ,hemos devuelto,to return,B1
+4,2,¿Estás seguro de que,cola durante tres horas?,hicimos,to do,B1
+4,3,,la carrera en el 99. ,empezamos,to start,B1
+4,4,,lo que pensábamos antes de empezar la reunión. ,habíamos dicho,to say,B1
+4,5,Cuando ,"el lavavajillas, se fue la luz. ",pusimos,to run,B1
+5,1,Esta mañana,el piso y no le gusta. ,ha visto,to see,B1
+5,2,La niña,a todas sus muñecas para la fiesta. ,vistió,to get dress,B1
+5,3,Cuando llegó a Portugal,muy buena suerte. ,tuvo,to have,B1
+5,4,,la piel tan clara que se quemó. ,tenía,to have,B1
+5,5,Antes de soplar las velas ya,todos los regalos. ,había abierto,to open,B1
+6,1,Durante su viaje a España,de tapas todos los días. ,iban,to go,B1
+6,2,Debido a su enfermedad le,toda la matrícula. ,devolvieron,to give back,B1
+6,3,Como era su comida favorita,un montón de patatas. ,frieron,to fry,B1
+6,4,Los ladrones,por la ventana del jardín. ,huyeron,to escape,B1
+6,5,Ya,"el teatro, ¿no?",han reabierto,to reopen,B1
+1,1,Inicialmente,"los regalos con papel rojo, pero lo cambiamos. ",habíamos envuelto,to wrap,B2
+1,2,Tu madre y yo,una beca importante para ir a México. ,obtuvimos,to get,B2
+1,3,,a tus primos en el parque esta mañana. ,hemos visto,to see,B2
+1,4,Al llegar al instituto,una prueba de nivel. ,hicimos,to do,B2
+1,5,En nuestra asociación,todo del dinero en una ONG. ,invertíamos,to invest,B2
+2,1,El estrés que tenían,la relación entre los dos. ,ha roto,to break,B2
+2,2,,tanta gente en su casa que se quejaron los vecinos. ,hubo,to have,B2
+2,3,La conversación,entre ellos de forma natural. ,fluyó,to flow,B2
+2,4,Cuando le llegó el contrato ya,un trabajo. ,había conseguido,to get,B2
+2,5,Después de acabar la carrera,la tesis doctoral. ,hizo,to do,B2
+3,1,Los niños ya,a su abuela desde el campamento.,han escrito,to write,B2
+3,2,Cuando le dieron el nuevo trabajo ya,el contrato de alquiler. ,habían renovado,to renew,B2
+3,3,Las compañías extranjeras,varios hoteles en la costa. ,construyeron,to build,B2
+3,4,,un gran discurso en la inauguración. ,dieron,to give,B2
+3,5,En los 90,un empleo en una multinacional. ,tenían,to have,B2
+4,1,No ,"las almendras bien, necesitan estar más doradas. ",has frito,to fry,B2
+4,2,,"dejarme tu coche, pero no quisiste. ",pudiste,can,B2
+4,3,Lo lamento pero,el contrato equivocado. ,renovaste,to renew,B2
+4,4,,demasiada sopa y por eso sobró tanta. ,habías servido,to serve,B2
+4,5,Ayer,de baja la línea y por eso no funciona el teléfono. ,diste,to cancel,B2
+5,1,No,en el armario así que busqué otro sitio para esconderme. ,cupe,to fit,B2
+5,2,La semana pasada,a las palas y me dañé la muñeca. ,jugué,to play,B2
+5,3,El día de su boda,un brindis por toda la familia. ,hice,to do,B2
+5,4,"Estoy agotada, ayer",por lo menos 20 kilómetros. ,anduve,to walk,B2
+5,5,Cuando viniste,ya el primer capítulo. ,había escrito,to write,B2
+6,1,Las aguas de los ríos,debido a la sequía. ,disminuyeron,to decrease,B2
+6,2,Cuando llegamos al cruce ya,el tráfico. ,habían restablecido,to restore,B2
+6,3,Con las máquinas,toda la zona virgen. ,destruyeron,to destroy,B2
+6,4,Los pisos,a un jardín con árboles frutales. ,daban,to look at,B2
+6,5,De regalo ,una ampliación de la foto de su boda. ,han hecho,to do,B2

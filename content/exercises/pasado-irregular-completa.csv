@@ -1,21 +1,81 @@
 ﻿set,id,before,after,infinitive,tense,correct,translation,level
-1,1,Yo,al {parque|park} ayer.,ir,pretérito perfecto simple,fui,to go,A2
-1,2,Ellos,la {verdad|truth}.,decir,pretérito perfecto simple,dijeron,to say,A2
-1,3,Vosotros,con la {ventana|window} {abierta|open}.,dormir,pretérito perfecto simple,dormisteis,to sleep,A2
+1,1,Yo,al {parque|park} ayer.,ir,pretérito indefinido,fui,to go,A2
+1,2,Ellos,la {verdad|truth}.,decir,pretérito indefinido,dijeron,to say,A2
+1,3,Vosotros,con la {ventana|window} {abierta|open}.,dormir,pretérito indefinido,dormisteis,to sleep,A2
 1,4,Tú ,con la {cabeza|head}.,asentir,pretérito imperfecto,asentías,to nod,A2
 1,5,Nosotros,{ganar|to win}.,merecer,pretérito imperfecto,merecíamos,to deserve,A2
 2,1,Ella,todos los {días|days} a {gimnasia|gym class}. ,ir,pretérito imperfecto,iba,to go,A2
-2,2,Con la lluvia,la {montaña|mountain} {rápidamente|quickly}.,descender,pretérito perfecto simple,descendimos,to go down,A2
-2,3,El taxista,muy {rápido|fast} por la {autovía|highway}. ,conducir,pretérito perfecto simple,condujo,to drive,A2
+2,2,Con la lluvia,la {montaña|mountain} {rápidamente|quickly}.,descender,pretérito indefinido,descendimos,to go down,A2
+2,3,El taxista,muy {rápido|fast} por la {autovía|highway}. ,conducir,pretérito indefinido,condujo,to drive,A2
 2,4,El caballo,al {trote|trotting}. ,andar,pretérito imperfecto,andaba,to walk,A2
 2,5,Ustedes ,cada {detalle|detail}.,recordar,pretérito imperfecto,recordaban,to remember,A2
-3,1,El bombero ,{pasar|to happen} a las personas. ,impedir,pretérito perfecto simple,impidió,to prevent,A2
+3,1,El bombero ,{pasar|to happen} a las personas. ,impedir,pretérito indefinido,impidió,to prevent,A2
 3,2,Los matorrales,{entre|between} los {árboles|trees}.,florecer,pretérito imperfecto,florecían,to flower,A2
-3,3,Tú ,muy bien tu {dinero|money}. ,invertir,pretérito perfecto simple,invertiste,to invest,A2
-3,4,Pedro y yo,las {camisetas|t-shirts} para los {niños|kids}. ,teñir,pretérito perfecto simple,teñimos,to dye,A2
+3,3,Tú ,muy bien tu {dinero|money}. ,invertir,pretérito indefinido,invertiste,to invest,A2
+3,4,Pedro y yo,las {camisetas|t-shirts} para los {niños|kids}. ,teñir,pretérito indefinido,teñimos,to dye,A2
 3,5,El tren ,cada {día|day} a las cuatro. ,salir,pretérito imperfecto,salía,to get out,A2
 4,1,En las montañas ,mucho cada {invierno|winter}. ,nevar,pretérito imperfecto,nevaba,to sknow,A2
-4,2,Vosotros,el {texto|text} perfectamente. ,entender,pretérito perfecto simple,entendisteis,to understand,A2
-4,3,Yo,para poder {cruzar|to cross} la {calle|street}.,detener,pretérito perfecto simple,detuve,to stop,A2
+4,2,Vosotros,el {texto|text} perfectamente. ,entender,pretérito indefinido,entendisteis,to understand,A2
+4,3,Yo,para poder {cruzar|to cross} la {calle|street}.,detener,pretérito indefinido,detuve,to stop,A2
 4,4,Ustedes ,por la {izquierda|left} en Sudáfrica. ,conducir,pretérito imperfecto,conducían,to drive,A2
-4,5,Yo ,todas mis {asignaturas|classes}. ,aprobar,pretérito perfecto simple,aprobé,to pass,A2
+4,5,Yo ,todas mis {asignaturas|classes}. ,aprobar,pretérito indefinido,aprobé,to pass,A2
+1,1,,muy maleducado y por eso no querían trabajar con él. ,ser,pretérito imperfecto,era,to be,B1
+1,2,Laura,muy buena suerte en la vida. ,tener,pretérito perfecto,ha tenido,to have,B1
+1,3,Ya nos,el director que iba a llover esta tarde. ,decir,pretérito pluscuamperfecto,habían dicho,to say,B1
+1,4,Cuando,el segundo plato ya estaba frío. ,traer,pretérito indefinido,trajeron,to bring,B1
+1,5,Esta mañana yo,el lavavajillas porque había muchos platos sucios. ,poner,pretérito perfecto,he puesto,to run,B1
+2,1,,"sueño después de la carrera, estaba muy cansada. ",sentir,pretérito indefinido,sintió,to feel,B1
+2,2,Los gemelos ya,"todos los regalos, no podían esperar. ",abrir,pretérito perfecto,han abierto,to open,B1
+2,3,Las hojas,lentamente mientras soplaba la brisa. ,caer,pretérito imperfecto,caían,to fall,B1
+2,4,El sol,mucho antes de sonar el despertador. ,salir,pretérito pluscuamperfecto,había salido,to get out,B1
+2,5,,el partido porque no habían entrenado suficiente. ,perder,pretérito indefinido,perdieron,to lose,B1
+3,1,La televisión nunca,"garantía, fue muy barata. ",tener,pretérito indefinido,tuvo,to have,B1
+3,2,Como no,"bien, te he traído una lupa. ",ver,pretérito imperfecto,veías,to see,B1
+3,3,Tristemente Ricardo,a fumar a pesar de toda la ayuda. ,volver,pretérito pluscuamperfecto,había vuelto,to go back,B1
+3,4,Los chicos ya,"los huevos, ya podemos hacer el pastel. ",batir,pretérito perfecto,han batido,to whisk,B1
+3,5,Al principio,los primeros pero al final perdieron. ,ir,pretérito imperfecto,iban,to go,B1
+4,1,Petra ,esta mañana la cama ella sola. ,hacer,pretérito perfecto,ha hecho,to do,B1
+4,2,,la ropa cuando les ha llamado su tía. ,tender,pretérito imperfecto,tendían,to hang,B1
+4,3,Cuando empezó a llover ya,"un paseo, estaban contentos. ",dar,pretérito pluscuamperfecto,habían dado,to walk,B1
+4,4,"Está enferma, no le ",bien la comida. ,sentar,pretérito perfecto,ha sentado,to sit,B1
+4,5,La limpiadora,el suelo y estaba muy resbaladizo. ,fregar,pretérito pluscuamperfecto,había fregado,to mop,B1
+5,1,,las diferencias entre los dos dibujos pero no encontré nada. ,buscar,pretérito indefinido,busqué,to look for,B1
+5,2,Sus hijos,a clase de piano cuando eran niños. ,ir,pretérito imperfecto,iban,to go,B1
+5,3,Mis hermanos y yo,muy afortunados de crecer en el campo. ,ser,pretérito indefinido,fuimos,to be,B1
+5,4,El jefe le,la mano con orgullo. ,dar,pretérito indefinido,dio,to shake,B1
+5,5,Ya,"ayer una película, no podéis ver otra hoy. ",ver,pretérito indefinido,visteis,to see,B1
+6,1,Tú ,"la mesa, me toca a mí quitarla. ",poner,pretérito perfecto,has puesto,to set,B1
+6,2,,todas las bebidas y por eso estaban borrachos. ,probar,pretérito pluscuamperfecto,habían probado,to taste,B1
+6,3,El año pasado,a Sevilla a celebrar nuestro aniversario. ,ir,pretérito indefinido,fuimos,to go,B1
+6,4,Ayer mis padres y yo,en el banco para abrir una cuenta. ,estar,pretérito indefinido,estuvimos,to be,B1
+6,5,,muchas personas viendo el conciert. ,haber,pretérito imperfecto,había,to have,B1
+1,1,Su abuelo es famoso porque,el único rascacielos de la ciudad. ,constriuir,pretérito indefinido,construyó,to build,B2
+1,2,Te ,demasiadas veces que eso no se tira. ,decir,pretérito perfecto,he dicho,to say,B2
+1,3,Siempre,conclusiones erróneas. ,sacar,pretérito imperfecto,sacaban,to form a judgment,B2
+1,4,Ya no es alcalde porque nos,a todos. ,mentir,pretérito indefinido,mintió,to lie,B2
+1,5,Mientras ha estado fuera me,todos los meses. ,escribir,pretérito perfecto,ha escrito,to write,B2
+2,1,Después de la operación estaba relajado y,muy tranquilo. ,durmió,pretérito indefinido,durmió,to sleep,B2
+2,2,Los accionistas ,mucho dinero en la compañía cuando esta fracasó. ,invertir,pretérito pluscuamperfecto,habían invertido,to invest,B2
+2,3,Samuel,quedarse en casa de su madre antes que ir a una residencia de estudiantes. ,preferir,pretérito indefinido,prefirió,to prefer,B2
+2,4,El gato,"la cámara de fotos, es un desastre. ",romper,pretérito perfecto,ha roto,to break,B2
+2,5,,"que llegarían tarde, pero no tan tarde. ",decir,pretérito indefinido,dijeron,to say,B2
+3,1,Cuando llegamos al supermercado los empleados y,todos los alimentos. ,distribuir,pretérito pluscuamperfecto,habían distribuido,to distribute,B2
+3,2,El vicepresidente ,al ministro por problemas de corrupción. ,destituir,pretérito indefinido,destituyó,to dismiss,B2
+3,3,Sus abuelos,una gran alegría cuando Marcos se graduó. ,sentir,pretérito indefinido,sintieron,to feel,B2
+3,4,Tus padres,"huevos para la cena, qué bien. ",freir,pretérito perfecto,han frito,to fry,B2
+3,5,Los ladrones,cuando llegó la policía. ,huir,pretérito imperfecto,huían,to escape,B2
+4,1,No estaba contento con el resultado y por eso,la revisión de examen. ,pedir,pretérito indefinido,pidió,to ask for,B2
+4,2,Su padre,coleccionista de sellos. ,ser,pretérito imperfecto,era,to be,B2
+4,3,Mateo nunca,ir a la playa con sus primos. ,querer,pretérito indefinido,quiso,to want,B2
+4,4,El río,por le medio de la ciudad. ,fluir,pretérito imperfecto,fluía,to flow,B2
+4,5,Enseguida ,que algo no iba bien cuando vio su cara. ,intuir,pretérito indefinido,intuyó,to sense,B2
+5,1,El gato no ,en la caja por lo que no vino de viaje. ,caber,pretérito indefinido,cupo,to fit,B2
+5,2,Su maestra de primero ,mucho en él. ,influir,pretérito indefinido,inluyó,to influence,B2
+5,3,Todo el papeleo al final no,de nada. ,servir,pretérito pluscuamperfecto,había servido,to help,B2
+5,4,Cuando era joven,en carreras a nivel nacional. ,competir,pretérito indefinido,compitió,to compete,B2
+5,5,Los médicos,que debíamos seguir un régimen. ,decir,pretérito indefinido,dijeron,to say,B2
+6,1,Era un artículo tan interesante que los periódicos lo,a cinco idiomas. ,traducir,pretérito indefinido,tradujeron,to translate,B2
+6,2,Cuando,el periódico ya nos habíamos ido. ,traer,pretérito indefinido,trajeron,to bring,B2
+6,3,Los guías,a todo el equipo hasta la ciudad. ,conducir,pretérito indefinido,condujeron,to drive,B2
+6,4,"La tienda estaba vacía, apenas",nada. ,haber,pretérito imperfecto,había,to have,B2
+6,5,Se torció un tobillo y le,una venda. ,poner,pretérito indefinido,pusieron,to put on,B2
