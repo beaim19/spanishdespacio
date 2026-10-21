@@ -741,6 +741,9 @@ a.theme-block:focus-visible {
 }
 .letter-btn:hover:not(:disabled) { background-color: var(--color-hover-tint); }
 .letter-btn:disabled { cursor: default; }
+/* Vowels while only one petal is left: muted but still tappable, so the
+   player gets the "only consonants now" message instead of a dead button. */
+.letter-btn.is-locked { opacity: 0.45; }
 .letter-btn.is-hit {
   background-color: var(--color-brand-dark);
   border-color: var(--color-brand-dark);

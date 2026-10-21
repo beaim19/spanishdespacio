@@ -3,10 +3,16 @@
  * at a time, shown as a short description (the hint) plus a row of blank
  * letter spaces. The player taps letters from an A-Z (+Ñ) keyboard, or —
  * if they think they know it — types the whole word and presses "Probar".
- * Every wrong letter AND every wrong whole-word attempt adds one petal to
- * the flower; at 8 petals the flower is full, the round is lost, and the
- * whole word is revealed. Guess every letter (or the whole word) first and
- * the round is won.
+ * Every wrong consonant AND every wrong whole-word attempt adds one petal
+ * to the flower; a wrong VOWEL (a, e, i, o, u) costs TWO, since vowels are
+ * the cheapest letters to find. A vowel that IS in the word costs nothing,
+ * same as any other correct letter. At 8 petals the flower is full, the
+ * round is lost, and the whole word is revealed. Guess every letter (or
+ * the whole word) first and the round is won.
+ *
+ * With only ONE petal left a vowel can no longer be chosen (a wrong one
+ * would cost two): tapping one shows "Ahora solo puedes elegir
+ * consonantes, buena suerte!" instead, and the vowel keys look muted.
  *
  * CSV columns: set,id,hint,word,level
  *   hint  = a short description of the word, in Spanish. Can mark words
@@ -34,6 +40,8 @@
 
 (function () {
   const MAX_WRONG = 8; // petals on the flower
+  const VOWEL_COST = 2; // petals a WRONG vowel costs (everything else costs 1)
+  const VOWELS = 'aeiou';
   const LETTERS = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ'.split('');
   const SVG_NS = 'http://www.w3.org/2000/svg';
 
@@ -123,7 +131,7 @@
 
     const instructions = document.createElement('p');
     instructions.className = 'exercise-instructions';
-    instructions.textContent = `Adivina la palabra a partir de la descripción. Elige letras: cada error añade un pétalo a la flor, y con ${MAX_WRONG} pétalos pierdes la palabra. Si crees saberla, escríbela abajo.`;
+    instructions.textContent = `Adivina la palabra a partir de la descripción. Elige letras: cada consonante incorrecta añade un pétalo a la flor, pero una vocal incorrecta cuesta dos pétalos. Con ${MAX_WRONG} pétalos pierdes la palabra. Si crees saberla, escríbela abajo (si te equivocas, cuesta un pétalo).`;
     container.appendChild(instructions);
 
     let deck = shuffle(rows).filter((row) => normalize(row.word));
@@ -280,19 +288,40 @@
         controls.appendChild(nextBtn);
       }
 
-      function addWrong(message) {
-        wrong += 1;
+      // With exactly one petal left, a wrong vowel (2 petals) would be
+      // worse than losing outright, so vowels get locked: muted look, still
+      // tappable so the player gets the explanation message.
+      function refreshVowelLock() {
+        const lock = MAX_WRONG - wrong === 1;
+        letterButtons.forEach((b, i) => {
+          const isVowel = VOWELS.includes(LETTERS[i].toLowerCase());
+          const locked = lock && isVowel && !b.disabled;
+          b.classList.toggle('is-locked', locked);
+          if (locked) b.setAttribute('aria-disabled', 'true');
+          else b.removeAttribute('aria-disabled');
+        });
+      }
+
+      function addWrong(cost, message) {
+        wrong = Math.min(MAX_WRONG, wrong + cost);
         setPetals(wrong);
         status.textContent = message;
         if (wrong >= MAX_WRONG) finish(false);
+        else refreshVowelLock();
       }
 
       letterButtons.forEach((btn, i) => {
         const ch = LETTERS[i].toLowerCase();
+        const isVowel = VOWELS.includes(ch);
         btn.addEventListener('click', () => {
           if (finished || guessed.has(ch)) return;
+          if (isVowel && MAX_WRONG - wrong === 1) {
+            status.textContent = 'Ahora solo puedes elegir consonantes, buena suerte!';
+            return;
+          }
           guessed.add(ch);
           btn.disabled = true;
+          btn.classList.remove('is-locked');
           if (target.includes(ch)) {
             btn.classList.add('is-hit');
             refreshWord(false);
@@ -300,7 +329,10 @@
             if (allFound()) finish(true);
           } else {
             btn.classList.add('is-miss');
-            addWrong(`No hay ninguna ${LETTERS[i]}. Errores: ${wrong + 1} de ${MAX_WRONG}.`);
+            const cost = isVowel ? VOWEL_COST : 1;
+            const total = Math.min(MAX_WRONG, wrong + cost);
+            const note = isVowel ? ' Las vocales cuestan 2 pétalos.' : '';
+            addWrong(cost, `No hay ninguna ${LETTERS[i]}.${note} Errores: ${total} de ${MAX_WRONG}.`);
           }
         });
       });
@@ -315,7 +347,7 @@
           finish(true);
         } else {
           input.value = '';
-          addWrong(`Esa no es la palabra. Errores: ${wrong + 1} de ${MAX_WRONG}.`);
+          addWrong(1, `Esa no es la palabra. Errores: ${wrong + 1} de ${MAX_WRONG}.`);
           input.focus();
         }
       }

@@ -1,11 +1,61 @@
 ﻿set,id,before,after,infinitive,tense,correct,translation,level
-1,1,Mañana yo,con mis {compañeros|classmates} sobre el proyecto.,hablar,futuro simple,hablaré,to speak,B1
-1,2,El próximo verano nosotros,en la playa dos semanas.,viajar,futuro simple,viajaremos,to travel,B1
-1,3,Cuando llegue el invierno tú,mucho frío.,pasar,futuro simple,pasarás,to spend (time),B1
-1,4,Estoy segura de que ellos,el examen sin problema.,aprobar,futuro simple,aprobarán,to pass,B1
-1,5,Si sigues así,muy pronto el proyecto.,terminar,futuro simple,terminarás,to finish,B1
-2,1,El año que viene vosotros,una nueva casa.,comprar,futuro simple,compraréis,to buy,B1
-2,2,Para su cumpleaños yo le,un regalo especial.,regalar,futuro simple,regalaré,to gift,B1
-2,3,Con este calor las plantas,mucha {agua|water}.,necesitar,futuro simple,necesitarán,to need,B1
-2,4,Después de la reunión nosotros,el informe juntos.,revisar,futuro simple,revisaremos,to review,B1
-2,5,Estoy convencido de que ella,el {puesto|position}.,conseguir,futuro simple,conseguirá,to get,B1
+1,1,Mañana yo,con mis {compañeros|classmates} sobre el proyecto.,hablar,futuro imperfecto,hablaré,to speak,B1
+1,2,El próximo verano nosotros,en la playa dos semanas.,viajar,futuro imperfecto,viajaremos,to travel,B1
+1,3,Cuando llegue el invierno tú,mucho frío.,pasar,futuro imperfecto,pasarás,to spend (time),B1
+1,4,Estoy segura de que ellos,el examen sin problema.,aprobar,futuro imperfecto,aprobarán,to pass,B1
+1,5,Si sigues así,muy pronto el proyecto.,terminar,futuro imperfecto,terminarás,to finish,B1
+2,1,El año que viene vosotros,una nueva casa.,comprar,futuro imperfecto,compraréis,to buy,B1
+2,2,Para su cumpleaños yo le,un regalo especial.,regalar,futuro imperfecto,regalaré,to gift,B1
+2,3,Con este calor las plantas,mucha {agua|water}.,necesitar,futuro imperfecto,necesitarán,to need,B1
+2,4,Después de la reunión nosotros,el informe juntos.,revisar,futuro imperfecto,revisaremos,to review,B1
+2,5,Estoy convencido de que ella,el {puesto|position}.,conseguir,futuro imperfecto,conseguirá,to get,B1
+3,1,Marcia y yo,tomates y haremos ensaladas muy ricas. ,cultivar,futuro imperfecto,cultivaremos,to grow,B1
+3,2,"Es mi grupo favorito, además",las canciones que más me gustan. ,tocar,futuro imperfecto,tocarán,to play,B1
+3,3,"Iré a tu cena, aunque esta vez yo no",el pollo. ,asar,futuro imperfecto,asaré,to roast,B1
+3,4,"En primer lugar, ","la cámara digital, y después haré los vídeos. ",utilizar,futuro imperfecto,utilizaré,to use,B1
+3,5,"En resumen, la empresa de Luis",las sábanas del campamento. ,lavar,futuro imperfecto,lavará,to wash,B1
+4,1,Dentro de dos días la compañía tellefónica,las comunicaciones. ,cortar,futuro imperfecto,cortará,to cut,B1
+4,2,En cuanto llegues a casa,el frigorífico lo primero. ,enchufar,futuro imperfecto,enchufarás,to plug,B1
+4,3,Si estudiáis tan poco solo,un cinco en el examen. ,sacar,futuro imperfecto,sacaréis,to get,B1
+4,4,En vuestra casa,la línea de internet que yo os diga. ,contratar,futuro imperfecto,contrataréis,to hire,B1
+4,5,¿,el veterinario a nuestro gato?,curar,futuro imperfecto,curará,to cure,B1
+5,1,Prométeme que no ,más con la maestra. ,discutir,futuro imperfecto,discutirás,to fight,B1
+5,2,Cuando me levante,"los huevos, y así los tienes listo. ",batir,futuro imperfecto,batiré,to whisk,B1
+5,3,Mañana te toca a ti y ,tú a los niños al colegio. ,llevar,futuro imperfecto,llevarás,to take,B1
+5,4,Creo que yo nunca,a mis padres de ir a EEUU. ,convencer,futuro imperfecto,convenceré,to convince,B1
+5,5,Y cuando estemos en el parque,alrededor del lago. ,pasear,futuro imperfecto,pasearemos,to walk,B1
+6,1,Nunca,todo lo que has hecho por mí. ,olvidar,futuro imperfecto,olvidaré,to forget,B1
+6,2,En el colegio,tus magdalenas con tus amigos. ,compartir,futuro imperfecto,compartirás,to share,B1
+6,3,Ahora los dependientes,las camisetas a mitad de precio. ,vender,futuro imperfecto,venderán,to sell,B1
+6,4,Tengo efectivo por lo que ,todo en metálico. ,pagar,futuro imperfecto,pagaré,to pay,B1
+6,5,En breve el comité ,nuestros deberes. ,explicar,futuro imperfecto,explicará,to explain,B1
+1,1,,,abrochar,futuro imperfecto,,,
+1,2,Estoy cansada así que ya,el concierto más tarde. ,escuchar,futuro imperfecto,escucharé,,
+1,3,Cuando lleguemos Elena,ya por todas partes. ,buscar,futuro perfecto,habrá buscado,,
+1,4,El curso que viene Laura,con su novio en la afueras. ,vivir,futuro imperfecto,vivirá,,
+1,5,Me encanta la feria por lo que ya,tanto como quiera. ,gastar,futuro imperfecto,gastaré,,
+2,1,Como hemos oído un ruido fuera,un vistazo por el jardín. ,echar,futuro imperfecto,echaremos,,
+2,2,La policía municipal ,llegar a la casa rápidamente. ,intentar,futuro imperfecto,intentará,,
+2,3,Me imagino que cuando lleguemos los conserjes ya,apagado las luces del edificio. ,apagar,futuro perfecto,habrán apagado,,
+2,4,Con todas estas inundaciones me imagino que,todos los vuelos de hoy. ,cancelar,futuro imperfecto,cancelarán,,
+2,5,Los gatos son demasiado pequeños y ,todos los sillones. ,arañar,futuro imperfecto,arañarán,,
+3,1,Durante esta hora os portaréis bien y,la página diez del libro. ,colorear,futuro imperfecto,colorearéis,,
+3,2,,tú a cabo el servicio de mantenimiento. ,llevar,futuro imperfecto,llevarás,,
+3,3,Con tanta propaganda los partidos,a los votantes antes de empezar. ,repeler,futuro perfecto,habrán repelido,,
+3,4,No solo ,tú la fiesta sino también la comida del día siguiente. ,planificar,futuro imperfecto,planificarás,,
+3,5,Este alcalde ni,el deporte ni ayudará con la educación. ,fomentar,futuro imperfecto,fomentará,,
+4,1,Ya,yo la habitación que nadie quiere. ,usar,futuro imperfecto,usaré,,
+4,2,Estimo que los voluntarios,un total de mil euros hasta ahora. ,juntar,futuro perfecto,habrán juntado,,
+4,3,"A pesar de no sacar buenas notas, Luisa",a todos los maestros. ,sorprender,futuro imperfecto,sorprenderá,,
+4,4,"Para empezar, los electricistas",todas las luces en el primer escenario. ,instalar,futuro imperfecto,instalarán,,
+4,5,"En suma, o me escucháis o",por la ventana. ,escapar,futuro imperfecto,escaparé,,
+5,1,"En cualquier caso, como siempre haces estoy segura de que",toda la cena. ,quemar,futuro imperfecto,quemarás,,
+5,2,¿Crees que estarás lista y ya,el coche cuando lleguemos?,arrancar,futuro perfecto,habrás arrancado,,
+5,3,Por supuesto que cuando llegues yo ya,todas las camisetas del equipo. ,planchar,futuro perfecto,habré planchado,,
+5,4,Todos los chicos y yo,al equipo desde la grada. ,animar,futuro imperfecto,animaremos,,
+5,5,Entre los dos ,cerca de veinte kilos. ,pesar,futuro imperfecto,pesarán,,
+6,1,"Recuerda, en el examen","en todos los stops, y así aprobarás.",parar,futuro imperfecto,pararás,,
+6,2,¿Quién,la pizarra hoy?,borrar,futuro imperfecto,borrará,,
+6,3,Aquellos que no vinieron ayer,este formulario. ,rellenar,futuro imperfecto,rellenarán,,
+6,4,El coche de carreras,a partir de cinco segundos de la salida. ,acelerar,futuro imperfecto,acelerará,,
+6,5,El papel lo,yo cuando llegue a la oficina. ,escanear,futuro imperfecto,escanearé,,

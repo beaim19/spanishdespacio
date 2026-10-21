@@ -671,10 +671,19 @@ hover hints work), a row of blank letter spaces for `word`, an A–Z + Ñ
 letter keyboard, and a box to type the whole word ("Probar", or Enter).
 The flower is an inline SVG built in the engine (stem, leaves and centre
 always drawn; 8 petals that start as faint dashed outlines and fill in).
-**Every wrong letter and every wrong whole-word attempt adds one petal**;
-at 8 (`MAX_WRONG`) the flower is full, the round is lost, and the whole
-word is revealed (letters the player never guessed are shown in red). A
-letter can only be tapped once, so it can't cost two petals. Guessing
+**Every wrong consonant and every wrong whole-word attempt adds one
+petal; a wrong vowel (a, e, i, o, u) adds two** (`VOWEL_COST`) — a vowel
+that is in the word costs nothing. At 8 (`MAX_WRONG`) the flower is full,
+the round is lost, and the whole word is revealed (letters the player
+never guessed are shown in red). A letter can only be tapped once, so it
+can't be charged twice. The double price is stated in the game's intro
+text and on the page header.
+
+When only **one petal is left**, vowels are locked (a wrong one would
+cost two): tapping a vowel shows "Ahora solo puedes elegir consonantes,
+buena suerte!" and does nothing else, and the vowel keys look muted
+(`.letter-btn.is-locked`, still tappable so the message can appear).
+Consonants and the whole-word box keep working. Guessing
 every letter, or typing the right word, wins the round. Spaces and hyphens
 in `word` show from the start and don't need guessing.
 

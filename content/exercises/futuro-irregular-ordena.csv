@@ -1,11 +1,61 @@
 ﻿set,id,correct,also_correct,level
-1,1,Este verano nosotros tendremos muy poco {tiempo|time} libre.,,B1
-1,2,Estoy segura de que ella pondrá la mesa.,,B1
-1,3,Mañana yo saldré de casa muy temprano.,,B1
-1,4,El próximo mes ellos vendrán a visitarnos.,,B1
+1,1,Este verano tendremos muy poco {tiempo|time} libre.,Tendremos muy poco tiempo libre este verano. ,B1
+1,2,Estoy segura de que ella pondrá la mesa.,Estoy segura de que pondrá la mesa ella. ,B1
+1,3,Mañana saldré de casa muy temprano.,Saldré de casa muy temprano mañana. |Mañana saldré muy temprano de casa. ,B1
+1,4,El próximo mes vendrán a visitarnos.,Vendrán a visitarnos el próximo mes. ,B1
 1,5,Nadie sabe qué dirá el jefe sobre el {cambio|change}.,,B1
-2,1,Con esfuerzo tú podrás resolver el problema.,,B1
+2,1,Con esfuerzo podrás resolver el problema.,Podrás resolver el problema con esfuerzo. ,B1
 2,2,Estoy convencido de que vosotros sabréis la respuesta.,,B1
 2,3,Ella querrá quedarse un poco más.,,B1
-2,4,Para el viernes ya habré terminado el {informe|report}.,,B1
-2,5,Con esa receta la cena estará deliciosa.,,B1
+2,4,Para el viernes ya habré terminado el {informe|report}.,Ya habré terminado para el viernes. ,B1
+2,5,Con esa receta la cena estará deliciosa.,La cena estará deliciosa con esta receta. ,B1
+3,1,Iremos al veterinario y elegiremos un perro. ,,B1
+3,2,A las nueve en el telediario sabremos quién ha ganado. ,Sabremos quién ha ganado a las nueve en el telediario. |En el telediario a las nueve sabremos quién ha ganado. |Sabremos quién ha ganado en el telediario a las nueve. ,B1
+3,3,Hace mucho calor así que daré más agua a los animales. ,Hace mucho calor así que daré a los animales más agua. ,B1
+3,4,"En conclusión, no podrás salir en una semana. ",,B1
+3,5,Daré una propina aunque no me gusta. ,Aunque no me gusta daré una propina. ,B1
+4,1,Si no entrenas perderás el partido. ,Perderás el partido si no entrenas. ,B1
+4,2,Dentro de dos días podremos salir a celebrar el final del curso. ,Podremos salir a celebrar el final del curso dentro de dos días. ,B1
+4,3,¿Quién hará el café mañana por la mañana?,¿Mañana por la mañana quién hará el café?,B1
+4,4,Me han preguntado si querré decir unas palabras. ,,B1
+4,5,La empresa no despedirá a nadie hasta julio. ,Hasta julio la empresa no despedirá a nadie. ,B1
+5,1,Tendrán que hacer un descuento si quieren venderlo todo. ,Si quieren venderlo todo tendrán que hacer un descuento. ,B1
+5,2,Si no corro perderé el autobús a mi pueblo. ,Perderé el autobús a mi pueblo si no corro. ,B1
+5,3,El sábado por la tarde habrá caravana para entrar en la ciudad. ,Habrá caravana para entrar en la ciudad el sábado por la tarde. |Para entrar en la ciudad el sábado por la tarde habrá caravana. |El sábado por la tarde para entrear en la ciudad habrá caravana. ,B1
+5,4,El médico escribirá la receta para el antibiótico. ,,B1
+5,5,El camaero traerá la vuelta y nos iremos. ,,B1
+6,1,El centro de salud nuevo ofrecerá ayuda a las personas mayores. ,El nuevo centro de salud ofrecerá ayuda a las personas mayores. ,B1
+6,2,Todas las noches pondrás agua oxigenada en la herida. ,Pondrás agua oxigenada en la herida todas las noches. ,B1
+6,3,Conseguiremos un seguro médico para el viaje. ,Para el viaje conseguiremos un seguro médico. ,B1
+6,4,Tendremos que poner pilas al muñeco para que funcione. ,Para que funciones tendremos que poner pilas al muñeco. ,B1
+6,5,En nuestro hotel habrá servicio de habitaciónes. ,Habrá servicio de habitaciones en nuestro hotel. ,B1
+1,1,"No lo sé seguro, ya veremos si puedo ir. ",,B2
+1,2,Próximante podrán inscribirse en los grupos del barrio. ,Podrán inscribirse en los grupos del barrio próximamente. ,B2
+1,3,Entretanto vendremos a ver cómo están las plantas. ,Vendremos a ver cómo están las plantas entretanto. ,B2
+1,4,En breve dirán que han retrasado el partido. ,Dirán en breve que han rechazado el partido. |Dirán que ha rechazado el partido en breve. ,B2
+1,5,Si no salimos llegaremos tarde al estreno de la película. ,Llegaremos tarde al estreno de la película si no salimos. ,B2
+2,1,Seguiré sin saber nada de él porque aún está enfadado.  ,Porque aún está enfadado seguiré sin saber nada de él. ,B2
+2,2,Te dirá que él no sabía nada del asunto. ,Él te dirá que no sabía nada del asunto. ,B2
+2,3,Estoy pensando que pronto conseguiré toda la colección.,Estoy pensando que conseguiré la colección pronto. ,B2
+2,4,Dice que de mayor hará mucho dinero y será rico. ,Dice que de mayor será rico y hará mucho dinero. ,B2
+2,5,Habrás visto en las noticias que se acerca una marea negra. ,Habrás visto que se acerca una marea negra en las noticias. |En las noticias habrás visto que se acerca una marea negra. ,B2
+3,1,Si escuchas la música tan alta tendrás un problema de oído. ,Tendrás un problema de oído si escuchas la música tan alta. ,B2
+3,2,Ha estudiado mucho por lo que hará muy bien el examen. ,,B2
+3,3,Los que canten bien serán parte del coro. ,Serán parte del coro los que canten bien. ,B2
+3,4,Ese chico es el que saldrá primero. ,El que saldrá primero es ese chico. ,B2
+3,5,Me gustaría saber si habrás vuelto a las seis. ,Me gustaría saber si a las seis habrás vuelto. ,B2
+4,1,Nada más salir haremos una parada en la biblioteca. ,Haremos una parada en la biblioteca nada más salir. ,B2
+4,2,Habrás escuchado en las noticias que se acerca un anticiclón. ,,B2
+4,3,Lo que pasa es que nunca dirá la verdad. ,,B2
+4,4,¿Es verdad que harás tú la cena hoy?,¿Es verdad que hoy harás tú la cena?|¿Es verdad que tú harás la cena hoy?|¿Es verdad que hoy tú harás la cena?,B2
+4,5,A mi modo de ver esta cena supondrá un gran gasto. ,,B2
+5,1,Los cientificos podrán explicar en las noticias los beneficios de la agricultura ecológica. ,Los científicos podrán explicar los beneficios de la agricultura ecológica en las noticias. |En las noticias los científicos podrán explicar los beneficios de la agricultura ecológica. ,B2
+5,2,¿Cómo puedo estar segura de que diréis la verdad?,,B2
+5,3,La fiesta de esta noche será genial. ,,B2
+5,4,¿Quieres decir que saldréis solos esta noche?,¿Quieres decir que esta noche saldréis solos?,B2
+5,5,"Está claro, haré todo lo que sea necesario. ","Haré todo lo que sea necesario, está claro. ",B2
+6,1,Vendremos todos los días y además traeremos palmeras de chocolate. ,,B2
+6,2,¿En serio habréis frito todas las rosquillas antes de la una?,¿En serio habréis frito antes de la una todas las rosquillas?|¿En serio antes de la una habréis frito todas las rosquillas?,B2
+6,3,No comparto tu punto de vista pero sé que lo conseguirás. ,Sé que lo conseguirás pero no comparto tu punto de vista. ,B2
+6,4,Habrá escrito ella el libro pero no lo parece. ,,B2
+6,5,No dudo que la mayoría querrá venir al partido. ,,B2

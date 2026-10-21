@@ -1,11 +1,61 @@
 ﻿set,id,correct,also_correct,level
-1,1,Mañana yo me levantaré muy temprano.,,B1
-1,2,Después del {viaje|trip} nosotros nos ducharemos.,,B1
-1,3,Para la boda tú te vestirás muy elegante.,,B1
-1,4,Esta noche los niños se acostarán pronto.,,B1
+1,1,Mañana me levantaré muy temprano.,Me levantaré muy temprano mañana. ,B1
+1,2,Después del {viaje|trip} en avión nos ducharemos.,Nos ducharemos después del viaje en avión,B1
+1,3,Para la boda te vestirás muy elegante.,Te vestirás muy elegante para la boda. ,B1
+1,4,Esta noche los niños se acostarán pronto.,Los niños se acostarán pronto esta noche. ,B1
 1,5,Ella se peinará delante del {espejo|mirror}.,,B1
 2,1,Estoy segura de que vosotros os sentaréis en la primera fila.,,B1
-2,2,Con este sol yo me bañaré en la piscina.,,B1
-2,3,Para la entrevista ella se maquillará con cuidado.,,B1
-2,4,Si pierde el partido él se quejará mucho.,,B1
-2,5,El próximo lunes nosotros nos despertaremos antes del {amanecer|dawn}.,,B1
+2,2,Con este sol me bañaré en la piscina.,,B1
+2,3,Para la entrevista ese maquillará con cuidado.,Se maquillará con cuidado para la entrevista. ,B1
+2,4,Si pierde el partido se quejará mucho.,Se quejará mucho si pierde el partido. ,B1
+2,5,El próximo lunes nos despertaremos antes del {amanecer|dawn}.,Nos despertaremos antes del amanecer el próximo lunes. ,B1
+3,1,Se hará la crema de calabacín a mi estilo. ,,B1
+3,2,Los reyes se despedirán del pueblo después del acto. ,Después del acto los reyes se despedirán del pueblo. ,B1
+3,3,Con el huracán que viene probablemente se cortará la comunicación. ,Probablemente se cortará la comunicación con el huracán que viene. |Probablemente con el huracán que viene se cortará la comunicación. |Se cortará la comunicación probablemente con el huracán que viene. |,B1
+3,4,Según el mapa del tiempo se nublará a las dos de la tarde. ,Se nublará a las dos de la tarde según el mapa del tiempo. ,B1
+3,5,Tengo mala memoria y me equivocaré de número. ,,B1
+4,1,Creo que nos divertiremos mucho en nuestro viaje. ,,B1
+4,2,Solamente me cortaré yo el pelo para la obra de teatro. ,Para la obra de teatro solamente yo me cortaré el pelo. |Solamente yo me cortaré el pelo para la obra de teatro. |Para la obra de teatro solamente me cortaré el pelo yo. |Solamente yo me cortaré el pelo para la obra de teatro. ,B1
+4,3,Ahora se levantarán para declarar. ,Se levantarán para declarar ahora. |Se levantarán ahora para declarar. ,B1
+4,4,El jefe se pondrá inmediatamente al teléfono. ,Inmediatamente se pondrá el jefe al teléfono. ,B1
+4,5,Hay que tener cuidado porque si no se secarán todas las hojas. ,,B1
+5,1,Dentro de una hora se bajará toda la música de su cuenta. ,Se bajará toda la música de su cuenta dentro de una hora. ,B1
+5,2,Me conectaré más tarde para hablar contigo. ,Para hablar contigo me conectaré más tarde. ,B1
+5,3,Las vecinas se inscribieron a las clase de informática. ,,B1
+5,4,Creo que se abrazarán cuando acaben de discutir. ,Cuando acaben de discutir creo que se abrazarán. ,B1
+5,5,Cuando hagamos senderismo nos alimentaremos muy bien. ,Nos alimentamos muy bien cuando hacemos senderismo. ,B1
+6,1,Me bajaré del tren cuando llegue a la estación central. ,Cuando llegue a la estación central me bajaré del tren. ,B1
+6,2,Con estas temperaturas se congelará el agua del lago. ,El agua del lago se congelará con estas temperaturas. ,B1
+6,3,Cuando se conozcan se caerán muy bien. ,Se caerán muy bien cuando se conozcan. ,B1
+6,4,Nos los pasaremos muy bien en la fiesta de cumpleaños. ,En la fiesta de cumpleaños nos los pasaremos muy bien. ,B1
+6,5,Los niños se cambiarán de sitio a la primera fila. ,,B1
+1,1,Pronto te harás una idea de cómo trabajamos aquí. ,Te harás una idea pronto de cómo trabajamos aquí. |Te harás una idea de cómo trabajamos aquí pronto. ,B2
+1,2,Nos sentaremos a la mesa tan pronto como termine el partido. ,Tan pronto como termine el partido nos sentaremos a la mesa. ,B2
+1,3,Te aseguro que se lo pasarán muy bien en el campamento. ,,B2
+1,4,"Hablan muy bien inglés, se habrán educado en el extranjero. ","Se habrán educado en el extranjero, hablan muy bien inglés. ",B2
+1,5,Me daré cuenta enseguida si me mientes. ,Si me mientes me daré cuenta enseguida. ,B2
+2,1,Se prepará para el examen en la academia de la esquina. ,En la academia de la esquina se preparará para el examen. ,B2
+2,2,"No tenía ni idea, se habrá perdido las noticias. ","Se habrá perdido las noticias, no tenía ni idea. ",B2
+2,3,Con la dana que viene dicen que se inundarán dos pueblos. ,Dicen que se inundarán dos pueblos con la dana que viene. |Dicen que con la dana que viene se inundarán dos pueblos. ,B2
+2,4,Si juego con estas zapatillas me torceré un tobillo. ,Me torceré el tobillo si juego con estas zapatillas. ,B2
+2,5,Me cepillaré bien las uñas cuando acabe con la leña.,Cuando acabe con la leña me cepillaré bien las uñas. ,B2
+3,1,"No sale papel, se habrá bloqueado la impresora. ","Se habrá bloqueado la impresora, no sale papel. ",B2
+3,2,Durante las vacaciones nos alojaremos en el camping del pueblo. ,Nos alojaremos en el camping del pueblo durante las vacaciones. ,B2
+3,3,Te agradeceré si me confirmas que te quedarás esta noche. ,Te agradeceré si me confirmas que esta noche te quedarás. ,B2
+3,4,"Si no te importa, te enterarás cuando leas el periódico. ","Cuando leas el periódico te enterarás, si no te importa. |Te enterarás cuando leas el periódico, si no te importa. |Si no te importa, cuando leas el periódico te enterarás. ",B2
+3,5,Si no escuchas con atención te equivocarás otras vez. ,Te equivocarás otra vez si no escuchas con atención. ,B2
+4,1,Nos haremos mayores casi sin darnos cuenta. ,Casi sin darnos cuenta nos haremos mayores. |Sin casi darnos cuenta nos haremos mayores. |Nos haremos mayores casi sin darnos cuenta. ,B2
+4,2,¿Crees que el lince se extinguirá algún día?,¿Crees que algún día se extinguirá el lince?|¿Crees que algún día el lince se extinguirá?|¿Crees que se extinguirá el lince algún día?,B2
+4,3,¿Es verdad que os suscribiréis al podcast?,,B2
+4,4,He oído que os sacaréis el carné de conducir este verano. ,He oído que este verano os sacaréis el carné de conducir. ,B2
+4,5,"Lo ha hecho muy bien, se habrá apuntado a clases de teatro. ","Se habrá apuntado a clases de teatro, lo ha hecho muy bien. ",B2
+5,1,Al final del acto os daréis un abrazo de despedida. ,Os daréis un abrazo de despedida al final del acto. ,B2
+5,2,"¿Por qué no habla, se habrá quedado en blanco?",,B2
+5,3,Todos los coches de la policía se comunicarán durante el desfile. ,Durante el desfile todos los coches de la policía se comunicarán. ,B2
+5,4,Sois muy simpáticos y por lo que os integraréis bien. ,,B2
+5,5,Si come tantos caramelos de golpe se pondrá malo. ,Se pondrá malo si come tantos caramelos de golpe. ,B2
+6,1,"Veo mucho humo, ¿se habrá incendiado algo?","¿Se habrá incendiado algo?, veo mucho humo. ",B2
+6,2,Si paso por esos cristales se pinchará una rueda seguro. ,Se pinchará una rueda seguro si paso por esos cristales. ,B2
+6,3,Con esos disfraces se reconocerán por casualidad. ,Se reconocerán por casualidad con esos disfraces. ,B2
+6,4,Si no andas con cuidado te darás un golpe. ,Te darás un golpe si no andas con cuidado. ,B2
+6,5,Son muy parecidos y creo que se gustarán enseguida. ,Son muy parecido y creo que enseguida se gustarán. ,B2

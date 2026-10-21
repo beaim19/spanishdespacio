@@ -1,11 +1,61 @@
 ﻿set,id,before,after,word,translation,level
 1,1,Mañana yo,muy temprano para coger el {avión|plane}.,me levantaré,to get up,B1
-1,2,Después del {viaje|trip} nosotros,varios días.,nos ducharemos,to shower,B1
-1,3,Para la boda tú,muy elegante.,te vestirás,to get dressed,B1
-1,4,Esta noche los niños,pronto porque están cansados.,se acostarán,to go to bed,B1
-1,5,Ella,delante del {espejo|mirror} antes de salir.,se peinará,to comb one's hair,B1
+1,2,Con este sol yo,en la piscina.,me bañaré,to bathe,B1
+1,3,El año que viene,en el equipo de fútbol de los mayores. ,me inscribiré,to sign up,B1
+1,4,Al final,el brazo con tanto salto. ,me romperé,to break,B1
+1,5,Si me visto así,a mi hermana. ,me pareceré,to look alike,B1
 2,1,Estoy segura de que vosotros,en la primera fila.,os sentaréis,to sit down,B1
-2,2,Con este sol yo,en la piscina.,me bañaré,to bathe,B1
-2,3,Para la entrevista ella,con cuidado.,se maquillará,to put on makeup,B1
-2,4,Si pierde el partido él,mucho.,se quejará,to complain,B1
-2,5,El próximo lunes nosotros,antes del {amanecer|dawn}.,nos despertaremos,to wake up,B1
+2,2,Si seguís jugando con el teléfono,sin batería. ,os quedaréis,to run out,B1
+2,3,El mes que viene,de vacaciones al fin. ,os iréis,to go,B1
+2,4,Para el verano,el pelo para estar más frescos. ,os cortaréis,to cut,B1
+2,5,Leeréis el periódico y ,informados. ,os mantendréis,to keep,B1
+3,1,A partir de ahora,las gotas tú solo. ,te echarás,to put on,B1
+3,2,Para la boda tú,muy elegante.,te vestirás,to get dressed,B1
+3,3,Si comes tanto en un rato,regular.,te encontrarás,to feel,B1
+3,4,Promete que ,muy bien en clase. ,te portarás,to behave,B1
+3,5,Esta noche,al teléfono cuando llame la tía. ,te pondrás,to get on,B1
+4,1,Federico y yo,mal pero nos respetamos. ,nos llevamos,to get along,B1
+4,2,Después del {viaje|trip} nosotros,varios días.,nos ducharemos,to shower,B1
+4,3,El próximo lunes nosotros,antes del {amanecer|dawn}.,nos despertaremos,to wake up,B1
+4,4,Sin nuestros amigos,mucho en el camping. ,nos aburriremos,to get bored,B1
+4,5,Ya en la playa ,crema protectora. ,nos daremos,to put on,B1
+5,1,Cuando llegue el frío,las hojas de los árboles. ,se caerán,to fall,B1
+5,2,Si tienen dinero en la cuenta,el videojuego. ,se descargarán,to download,B1
+5,3,Esta noche los niños,pronto porque están cansados.,se acostarán,to go to bed,B1
+5,4,Si no los llevamos al parque,tristes. ,se pondrán,to get,B1
+5,5,Creo que en Navidad,unos días a la playa. ,se marcharán,to leave,B1
+6,1,Ella,delante del {espejo|mirror} antes de salir.,se peinará,to comb one's hair,B1
+6,2,Para la entrevista ella,con cuidado.,se maquillará,to put on makeup,B1
+6,3,Si pierde el partido él,mucho.,se quejará,to complain,B1
+6,4,En cuanto acabemos el camarero,el primer plato. ,se llevará,to put away,B1
+6,5,Si me llamas mientra cocino,toda la cena. ,se quemará,to burn,B1
+1,1,"No te preocupes, en la playa",de la radiación solar. ,nos protegeremos,to protect,B2
+1,2,Esta noche,en la fiesta de tus primos. ,nos colaremos,to sneak in,B2
+1,3,Cuando llegues ya,para salir. ,nos habremos preparado,to prepare,B2
+1,4,Seguramente,cuando montemos en el tren de la bruja. ,nos asustaremos,to fright,B2
+1,5,Durante el juicio solo,en las pruebas. ,nos basaremos,to base,B2
+2,1,O vas ahora o ,sin gasolina a mitad de camino. ,te quedarás,to stay,B2
+2,2,Me imagino que ya,cuenta de que fuera hace frío. ,te habrás dado,to realize,B2
+2,3,¿No,el tobillo otra vez?,te habrás torcido,to twist,B2
+2,4,Como siempre ,por casualidad de los rumores. ,te enterarás,to find out,B2
+2,5,Lee esto bien y ,una idea de lo que estamos hablando. ,te harás,to do,B2
+3,1,El proximo mes,a un piso nuevo. ,me trasladaré,to move,B2
+3,2,Con este record seguro que ya,para la final. ,me habré clasificado,to qualify,B2
+3,3,En las vacaciones ,en la cabaña del monte. ,me alojaré,to stay,B2
+3,4,Las próximas noches,a dormir en tu casa. ,me quedaré,to stay,B2
+3,5,"No quiero hablar contigo, por lo que no ",al teléfono. ,me pondré,to get on,B2
+4,1,,de pie en cuanto digan su nombre. ,se pondrá,to stand up,B2
+4,2,,de la lluvia en la parada de autobús. ,se habrá protegido,to protect,B2
+4,3,Si siguen así,el agua subterránea y tendremos sequía. ,se agotará,to run out,B2
+4,4,"Déjala, ya",toda la leña sola. ,se quemará,to burn,B2
+4,5,Creo que ,al periódico del colegio. ,se suscribirá,to subscribe,B2
+5,1,Mientras estéis fuera,por chat. ,os comunicaréis,to communicate,B2
+5,2,Para hacerme un favor,el turno la semana que viene. ,os cambiaréis,to change,B2
+5,3,,cuando hayáis acabado los deberes. ,os marcharéis,to leave,B2
+5,4,Esta noche no,a internet porque tenéis que dormir. ,os conectaréis,to connect,B2
+5,5,Pronto,cuenta de lo mucho que vale. ,os daréis,to realice,B2
+6,1,¿Cómo ,sus nombres en otro país?,se pronunciarán,to pronounce,B2
+6,2,¿Crees que,bien con nosotros?,se portarán,to behave,B2
+6,3,Si les dejas hablar,por las ramas. ,se irán,to go,B2
+6,4,Hoy no han venido porque,dormidos. ,se habrán quedado,to fall asleep,B2
+6,5,Con las medicinas pronto,mejor. ,se econtrarán,to feel,B2

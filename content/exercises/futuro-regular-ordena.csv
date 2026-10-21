@@ -1,11 +1,61 @@
 ﻿set,id,correct,also_correct,level
-1,1,Mañana yo hablaré con mis {compañeros|classmates} sobre el proyecto.,,B1
-1,2,El próximo verano nosotros viajaremos a la playa.,,B1
-1,3,Cuando llegue el invierno tú pasarás mucho frío.,,B1
+1,1,Mañana hablaré con mis {compañeros|classmates} sobre el proyecto.,Hablaré con mis compañeros sobre el proyecto mañana. |Hablaré mañana con mi compañeros sobre el proyecto. |Sobre el proyecto hablaré mañana con mis compañeros. |Mañana hablaré sobre el proyecto con mis compañeros. ,B1
+1,2,El próximo verano nosotros viajaremos a la playa.,Nosotros viajaremos a la playa el próximo verano. ,B1
+1,3,Cuando llegue el invierno pasarás mucho frío.,Pasarás mucho frío cuando llegue el invierno. ,B1
 1,4,Estoy segura de que ellos aprobarán el examen.,,B1
-1,5,Si sigues así terminarás muy pronto el proyecto.,,B1
-2,1,El año que viene vosotros compraréis una nueva casa.,,B1
-2,2,Para su cumpleaños yo le regalaré un {regalo|gift} especial.,,B1
-2,3,Con este calor las plantas necesitarán mucha {agua|water}.,,B1
-2,4,Después de la reunión nosotros revisaremos el informe juntos.,,B1
+1,5,Si sigues así terminarás muy pronto el proyecto.,Terminarás muy pronto el proyecto si sigues así. ,B1
+2,1,El año que viene compraréis una nueva casa.,Compraréis una nueva casa el año que viene. |El año que viene compraréis una casa nuevo. |Compraréis una casa nueva el año que viene. ,B1
+2,2,Para su cumpleaños le regalaré un algo especial.,Le regalaré algo especial por su cumpleaños. ,B1
+2,3,Con este calor las plantas necesitarán mucha {agua|water}.,Las plantas necesitarán mucho agua con este calor. ,B1
+2,4,Después de la reunión revisaremos el informe juntos.,Revisaremos el informe juntos después de la reunión. ,B1
 2,5,Estoy convencido de que ella conseguirá el {puesto|position}.,,B1
+3,1,Crees que lo sabes todo pero yo nunca trabajaré allí. ,,B1
+3,2,Seguro que explicará porqué no vino. ,,B1
+3,3,¿Sabes quién llevará las bebidas a la despedida de soltero?,,B1
+3,4,El libro que voy a escribir tratará de los años 80. ,,B1
+3,5,El médico ha dicho que llamará mañana por la tarde. ,,B1
+4,1,Me ha dicho que quitará la mesa. ,,B1
+4,2,"Nunca venderá su moto, le gusta demasiado. ",,B1
+4,3,Buscaremos la mejor manera de llegar a tu casa. ,,B1
+4,4,Deberá portarse mejor cuando esté en el colegio. ,Cuando esté en el colegio deberá portarse mejor. ,B1
+4,5,No cambiará nunca su actitud. ,,B1
+5,1,Después del teatro tomaremos una copa. ,Tomaremos una copa después del teatro. ,B1
+5,2,Acabaremos la carrera el año que viene. ,El año que viene acabaremos la carrera. ,B1
+5,3,Pasaremos por el parque de camino a tu casa. ,De camino a tu casa pasaremos por el parque. ,B1
+5,4,Esta medicina curará a muchas personas. ,,B1
+5,5,Ingresará esta noche en el hospital para la operación. ,Ingresará en el hospital esta noche para la operación. |Para la operación ingresará esta noche en el hospital. |Para la operación ingresará en el hospital esta noche.|Ingresará en el hospital para la operación esta noche. ,B1
+6,1,Contrataremos la línea de teléfono cuando regresemos del viaje de novios. ,Cuando regresemos del viaje de novios contraremos la línea de teléfono. ,B1
+6,2,Esta noche desinstalaré todos los videojuegos antiguos. ,Desinstalaré todos los videjuegos antiguos esta noche. ,B1
+6,3,Creo que esta conferencia no terminará nunca. ,,B1
+6,4,Para ir más rápido tu cortarás el pan. ,Tú cortarás el pan para ir más rápido. |Para ir más rápido cortarás tú el pan. |Cortarás tú el pan para ir más rápido. ,B1
+6,5,¿Quién pagará todos los carteles publicitarios?,,B1
+1,1,Como dijiste Marco trabajará en la empresa de coches. ,Marco trabajará en la empresa de coches como dijiste. ,B2
+1,2,En las próximas semanas desarrollarán el programa nuevo. ,En las próximas semanas desarrollarán el nuevo programa. |Desarollarán el programa nuevo en las próximas semanas. ,B2
+1,3,En pocos años ya habrá ocupado un puesto de importancia. ,Ya habrá ocupado un puesto de importancia en pocos años. ,B2
+1,4,Durante la semana que viene preparé el presupuesto de ese gran proyecto. ,Prepararé el presupuesto de ese gran proyecto durante la semana que viene. ,B2
+1,5,Se quedó de piedra al saber quién coordinará el equipo. ,Al saber quién coordinará el equipo se quedó de piedra. ,B2
+2,1,Negociaremos el contrato y así empezar la cotización a las Seguridad Social. ,,B2
+2,2,Está como una cabra y no firmará el contrato. ,,B2
+2,3,En mayo bajará el paro por los contratos de verano. ,Por los contratos de veradno en mayo bajará el paro. ,B2
+2,4,Tristemente no participaré en el proceso de selección. ,No participaré en el proceso de selección tristemente. ,B2
+2,5,Habrán contratado a mucha gente pero no se nota la diferencia. ,No habrán contratado a mucha gente pero se nota la diferencia. |Se nota la diferencia pero no habrán contratado a mucha gente. |No se nota la diferencia pero habrán contratado a mucha gente. ,B2
+3,1,Dependerá de quién vaya a la reunión el éxito de esta. ,El éxito de la reunión dependerá de quién vaya a esta. ,B2
+3,2,Se dice que cobrará el paro durante unos meses. ,,B2
+3,3,Al a espera de los resultados pasaremos el rato en la cafetería. ,Pasaremos el rato en la cafetería a la espera de los resultados. ,B2
+3,4,El equipo estrenará camisetas en el campeonato nacional. ,En el campeonato nacional el equipo estrenará camisetas. ,B2
+3,5,Ahora escogeréis a los miembros de vuestro equipo. ,,B2
+4,1,Estoy segura de que ganaremos la liga este año. ,Este año estoy segura de que ganaremos la liga. ,B2
+4,2,"Vamos a jugar, yo repartiré las cartas a todos. ",,B2
+4,3,Cuando lleguemos al parque ya habrán montado en los columpios. ,Ya habrán montado en los columpios cuando lleguemos al parque. ,B2
+4,4,Mañana anunciarán quién es el ganador del concurso. ,Anunciarán quién es el ganador del concurso mañana. ,B2
+4,5,Formularé una pregunta y el primero que conteste gana. ,Formularé una pregunta y gana el primero que conteste. ,B2
+5,1,Ya arreglarán la casa cuando esté demasiado sucia. ,Cuando esté demasiado sucia ya arreglarán la casa. ,B2
+5,2,Esta habitación la amueblaré yo a mi gusto. ,,B2
+5,3,¿Meterán a los ladrones en la cárcel?,,B2
+5,4,Si no calentáis bien sufriréis una lesión. ,Sufriréis una lesión si no calentáis bien. ,B2
+5,5,Reservaremos una mesa para cuando vengas. ,Para cuando vengas reservaremos una mesa. ,B2
+6,1,Señalaré en el libro el texto que tienes que estudiar. ,Señalaré en el texto el libro que tienes que estudiar. ,B2
+6,2,Cuando salgas al escenario aplaudiremos sin parar. ,Aplaudiremos sin parar cuando salgas al escenario. ,B2
+6,3,La policía indicará el camino para evitar las obras. ,Para evitar las obras le policía indicará el camino. ,B2
+6,4,Los niños enterrarán el tesoro para juego de los piratas. ,Para el juego de los piratas los niños enterrarán el tesoro. ,B2
+6,5,Habrás disfrutado mucho en tu visita a Chile. ,En tu visita a Chile habrás disfrutado mucho. ,B2

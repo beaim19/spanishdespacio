@@ -1,12 +1,61 @@
 ﻿set,id,before,after,word,translation,level
 1,1,Este {verano|summer} nosotros,muy poco tiempo libre.,tendremos,to have,B1
-1,2,Estoy seguro de que ella,la mesa en el {salón|living room}.,pondrá,to put,B1
-1,3,Mañana yo,de casa muy temprano.,saldré,to leave,B1
-1,4,El próximo mes ellos,a visitarnos.,vendrán,to come,B1
-1,5,Nadie sabe qué,el jefe sobre el {cambio|change}.,dirá,to say,B1
-2,1,Con esfuerzo tú,resolver el problema.,podrás,to be able to,B1
-2,2,Estoy convencido de que vosotros,la respuesta correcta.,sabréis,to know,B1
-2,3,Ella,quedarse un poco más.,querrá,to want,B1
-2,4,Para el viernes ya,terminado el {informe|report}.,habré,to have (aux.),B1
-2,5,Con esa receta la cena,deliciosa.,estará,to be,B1
-2,6,,"ya las diez, así que nos podemos ir. ",serán,to be,B1
+1,2,Pronto,si podemos ir a la montaña. ,sabremos,to know,B1
+1,3,Nunca te,la verdad porque no queremos. ,diremos,to say,B1
+1,4,,celebrar la boda en el bosque. ,querremos,to want,B1
+1,5,Mañana yo,cerca de la once de la mañana.,saldremos,to leave,B1
+2,1,Son tan lentos que seguramente,el vuelo. ,perderán,to miss,B1
+2,2,Me imagino que ahora,quién ha ganado. ,dirán,to say,B1
+2,3,El próximo mes,a visitarnos.,vendrán,to come,B1
+2,4,,"ya las diez, así que nos podemos ir. ",serán,to be,B1
+2,5,Los niños,pensando que no sabemos hacerlo. ,estarán,to be,B1
+3,1,Él,lo que quiere hacer. ,sabrá,to know,B1
+3,2,Ella,quedarse un poco más.,querrá,to want,B1
+3,3,Nadie sabe qué,el jefe sobre el {cambio|change}.,dirá,to say,B1
+3,4,Estoy seguro de que ella,la mesa en el {salón|living room}.,pondrá,to put,B1
+3,5,Con esa receta la cena,deliciosa.,estará,to be,B1
+4,1,Ya te,lo que he pensado. ,diré,to say,B1
+4,2,Mañana yo,de casa muy temprano.,saldré,to leave,B1
+4,3,Para el viernes ya,terminado el {informe|report}.,habré,to have (aux.),B1
+4,4,En estas ventandas,unas cortinas azules. ,pondré,to put,B1
+4,5,Con el trabajo nuevo no,nada de tiempo libre. ,tendré,to have,B1
+5,1,Ahora,toda la verdad,dirás,to say,B1
+5,2,Después de comer ,café a esas mesas de allí. ,servirás,to serve,B1
+5,3,Con esfuerzo tú,resolver el problema.,podrás,to be able to,B1
+5,4,Después de tanto estudiar,presentarte al examen. ,querrás,to want,B1
+5,5,No protestes porque ,lo que te ha dicho la maestra. ,harás,to do,B1
+6,1,A pesar del café,muy bien esta noche. ,dormiréis,to sleep,B1
+6,2,Estoy convencido de que vosotros,la respuesta correcta.,sabréis,to know,B1
+6,3,Como siempre,razón y tendré que hacerlo. ,tendréis,to have,B1
+6,4,Si os apretáis,todos en el coche. ,cabréis,to fit,B1
+6,5,,en fila hasta la puerta del comedor. ,iréis,to go,B1
+1,1,A estas horas mañana ya,a la playa. ,habrás llegado,to have,B2
+1,2,Ya me,a qué hora debo recogerte. ,dirás,to say,B2
+1,3,Si no vas a comprar no,ni agua ni aceite. ,tendrás,to have,B2
+1,4,"Según el plan, a las cinco ya",todo el proyecto. ,habrás impreso,to print,B2
+1,5,"En suma, ya",y descansarás cuando lleguemos a casa. ,dormirás,to sleep,B2
+2,1,Ya,tiempos mejores. ,vendrán,to come,B2
+2,2,"En cualquier caso, no",abrir la puerta sin las llaves. ,podrán,to be able to,B2
+2,3,Para entonces ya,todo el dinero a su dueño. ,habrán devuelto,to return,B2
+2,4,,la liga si no empiezan a meter goles. ,perderán,to lose,B2
+2,5,Me imagino que los niños,más caramelos. ,querrán,to want,B2
+3,1,Esta noche no,porque necesito paz. ,reñiréis,to fight,B2
+3,2,¿No,vosotros la taza del abuelo?,habréis roto,to break,B2
+3,3,Según el horario mañana,antes que otros días. ,saldréis,to get out,B2
+3,4,Cuando os pregunte el policía ,solo la verdad. ,diréis,to say,B2
+3,5,,no haber dicho la verdad. ,sentiréis,to feel,B2
+4,1,"Hazme caso, ",el puesto que quiero. ,conseguiré,to get,B2
+4,2,No,"ahora el examen, esperaré a junio. ",haré,to do,B2
+4,3,"No os preocupéis, cuando lleguéis ya",los huevos. ,habré frito,to fry,B2
+4,4,,trabajando para la misma empresa durante unos meses. ,seguiré,to continue,B2
+4,5,Para la primavera ya,la tienda de productos típicos. ,habré reabierto,to reopen,B2
+5,1,Imagino que ya,la crónica. ,habrá escrito,to write,B2
+5,2,La compañía,su producto nuevo en toda la comarca. ,distribuirá,to distribute,B2
+5,3,¿Tú crees que ,toda la compra en las bolsas?,cabrá,to fit,B2
+5,4,El nuevo ambiente en la oficina,el estrés de los últimos meses. ,prevendrá,to prevent,B2
+5,5,La escuela no,un gran gasto este curso. ,supondrá,to suposse,B2
+6,1,"Precisamente, ",mañana temprano.,saldremos,to leave,B2
+6,2,"Para cuando salga en el periódico, ya",la casa en nuestra revista. ,habremos descrito,to describe,B2
+6,3,Ya,quién pone la mesa hoy. ,veremos,to see,B2
+6,4,Cuando volváis de vacaciones nosotros ya,a la montaña. ,habremos ido,to go,B2
+6,5,,a verte a la residencia todos los meses. ,vendremos,to come,B2
