@@ -277,8 +277,15 @@
     return { correct: correctCount, total: items.length };
   }
 
+  // "Intentar de nuevo" only clears the boxes that were wrong (or empty);
+  // correct ones stay filled and locked. If EVERY answer was right, it
+  // clears all of them.
   function resetExercise(list) {
-    list.querySelectorAll('.exercise-item').forEach((item) => {
+    const items = [...list.querySelectorAll('.exercise-item')];
+    const isRight = (item) => item.querySelector('.exercise-input').classList.contains('input-correct');
+    const resetAll = items.every(isRight);
+    items.forEach((item) => {
+      if (!resetAll && isRight(item)) return;
       const input = item.querySelector('.exercise-input');
       const feedback = item.querySelector('.exercise-feedback');
       input.value = '';

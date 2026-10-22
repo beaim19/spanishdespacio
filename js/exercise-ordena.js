@@ -407,8 +407,15 @@
     return { correct: correctCount, total: items.length };
   }
 
+  // "Intentar de nuevo" only clears the sentences that were wrong (or left
+  // empty); correctly rebuilt ones stay as they are, locked. If EVERY
+  // sentence was right, it clears all of them.
   function resetExercise(list) {
-    list.querySelectorAll('.ordena-item').forEach((item) => {
+    const items = [...list.querySelectorAll('.ordena-item')];
+    const isRight = (item) => item.querySelector('.ordena-assembly').classList.contains('ordena-assembly-correct');
+    const resetAll = items.every(isRight);
+    items.forEach((item) => {
+      if (!resetAll && isRight(item)) return;
       const assembly = item.querySelector('.ordena-assembly');
       assembly.classList.remove('ordena-assembly-correct', 'ordena-assembly-incorrect');
       assembly.querySelectorAll('.ordena-word').forEach((w) => w.remove());

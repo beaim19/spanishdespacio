@@ -463,6 +463,17 @@ uses to show the correct answer while the class is present:
 }
 ```
 
+**"Intentar de nuevo" only clears what was wrong.** Items answered
+correctly stay filled in and locked (they keep their green look, and in
+Empareja/Texto Fácil their word stays out of the word bank); wrong or
+empty ones are cleared and their words go back to the bank. If *every*
+item was right there's nothing to keep, so it clears everything (Texto
+re-renders from scratch, which also reshuffles its bank). Each engine's
+`resetExercise()` (Texto: the retry handler) works out "right" from the
+green class the check already put on the item, so nothing extra is
+tracked, and a second Comprobar simply re-grades everything (kept items
+are still right) and scores all of them, not just the retried ones.
+
 Nothing about *grading* changes — the green/red coloring, the score count,
 and disabling inputs after Comprobar all work exactly as before. Only the
 textual/highlighted "here's what was correct" reveal is deferred.

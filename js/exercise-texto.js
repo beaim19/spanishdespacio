@@ -483,8 +483,57 @@
       solutionBtn.hidden = true;
     });
 
+    // "Intentar de nuevo" only clears the blanks that were wrong (or empty);
+    // correct ones keep their word and stay locked. If EVERY blank was
+    // right there's nothing to keep, so it starts over completely (a full
+    // re-render, which also reshuffles the word bank).
     retryBtn.addEventListener('click', () => {
-      renderExercise(container, row, setNumber, allSets, mode, availableLevels, requestedLevel);
+      const isRight = ({ el }) => el.classList.contains('drop-slot-correct')
+        || el.classList.contains('input-correct');
+      if (blanks.every(isRight)) {
+        renderExercise(container, row, setNumber, allSets, mode, availableLevels, requestedLevel);
+        return;
+      }
+
+      const keptChipIds = new Set();
+      blanks.forEach((blank) => {
+        const { el, kind } = blank;
+        if (isRight(blank)) {
+          if (kind === 'slot') keptChipIds.add(el.dataset.chipId);
+          return;
+        }
+        // The "(correcto: ...)" note sits right after the blank.
+        const next = el.nextElementSibling;
+        if (next && next.classList.contains('exercise-feedback')) next.remove();
+        el.disabled = false;
+        if (kind === 'slot') {
+          el.textContent = '______';
+          el.dataset.filled = 'false';
+          delete el.dataset.chipId;
+          delete el.dataset.word;
+          el.classList.remove('drop-slot-filled', 'drop-slot-correct', 'drop-slot-incorrect');
+        } else {
+          el.value = '';
+          el.style.width = ''; // back to the CSS base width
+          el.classList.remove('input-correct', 'input-incorrect');
+        }
+      });
+
+      if (pool) {
+        pool.querySelectorAll('.pool-chip').forEach((chip) => {
+          const kept = keptChipIds.has(chip.dataset.chipId);
+          chip.disabled = kept;
+          chip.hidden = kept;
+          chip.classList.remove('pool-chip-selected');
+        });
+        selectedChip = null;
+      }
+
+      result.textContent = '';
+      checkBtn.hidden = false;
+      solutionBtn.hidden = true;
+      retryBtn.hidden = true;
+      container.classList.remove('solution-hidden');
     });
 
     controls.appendChild(checkBtn);

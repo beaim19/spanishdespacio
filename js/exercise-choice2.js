@@ -194,11 +194,20 @@
     return { correct: correctCount, total: items.length };
   }
 
+  // "Intentar de nuevo" only clears the questions that were wrong (or left
+  // unanswered); the ones answered correctly stay as they are, locked.
+  // If EVERY question was right, there's nothing to keep, so it clears all.
   function resetExercise(list) {
-    list.querySelectorAll('.option-btn').forEach((btn) => {
-      btn.disabled = false;
-      btn.classList.remove('option-selected', CORRECT_CLASS, INCORRECT_CLASS, REVEAL_CLASS);
-      btn.setAttribute('aria-pressed', 'false');
+    const items = [...list.querySelectorAll('.exercise-item')];
+    const isRight = (item) => Boolean(item.querySelector(`.${CORRECT_CLASS}`));
+    const resetAll = items.every(isRight);
+    items.forEach((item) => {
+      if (!resetAll && isRight(item)) return;
+      item.querySelectorAll('.option-btn').forEach((btn) => {
+        btn.disabled = false;
+        btn.classList.remove('option-selected', CORRECT_CLASS, INCORRECT_CLASS, REVEAL_CLASS);
+        btn.setAttribute('aria-pressed', 'false');
+      });
     });
   }
 

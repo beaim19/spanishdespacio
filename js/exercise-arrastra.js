@@ -303,8 +303,19 @@
     return { correct: correctCount, total: items.length };
   }
 
+  // "Intentar de nuevo" only clears the blanks that were wrong (or empty):
+  // correct ones keep their word, stay locked, and their chip stays out of
+  // the word bank. If EVERY blank was right, it clears all of them.
   function resetExercise(list, pool) {
-    list.querySelectorAll('.drop-slot').forEach((slot) => {
+    const slots = [...list.querySelectorAll('.drop-slot')];
+    const isRight = (slot) => slot.classList.contains('drop-slot-correct');
+    const resetAll = slots.every(isRight);
+    const keptChipIds = new Set();
+    slots.forEach((slot) => {
+      if (!resetAll && isRight(slot)) {
+        keptChipIds.add(slot.dataset.chipId);
+        return;
+      }
       slot.disabled = false;
       slot.textContent = '______';
       slot.dataset.filled = 'false';
@@ -314,8 +325,9 @@
     });
     list.querySelectorAll('.drop-slot-reveal').forEach((reveal) => reveal.remove());
     pool.querySelectorAll('.pool-chip').forEach((chip) => {
-      chip.disabled = false;
-      chip.hidden = false;
+      const kept = keptChipIds.has(chip.dataset.chipId);
+      chip.disabled = kept;
+      chip.hidden = kept;
       chip.classList.remove('pool-chip-selected');
     });
   }

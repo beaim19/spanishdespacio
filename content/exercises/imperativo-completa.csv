@@ -4,7 +4,7 @@
 1,3,Vosotros,la mesa en el restaurante. ,reservar,,reservad,to reserve,A2
 1,4,Vosotros,la medicina ahora. ,tomar,,tomad,to take,A2
 1,5,"Por favor, Marta y tú",ya la maletas. ,deshacer,,deshaced,to unpack,A2
-2,1,,"tú por favor, yo no tengo tiempo de ir a la tienda. ",comprar,,cómpralo,to buy,A2
+2,1,,"tú por favor, yo no tengo tiempo de ir a la tienda. ",comprar,,compra,to buy,A2
 2,2,Ustedes,el metro para venir a casa. ,tomar,,tomen,to take,A2
 2,3,"Pedro, ",el coche por favor. ,lavar,,lava,to wash,A2
 2,4,Mañana tú,de casa temprano. ,salir,,sal,to get out,A2
@@ -15,7 +15,7 @@
 3,4,,"tú, no es nada fácil. ",hacer,,hazlo,to do,A2
 3,5,"Estoy de acuerdo, tú ahora",el cuaderno en la mochila. ,meter,,mete,to put in,A2
 4,1,,ustedes la compra de hoy. ,pagar,,paguen,to pay,A2
-4,2,Tú,que llevar esto al colegio. ,tener,,tienes,to have to,A2
+4,2,Tú,esto al colegio. ,llevar,,lleva,to bring,A2
 4,3,"Mario, ","la leche rápido, tenemos prisa. ",beber,,bebe,to drink,A2
 4,4,"Si no te importa, ",esto por fax. ,enviar,,envía,to send,A2
 4,5,"Después de la boca de metro, usted",todo recto por la calle. ,continuar,,continúe,to continue,A2
@@ -24,16 +24,16 @@
 5,3,,"vosotros tres al cine, yo me quedo en casa. ",ir,,id,to go,A2
 5,4,"Quizá, mejor",vosotros. ,pagar,,pagad,to pay,A2
 5,5,¿Ves este botón?,bien.,pulsar,,púlsalo,to push,A2
-1,1,Vosotros,ya y él lo entenderá. ,decir,,decídselo,to say,B1
+1,1,"Vosotros no lo escondáis, ",a él ya y él lo entenderá. ,decir,,decídselo,to say,B1
 1,2,,", ¿se puede retirar un momento, por favor?",perdonar,,perdone,to excuse,B1
 1,3,Esta noche,pronto y mañana estarás descansado. ,acostar,,acuéstate,to go to sleep,B1
 1,4,"Pasa, ",", te estábamos esperando. ",pasar,,pasa,to come in,B1
 1,5,No,antes de haberte despedido. ,irse,,te vayas,to leave,B1
-2,1,Mañana,usted antes de las nueve. ,traer,,traígalo,to bring,B1
+2,1,"Mañana, el ibro, ",usted antes de las nueve. ,traer,,traígalo,to bring,B1
 2,2,,"voluntario a la pizarra, la maestra te dará puntos. ",salir,,sal,to go up to,B1
 2,3,,todas las palabras que no entiendas. ,tachar,,tacha,to cross out,B1
 2,4,"Camarero, por favor, ",nota de lo que queremos. ,tomar,,tome,to take,B1
-2,5,"Eres bienvenido, ",como en tu propia casa. ,sentir,,siéntese,to feel,B1
+2,5,"Eres bienvenido, ",como en tu propia casa. ,sentir,,siéntete,to feel,B1
 3,1,"Con este frío,",nosotros la chimenea. ,encender,,encendamos,to light,B1
 3,2,"Si tienes tú las pegatinas, ",a mí para guardarlas.,dar,,dámelas,to give,B1
 3,3,No,"el vidrio a la basura, recíclalo. ",tirar,,tires,to throw,B1
@@ -65,7 +65,7 @@
 3,4,,vosotros la fiesta de disfraces. ,organizar,,organizad,to organize,B2
 3,5,"Qué gran proyecto, ",todo a tus compañeros. ,mostrar,,muéstraselo,to show,B2
 4,1,Para la cena ,vosotros las pechugas y yo hago la ensalada. ,empanar,,empanad,to bread,B2
-4,2,"Si no queremos cocinar, ",hoy para comer. ,tapear,,tapeémos,to go the tapas,B2
+4,2,"Si no queremos cocinar, ",hoy para comer. ,tapear,,tapeemos,to go the tapas,B2
 4,3,,sobre lo que habéis hecho y luego hablamos. ,reflexionar,,reflexionad,to think about,B2
 4,4,,buenas notas y entoces podréis ir al viaje. ,sacar,,sacad,to get,B2
 4,5,Ustedes no,"los estudios, inténtelo hasta el final. ",abandonar,,abandonen,to quit,B2
