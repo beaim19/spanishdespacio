@@ -1,11 +1,121 @@
 ﻿set,id,before,after,infinitive,tense,correct,translation,level
-1,1,Mañana yo,muy temprano para coger el {avión|plane}.,levantarse,futuro simple,me levantaré,to get up,B1
-1,2,Después del {viaje|trip} nosotros,varios días.,ducharse,futuro simple,nos ducharemos,to shower,B1
-1,3,Para la boda tú,muy elegante.,vestirse,futuro simple,te vestirás,to get dressed,B1
-1,4,Esta noche los niños,pronto porque están cansados.,acostarse,futuro simple,se acostarán,to go to bed,B1
-1,5,Ella,delante del {espejo|mirror} antes de salir.,peinarse,futuro simple,se peinará,to comb one's hair,B1
-2,1,Estoy segura de que vosotros,en la primera fila.,sentarse,futuro simple,os sentaréis,to sit down,B1
-2,2,Con este sol yo,en la piscina.,bañarse,futuro simple,me bañaré,to bathe,B1
-2,3,Para la entrevista ella,con cuidado.,maquillarse,futuro simple,se maquillará,to put on makeup,B1
-2,4,Si pierde el partido él,mucho.,quejarse,futuro simple,se quejará,to complain,B1
-2,5,El próximo lunes nosotros,antes del {amanecer|dawn}.,despertarse,futuro simple,nos despertaremos,to wake up,B1
+1,1,Mañana yo,muy temprano para coger el {avión|plane}.,levantarse,futuro imperfecto,me levantaré,to get up,B1
+1,2,Con este sol yo,en la piscina.,bañarse,futuro imperfecto,me bañaré,to bathe,B1
+1,3,El año que viene,en el equipo de fútbol de los mayores. ,inscribirse,futuro imperfecto,me inscribiré,to sign up,B1
+1,4,Al final,el brazo con tanto salto. ,romperse,futuro imperfecto,me romperé,to break,B1
+1,5,Si me visto así,a mi hermana. ,parecerse,futuro imperfecto,me pareceré,to look alike,B1
+2,1,Estoy segura de que vosotros,en la primera fila.,sentarse,futuro imperfecto,os sentaréis,to sit down,B1
+2,2,Si seguís jugando con el teléfono,sin batería. ,quedarse,futuro imperfecto,os quedaréis,to run out,B1
+2,3,El mes que viene,de vacaciones al fin. ,irse,futuro imperfecto,os iréis,to go,B1
+2,4,Para el verano,el pelo para estar más frescos. ,cortarse,futuro imperfecto,os cortaréis,to cut,B1
+2,5,Leeréis el periódico y ,informados. ,mantenerse,futuro imperfecto,os mantendréis,to keep,B1
+3,1,A partir de ahora,las gotas tú solo. ,echarse,futuro imperfecto,te echarás,to put on,B1
+3,2,Para la boda tú,muy elegante.,vestirse,futuro imperfecto,te vestirás,to get dressed,B1
+3,3,Si comes tanto en un rato,regular.,encontrarse,futuro imperfecto,te encontrarás,to feel,B1
+3,4,Promete que ,muy bien en clase. ,portarse,futuro imperfecto,te portarás,to behave,B1
+3,5,Esta noche,al teléfono cuando llame la tía. ,ponerse,futuro imperfecto,te pondrás,to get on,B1
+4,1,Federico y yo,mal pero nos respetamos. ,llevarse,futuro imperfecto,nos llevamos,to get along,B1
+4,2,Después del {viaje|trip} nosotros,varios días.,ducharse,futuro imperfecto,nos ducharemos,to shower,B1
+4,3,El próximo lunes nosotros,antes del {amanecer|dawn}.,despertarse,futuro imperfecto,nos despertaremos,to wake up,B1
+4,4,Sin nuestros amigos,mucho en el camping. ,aburrirse,futuro imperfecto,nos aburriremos,to get bored,B1
+4,5,Ya en la playa ,crema protectora. ,darse,futuro imperfecto,nos daremos,to put on,B1
+5,1,Cuando llegue el frío,las hojas de los árboles. ,caerse,futuro imperfecto,se caerán,to fall,B1
+5,2,Si tienen dinero en la cuenta,el videojuego. ,descargarse,futuro imperfecto,se descargarán,to download,B1
+5,3,Esta noche los niños,pronto porque están cansados.,acostarse,futuro imperfecto,se acostarán,to go to bed,B1
+5,4,Si no los llevamos al parque,tristes. ,ponerse,futuro imperfecto,se pondrán,to get,B1
+5,5,Creo que en Navidad,unos días a la playa. ,marcharse,futuro imperfecto,se marcharán,to leave,B1
+6,1,Ella,delante del {espejo|mirror} antes de salir.,peinarse,futuro imperfecto,se peinará,to comb one's hair,B1
+6,2,Para la entrevista ella,con cuidado.,maquillarse,futuro imperfecto,se maquillará,to put on makeup,B1
+6,3,Si pierde el partido él,mucho.,quejarse,futuro imperfecto,se quejará,to complain,B1
+6,4,En cuanto acabemos el camarero,el primer plato. ,llevarse,futuro imperfecto,se llevará,to put away,B1
+6,5,Si me llamas mientra cocino,toda la cena. ,quemarse,futuro imperfecto,se quemará,to burn,B1
+7,1,Mañana yo,muy temprano para coger el {avión|plane}.,levantarse,futuro imperfecto,me levantaré,to get up,B1
+7,2,Después del {viaje|trip} nosotros,varios días.,ducharse,futuro imperfecto,nos ducharemos,to shower,B1
+7,3,Para la boda tú,muy elegante.,vestirse,futuro imperfecto,te vestirás,to get dressed,B1
+7,4,Esta noche los niños,pronto porque están cansados.,acostarse,futuro imperfecto,se acostarán,to go to bed,B1
+7,5,Ella,delante del {espejo|mirror} antes de salir.,peinarse,futuro imperfecto,se peinará,to comb one's hair,B1
+8,1,Estoy segura de que vosotros,en la primera fila.,sentarse,futuro imperfecto,os sentaréis,to sit down,B1
+8,2,Con este sol yo,en la piscina.,bañarse,futuro imperfecto,me bañaré,to bathe,B1
+8,3,Para la entrevista ella,con cuidado.,maquillarse,futuro imperfecto,se maquillará,to put on makeup,B1
+8,4,Si pierde el partido él,mucho.,quejarse,futuro imperfecto,se quejará,to complain,B1
+8,5,El próximo lunes nosotros,antes del {amanecer|dawn}.,despertarse,futuro imperfecto,nos despertaremos,to wake up,B1
+9,1,Creo que,bien con el nuevo jefe. ,llevarse,futuro imperfecto,me llevaré,to get along,B1
+9,2,Beltrán,muy contento cuando vea el regalo. ,ponerse,futuro imperfecto,se pondrá,to get,B1
+9,3,Según crezcan los gemelos,más a su madre. ,parecerse,futuro imperfecto,se parecerán,to look alike,B1
+9,4,Si no te llevas un libro,durante las vacaciones. ,aburrirse,futuro imperfecto,te aburrirás,to get bored,B1
+9,5,Esta semana tú y Julián ,la revisión anual. ,hacerse,futuro imperfecto,os haréis,to do,B1
+10,1,Cuando acabe el campamento mis amigas y yo,por carta. ,comunicarse,futuro imperfecto,nos comunicaremos,to communicate,B1
+10,2,"De acuerdo, estaré lista y cuando llame",al teléfono. ,ponerse,futuro imperfecto,me pondré,to get on,B1
+10,3,Pronto,a vivir a un barrio en las afueras. ,irse,futuro imperfecto,nos iremos,to go,B1
+10,4,Si no descansas pronto,mal de salud. ,encontrarse,futuro imperfecto,te encontrarás,to feel,B1
+10,5,Si no recargo pronto,sin batería. ,quedarse,futuro imperfecto,me quedaré,to run out,B1
+11,1,En breve,y comenzará a llover. ,nublarse,futuro imperfecto,se nublará,,B1
+11,2,Todos los días antes de ponernos el bañanador,crema protectora. ,darse,futuro imperfecto,nos daremos,to apply,B1
+11,3,Aunque estarán lejos,informados gracias a la radio. ,mantenerse,futuro imperfecto,se mantendrán,to keep,B1
+11,4,El ejercicio es tan fácil que todos los alumnos,para resolverlo en la pizarra. ,levantarse,futuro imperfecto,se levantarán,to get up,B1
+11,5,O regamos más o,todas las hojas. ,secarse,futuro imperfecto,se secarán,to dry,B1
+12,1,Durante el curso mi hermana y yo,a internet por las noches. ,conectarse,futuro imperfecto,nos conectaremos,to connect,B1
+12,2,Id todos a las fiestas populares porque,mucho. ,divertirse,futuro imperfecto,os divertiréis,to have fun,B1
+12,3,Si no apagas el horno,las costillas de cordero. ,quemarse,futuro imperfecto,se quemarán,to burn,B1
+12,4,Aunque no me gustan las despedidas,de todos después de cenar. ,despedirse,futuro imperfecto,me despediré,to say goodbye,B1
+12,5,El próximo curso ,a clase de música. ,inscribirse,futuro imperfecto,se inscribirán,to sign up,B1
+1,1,"No te preocupes, en la playa",de la radiación solar. ,protegerse,futuro imperfecto,nos protegeremos,to protect,B2
+1,2,Esta noche,en la fiesta de tus primos. ,colarse,futuro imperfecto,nos colaremos,to sneak in,B2
+1,3,Cuando llegues ya,para salir. ,prepararse,futuro perfecto,nos habremos preparado,to prepare,B2
+1,4,Seguramente,cuando montemos en el tren de la bruja. ,asustarse,futuro imperfecto,nos asustaremos,to fright,B2
+1,5,Durante el juicio solo,en las pruebas. ,basarse,futuro imperfecto,nos basaremos,to base,B2
+2,1,O vas ahora o ,sin gasolina a mitad de camino. ,quedarse,futuro imperfecto,te quedarás,to stay,B2
+2,2,Me imagino que ya,cuenta de que fuera hace frío. ,darse,futuro perfecto,te habrás dado,to realize,B2
+2,3,¿No,el tobillo otra vez?,torcerse,futuro perfecto,te habrás torcido,to twist,B2
+2,4,Como siempre ,por casualidad de los rumores. ,enterarse,futuro imperfecto,te enterarás,to find out,B2
+2,5,Lee esto bien y ,una idea de lo que estamos hablando. ,hacerse,futuro imperfecto,te harás,to do,B2
+3,1,El proximo mes,a un piso nuevo. ,trasladarse,futuro imperfecto,me trasladaré,to move,B2
+3,2,Con este record seguro que ya,para la final. ,clasificarse,futuro perfecto,me habré clasificado,to qualify,B2
+3,3,En las vacaciones ,en la cabaña del monte. ,alojarse,futuro imperfecto,me alojaré,to stay,B2
+3,4,Las próximas noches,a dormir en tu casa. ,quedarse,futuro imperfecto,me quedaré,to stay,B2
+3,5,"No quiero hablar contigo, por lo que no ",al teléfono. ,ponerse,futuro imperfecto,me pondré,to get on,B2
+4,1,,de pie en cuanto digan su nombre. ,ponerse,futuro imperfecto,se pondrá,to stand up,B2
+4,2,,de la lluvia en la parada de autobús. ,protegerse,futuro perfecto,se habrá protegido,to protect,B2
+4,3,Si siguen así,el agua subterránea y tendremos sequía. ,agotarse,futuro imperfecto,se agotará,to run out,B2
+4,4,"Déjala, ya",toda la leña sola. ,quemarse,futuro imperfecto,se quemará,to burn,B2
+4,5,Creo que ,al periódico del colegio. ,suscribirse,futuro imperfecto,se suscribirá,to subscribe,B2
+5,1,Mientras estéis fuera,por chat. ,comunicarse,futuro imperfecto,os comunicaréis,to communicate,B2
+5,2,Para hacerme un favor,el turno la semana que viene. ,cambiarse,futuro imperfecto,os cambiaréis,to change,B2
+5,3,,cuando hayáis acabado los deberes. ,marcharse,futuro imperfecto,os marcharéis,to leave,B2
+5,4,Esta noche no,a internet porque tenéis que dormir. ,conectarse,futuro imperfecto,os conectaréis,to connect,B2
+5,5,Pronto,cuenta de lo mucho que vale. ,darse,futuro imperfecto,os daréis,to realice,B2
+6,1,¿Cómo ,sus nombres en otro país?,pronunciarse,futuro imperfecto,se pronunciarán,to pronounce,B2
+6,2,¿Crees que,bien con nosotros?,portarse,futuro imperfecto,se portarán,to behave,B2
+6,3,Si les dejas hablar,por las ramas. ,irse,futuro imperfecto,se irán,to go,B2
+6,4,Hoy no han venido porque,dormidos. ,quedarse,futuro perfecto,se habrán quedado,to fall asleep,B2
+6,5,Con las medicinas pronto,mejor. ,encontrarse,futuro imperfecto,se encontrarán,to feel,B2
+7,1,Con esos saltos,un tobillo fácilmente. ,torcerse,futuro imperfecto,te torcerás,to twist,B2
+7,2,Mirad este vídeo y ,una idea de a lo que nos enfrentamos. ,hacerse,futuro imperfecto,os haréis,to do,B2
+7,3,Antes de dormir ,las uñas. ,cepillarse,futuro imperfecto,te cepillarás,to brush,B2
+7,4,,a mi nueva casa nada más terminar de trabajar. ,trasladarse,futuro imperfecto,me trasladaré,to move,B2
+7,5,"El ordenador no funciona, ",.,bloquearse,futuro perfecto,se habrá bloqueado,to block,B2
+8,1,Los del pañuelo verde,en el albergue central. ,alojarse,futuro imperfecto,se alojarán,to host,B2
+8,2,"No, no sé si tus amigas",a nuestra revista. ,suscribirse,futuro imperfecto,se sucribirán,to subscribe,B2
+8,3,A primeros de año Andrés y Cecilia ya,el carné de conducir. ,sacarse,futuro perfecto,se habrán sacado,to take out,B2
+8,4,Si no llego antes de las nueve ,mi programa favorito. ,perderse,futuro imperfecto,me perderé,to miss,B2
+8,5,Ana es la chica que,a las clases de baloncesto. ,apuntarse,futuro imperfecto,se apuntará,to sign up,B2
+9,1,Imagino que cuando se vean,dos besos. ,darse,futuro imperfecto,se darán,to give,B2
+9,2,Si no me preparo bien,en blanco nada más empezar. ,quedarse,futuro imperfecto,me quedaré,to become,B2
+9,3,Parece que los días que estemos aquí,poco con gente de fuera. ,comunicarse,futuro imperfecto,nos comunicaremos,to communicate,B2
+9,4,Llegamos tarde y ya,a la mesa. ,sentarse,futuro perfecto,se habrán sentado,to sit,B2
+9,5,El que llegue primero,de quién ha ganado el concurso. ,enterarse,futuro imperfecto,se enterará,to find out,B2
+10,1,¿Te has enterado de que Jaime,para el examen en la academia?,prepararse,futuro imperfecto,se preparará,to prepare,B2
+10,2,Con todas estas lluvias,todo el pueblo. ,inundarse,futuro imperfecto,se inundará,to flood,B2
+10,3,Si voy con mi primo,en grande con él. ,pasarselo,futuro imperfecto,me lo pasaré,to have a good time,B2
+10,4,Los mecánicos,al cambiar la pieza del coche. ,equivocarse,futuro imperfecto,se equivocaron,to make a mistake,B2
+10,5,¡Aunque no quieras tú también,mayor!,hacerse,futuro imperfecto,te harás,to do,B2
+11,1,"No vayas a buscarle, ya",en la clase. ,integrarse,futuro perfecto,se habrá integrado,to integrate,B2
+11,2,Con tanto jugar en la lluvia Pedro,malo. ,ponerse,futuro perfecto,se habrá puesto,to get,B2
+11,3,¿No crees que tus hijos,de la gripe en el colegio?,contagiarse,futuro imperfecto,se contagiaron,to catch,B2
+11,4,Con estas temperaturas ,todo el bosque. ,incendiarse,futuro imperfecto,se incendiará,to burn,B2
+11,5,Lucas y Ana ,"en dos idiomas, tienen mucha suerte. ",educarse,futuro imperfecto,se educarán,to be educated,B2
+12,1,En el viaje vosotros dos,sobre todo con gente extranjera. ,relacionarse,futuro imperfecto,os relacionaréis,to connect,B2
+12,2,,si no vas mirando hacia delante. ,darse,futuro imperfecto,te darás,to realice,B2
+12,3,Estoy segura de que nada más veros,de vista. ,conocerse,futuro imperfecto,os conoceréis,to know,B2
+12,4,Después de dos días de fuego éste,por si solo. ,extinguirse,futuro imperfecto,se extinguirá,to extinguish,B2
+12,5,Con mi mala suerte seguro que ,la rueda de la bicicleta. ,pincharse,futuro imperfecto,se pinchará,to puncture,B2

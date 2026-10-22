@@ -1,0 +1,71 @@
+﻿set,id,before,after,word,translation,level
+1,1,,bien lo que te digo. ,escucha,to listen,A2
+1,2,,la mesa en la cocina hoy. ,pon,to set,A2
+1,3,,el dinero en el banco. ,cambia,to change,A2
+1,4,,en la tienda de la esquina. ,cómpralo,to buy,A2
+1,5,,bien tu direción en el papel. ,escribe,to write,A2
+2,1,,los deberes ahora. ,haced,to do,A2
+2,2,,el regalo a Manuel. ,dadle,to give,A2
+2,3,,todo recto hasta el final. ,seguid,to continue,A2
+2,4,,al fútbol ahora. ,jugad,to play,A2
+2,5,,el piso pronto. ,alquilad,to rent,A2
+3,1,,más con tus amigos. ,sal,to go out,A2
+3,2,Pues,", la casa es muy grande. ",mira,to look,A2
+3,3,,bien a las preguntas. ,responde,to answer,A2
+3,4,,ejercicio todos los días. ,haz,to do,A2
+3,5,,todo para el examen. ,memorízalo,to memorise,A2
+4,1,,usted fotocopias del proyecto. ,haga,to do,A2
+4,2,,la factura para el cliente. ,prepare,to prepare,A2
+4,3,,"usted al correo, por favor. ",responda,to answer,A2
+4,4,,una nota breve. ,escríbale,to write,A2
+4,5,,piso lo antes posible. ,busque,to look for,A2
+1,1,,y escúchame con atención. ,cállate,to shut up,B1
+1,2,,"a mover esta mesa, por favor. ",ayúdame,to help,B1
+1,3,"Si estás muy cansado, ",un poco a descansar. ,párate,to stop,B1
+1,4,"Con ese dolor de cabeza, ",una pastilla. ,tómate,to take,B1
+1,5,"Vale, ",entonces como prefieras. ,hazlo,to do,B1
+2,1,"Si no quieres venir a la cena, no",.,vengas,to come,B1
+2,2,No te,", ese cuchillo está muy afilado. ",cortes,to cut,B1
+2,3,No,esa puerta en ningún momento. ,abras,to open,B1
+2,4,No le,a nadie lo que te he dicho. ,cuentes,to tell,B1
+2,5,No te,", he estudiado mucho y voy a aprobar. ",preocupes,to worry,B1
+3,1,,todo lo que debe y no habrá problema. ,pague,to pay,B1
+3,2,,mañana a primera hora a mi despacho. ,tráigamelo,to bring,B1
+3,3,,"su bolígrafo azul, por favor, necesito firmar esto. ",présteme,to lend,B1
+3,4,"Si ha terminado, ",a casa. ,váyase,to go,B1
+3,5,,todo lo que quieran del bufet. ,tomen,to take,B1
+4,1,"Hace mucho frío hoy, ",dentro. ,sentémosnos,to sit,B1
+4,2,"Son tan bonitas, ",todas. ,comprémoslas,to buy,B1
+4,3,,"ya, se está haciendo tarde. ",vámonos,to go,B1
+4,4,No,más tiempo y vayamos al grano. ,perdamos,to waste,B1
+4,5,,"rápido, el partido empieza en cinco minutos. ",cambiémonos,to change,B1
+5,1,"Si sois ladrones,",", pero yo no quiero saber nada. ",robadlo,to steal,B1
+5,2,,buena nota y estaré contenta. ,sacad,to get,B1
+5,3,"Si queréis el coche, ",esta noche y lo traéis mañana.,lleváoslo,to take,B1
+5,4,,las velas los dos juntos. ,soplad,to blow,B1
+5,5,,y pensad qué es lo que queréis. ,paraos,to stop,B1
+1,1,¡,cuidado con ese coche!,ten,to have,B2
+1,2,¡,la puerta del coche corriendo!,abre,to open,B2
+1,3,,", verás cómo todo se soluciona. ",anímate,to cheer up,B2
+1,4,¡,", reacciona y hazlo de una vez!",venga,come on,B2
+1,5,,su cara cuando vio el regalo. ,imagínate,to imagine,B2
+2,1,,el contrato en cada página. ,firmen,to sign,B2
+2,2,,sus teléfonos durante la función. ,apaguen,to turn off,B2
+2,3,,de uno en uno y en silencio. ,entren,to come in,B2
+2,4,No,"la mesa, lo hacemos nosotros. ",recojan,to clear,B2
+2,5,,solo lo que opinan de este artículo. ,digan,to say,B2
+3,1,No,"por nada, yo lo soluciono. ",te preocupes,to be worried,B2
+3,2,¡,"hombre, era mi mejor camiseta!",vaya,to go,B2
+3,3,"¡Corre, ",", que no llegamos!",corre,to run,B2
+3,4,,"un poco, está muy nervioso. ",tranquilízalo,to calm down,B2
+3,5,¡No me,que era verdad!,digas,to say,B2
+4,1,¡,"ya, eso no puede ser verdad!",anda,to walk,B2
+4,2,,inmediatamente de tu escondite. ,sal,to get out,B2
+4,3,,", si te lo vas a pasar fenomenal. ",alégrate,to cheer up,B2
+4,4,,rápidamente para que nos ayuden. ,llama,to call,B2
+4,5,,de cenar tranquilamente y después nos vamos. ,termina,to finish,B2
+5,1,,", no hay quién esté aquí. ",vámonos,to go,B2
+5,2,,pronto el informe para mandarlo a tiempo. ,terminemos,to finish,B2
+5,3,,a la iglesia y coloquemos las flores. ,entremos,to come in,B2
+5,4,,"al equipo, parecen un poco alicaídos. ",animemos,to cheer up,B2
+5,5,,"un poco, y continuemos con la tarea. ",calmémonos,to calm down,B2

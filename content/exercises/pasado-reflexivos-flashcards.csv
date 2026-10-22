@@ -1,5 +1,5 @@
 ﻿set,id,before,after,infinitive,tense,correct,translation,level
-1,1,Yo,{tarde|late} {ayer|yesterday}.,depertarse,pretérito indefinido,me desperté,to wake up,A2
+1,1,Yo,{tarde|late} {ayer|yesterday}.,despertarse,pretérito indefinido,me desperté,to wake up,A2
 1,2,Ellos,mucho en la {playa|beach}.,broncearse,pretérito indefinido,se broncearon,to tan,A2
 1,3,Ella ,muy {simpática|friendly} con el {tiempo|time}. ,volverse,pretérito indefinido,se volvió,to come back,A2
 1,4,Los estudiantes,para el master el {primer|first} día. ,inscribirse,pretérito indefinido,se inscribieron,to sign in,A2
@@ -20,22 +20,142 @@
 4,4,En el {campamento|camp} los niños,cada {mañana|morning}. ,ducharse,pretérito imperfecto,se duchaban,to shower,A2
 4,5,Yo,con {pasar|to pass} el {examen|test}. ,conformarse,pretérito imperfecto,me conformaba,to conform,A2
 5,1,Nosotros,muy temprano durante las {vacaciones|vacation}.,levantarse,pretérito imperfecto,nos levantábamos,to get up,A2
-5,2,Tú ,en la {fiesta|party}.,colarse,pretérito perfecto simple,te colaste,to sneak in,A2
+5,2,Tú ,en la {fiesta|party}.,colarse,pretérito indefinido,te colaste,to sneak in,A2
 5,3,Vosotros,con el {fantasma|ghost}.,asustarse,pretérito imperfecto,os asustabais,to get scared of,A2
-5,4,Ellos,{ayer|yesterday} para la {excursión|excursion}. ,prepararse,pretérito perfecto simple,se prepararon,to prepare,A2
-5,5,Vosotros,con el {rosal|rosebush}. ,pincharse,pretérito perfecto simple,os pinchasteis,to puncture,A2
+5,4,Ellos,{ayer|yesterday} para la {excursión|excursion}. ,prepararse,pretérito indefinido,se prepararon,to prepare,A2
+5,5,Vosotros,con el {rosal|rosebush}. ,pincharse,pretérito indefinido,os pinchasteis,to puncture,A2
 6,1,Ella,en clase.,distraerse,pretérito imperfecto,se distraía,to get distracted,A2
-6,2,Tú ,en el {sillón|couch}.,sentarse,pretérito perfecto simple,te sentaste,to sit,A2
-6,3,Nostras,todas las {mantas|blankets} al {dormitorio|bedroom}. ,llevarse,pretérito perfecto simple,nos llevamos,to take,A2
+6,2,Tú ,en el {sillón|couch}.,sentarse,pretérito indefinido,te sentaste,to sit,A2
+6,3,Nostras,todas las {mantas|blankets} al {dormitorio|bedroom}. ,llevarse,pretérito indefinido,nos llevamos,to take,A2
 6,4,Ustedes,de la lista de {invitados|guests}. ,encargarse,pretérito imperfecto,se encargaban,to be in charge of,A2
-6,5,Yo,ayer del {cambio|change} de {planes|plans}.,enterarse,pretérito perfecto simple,me enteré,to find out,A2
-7,1,Yo ,de su {promesa|promise}. ,fiarse,pretérito perfecto simple,me fie,to trust,A2
-7,2,Vosotros,muy bien para el {partido|game}. ,prepararse,pretérito perfecto simple,os preparasteis,to get ready,A2
+6,5,Yo,ayer del {cambio|change} de {planes|plans}.,enterarse,pretérito indefinido,me enteré,to find out,A2
+7,1,Yo ,de su {promesa|promise}. ,fiarse,pretérito indefinido,me fie,to trust,A2
+7,2,Vosotros,muy bien para el {partido|game}. ,prepararse,pretérito indefinido,os preparasteis,to get ready,A2
 7,3,Ellos no,nunca en los {partidos|games}. ,cansarse,pretérito imperfecto,se cansaban,to get tired,A2
-7,4,Nosotros,mucho esta {tarde|afternoon}.,divertirse,pretérito perfecto compuesto,nos hemos divertido,to have fun,A2
-7,5,Tú ,{ayer|yesterday} por la {noche|night}. ,ducharse,pretérito perfecto simple,te duchaste,to shower,A2
+7,4,Nosotros,mucho ayer.,divertirse,pretérito indefinido,nos divertimos,to have fun,A2
+7,5,Tú ,{ayer|yesterday} por la {noche|night}. ,ducharse,pretérito indefinido,te duchaste,to shower,A2
 8,1,Tú ,muy {a menudo|often}. ,equivocarse,pretérito imperfecto,te equivocabas,to be wrong,A2
 8,2,Yo en invierno,{pronto|early} a la {cama|bed}.,irse,pretérito imperfecto,me iba,to leave,A2
-8,3,Ella no,a la {decisión|decision}.,oponerse,pretérito perfecto simple,se opuso,to opose,A2
-8,4,Vosotros,muchas veces a la {piscina|swimming pool}. ,tirarse,pretérito perfecto simple,os tirasteis,to jump into,A2
+8,3,Ella no,a la {decisión|decision}.,oponerse,pretérito indefinido,se opuso,to opose,A2
+8,4,Vosotros,muchas veces a la {piscina|swimming pool}. ,tirarse,pretérito indefinido,os tirasteis,to jump into,A2
 8,5,Nosotros,siempre de {comprar|to buy} {arroz|rice}.,olvidarse,pretérito imperfecto,nos olvidábamos,to forget,A2
+1,1,,"siempre mal con su hermano, pero con la edad se entendieron. ",,pretérito pluscuamperfecto,se había llevado,to get along,B1
+1,2,,muy contento cuando volvió a casa. ,ponerse,pretérito indefinido,se puso,to get,B1
+1,3,En casa,"muy mal, pero en la escuela era bueno. ",portarse,pretérito imperfecto,se portaba,to behave,B1
+1,4,Mariela,tanto a su padre. ,parecerse,pretérito imperfecto,se parecía,to look alike,B1
+1,5,Olvidé el horno y ,la comida. ,quemarse,pretérito indefinido,se quemó,to burn,B1
+2,1,En el camping,informada gracias a la radio. ,mantenerse,pretérito imperfecto,me mantenía,to keep,B1
+2,2,,sin batería y no te puede llamar. ,quedarse,pretérito indefinido,me quedé,to run out,B1
+2,3,Ayer,en la asociación de vecinos. ,inscribirse,pretérito indefinido,me inscribí,to sign for,B1
+2,4,Después de los campamentos,con mis amigas por carta porque no había móviles. ,comunicarse,pretérito imperfecto,me comunicaba,to communicate,B1
+2,5,,tan mal que tuve que cancelar la reunión.,encontrarse,pretérito imperfecto,me encontraba,to feel,B1
+3,1,,mucha música y ahora no hay sitio en la memoria. ,bajarse,pretérito indefinido,os bajasteis,to download,B1
+3,2,¿,ya a internet o aún no funciona?,conectarse,pretérito pluscuamperfecto,os habéis conectado,to connect,B1
+3,3,,a vivir a un barrio muy interesante. ,irse,pretérito pluscuamperfecto,os habéis ido,to go,B1
+3,4,Ayer,"la revisión, y hoy tenéis los resultados. ",hacerse,pretérito indefinido,os hicisteis,to do,B1
+3,5,Os quemasteis porque no,crema protectora. ,darse,pretérito indefinido,os disteis,to apply,B1
+4,1,"Ha sido un verano duro, ",todas las hojas. ,secarse,pretérito perfecto,se han secado,to dry,B1
+4,2,Sus padres llamaban cada noche pero los niños no,al teléfono. ,ponerse,pretérito imperfecto,se ponían,to get on,B1
+4,3,Se cayeron de la bici y ,una herida en la rodilla. ,hacerse,pretérito indefinido,se hicieron,to do,B1
+4,4,Además de las heridas ,un brazo. ,romperse,pretérito indefinido,se rompieron,to break,B1
+4,5,Los alumnos,para hacer el ejercicio en la pizarra. ,levantarse,pretérito pluscuamperfecto,se habían levantado,to stand up,B1
+5,1,En clase,porque no te interesaba el tema. ,aburrirse,pretérito imperfecto,te aburrías,to get bored,B1
+5,2,,el pelo ayer y hoy ya no te gusta. ,cortarse,pretérito indefinido,te cortaste,to cut,B1
+5,3,"No me gusta, ",los labios de un color feo. ,pintarse,pretérito perfecto,te has pintado,to apply lipstick,B1
+5,4,¿,ayer en la verbena del pueblo?,divertirse,pretérito indefinido,te divertiste,to have fun,B1
+5,5,Creo que,de número de teléfono. ,equivocarse,pretérito perfecto,te has equivocado,to be wrong,B1
+6,1,El cielo ,rápidamente y comenzó a llover,nublarse,pretérito indefinido,se nubló,to get cloudy,B1
+6,2,Los dos amigos,durante un largo rato. ,abrazarse,pretérito perfecto,se han abrazado,to hug,B1
+6,3,La comunicación,y no puedo oírte. ,cortarse,pretérito perfecto,se ha cortado,to get cut off,B1
+6,4,Ya,cuando se estropeó el coche. ,despedirse,pretérito pluscuamperfecto,se habían despedido,to say goodbye,B1
+6,5,¿Cómo ,la sopa de calabacín con guisantes?,hacerse,pretérito imperfecto,se hacía,to make,B1
+7,1,No fue al cine porque,regular.,encontrarse,pretérito imperfecto,se encontraba,to feel,B1
+7,2,Jugáis a tantos juegos que,sin batería en el teléfono. ,quedarse,pretérito perfecto,os habéis quedado,to run out,B1
+7,3,El camarero ,el segundo plato antes de que acabásemos. ,llevarse,pretérito indefinido,se llevó,to put away,B1
+7,4,Cuando se fue a dormir ya,descargado el videojuego. ,descargarse,pretérito pluscuamperfecto,se había descargado,to download,B1
+7,5,"¿Qué te ha pasado, ",un brazo en la caída?,romperse,pretérito perfecto,te has roto,to break,B1
+8,1,Al llegar el frío,las hojas de todos los árboles del parque. ,caerse,pretérito indefinido,se cayeron,to fall,B1
+8,2,Aquel día,tan bien que me dieron más bizcocho. ,portarse,pretérito pluscuamperfecto,me había portado,behave,B1
+8,3,Ayer ,en un grupo de menores de veinte años. ,inscribirse,pretérito indefinido,me inscribí,to sign up,B1
+8,4,Olvidaron el horno encendido y ,toda la cena. ,quemarse,pretérito indefinido,se quemó,to burn,B1
+8,5,No leiais el periódico y por eso,tan mal informados. ,mantenerse,pretérito imperfecto,os manteniais,to keep informed,B1
+9,1,Los novios,en los labios cuando acabó la boda. ,besarse,pretérito indefinido,se besaron,to kiss,B1
+9,2,Al irse mi hermana a la universidad,muy triste. ,ponerse,pretérito indefinido,me puse,to get,B1
+9,3,De bebé yo,mucho a mi hermana. ,parecerse,pretérito imperfecto,me parecía,to look alike,B1
+9,4,Los niños dijeron que nunca,tanto en una clase. ,aburrirse,pretérito pluscuamperfecto,se habían aburrido,to get bored,B1
+9,5,De repente llegaron las nubes y,todo. ,nublarse,pretérito indefinido,se nubló,to get foggy,B1
+10,1,El otro día ví que Juan y tú,los dos al teléfono. ,ponerse,pretérito indefinido,os pusisteis,to get on,B1
+10,2,En el reencuentro los dos hermanos ,durante un rato largo. ,abrazarse,pretérito indefinido,se abrazaron,to hug,B1
+10,3,Como vas corriendo sin mirar,una herida. ,hacerse,pretérito perfecto,te has hecho,to do,B1
+10,4,Cuando era pequeña no me gustaba mi hermano y ,mal con él. ,llevarse,pretérito imperfecto,me llevaba,to get along,B1
+10,5,Puedo ver en la factura como ayer,a internet sin mi permiso. ,conectarse,pretérito indefinido,os conectasteis,to connect,B1
+11,1,La pareja,de viaje de novios a Tailandia.,irse,pretérito perfecto,se ha ido,to go,B1
+11,2,Llevaba mucho tiempo sin vacaciones por lo que la semana pasada,de puente a Sevilla. ,marcharse,pretérito indefinido,se marchó,to leave,B1
+11,3,De pequeñas tu prima y tú,por carta. ,comunicarse,pretérito imperfecto,os comunicabais,to communicate,B1
+11,4,No veían bien la pizarra por lo que este curso,de sitio a la primera fila. ,cambiarse,pretérito perfecto,se han cambiado,to change,B1
+11,5,Mi padre ya,las gotas en los ojos cuando le llevé el libro. ,echarse,pretérito pluscuamperfecto,se había echado,to put on,B1
+12,1,Todos los mayores ya,la vacuna de la gripe.,ponerse,pretérito perfecto,se han puesto,to put on,B1
+12,2,¿Me prometes que anoche tú,la crema en la cara?,darse,pretérito indefinido,te diste,to put on,B1
+12,3,Nunca me pinto pero ayer para la fiesta,los ojos. ,pintarse,pretérito indefinido,me pinté,to put lipstick,B1
+12,4,Yo de niña,el pelo todo los veranos para estar más fresca. ,cortarse,pretérito imperfecto,me cortaba,to cut,B1
+12,5,El perro siempre,muy contento cuando llegaba su dueño. ,ponerse,pretérito imperfecto,se ponía,to get,B1
+1,1,Todo el grupo,de pie en cuanto entó el profesor en clase. ,ponerse,pretérito indefinido,se puso,to stand up,B2
+1,2,Al empezar el cuento ya,dormido. ,quedarse,pretérito pluscuamperfecto,se había quedado,to fall sleep,B2
+1,3,Tenía tantos exámenes que ,un poco agobiado. ,sentirse,pretérito imperfecto,se sentía,to feel,B2
+1,4,"Fue un cambio increíble, en pocos días",mayor. ,hacerse,pretérito indefinido,se hizo,to become,B2
+1,5,Era muy joven cuando,viudo. ,quedarse,pretérito indefinido,se quedó,to become,B2
+2,1,Se lo dijimos pero ya,al periódico local. ,suscribirse,pretérito pluscuamperfecto,se habían suscrito,to sign up,B2
+2,2,Los dos deportistas,cuando cumplieron cuarenta años. ,retirarse,pretérito indefinido,se retiraron,to retire,B2
+2,3,,furiosos cuando se enteraron de la noticia. ,ponerse,pretérito indefinido,se pusieron,to get,B2
+2,4,En España las personas,dos besos cuando se encontraban con alguien. ,darse,pretérito imperfecto,se daban,to give,B2
+2,5,¿Por qué,en blanco justo antes del examen?,quedarse,pretérito indefinido,se quedaron,to become,B2
+3,1,Antes de sonar la campana ya,a la mesa. ,sentarse,pretérito pluscuamperfecto,nos habíamos sentado,to sit,B2
+3,2,En nuestros años en la escuela es verdad que,bastante mal. ,portarse,pretérito imperfecto,nos portábamos,to behave,B2
+3,3,La semana pasada,de barrio a uno más tranquilo. ,mudarse,pretérito indefinido,nos mudamos,to move,B2
+3,4,Aunque no lo habíamos preparado bien,al examen. ,presentarse,pretérito indefinido,nos presentamos,to take,B2
+3,5,Antes de irnos a casa,afectuosamente de todos los invitados. ,despedirse,pretérito indefinido,nos despedimos,to say goodbye,B2
+4,1,"Durante las vacaciones, ¿",diariamente con el jefe?,comunicarse,pretérito indefinido,os comunicasteis,to communicate,B2
+4,2,,una lesión porque no tuvisteis cuidado. ,hacerse,pretérito indefinido,os hicisteis,to do,B2
+4,3,No me gustó jugar con vosotros porque,las reglas del juego. ,saltarse,pretérito imperfecto,os saltabais,to break,B2
+4,4,"Muy bien, ",para la final de 400 metros. ,clasificarse,pretérito pluscuamperfecto,os habéis clasificado,to qualify,B2
+4,5,"Cuando os lo dijeron, ¿ya",de la noticia por la prensa?,enterarse,pretérito pluscuamperfecto,os habíais enterado,to find out,B2
+5,1,Creo que el pan no tenía conservantes porque,malo en dos días. ,ponerse,pretérito indefinido,se puso,to become,B2
+5,2,Luisa,a la lista de distribución de cosas de segunda mano. ,apuntarse,pretérito perfecto,se ha apuntado,to sign up,B2
+5,3,Debido a la tormenta,la comunicación en toda la isla. ,cortarse,pretérito indefinido,se cortó,to cut,B2
+5,4,No tenía teléfono por lo que ,solo por correo electrónico. ,comunicarse,pretérito imperfecto,se comunicaba,to communicate,B2
+5,5,Había tanto tráfico que ,su programa de televisión favorito. ,perderse,pretérito indefinido,se perdió,to miss,B2
+6,1,Cuando visité a Lucas en Valencia,en un hotel en el centro. ,alojarse,pretérito indefinido,me alojé,to do,B2
+6,2,Al segundo año de carrera,a una residencia de estudiantes. ,trasladarse,pretérito indefinido,me trasladé,to move,B2
+6,3,Cuando trabajaba en el campo,la uñas todos los días. ,cepillarse,pretérito imperfecto,me cepillaba,to clean,B2
+6,4,A los cinco minutos de llegar ya,una idea de lo pequeño que era el piso. ,hacerse,pretérito pluscuamperfecto,me había hecho,to get,B2
+6,5,Esta mañana en la clase de ballet,"un tobillo, pero estoy bien.",torcerse,pretérito perfecto,me he torcido,to twist,B2
+7,1,Siempre que iba a la playa la abuela,del radiación solar con una sombrilla. ,protegerse,pretérito imperfecto,se protegía,to protect,B2
+7,2,Los niños estaban tristes porque veían que,los recursos naturales. ,agotarse,pretérito imperfecto,se agotaban,to run out,B2
+7,3,Al casarse con él María,al hinduismo. ,convertirse,pretérito indefinido,se convirtió,to become,B2
+7,4,Cuando llegamos a la librería ya,el libro que necesitábamos. ,agotarse,pretérito pluscuamperfecto,se había agotado,to run out,B2
+7,5,En el último ataque los dos ejércitos ,en lo alto de una montaña. ,enfrentarse,pretérito indefinido,se enfrentaron,to confront,B2
+8,1,A pesar de su cansancio el presidente,de nuevo a las elecciones el año pasado. ,presentarse,pretérito indefinido,se presentó,to run,B2
+8,2,El trabajo de toda su vida,siempre en investigaciones científicas. ,basarse,pretérito pluscuamperfecto,se había basado,to be based on,B2
+8,3,En medio de nuestro viaje,sin gasolina. ,quedarse,pretérito indefinido,nos quedamos,to run out,B2
+8,4,"Miraos bien, ",la espalda y los hombros. ,quemarse,pretérito perfecto,os habéis quemado,to burn,B2
+8,5,¿Ayer cuando llegaste ,un baño caliente?,darse,pretérito indefinido,te diste,to take,B2
+9,1,Era muy presumido y antes de cada programa,la barba. ,recortarse,pretérito imperfecto,se recortaba,to trim,B2
+9,2,En nuestras vacaciones,en una cabaña en el bosque. ,alojarse,pretérito indefinido,nos alojamos,to stay,B2
+9,3,Ayer me corté y,las uñas. ,limarse,pretérito indefinido,me limé,to file,B2
+9,4,Esta mañana hemos ido al spa y ,un masaje. ,darse,pretérito perfecto,nos hemos dado,to take,B2
+9,5,La semana pasada jugando al balonmano,"un esquince, aún me duele. ",hacerse,pretérito indefinido,me hice,to do,B2
+10,1,Cuando fui a ayudarle ya,el cinturón él solo. ,ponerse,pretérito pluscuamperfecto,se había puesto,to put on,B2
+10,2,Cuando llegué en febrero,al periódico local. ,suscribirse,pretérito indefinido,me suscribí,to sign up,B2
+10,3,No puedo usar esta goma del pelo porque,de sí. ,darse,pretérito perfecto,se ha dado,to get stretsch out,B2
+10,4,No podemos lavar porque,la lavadora. ,romperse,pretérito perfecto,se ha roto,to break,B2
+10,5,No le gustaba dar conferencias y ,en blanco cuando subía a la tarima. ,quedarse,pretérito imperfecto,se quedaba,to go blank,B2
+11,1,Robaron los cables y,la comunicación.,cortarse,pretérito indefinido,se cortó,to break,B2
+11,2,¿,ya tú y tus hermanos en la lista de distribución?,inscribirse,pretérito perfecto,os habéis,to have to,B2
+11,3,Llegué tarde a casa y,mi programa de TV favorito. ,perderse,pretérito indefinido,me perdí,to miss,B2
+11,4,"Me gusta tu aspecto, ",muy guapo para la boda de tu hermana. ,ponerse,pretérito perfecto,te has puesto,to get,B2
+11,5,No puedo ir porque,un tobillo. ,torcerse,pretérito perfecto,me he torcido,to twist,B2
+12,1,"Aún no lo puedo creer, compré el periódico y ",por casualidad de la noticia. ,enterarse,pretérito indefinido,me enteré,to find out,B2
+12,2,"¿Después de ir de escaparates con tu madre,",una idea del vestido que quieres? ,hacerse,pretérito perfecto,te has hecho,to get an idea,B2
+12,3,Al fin he saltado la altura necesaria y ,para la competición nacional. ,clasificarse,pretérito perfecto,me he clasificado,to qualify,B2
+12,4,No calentó lo suficiente y,una lesión. ,hacerse,pretérito indefinido,se hizo,to do,B2
+12,5,"Ya no vivo allí, ",a otra ciudad. ,trasladarse,pretérito perfecto,me he trasladado,to move,B2

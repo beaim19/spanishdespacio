@@ -1,0 +1,51 @@
+﻿set,id,correct,also_correct,level
+1,1,¿Podrías bajar un poco el volumen de la radio?,¿Podrías bajar el volumen de la radio un poco?,B1
+1,2,Abriría la ventana porque huele muy mal en esta habitación. ,Abriría la ventana porque en esta habitación huele muy mal. ,B1
+1,3,Le diría que vuelva mañana a las tres de la tarde. ,Le diría que vuelva a las tres de la tarde mañana. ,B1
+1,4,"Yo no mentiría a la policía, puedes tener problemas. ","Puedes tener problemas, yo no mentiría a la policía. ",B1
+1,5,¿Llenarías la piscina de agua y limpiarías las escaleras?,¿Limpiarías las escaleras y llenarías la piscina de agua?,B1
+2,1,Madrugaría todos los días porque por la tarde hace calor. ,Porque por la tarde hace calor madrugaría todos los días. |Madrugaría porque todos los días por la tarde hace calor. |Madrugaría porque hace calor todos los días por la tarde. |Madrugaría todos los diás porque hace calor por la tarde. |Porque hace calor por la tarde madrugaría todos los días. ,B1
+2,2,Elegiría a alguien diferente para liderar el equipo. ,Para liderar el equipo eligiría a alguien diferente. ,B1
+2,3,¿Saldrías un poco antes de casa para llegar a tiempo?,¿Saldrías de casa un poco antes para llegar a tiempo?|¿Para llegar a tiempo saldrías un poco antes de casa?|¿Para llegar a tiempo saldrías de casa un poco antes?,B1
+2,4,Yo si fuera tú ordenaría la habitación antes de que vengan tus padres. ,Yo ordenaría la habitación si fuera tú antes de que vengan tus padres. |Antes de que vengan tus padres yo ordenaría la habitación si fuera tú. |Antes de que vengan tus padres yo si fuera tú orderaría la habitación. |Si yo fuera tú ordenaría la habitación antes de que vengan tus padres. |Antes de que vengan tus padres si yo fuer tú ordenaría la habitación,B1
+2,5,Te acostumbrarías mejor si hicieras un esfuerzo. ,Si hicieras un esfuerzo te acostumbrarías mejor. ,B1
+3,1,Para que sea más fácil haría lo mismo que ayer. ,Haría lo mismo que ayer para que sea más fácil. ,B1
+3,2,¿Sacarías al perro esta noche cuando llegues?,¿Cuándo llegues esta noche sacarías al perro?|¿Sacarías al perro cuando llegues esta noche?|¿Esta noche cuando llegues sacarías al perro?|¿Cuando llegues esta noche sacarías al perro?|¿Cuando esta noche llegues sacarías al perro?,B1
+3,3,¿Tendrías cinco euros para prestarme?,,B1
+3,4,Dejaría que tu hijo haga los deberes solo. ,,B1
+3,5,¿Ayudarías a tu hermano con la mudanza?,,B1
+4,1,Deberías viajar más y conocer mundo. ,Deberías conocer mundo y viajar más. ,B1
+4,2,"En resumen, yo leería todos los libros de la colección. ",,B1
+4,3,¿Apretaríais los botones cuando yo os diga?,¿Cuando yo os diga apretaríais los botones?,B1
+4,4,¿Supondría un gran favor pedirte ayuda con la mudanza?,¿Pedirte ayuda con la mudanza supondría un gran favor?,B1
+4,5,"Yo rompería con ella, no te conviene. ","No te conviene, yo rompería con ella. ",B1
+5,1,¿Tú colgarías este cuadro en la pared del salón?,¿Colgarías tú este cuadro en la pared del salón?,B1
+5,2,Yo comería bacalao cuando estén en Lisboa. ,Cuando estén en Lisboa yo comería bacalao. ,B1
+5,3,Durante el examen me fijaría muy bien en las señales. ,Me fijaría muy bien en las señales durante el examen. ,B1
+5,4,¿Propondrías un plan mejor del que tenemos?,,B1
+5,5,¿Invitarías a su padres a venir de viaje con nosotros?,,B1
+1,1,Sacaríamos mejores notas si estudiáramos más. ,Si estudiáramos más sacaríamos mejores notas. ,B2
+1,2,Me habría hecho mucha ilusión tener un nieto. ,Tener un nieto me habría hecho mucha ilusión. ,B2
+1,3,Me dijo que hoy no iría a trabajar. ,Me dijo que no iría a trabajar hoy. ,B2
+1,4,Se preocupan por lo que podría pasar si te vas. ,Se preocupan si te vas por lo que podría pasar. ,B2
+1,5,Sería necesario que termines pronto este trabajo. ,Que termines pronto este trabajo sería necesario. ,B2
+2,1,¿Te importaría si me acerco un momento a preguntar en el quiosco?,,B2
+2,2,Nos indignaría que no nos dijese la verdad. ,Que no nos dijese la verdad nos indignaría. |No nos indignaría que nos dijese la verdad. |Que nos dijese la verdad no nos indignaría. ,B2
+2,3,Aseguró que habría llamado de haberlo sabido. ,Aseguró que de haberlo sabido habría llamado. |De haberlo sabido aseguró que habría llamado. ,B2
+2,4,Me imagino que cuando llegasteis ya se habría ido. ,Me imagino que ya se habría ido cuando llegasteis. ,B2
+2,5,El alcalde anunció que aprobaría el programa el día siguiente. ,El alcalde anunció que aprobaría el día siguiente aprobaría el programa. |El alcalde anunción que al día siguiente aprobaría el programa. |El día siguiente el alcalde anunción que aprobaría el programa. ,B2
+3,1,Necesitaría que me compres unas cosas en la farmacia. ,,B2
+3,2,Tenía tanto hambre que me habría comido la tarta entera. ,,B2
+3,3,Nos confirmaron que para el fin de semana ya habrían terminado todo. ,Nos confirmaron que para el fin de semana ya habrían terminado todo. ,B2
+3,4,"Si tuviese menos años, viajaría alrededor del mundo. ",,B2
+3,5,"Si hubieras entrenado más, habrías ganado la carrera. ",,B2
+4,1,Me gustaría aprender español más rápido. ,,B2
+4,2,Te recomendaría que no escuches los consejos de tu hermano. ,,B2
+4,3,"Cualquiera habría dicho que estabas enfadado, tenías mala cara. ","Tenías mala cara, cualquiera habría dicho que estabas enfadado. ",B2
+4,4,De tener un coche pienso que habría venido. ,Pienso que de tener un coche habría venido. |Pienso que habría venido de tener un coche. ,B2
+4,5,"Sería genial tener una granja, pero no tengo terreno. ",,B2
+5,1,Me imagino que la vida en el campo sería mucho más tranquila. ,La vida en el campo me imagino que sería mucho más tranquila. |Me imagino que en el campo la vida sería mucho más tranquila. ,B2
+5,2,El director del hotel aseguró que solucionaría todo esa noche. ,El director del hotel aseguró que esa noche solucionaría todo. |Esa noche el director del hotel aseguró que solucionaría todo. ,B2
+5,3,"Si hiciésemos más deporte, estaríamos más fuertes. ",,B2
+5,4,"Si nos hubieran llamado antes, no habríamos cancelado la suscripción. ",,B2
+5,5,"Desearía cenar con vosotros, pero tengo que trabajar. ","Tengo que trabajar, pero desearía cenar con vosotros. ",B2

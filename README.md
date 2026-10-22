@@ -680,10 +680,12 @@ can't be charged twice. The double price is stated in the game's intro
 text and on the page header.
 
 When only **one petal is left**, vowels are locked (a wrong one would
-cost two): tapping a vowel shows "Ahora solo puedes elegir consonantes,
-buena suerte!" and does nothing else, and the vowel keys look muted
-(`.letter-btn.is-locked`, still tappable so the message can appear).
-Consonants and the whole-word box keep working. Guessing
+cost two). The moment that happens, "¡Ahora solo puedes elegir una
+consonante, buena suerte!" is added to the status line (and stays while
+it's true, even after a correct consonant); tapping a vowel just repeats
+it, and the vowel keys look muted (`.letter-btn.is-locked`, still
+tappable so the message can appear). Consonants and the whole-word box
+keep working. Guessing
 every letter, or typing the right word, wins the round. Spaces and hyphens
 in `word` show from the start and don't need guessing.
 

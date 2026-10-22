@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imperativo — Spanish Despacio</title>
+  <meta name="description" content="Ejercicio interactivo: escribe el verbo en imperativo para completar cada frase.">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+  <div id="site-header-placeholder"></div>
+
+  <main id="main-content">
+    <section class="intro-band">
+      <div class="container">
+        <a class="back-link-top" href="/exercises.html" aria-label="Volver a Ejercicios">&larr;</a>
+        <h1>Imperativo</h1>
+        <p>Elige el nivel y el tipo de ejercicio para practicar el imperativo. Cuando termines, pulsa "Comprobar".</p>
+        <div id="level-switcher-slot"></div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div id="exercise-type-slot"></div>
+      <div id="series-switcher-slot"></div>
+      <div id="exercise-app">
+        <p>Cargando ejercicio…</p>
+      </div>
+      <a class="back-link-bottom" href="/exercises.html">&larr; Ejercicios</a>
+    </div>
+  </main>
+
+  <div id="site-footer-placeholder"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <script src="/js/exercise-common.js"></script>
+  <script src="/js/exercise-arrastra.js"></script>
+  <script src="/js/exercise-typed.js"></script>
+  <script src="/js/exercise-flashcards.js"></script>
+  <script src="/js/exercise-ordena.js"></script>
+  <script src="/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // No verb-type variants here — one CSV per exercise type, filtered by
+      // level only (A2/B1/B2). The `tense` column in Completa/Flashcards is
+      // intentionally blank (imperativo isn't split into tenses), so the
+      // hint shows just the infinitive. No "modo indicativo" note in the
+      // intro either: imperativo isn't indicativo.
+      ExerciseCommon.initExerciseTypePage([
+        { id: 'empareja', label: 'Empareja', engine: 'arrastra', src: '/content/exercises/imperativo-empareja.csv' },
+        { id: 'completa', label: 'Completa', engine: 'typed', src: '/content/exercises/imperativo-completa.csv' },
+        { id: 'flashcards', label: 'Flashcards', engine: 'flashcards', src: '/content/exercises/imperativo-flashcards.csv' },
+        { id: 'ordena', label: 'Ordena', engine: 'ordena', src: '/content/exercises/imperativo-ordena.csv' },
+      ]);
+    });
+  </script>
+</body>
+</html>

@@ -11,8 +11,10 @@
  * the whole word) first and the round is won.
  *
  * With only ONE petal left a vowel can no longer be chosen (a wrong one
- * would cost two): tapping one shows "Ahora solo puedes elegir
- * consonantes, buena suerte!" instead, and the vowel keys look muted.
+ * would cost two). The moment the flower reaches 7 petals the status line
+ * adds "¡Ahora solo puedes elegir una consonante, buena suerte!" (and
+ * keeps showing it while that stays true); the vowel keys look muted, and
+ * tapping one just repeats the message.
  *
  * CSV columns: set,id,hint,word,level
  *   hint  = a short description of the word, in Spanish. Can mark words
@@ -42,6 +44,7 @@
   const MAX_WRONG = 8; // petals on the flower
   const VOWEL_COST = 2; // petals a WRONG vowel costs (everything else costs 1)
   const VOWELS = 'aeiou';
+  const LAST_PETAL_MESSAGE = '¡Ahora solo puedes elegir una consonante, buena suerte!';
   const LETTERS = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ'.split('');
   const SVG_NS = 'http://www.w3.org/2000/svg';
 
@@ -302,12 +305,22 @@
         });
       }
 
+      // Shown as soon as only one petal is left, and kept on screen while
+      // that stays true (so a correct consonant doesn't wipe the warning).
+      function lastPetalNote() {
+        return MAX_WRONG - wrong === 1 ? LAST_PETAL_MESSAGE : '';
+      }
+
       function addWrong(cost, message) {
         wrong = Math.min(MAX_WRONG, wrong + cost);
         setPetals(wrong);
-        status.textContent = message;
-        if (wrong >= MAX_WRONG) finish(false);
-        else refreshVowelLock();
+        if (wrong >= MAX_WRONG) {
+          status.textContent = message;
+          finish(false);
+        } else {
+          refreshVowelLock();
+          status.textContent = `${message} ${lastPetalNote()}`.trim();
+        }
       }
 
       letterButtons.forEach((btn, i) => {
@@ -316,7 +329,7 @@
         btn.addEventListener('click', () => {
           if (finished || guessed.has(ch)) return;
           if (isVowel && MAX_WRONG - wrong === 1) {
-            status.textContent = 'Ahora solo puedes elegir consonantes, buena suerte!';
+            status.textContent = LAST_PETAL_MESSAGE;
             return;
           }
           guessed.add(ch);
@@ -325,7 +338,7 @@
           if (target.includes(ch)) {
             btn.classList.add('is-hit');
             refreshWord(false);
-            status.textContent = '';
+            status.textContent = lastPetalNote();
             if (allFound()) finish(true);
           } else {
             btn.classList.add('is-miss');

@@ -1,13 +1,121 @@
 ﻿set,id,before,after,infinitive,tense,correct,translation,level
-1,1,Este verano nosotros,muy poco tiempo libre.,tener,futuro simple,tendremos,to have,B1
-1,2,Este {verano|summer} nosotros,muy poco tiempo libre.,tener,futuro simple,tendremos,to have,B1
-1,3,Estoy segura de que ella,la mesa en el {salón|living room}.,poner,futuro simple,pondrá,to put,B1
-1,4,Estoy seguro de que ella,la mesa en el {salón|living room}.,poner,futuro simple,pondrá,to put,B1
-1,5,Mañana yo,de casa muy temprano.,salir,futuro simple,saldré,to leave,B1
-2,1,El próximo mes ellos,a visitarnos.,venir,futuro simple,vendrán,to come,B1
-2,2,Nadie sabe qué,el jefe sobre el {cambio|change}.,decir,futuro simple,dirá,to say,B1
-2,3,Con esfuerzo tú,resolver el problema.,poder,futuro simple,podrás,to be able to,B1
-2,4,Estoy convencido de que vosotros,la respuesta correcta.,saber,futuro simple,sabréis,to know,B1
-2,5,Ella,quedarse un poco más.,querer,futuro simple,querrá,to want,B1
-3,1,Para el viernes ya,terminado el {informe|report}.,haber,futuro simple,habré,to have (aux.),B1
-3,2,Con esa receta la cena,deliciosa.,estar,futuro simple,estará,to be,B1
+1,1,Este {verano|summer} nosotros,muy poco tiempo libre.,tener,futuro imperfecto,tendremos,to have,B1
+1,2,Pronto,si podemos ir a la montaña. ,saber,futuro imperfecto,sabremos,to know,B1
+1,3,Nunca te,la verdad porque no queremos. ,decir,futuro imperfecto,diremos,to say,B1
+1,4,,celebrar la boda en el bosque. ,querer,futuro imperfecto,querremos,to want,B1
+1,5,Mañana yo,cerca de la once de la mañana.,salir,futuro imperfecto,saldremos,to leave,B1
+2,1,Son tan lentos que seguramente,el vuelo. ,perder,futuro imperfecto,perderán,to miss,B1
+2,2,Me imagino que ahora,quién ha ganado. ,decir,futuro imperfecto,dirán,to say,B1
+2,3,El próximo mes,a visitarnos.,venir,futuro imperfecto,vendrán,to come,B1
+2,4,,"ya las diez, así que nos podemos ir. ",ser,futuro imperfecto,serán,to be,B1
+2,5,Los niños,pensando que no sabemos hacerlo. ,estar,futuro imperfecto,estarán,to be,B1
+3,1,Él,lo que quiere hacer. ,saber,futuro imperfecto,sabrá,to know,B1
+3,2,Ella,quedarse un poco más.,querer,futuro imperfecto,querrá,to want,B1
+3,3,Nadie sabe qué,el jefe sobre el {cambio|change}.,decir,futuro imperfecto,dirá,to say,B1
+3,4,Estoy seguro de que ella,la mesa en el {salón|living room}.,poner,futuro imperfecto,pondrá,to put,B1
+3,5,Con esa receta la cena,deliciosa.,estar,futuro imperfecto,estará,to be,B1
+4,1,Ya te,lo que he pensado. ,decir,futuro imperfecto,diré,to say,B1
+4,2,Mañana yo,de casa muy temprano.,salir,futuro imperfecto,saldré,to leave,B1
+4,3,Para el viernes ya,terminado el {informe|report}.,haber,futuro imperfecto,habré,to have (aux.),B1
+4,4,En estas ventandas,unas cortinas azules. ,poner,futuro imperfecto,pondré,to put,B1
+4,5,Con el trabajo nuevo no,nada de tiempo libre. ,tener,futuro imperfecto,tendré,to have,B1
+5,1,Ahora,toda la verdad,decir,futuro imperfecto,dirás,to say,B1
+5,2,Después de comer ,café a esas mesas de allí. ,servir,futuro imperfecto,servirás,to serve,B1
+5,3,Con esfuerzo tú,resolver el problema.,poder,futuro imperfecto,podrás,to be able to,B1
+5,4,Después de tanto estudiar,presentarte al examen. ,querer,futuro imperfecto,querrás,to want,B1
+5,5,No protestes porque ,lo que te ha dicho la maestra. ,hacer,futuro imperfecto,harás,to do,B1
+6,1,A pesar del café,muy bien esta noche. ,dormir,futuro imperfecto,dormiréis,to sleep,B1
+6,2,Estoy convencido de que vosotros,la respuesta correcta.,saber,futuro imperfecto,sabréis,to know,B1
+6,3,Como siempre,razón y tendré que hacerlo. ,tener,futuro imperfecto,tendréis,to have,B1
+6,4,Si os apretáis,todos en el coche. ,caber,futuro imperfecto,cabréis,to fit,B1
+6,5,,en fila hasta la puerta del comedor. ,ir,futuro imperfecto,iréis,to go,B1
+7,1,Este verano nosotros,muy poco tiempo libre.,tener,futuro imperfecto,tendremos,to have,B1
+7,2,Estoy segura de que ella,la mesa en el {salón|living room}.,poner,futuro imperfecto,pondrá,to put,B1
+7,3,Mañana yo,de casa muy temprano.,salir,futuro imperfecto,saldré,to leave,B1
+7,4,El próximo mes ellos,a visitarnos.,venir,futuro imperfecto,vendrán,to come,B1
+7,5,Nadie sabe qué,el jefe sobre el {cambio|change}.,decir,futuro imperfecto,dirá,to say,B1
+8,1,Con esfuerzo tú,resolver el problema.,poder,futuro imperfecto,podrás,to be able to,B1
+8,2,Estoy convencido de que vosotros,la respuesta correcta.,saber,futuro imperfecto,sabréis,to know,B1
+8,3,Ella,quedarse un poco más.,querer,futuro imperfecto,querrá,to want,B1
+8,4,Para el viernes ya,terminado el {informe|report}.,haber,futuro imperfecto,habré,to have (aux.),B1
+8,5,Con esa receta la cena,deliciosa.,estar,futuro imperfecto,estará,to be,B1
+9,1,Mañana,y no hemos traído paraguas. ,llover,futuro imperfecto,lloverá,to rain,B1
+9,2,La semana que viene los profesores,las notas y sabremos si hemos aprobado. ,dar,futuro imperfecto,darán,to give,B1
+9,3,Nunca,si me llamó antes o no. ,saber,futuro imperfecto,sabré,to know,B1
+9,4,,que llamar al dentista pronto y espero que me conteste. ,tener,futuro imperfecto,tendré,to have,B1
+9,5,Probablemente,el terremoto en las noticias. ,salir,futuro imperfecto,saldrá,to appear,B1
+10,1,En el futuro todos nosotros,pasear por el parque. ,poder,futuro imperfecto,podremos,to be able to,B1
+10,2,Me imagino que ustedes,ver la película en versión original. ,querer,futuro imperfecto,querrán,to want,B1
+10,3,,ya las once y la clase sin empezar. ,ser,futuro imperfecto,serán,to be,B1
+10,4,¿,todos los panes en esta cesta?,caber,futuro imperfecto,cabrán,to fit,B1
+10,5,La miel ,a las abejas y las volverá locas. ,atraer,futuro imperfecto,atraerá,to attract,B1
+11,1,Tú,si quieres venir o no. ,saber,futuro imperfecto,sabrás,to know,B1
+11,2,Si no sales ya de casa,el autobús. ,perder,futuro imperfecto,perderás,to miss,B1
+11,3,Los vecinos y yo,todo lo que sea necesario para ayudar. ,hacer,futuro imperfecto,haremos,to do,B1
+11,4,El viernes por la tarde la prima y yo,de rebajas. ,salir,futuro imperfecto,saldremos,to go out,B1
+11,5,,buena suerte y no os lloverá en la excursión. ,tener,futuro imperfecto,tendréis,to have,B1
+12,1,Me duele la cabeza por lo que en cinco minutos,un paseo por el jardín. ,dar,futuro imperfecto,daré,to go for a walk,B1
+12,2,Cuando vivas en España,de tapas con tus compañeros todos los días. ,ir,futuro imperfecto,irás,to go,B1
+12,3,Las lentejas,frías cuando llegues. ,estar,futuro imperfecto,estarán,to be,B1
+12,4,Mientras dure la reunión no hablaré y ,la boca cerrada. ,mantener,futuro imperfecto,mantendré,to keep,B1
+12,5,El bebé,la semana que viene seguramente. ,nacer,futuro imperfecto,nacerá,to be born,B1
+1,1,A estas horas mañana ya,a la playa. ,llegar,futuro perfecto,habrás llegado,to arrive,B2
+1,2,Ya me,a qué hora debo recogerte. ,decir,futuro imperfecto,dirás,to say,B2
+1,3,Si no vas a comprar no,ni agua ni aceite. ,tener,futuro imperfecto,tendrás,to have,B2
+1,4,"Según el plan, a las cinco ya",todo el proyecto. ,imprimir,futuro perfecto,habrás impreso,to print,B2
+1,5,"En suma, ya",y descansarás cuando lleguemos a casa. ,dormir,futuro imperfecto,dormirás,to sleep,B2
+2,1,Ya,tiempos mejores. ,venir,futuro imperfecto,vendrán,to come,B2
+2,2,"En cualquier caso, no",abrir la puerta sin las llaves. ,poder,futuro imperfecto,podrán,to be able to,B2
+2,3,Para entonces ya,todo el dinero a su dueño. ,devolver,futuro perfecto,habrán devuelto,to return,B2
+2,4,,la liga si no empiezan a meter goles. ,perder,futuro imperfecto,perderán,to lose,B2
+2,5,Me imagino que los niños,más caramelos. ,querer,futuro imperfecto,querrán,to want,B2
+3,1,Esta noche no,porque necesito paz. ,reñir,futuro imperfecto,reñiréis,to fight,B2
+3,2,¿No,vosotros la taza del abuelo?,romper,futuro perfecto,habréis roto,to break,B2
+3,3,Según el horario mañana,antes que otros días. ,salir,futuro imperfecto,saldréis,to get out,B2
+3,4,Cuando os pregunte el policía ,solo la verdad. ,decir,futuro imperfecto,diréis,to say,B2
+3,5,,no haber dicho la verdad. ,sentir,futuro imperfecto,sentiréis,to feel,B2
+4,1,"Hazme caso, ",el puesto que quiero. ,conseguir,futuro imperfecto,conseguiré,to get,B2
+4,2,No,"ahora el examen, esperaré a junio. ",hacer,futuro imperfecto,haré,to do,B2
+4,3,"No os preocupéis, cuando lleguéis ya",los huevos. ,freír,futuro perfecto,habré frito,to fry,B2
+4,4,,trabajando para la misma empresa durante unos meses. ,seguir,futuro imperfecto,seguiré,to continue,B2
+4,5,Para la primavera ya,la tienda de productos típicos. ,reabrir,futuro perfecto,habré reabierto,to reopen,B2
+5,1,Imagino que ya,la crónica. ,escribir,futuro perfecto,habrá escrito,to write,B2
+5,2,La compañía,su producto nuevo en toda la comarca. ,distribuir,futuro imperfecto,distribuirá,to distribute,B2
+5,3,¿Tú crees que ,toda la compra en las bolsas?,caber,futuro imperfecto,cabrá,to fit,B2
+5,4,El nuevo ambiente en la oficina,el estrés de los últimos meses. ,prevenir,futuro imperfecto,prevendrá,to prevent,B2
+5,5,La escuela no,un gran gasto este curso. ,suponer,futuro imperfecto,supondrá,to suposse,B2
+6,1,"Precisamente, ",mañana temprano.,salir,futuro imperfecto,saldremos,to leave,B2
+6,2,"Para cuando salga en el periódico, ya",la casa en nuestra revista. ,describir,futuro perfecto,habremos descrito,to describe,B2
+6,3,Ya,quién pone la mesa hoy. ,ver,futuro imperfecto,veremos,to see,B2
+6,4,Cuando volváis de vacaciones nosotros ya,a la montaña. ,ir,futuro imperfecto,habremos ido,to go,B2
+6,5,,a verte a la residencia todos los meses. ,venir,futuro imperfecto,vendremos,to come,B2
+7,1,"Me parece fatal lo que ha hecho, ",que pedir perdón. ,tener,futuro imperfecto,tendrá,to have,B2
+7,2,Mañana al fin,si he pasado el examen. ,saber,futuro imperfecto,sabré,to know,B2
+7,3,"No sé por qué lo sabe, supongo que se l",nosotros. ,decir,futuro perfecto,habremos dicho,to say,B2
+7,4,Me temo que nosotros lo,todo si no remontamos. ,perder,futuro imperfecto,perderemos,to lose,B2
+7,5,Todos vosotros,lo que yo diga para evitar problemas. ,hacer,futuro imperfecto,haréis,to do,B2
+8,1,La dueña nos ha dicho que,regresar siempre que querámos. ,poder,futuro imperfecto,podremos,to be able to,B2
+8,2,Supongo que María ,"ya el proyecto, ¿no?",escribir,futuro perfecto,habrá escrito,to write,B2
+8,3,¿Amelia no ,"venir con nosotros, no?",querer,futuro imperfecto,querrá,to want,B2
+8,4,Pues claro que los constructores,más cemento. ,poner,futuro imperfecto,pondrán,to be able to,B2
+8,5,"No pasa nada, nosotros",lo que sea necesario. ,hacer,futuro imperfecto,haremos,to do,B2
+9,1,Os aseguro que a partir de ahora,como en vuestar propia casa. ,estar,futuro imperfecto,estaréis,to be,B2
+9,2,¿Tú crees que todas estas cajas,en la furgoneta?,caber,futuro imperfecto,cabrán,to fit,B2
+9,3,Para el próximo verano el ayuntamiento ya,la playa. ,reabrir,futuro perfecto,habrá reabierto,to reopen,B2
+9,4,,"verte ir, me case muy bien. ",sentir,futuro imperfecto,sentiré,to feel,B2
+9,5,De todos modos los jugadores,las repeticiones después del partido. ,ver,futuro imperfecto,verán,to see,B2
+10,1,"Al final, ¿",al cine u os quedaréis en casa?,venir,futuro imperfecto,vendréis,to come,B2
+10,2,¿Crees que los ladrones,una ventana para entrar?,romper,futuro perfecto,habrán roto,to break,B2
+10,3,Si no entrenamos más,todos los partidos. ,perder,futuro imperfecto,perderemos,to lose,B2
+10,4,Los alumnos nunca,convencer a la maestra para quedarse. ,conseguir,futuro imperfecto,conseguirán,to manage,B2
+10,5,Has mañana no,"los resultados, ¿no?",salir,futuro imperfecto,saldrán,to get out,B2
+11,1,"Para empezar, según lo que hemos visto, ",que todo ha ido bien. ,suponer,futuro imperfecto,supondremos,to guess,B2
+11,2,,"otra oportunidad mañana, tenemos que aprovecharla. ",tener,futuro imperfecto,tendremos,to have,B2
+11,3,Si hacemos yoga por la mañana,el estrés. ,prevenir,futuro imperfecto,prevendremos,to prevent,B2
+11,4,"Pues verás, cuando llames Petra ya",al médico. ,ir,futuro perfecto,habrá ido,to go,B2
+11,5,Supongo que no ,"venir al partido mañana, ¿no?",poder,futuro imperfecto,podrás,to be able to,B2
+12,1,La policía ya,que los vecinos participaron en el robo. ,suponer,futuro perfecto,habrán supuesto,to guess,B2
+12,2,Las ONGs ,comida por los campamentos. ,destribuir,futuro imperfecto,distribuirán,to distribute,B2
+12,3,Seguro que todo,bien. ,salir,futuro imperfecto,saldrá,to success,B2
+12,4,Ya,nosotros si al final venís. ,ver,futuro imperfecto,veremos,to see,B2
+12,5,¿Qué,? Hay mucha policía allí. ,pasar,futuro perfecto,habrá pasado,to happen,B2
