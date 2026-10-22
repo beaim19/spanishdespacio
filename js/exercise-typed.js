@@ -45,7 +45,6 @@
 (function () {
   let lastFocusedInput = null;
   const ACCENT_CHARS = ['á', 'é', 'í', 'ó', 'ú', 'ñ', '¿', '¡'];
-  const MIN_INPUT_CH = 9;
   // Padding + border (see .exercise-input in css/styles.css) plus a little
   // room for the text caret, so the last character typed doesn't butt
   // right up against the input's edge.
@@ -61,25 +60,28 @@
     return ctx.measureText(text).width;
   }
 
-  // Grows the input as the student types so the whole word stays visible
-  // instead of scrolling inside a fixed-width box — never shrinks below
-  // the starting (empty-box) width, so short answers still line up.
+  // Grows the input as the student types, but ONLY once the text would no
+  // longer fit in the normal box: the box keeps its regular CSS width
+  // (`.exercise-input { width: 9ch }`) for short answers, and gets a wider
+  // pixel width only when the text needs it, so it doesn't jump bigger the
+  // moment someone starts typing.
   //
-  // This measures the ACTUAL rendered pixel width of the current value in
-  // the input's own font, rather than assuming "N characters = N ch" — the
-  // CSS "ch" unit is defined as the width of the font's "0" glyph, which in
-  // a proportional font like this site's (Segoe UI/Arial) is narrower than
-  // most letters, and noticeably narrower than capitals or accented
-  // letters (á, é, í, ó, ú, ñ) specifically. That mismatch was small enough
-  // to go unnoticed on short plain words but added up on longer answers or
-  // ones with several accented/capital characters, clipping the last
-  // letter even though the box visibly "grew" by the expected ch count.
+  // "Does it fit?" is measured in real pixels in the input's own font
+  // (canvas measureText), not by counting characters in `ch` units — `ch`
+  // is the width of the font's "0", narrower than most letters and
+  // noticeably narrower than capitals or accented ones (á, é, í, ó, ú, ñ),
+  // so a character count under-sizes the box for exactly those.
+  //
+  // Needs the input to be on the page (it's measured against its own CSS
+  // width), which is always true when typing or using the accent toolbar.
   function growInput(input) {
-    const font = window.getComputedStyle(input).font
-      || `${window.getComputedStyle(input).fontSize} ${window.getComputedStyle(input).fontFamily}`;
-    const minWidth = measureTextWidth('0'.repeat(MIN_INPUT_CH), font);
-    const textWidth = measureTextWidth(input.value || '', font);
-    input.style.width = `${Math.max(minWidth, textWidth) + WIDTH_BUFFER_PX}px`;
+    const cs = window.getComputedStyle(input);
+    input.style.width = ''; // back to the CSS base width, then measure
+    const baseWidth = input.getBoundingClientRect().width;
+    if (!baseWidth) return; // not laid out (hidden/detached) — leave it alone
+    const font = `${cs.fontStyle} ${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
+    const needed = measureTextWidth(input.value || '', font) + WIDTH_BUFFER_PX;
+    if (needed > baseWidth) input.style.width = `${needed}px`;
   }
 
   async function init() {
@@ -148,7 +150,6 @@
       input.addEventListener('input', () => growInput(input));
       if (!lastFocusedInput) lastFocusedInput = input;
       sentence.appendChild(input);
-      growInput(input);
 
       sentence.appendChild(window.ExerciseCommon.renderTextWithHints(` ${row.after} `));
 
@@ -282,7 +283,7 @@
       const feedback = item.querySelector('.exercise-feedback');
       input.value = '';
       input.disabled = false;
-      growInput(input);
+      input.style.width = ''; // back to the CSS base width
       input.classList.remove('input-correct', 'input-incorrect');
       feedback.textContent = '';
     });

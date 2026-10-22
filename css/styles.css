@@ -38,7 +38,13 @@
 
 /* --- Reset --- */
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  /* The header is fixed to the top now, so in-page anchor jumps (e.g. the
+     podcasts theme index) need to stop below it instead of under it. */
+  scroll-padding-top: 90px;
+}
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
@@ -85,15 +91,29 @@ a:hover { color: var(--color-tab-dark); }
 }
 
 /* --- Header / nav --- White header, brand-dark green text (6.76:1 — fully AA compliant at any size). */
+/* The header stays visible while scrolling (position: fixed) and shrinks
+   once the page is scrolled a little (.is-scrolled, toggled in js/main.js).
+   Fixed takes it out of the page flow, so #site-header-placeholder keeps
+   reserving the full-size header's height (80px logo + padding + border) —
+   that way shrinking never shifts the content below it, which would also
+   fight the scroll position and make it flicker. */
+#site-header-placeholder { min-height: 100px; }
 .site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
   background-color: var(--color-panel);
   border-bottom: 4px solid var(--color-brand);
+  transition: border-width 0.2s ease;
 }
 .site-header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-block: var(--space-2);
+  transition: padding 0.2s ease;
 }
 .site-logo {
   display: flex;
@@ -105,6 +125,7 @@ a:hover { color: var(--color-tab-dark); }
   display: block;
   height: 80px;
   width: auto;
+  transition: height 0.2s ease;
 }
 .site-tagline {
   display: block;
@@ -156,6 +177,13 @@ a:hover { color: var(--color-tab-dark); }
 .main-nav a[aria-current="page"] {
   border-bottom-color: var(--color-selected-dark);
 }
+
+/* Shrunk header once the page has been scrolled: smaller logo, no tagline,
+   tighter padding and border. */
+.site-header.is-scrolled { border-bottom-width: 3px; }
+.site-header.is-scrolled .container { padding-block: var(--space-1); }
+.site-header.is-scrolled .site-logo-img { height: 44px; }
+.site-header.is-scrolled .site-tagline { display: none; }
 
 @media (max-width: 700px) {
   .nav-toggle { display: inline-block; }
@@ -754,6 +782,7 @@ a.theme-block:focus-visible {
   border-color: var(--color-tab-dark);
   color: var(--color-text-inverse);
 }
+.ahorcado-guess .exercise-input { width: 14rem; }
 .ahorcado-guess {
   display: flex;
   flex-wrap: wrap;
@@ -1059,6 +1088,7 @@ a.theme-block:focus-visible {
   font-size: 1.1rem;
   padding: var(--space-1) var(--space-2);
   min-height: 44px;
+  width: 9ch;
   min-width: 9ch;
   /* Dashed, matching Empareja's .drop-slot blanks — on a phone, a solid
      green box sat too close in look to the solid buttons below the
@@ -1067,8 +1097,8 @@ a.theme-block:focus-visible {
   border: 2px dashed var(--color-brand);
   border-radius: var(--radius);
   margin: 0 var(--space-1);
-  /* Width itself is set/grown from JS as the student types (see
-     exercise-typed.js) so the whole word stays visible. */
+  /* 9ch is the normal size. exercise-typed.js/exercise-texto.js set a
+     wider inline pixel width only when the typed text wouldn't fit. */
 }
 .exercise-input:focus {
   /* Explicit, calm focus styling instead of falling back to the browser's

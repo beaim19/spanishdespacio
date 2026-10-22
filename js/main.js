@@ -42,6 +42,28 @@ function wireMobileNav() {
   });
 }
 
+// Shrinks the (fixed) header once the page is scrolled a bit. Two different
+// thresholds (shrink past 60px, grow back only under 20px) so it can't
+// flicker back and forth around a single scroll position.
+function wireHeaderShrink() {
+  const header = document.querySelector('.site-header');
+  if (!header) return;
+  let ticking = false;
+  function update() {
+    const y = window.scrollY;
+    if (y > 60) header.classList.add('is-scrolled');
+    else if (y < 20) header.classList.remove('is-scrolled');
+    ticking = false;
+  }
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      ticking = true;
+      window.requestAnimationFrame(update);
+    }
+  }, { passive: true });
+  update(); // the browser may restore a mid-page scroll position on reload
+}
+
 function setFooterYear() {
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -52,5 +74,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   await includePartial('site-footer-placeholder', '/partials/footer.html');
   markCurrentNavItem();
   wireMobileNav();
+  wireHeaderShrink();
   setFooterYear();
 });

@@ -123,21 +123,21 @@ This engine also adds an accent toolbar (á é í ó ú ñ ¿ ¡) above the
 questions, matching the buttons in the DELE app — clicking one inserts the
 character into whichever text box was last focused, at the cursor position.
 
-The input box that grows as the student types (`growInput()` in
-`js/exercise-typed.js`, and the identical logic in `js/exercise-texto.js`
-for Difícil's typed blanks) measures the actual rendered pixel width of
-the current text in a `<canvas>` (`ctx.measureText()`), rather than
-assuming "N characters = N ch". The CSS `ch` unit is defined as the width
-of the font's "0" glyph, which in this site's proportional font (Segoe
-UI/Arial) is narrower than most letters — and noticeably narrower than
-capitals or accented letters (á, é, í, ó, ú, ñ) specifically, i.e. exactly
-the characters the accent toolbar exists to insert. The old `N + 2` ch
-estimate under-sized the box on longer or heavily-accented answers even
-though it "grew" by the expected character count, clipping the last
-letter. Measuring in the actual font and converting straight to pixels
-(plus a fixed `WIDTH_BUFFER_PX` for padding/border/caret room) fixes this
-regardless of which characters are involved, rather than just padding the
-old estimate further.
+The typed boxes keep their normal CSS size (`.exercise-input { width: 9ch }`)
+and only grow when the typed text wouldn't fit — so they don't jump bigger
+the moment someone starts typing. `growInput()` (in
+`js/exercise-typed.js`, and the same logic in `js/exercise-texto.js` for
+Difícil's blanks) resets the box to its CSS width, measures the actual
+pixel width of the text in the input's own font (`<canvas>` `measureText`),
+and sets a wider inline width only if the text plus `WIDTH_BUFFER_PX`
+(padding, border, caret room) is wider than the box. It measures real
+pixels instead of counting characters in `ch` units because `ch` is the
+width of the font's "0", which is narrower than most letters and
+noticeably narrower than capitals or accented ones (á, é, í, ó, ú, ñ).
+The accent toolbar calls it too (inserting with `setRangeText()` doesn't
+fire an `input` event). One gotcha: it must not run before the box is on
+the page — an earlier version did, measured with the browser's default
+font, and made the box jump bigger on the first keystroke.
 
 ## Splitting a topic into verb-type variants (regular/irregular/reflexivos)
 
@@ -1117,6 +1117,28 @@ pasted into the wrong file instead.
 schema described above (`texto-articulos.csv`/`texto-adjetivos.csv`/`texto-verbos.csv`)
 and is no longer referenced from any page — delete it yourself whenever
 convenient.
+
+## Sticky, shrinking header
+
+The header (`.site-header`) is `position: fixed` to the top, so the nav is
+always visible while scrolling, and it shrinks once the page is scrolled:
+80px logo down to 44px, tagline hidden, tighter padding and border
+(`.site-header.is-scrolled`, toggled by `wireHeaderShrink()` in
+`js/main.js`). Two details worth knowing:
+
+- Fixed takes the header out of the page flow, so
+  `#site-header-placeholder` has `min-height: 100px` (the full-size
+  header's height) to keep reserving its space. Without that, shrinking
+  would pull the content up and fight the scroll position, which can make
+  the header flicker between sizes on short pages. If the full-size header
+  ever changes height (bigger logo, more padding), update that number.
+- The class is added past 60px of scroll and removed only under 20px, so
+  it can't flip back and forth around a single position. `html` has
+  `scroll-padding-top: 90px` so in-page anchor jumps (the podcasts theme
+  index) stop below the header instead of under it.
+
+On a phone the opened menu overlays the content below it rather than
+pushing it down, since the header is fixed.
 
 ## Buttons on narrow screens
 
