@@ -278,14 +278,14 @@ a:hover { color: var(--color-tab-dark); }
   font-size: 1.2rem;
   font-weight: 700;
 }
-/* Top back-link: just a bigger arrow, sitting at title level. Large size
-   is also what keeps it AA-compliant as white-on-green (large/bold text
-   only needs 3:1, this is 4.28:1). */
+/* Top back-link: small arrow + "Volver". Bold 1.2rem counts as large text,
+   which keeps it AA-compliant as white-on-green (needs 3:1, this is 4.28:1). */
 .back-link-top {
   display: inline-block;
   color: var(--color-text-inverse);
   text-decoration: none;
-  font-size: 2.25rem;
+  font-size: 1.2rem;
+  font-weight: 700;
   line-height: 1;
   margin-bottom: var(--space-2);
 }
@@ -757,10 +757,10 @@ a.theme-block:focus-visible {
 }
 .letter-btn {
   font-family: inherit;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  width: 44px;
-  height: 44px;
+  width: 34px;
+  height: 36px;
   background-color: var(--color-panel);
   color: var(--color-brand-dark);
   border: 2px solid var(--color-brand);
@@ -769,9 +769,6 @@ a.theme-block:focus-visible {
 }
 .letter-btn:hover:not(:disabled) { background-color: var(--color-hover-tint); }
 .letter-btn:disabled { cursor: default; }
-/* Vowels while only one petal is left: muted but still tappable, so the
-   player gets the "only consonants now" message instead of a dead button. */
-.letter-btn.is-locked { opacity: 0.45; }
 .letter-btn.is-hit {
   background-color: var(--color-brand-dark);
   border-color: var(--color-brand-dark);
@@ -1375,4 +1372,23 @@ a.theme-block:focus-visible {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+/* Texto Fácil: word bank stays pinned under the fixed header while the
+   passage scrolls; compact chips so it takes little room on phones. */
+.word-pool.texto-word-bank {
+  position: sticky;
+  top: 60px;
+  z-index: 50;
+  gap: var(--space-1);
+  padding: var(--space-2);
+  max-height: 32vh;
+  overflow-y: auto;
+  border-bottom: 2px solid var(--color-brand);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.12);
+}
+.word-pool.texto-word-bank .pool-chip {
+  font-size: 0.9rem;
+  min-height: 36px;
+  padding: 2px var(--space-2);
 }

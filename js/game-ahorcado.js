@@ -10,11 +10,8 @@
  * round is lost, and the whole word is revealed. Guess every letter (or
  * the whole word) first and the round is won.
  *
- * With only ONE petal left a vowel can no longer be chosen (a wrong one
- * would cost two). The moment the flower reaches 7 petals the status line
- * adds "¡Ahora solo puedes elegir una consonante, buena suerte!" (and
- * keeps showing it while that stays true); the vowel keys look muted, and
- * tapping one just repeats the message.
+ * With one petal left a vowel can still be chosen; a wrong one simply
+ * fills the flower (the cost is capped at 8) and loses the round.
  *
  * CSV columns: set,id,hint,word,level
  *   hint  = a short description of the word, in Spanish. Can mark words
@@ -44,7 +41,6 @@
   const MAX_WRONG = 8; // petals on the flower
   const VOWEL_COST = 2; // petals a WRONG vowel costs (everything else costs 1)
   const VOWELS = 'aeiou';
-  const LAST_PETAL_MESSAGE = '¡Ahora solo puedes elegir una consonante, buena suerte!';
   const LETTERS = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ'.split('');
   const SVG_NS = 'http://www.w3.org/2000/svg';
 
@@ -291,36 +287,11 @@
         controls.appendChild(nextBtn);
       }
 
-      // With exactly one petal left, a wrong vowel (2 petals) would be
-      // worse than losing outright, so vowels get locked: muted look, still
-      // tappable so the player gets the explanation message.
-      function refreshVowelLock() {
-        const lock = MAX_WRONG - wrong === 1;
-        letterButtons.forEach((b, i) => {
-          const isVowel = VOWELS.includes(LETTERS[i].toLowerCase());
-          const locked = lock && isVowel && !b.disabled;
-          b.classList.toggle('is-locked', locked);
-          if (locked) b.setAttribute('aria-disabled', 'true');
-          else b.removeAttribute('aria-disabled');
-        });
-      }
-
-      // Shown as soon as only one petal is left, and kept on screen while
-      // that stays true (so a correct consonant doesn't wipe the warning).
-      function lastPetalNote() {
-        return MAX_WRONG - wrong === 1 ? LAST_PETAL_MESSAGE : '';
-      }
-
       function addWrong(cost, message) {
         wrong = Math.min(MAX_WRONG, wrong + cost);
         setPetals(wrong);
-        if (wrong >= MAX_WRONG) {
-          status.textContent = message;
-          finish(false);
-        } else {
-          refreshVowelLock();
-          status.textContent = `${message} ${lastPetalNote()}`.trim();
-        }
+        status.textContent = message;
+        if (wrong >= MAX_WRONG) finish(false);
       }
 
       letterButtons.forEach((btn, i) => {
@@ -328,17 +299,12 @@
         const isVowel = VOWELS.includes(ch);
         btn.addEventListener('click', () => {
           if (finished || guessed.has(ch)) return;
-          if (isVowel && MAX_WRONG - wrong === 1) {
-            status.textContent = LAST_PETAL_MESSAGE;
-            return;
-          }
           guessed.add(ch);
           btn.disabled = true;
-          btn.classList.remove('is-locked');
           if (target.includes(ch)) {
             btn.classList.add('is-hit');
             refreshWord(false);
-            status.textContent = lastPetalNote();
+            status.textContent = '';
             if (allFound()) finish(true);
           } else {
             btn.classList.add('is-miss');

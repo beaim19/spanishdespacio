@@ -305,7 +305,7 @@
     let pool = null;
     if (mode === 'facil') {
       pool = document.createElement('div');
-      pool.className = 'word-pool';
+      pool.className = 'word-pool texto-word-bank';
       pool.setAttribute('role', 'group');
       pool.setAttribute('aria-label', 'Banco de palabras');
 

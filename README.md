@@ -690,13 +690,13 @@ never guessed are shown in red). A letter can only be tapped once, so it
 can't be charged twice. The double price is stated in the game's intro
 text and on the page header.
 
-When only **one petal is left**, vowels are locked (a wrong one would
-cost two). The moment that happens, "¡Ahora solo puedes elegir una
-consonante, buena suerte!" is added to the status line (and stays while
-it's true, even after a correct consonant); tapping a vowel just repeats
-it, and the vowel keys look muted (`.letter-btn.is-locked`, still
-tappable so the message can appear). Consonants and the whole-word box
-keep working. Guessing
+A wrong vowel always costs two petals; with one petal left it can still be
+chosen, and a wrong one fills the flower and loses the round (no lock, no
+message). Letter keys are compact (34×36px) to leave room on small phones.
+The Texto Fácil word bank (`.texto-word-bank`) is sticky under the header
+with smaller chips. Dropdown hover-open (`js/theme-menu.js`) now uses
+`pointerenter/leave` for mouse only, so one tap opens on touch.
+Guessing
 every letter, or typing the right word, wins the round. Spaces and hyphens
 in `word` show from the start and don't need guessing.
 
@@ -1193,3 +1193,17 @@ Then visit `http://localhost:8000`.
 Push to `main` on GitHub, then enable GitHub Pages in the repo's
 Settings > Pages (source: `main` branch, root). Point Porkbun DNS at GitHub
 Pages once Pages is live.
+
+## Subjuntivo
+
+The Verbos dropdown splits Subjuntivo into **Subjuntivo Presente** (live,
+`exercises/subjuntivo-presente.html`) and **Subjuntivo Pasado**
+(Próximamente). The presente page reads
+`content/exercises/presente-{type}-subjuntivo-{empareja,completa,flashcards,ordena}.csv`
+and currently only has the `regular` variant (a single variant hides the
+variant switcher). To add irregulars, create the
+`presente-irregular-subjuntivo-*` files and add `'irregular'` to the
+page's `variants`. For the past subjuntivo, copy the page as
+`subjuntivo-pasado.html` with `pasado-{type}-subjuntivo-…` templates and
+swap the menu's placeholder for a link. Its intro says the forms are
+subjuntivo (not the fixed indicativo sentence).

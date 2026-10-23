@@ -49,8 +49,8 @@
     // Desktop pointer convenience only — mouseleave fires when the pointer
     // actually leaves the wrapper's box, so moving down from the button
     // into the menu itself (a child of the same wrapper) doesn't close it.
-    wrapper.addEventListener('mouseenter', open);
-    wrapper.addEventListener('mouseleave', close);
+    wrapper.addEventListener('pointerenter', (e) => { if (e.pointerType === 'mouse') open(); });
+    wrapper.addEventListener('pointerleave', (e) => { if (e.pointerType === 'mouse') close(); });
 
     document.addEventListener('click', (event) => {
       if (!wrapper.contains(event.target)) close();
