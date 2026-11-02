@@ -64,6 +64,24 @@ function wireHeaderShrink() {
   update(); // the browser may restore a mid-page scroll position on reload
 }
 
+// On narrow screens the expanded header can be taller than the CSS minimum
+// (wrapped tagline, etc.) and would cover the top of the page (e.g. the
+// "Volver" link). Size the placeholder to the header's real expanded height.
+function wireHeaderSpacer() {
+  const header = document.querySelector('.site-header');
+  const spacer = document.getElementById('site-header-placeholder');
+  if (!header || !spacer) return;
+  function measure() {
+    if (header.classList.contains('is-scrolled')) return;
+    const nav = header.querySelector('.main-nav');
+    if (nav && nav.classList.contains('is-open')) return;
+    spacer.style.minHeight = header.offsetHeight + 'px';
+  }
+  measure();
+  window.addEventListener('resize', measure);
+  window.addEventListener('load', measure);
+}
+
 function setFooterYear() {
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -75,5 +93,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   markCurrentNavItem();
   wireMobileNav();
   wireHeaderShrink();
+  wireHeaderSpacer();
   setFooterYear();
 });

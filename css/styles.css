@@ -723,29 +723,35 @@ a.theme-block:focus-visible {
   stroke-opacity: 1;
 }
 .ahorcado-word {
+  /* Always one line: --n (character count, set in JS) shrinks the slot
+     width --w, and the font with it, when the word is long. */
+  container-type: inline-size;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
-  gap: var(--space-2);
+  gap: 0.25rem;
   margin: var(--space-3) 0;
+  --w: min(2rem, calc(100cqw / var(--n, 8) - 0.3rem));
 }
 .ahorcado-letter {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2rem;
-  height: 2.5rem;
+  flex: 0 0 auto;
+  width: var(--w);
+  height: calc(var(--w) * 1.25);
   border-bottom: 3px solid var(--color-brand-dark);
-  font-size: 1.5rem;
+  font-size: calc(var(--w) * 0.75);
   font-weight: 700;
   color: var(--color-brand-dark);
 }
 /* Letters revealed only because the round was lost (never guessed). */
 .ahorcado-letter.is-missed { color: var(--color-tab-dark); }
-.ahorcado-space { width: 1.5rem; }
+.ahorcado-space { flex: 0 0 auto; width: calc(var(--w) * 0.75); }
 .ahorcado-fixed {
   align-self: center;
-  font-size: 1.5rem;
+  flex: 0 0 auto;
+  font-size: calc(var(--w) * 0.75);
   font-weight: 700;
 }
 .ahorcado-letters {

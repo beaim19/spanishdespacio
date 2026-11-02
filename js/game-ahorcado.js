@@ -187,6 +187,7 @@
       const wordBox = document.createElement('div');
       wordBox.className = 'ahorcado-word';
       wordBox.setAttribute('aria-label', 'Palabra oculta');
+      wordBox.style.setProperty('--n', chars.length);
       const slots = chars.map((ch) => {
         const span = document.createElement('span');
         if (isLetter(ch)) {

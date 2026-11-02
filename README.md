@@ -1196,8 +1196,8 @@ Pages once Pages is live.
 
 ## Subjuntivo
 
-The Verbos dropdown splits Subjuntivo into **Subjuntivo Presente** (live,
-`exercises/subjuntivo-presente.html`) and **Subjuntivo Pasado**
+The Verbos dropdown splits Subjuntivo into **Presente (Modo Subjuntivo)** (live,
+`exercises/subjuntivo-presente.html`) and **Pasado (Modo Subjuntivo)**
 (Próximamente). The presente page reads
 `content/exercises/presente-{type}-subjuntivo-{empareja,completa,flashcards,ordena}.csv`
 and currently only has the `regular` variant (a single variant hides the
@@ -1207,3 +1207,8 @@ page's `variants`. For the past subjuntivo, copy the page as
 `subjuntivo-pasado.html` with `pasado-{type}-subjuntivo-…` templates and
 swap the menu's placeholder for a link. Its intro says the forms are
 subjuntivo (not the fixed indicativo sentence).
+
+Phone fixes: the Ahorcado word never wraps (`--n` = character count sets
+the slot width/font via container units in `.ahorcado-word`); `wireHeaderSpacer()`
+in `js/main.js` sizes `#site-header-placeholder` to the header's real
+expanded height so "Volver" is never hidden when scrolled back to the top.
